@@ -6,6 +6,14 @@
 #define OGRE_NO_GLES2_CG_SUPPORT 1
 #define OGRE_NO_GLES2_GLSL_OPTIMISER 1
 
+#define OGRE_BUILD_RENDERSYSTEM_GLES2 1
+
+//Turn off the gles3 suport
+#define OGRE_NO_GLES3_SUPPORT 1
+
+#define RTSHADER_SYSTEM_BUILD_CORE_SHADERS 1
+#define RTSHADER_SYSTEM_BUILD_EXT_SHADERS 1
+
 #endif
 
 // #ifndef __Custom_Config_H_

@@ -7,48 +7,47 @@
 
 namespace Ogre
 {
-	class ShaderGeneratorTechniqueResolverListener : public Ogre::MaterialManager::Listener
+class ShaderGeneratorTechniqueResolverListener : public MaterialManager::Listener
+{
+public:
+
+	ShaderGeneratorTechniqueResolverListener(RTShader::ShaderGenerator* pShaderGenerator)
 	{
-	public:
-		Ogre::Technique* handleSchemeNotFound( unsigned short schemeIndex, const Ogre::String& schemeName, Ogre::Material* originalMaterial, unsigned short lodIndex, const Ogre::Renderable* rend )
+		mShaderGenerator = pShaderGenerator;
+	}
+
+	virtual Technique* handleSchemeNotFound(unsigned short schemeIndex,
+		const String& schemeName, Material* originalMaterial, unsigned short lodIndex,
+		const Renderable* rend)
+	{
+		// Case this is the default shader generator scheme.
+		if (schemeName == RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME)
 		{
-			Ogre::Technique* generatedTech = NULL;
+			MaterialRegisterIterator itFind = mRegisteredMaterials.find(originalMaterial);
+			bool techniqueCreated = false;
 
-			// Case this is the default shader generator scheme.
-			if (schemeName == Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME)
+			// This material was not registered before.
+			if (itFind == mRegisteredMaterials.end())
 			{
-				bool techniqueCreated;
-
-				// Create shader generated technique for this material.
-				techniqueCreated = Ogre::RTShader::ShaderGenerator::getSingletonPtr()->createShaderBasedTechnique(
-					originalMaterial->getName(), 
-					Ogre::MaterialManager::DEFAULT_SCHEME_NAME, 
-					schemeName);	
-
-				// Case technique registration succeeded.
-				if (techniqueCreated)
-				{
-					// Force creating the shaders for the generated technique.
-					Ogre::RTShader::ShaderGenerator::getSingletonPtr()->validateMaterial(schemeName, originalMaterial->getName());
-
-					// Grab the generated technique.
-					Ogre::Material::TechniqueIterator itTech = originalMaterial->getTechniqueIterator();
-
-					while (itTech.hasMoreElements())
-					{
-						Ogre::Technique* curTech = itTech.getNext();
-
-						if (curTech->getSchemeName() == schemeName)
-						{
-							generatedTech = curTech;
-							break;
-						}
-					}				
-				}
+				techniqueCreated = mShaderGenerator->createShaderBasedTechnique(
+					originalMaterial->getName(),
+					MaterialManager::DEFAULT_SCHEME_NAME,
+					schemeName);
 			}
-
-			return generatedTech;
+			mRegisteredMaterials[originalMaterial] = techniqueCreated;
 		}
-	};	
+
+		return NULL;
+	}
+
+protected:
+	typedef std::map<Material*, bool>		MaterialRegisterMap;
+	typedef MaterialRegisterMap::iterator	MaterialRegisterIterator;
+
+
+protected:
+	MaterialRegisterMap				mRegisteredMaterials;		// Registered material map.
+	RTShader::ShaderGenerator*		mShaderGenerator;			// The shader generator instance.
+};
 }
 #endif

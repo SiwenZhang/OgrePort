@@ -46,6 +46,11 @@ LOCAL_SRC_FILES		:= \
                 $(OGRE_ROOT)/Components/RTShaderSystem/src/OgreShaderRenderState.cpp \
                 $(OGRE_ROOT)/Components/RTShaderSystem/src/OgreShaderScriptTranslator.cpp \
                 $(OGRE_ROOT)/Components/RTShaderSystem/src/OgreShaderSubRenderState.cpp \
+                $(OGRE_ROOT)/Components/RTShaderSystem/src/OgreShaderExHardwareSkinningTechnique.cpp \
+                $(OGRE_ROOT)/Components/RTShaderSystem/src/OgreShaderExLinearSkinning.cpp \
+                $(OGRE_ROOT)/Components/RTShaderSystem/src/OgreShaderExTriplanarTexturing.cpp \
+                $(OGRE_ROOT)/Components/RTShaderSystem/src/OgreShaderExTextureAtlasSampler.cpp \
+                $(OGRE_ROOT)/Components/RTShaderSystem/src/OgreShaderExDualQuaternionSkinning.cpp \
                 $(OGRE_ROOT)/Components/Overlay/src/OgreBorderPanelOverlayElement.cpp \
                 $(OGRE_ROOT)/Components/Overlay/src/OgreFont.cpp \
                 $(OGRE_ROOT)/Components/Overlay/src/OgreFontManager.cpp \

@@ -130,21 +130,28 @@ static void InitGameScene()
 	}
 
 	Ogre::RTShader::ShaderGenerator::getSingletonPtr()->invalidateScheme(Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME);
-	Ogre::ResourceGroupManager::getSingletonPtr()->initialiseResourceGroup("General");
+	Ogre::ResourceGroupManager::getSingletonPtr()->initialiseAllResourceGroups();
 
-	/**
-	 * Инициализация сцены
-	 */
-	Ogre::Entity* pEntity = gSceneMgr->createEntity("SinbadInstance", "ogrehead.mesh");
-	Ogre::SceneNode* pNode = gSceneMgr->getRootSceneNode()->createChildSceneNode();
+	gSceneMgr->setAmbientLight(Ogre::ColourValue(1.0f, 1.0f, 1.0f));
+
+	Ogre::Entity* pEntity = gSceneMgr->createEntity("Sinbad", "Sinbad.mesh");
+	Ogre::SceneNode* pNode = gSceneMgr->getRootSceneNode()->createChildSceneNode("Sinbad");
 	pNode->attachObject(pEntity);
+	//pNode->setPosition(0, 0, 0);
 
-	Ogre::Light* pDirLight = gSceneMgr->createLight();
-	pDirLight->setDirection(Ogre::Vector3(0,-1,0));
-	pDirLight->setType(Ogre::Light::LT_DIRECTIONAL);
-	pNode->attachObject(pDirLight);
+	//Ogre::Light* pDirLight = gSceneMgr->createLight();
+	//pDirLight->setDirection(Ogre::Vector3(0,-1,0));
+	//pDirLight->setType(Ogre::Light::LT_DIRECTIONAL);
+	//pNode->attachObject(pDirLight);
 
-	mRayScnQuery = gSceneMgr->createRayQuery(Ogre::Ray());
+	// Create a light
+ //   	Ogre::Light* pointLight = gSceneMgr->createLight("pointLight");
+ //   	pointLight->setType(Ogre::Light::LT_POINT);
+ //   	pointLight->setPosition(Ogre::Vector3(250, 150, 250));
+ //   	pointLight->setDiffuseColour(Ogre::ColourValue::Red);
+ //   	pointLight->setSpecularColour(Ogre::ColourValue::Red);
+
+//	mRayScnQuery = gSceneMgr->createRayQuery(Ogre::Ray());
 
 	app.state.CurentState = 2;
 }
@@ -156,25 +163,26 @@ static void InitStartScene()
 		return;
 	}
 
+	LOGW("Create SceneManager");
+    gSceneMgr = gRoot->createSceneManager(Ogre::ST_GENERIC);
+
 	Ogre::RTShader::ShaderGenerator::initialize();
 	Ogre::RTShader::ShaderGenerator::getSingletonPtr()->setTargetLanguage("glsles");
-	gMatListener = new Ogre::ShaderGeneratorTechniqueResolverListener();
+	gMatListener = new Ogre::ShaderGeneratorTechniqueResolverListener(Ogre::RTShader::ShaderGenerator::getSingletonPtr());
 	Ogre::MaterialManager::getSingleton().addListener(gMatListener);
 
-	LOGW("Create SceneManager");
-	gSceneMgr = gRoot->createSceneManager(Ogre::ST_GENERIC);
 	Ogre::RTShader::ShaderGenerator::getSingletonPtr()->addSceneManager(gSceneMgr);
 
 	camera = gSceneMgr->createCamera("MyCam");
-	camera->setNearClipDistance(1.0f);
-	camera->setFarClipDistance(100000.0f);
-	camera->setPosition(0,0,20.0f);
+	camera->setNearClipDistance(0.1f);
+	camera->setFarClipDistance(1000.0f);
+	camera->setPosition(0,0,50.0f);
 	camera->lookAt(0,0,0);
 	camera->setAutoAspectRatio(true);
 
 	vp = gRenderWnd->addViewport(camera);
-	vp->setBackgroundColour(Ogre::ColourValue(1.0f, 1.0f, 1.0f));
-	vp->setMaterialScheme(Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME);
+	vp->setBackgroundColour(Ogre::ColourValue(1.0f, 0.0f, 0.0f));
+//	vp->setMaterialScheme(Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME);
 
 	loadResources("resources.cfg");
 
@@ -225,16 +233,16 @@ static int32_t handleInput(struct android_app* app, AInputEvent* event)
         	    //mRayScnQuery->setRay(cameraRay);
 
 	        	//create a raycast straight out from the camera at the mouse's location
-				Ogre::Ray mouseRay = camera->getCameraToViewportRay( x/float(vp->getActualWidth()),  y/float(vp->getActualHeight()));
-				mRayScnQuery->setRay(mouseRay);
+				//Ogre::Ray mouseRay = camera->getCameraToViewportRay( x/float(vp->getActualWidth()),  y/float(vp->getActualHeight()));
+				//mRayScnQuery->setRay(mouseRay);
 
-	        	Ogre::RaySceneQueryResult& result = mRayScnQuery->execute();
-	        	Ogre::RaySceneQueryResult::iterator iter = result.begin();
-
-	        	if(iter != result.end() && iter->movable)
-	        	{
-	        		LOGW("SELECT: %s", iter->movable->getName().c_str());
-	        	}
+	        	//Ogre::RaySceneQueryResult& result = mRayScnQuery->execute();
+	        	//Ogre::RaySceneQueryResult::iterator iter = result.begin();
+//
+//	        	if(iter != result.end() && iter->movable)
+//	        	{
+//	        		LOGW("SELECT: %s", iter->movable->getName().c_str());
+//	        	}
 	        	return true;
 
 
@@ -353,6 +361,7 @@ void android_main(struct android_app* state)
 		if(gRenderWnd != NULL && gRenderWnd->isActive())
 		{
 			gRenderWnd->windowMovedOrResized();
+
 			gRoot->renderOneFrame();
 
 			InitGameScene();

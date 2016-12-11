@@ -70,6 +70,6 @@ LOCAL_SRC_FILES		:= \
 				$(OGRE_ROOT)/RenderSystems/GLES2/src/EGL/Android/OgreAndroidEGLWindow.cpp \
 				$(OGRE_ROOT)/RenderSystems/GLES2/src/EGL/Android/OgreAndroidResource.cpp \
 				$(OGRE_ROOT)/RenderSystems/GLES2/src/EGL/Android/OgreAndroidResourceManager.cpp \
-				$(OGRE_ROOT)/RenderSystems/GLES2/src/gles3w.cpp \
+				$(OGRE_ROOT)/RenderSystems/GLES2/src/gles2w.cpp \
 
 include $(BUILD_STATIC_LIBRARY)
