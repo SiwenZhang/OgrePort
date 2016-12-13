@@ -1,8 +1,6 @@
 #ifndef OGRE_INATIVEINTERFACE_H
 #define OGRE_INATIVEINTERFACE_H
 
-#include "IAppStateInterface.h"
-
 namespace OgreNative
 {
 	class INativeInterface
@@ -33,7 +31,7 @@ namespace OgreNative
 
 		virtual void setAssetManager(jobject pAssetManager) = 0;
 
-		virtual IAppStateInterface* GetAppStateInterface() = 0;
+//		virtual IAppStateInterface* GetAppStateInterface() = 0;
 
 		virtual ~INativeInterface() { }
 	};

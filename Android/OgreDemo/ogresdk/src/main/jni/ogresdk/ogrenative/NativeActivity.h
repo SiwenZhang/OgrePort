@@ -8,7 +8,6 @@
 #include "AndroidMessage.h"
 #include "INativeInterface.h"
 #include "IAndroidHandler.h"
-#include "AppStateImpl.h"
 #include "ClassLoader.h"
 #include "NotificationManager.h"
 
@@ -124,13 +123,11 @@ namespace OgreNative
 
 			virtual void setAssetManager(jobject pAssetManager);
 
-			// Interfaces
-			virtual IAppStateInterface* GetAppStateInterface();
+//			// Interfaces
+//			virtual IAppStateInterface* GetAppStateInterface();
 
 		private:
 			NativeActivity* m_pActivity;
-
-			AppStateImpl	m_AppState;
 		};
 
 		friend class NativeInterface;

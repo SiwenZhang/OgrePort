@@ -4,7 +4,6 @@
 
 #include "AndroidLog.h"
 #include "INativeInterface.h"
-#include "AppState.h"
 #include "Android.h"
 
 using namespace OgreNative;

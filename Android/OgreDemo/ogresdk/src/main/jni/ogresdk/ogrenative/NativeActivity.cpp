@@ -254,7 +254,6 @@ namespace OgreNative
 	/*                                 NativeInterface                                */
 	/**********************************************************************************/
 	NativeActivity::NativeInterface::NativeInterface( NativeActivity* pActivity )
-	: m_AppState( pActivity->GetJNI() )
 	{
 		m_pActivity = pActivity;
 	}
@@ -420,10 +419,10 @@ namespace OgreNative
 		m_pActivity->setAssetManager( pAssetManager );
 	}
 
-	IAppStateInterface* NativeActivity::NativeInterface::GetAppStateInterface()
-	{
-		return &m_AppState;
-	}
+//	IAppStateInterface* NativeActivity::NativeInterface::GetAppStateInterface()
+//	{
+//		return &m_AppState;
+//	}
 
 	ClassLoader& NativeActivity::GetClassLoader()
 	{

@@ -9,10 +9,7 @@ LOCAL_C_INCLUDES	:= \
 
 LOCAL_SRC_FILES := NativeActivity.cpp \
                     Android.cpp \
-                    Paths.cpp \
                     Notification.cpp \
-                    AppState.cpp \
-                    AppStateImpl.cpp \
                     ClassLoader.cpp \
                     NotificationManager.cpp \
                     AndroidMain.cpp \
