@@ -15,7 +15,7 @@
 
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
             <!-- Tell NativeActivity the name of or .so -->
-            <meta-data android:name="android.app.lib_name" android:value="OgreGLES2Sample" />
+            <!--<meta-data android:name="android.app.lib_name" android:value="OgreGLES2Sample" />-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
