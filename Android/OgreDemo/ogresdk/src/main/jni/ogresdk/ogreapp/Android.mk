@@ -22,7 +22,9 @@ LOCAL_C_INCLUDES	:= \
 LOCAL_LDLIBS		:= -ldl -llog -lz -landroid -lEGL -lGLESv2
 
 LOCAL_SRC_FILES		:= \
-                OgreApp.cpp
+                OgreApp.cpp \
+                AndroidLogListener.cpp \
+
 
 LOCAL_STATIC_LIBRARIES := \
                 libzzip \
