@@ -118,7 +118,7 @@ JNIEXPORT void JNICALL nativeMain( JNIEnv* pEnv, jobject pObj, jstring strApplic
 	const char* pErrorString = NULL;
 
 	// Library functions
-	void (*ogreapp_main)(void);
+	void (*ogreapp_main)(OgreNative::IAppInterface* appInterface);
 //	void (*init_native_activity)( JNIEnv*, jobject, INativeInterface** );
 
 	// Load library
@@ -151,7 +151,7 @@ JNIEXPORT void JNICALL nativeMain( JNIEnv* pEnv, jobject pObj, jstring strApplic
 //	}
 
 	// Call user defined main
-	(*ogreapp_main)();
+	(*ogreapp_main)(s_pNativeActivity->GetAppInterface());
 
 	dlclose( pLibraryHandle );
 }

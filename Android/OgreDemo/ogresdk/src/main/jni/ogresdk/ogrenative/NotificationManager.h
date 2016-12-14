@@ -4,6 +4,8 @@
 #include "Notification.h"
 #include <jni.h>
 
+#include "IAppInterface.h"
+
 namespace OgreNative
 {
 	class NotificationManager
@@ -19,7 +21,7 @@ namespace OgreNative
 		void Notify( int iNotificationID, const Notification& notification );
 		void Notify( const char* pTag, int iNotificationID, const Notification& notification );
 
-		void Init();
+		void Init(IAppInterface* appInterface);
 
 	private:
 		JNIEnv* m_pEnv;

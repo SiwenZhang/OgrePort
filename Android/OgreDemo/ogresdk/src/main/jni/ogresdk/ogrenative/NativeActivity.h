@@ -2,18 +2,16 @@
 #define OGRE_NATIVE_ACTIVTIY_H
 
 #include <jni.h>
-#include <android/native_window_jni.h> // requires ndk r5 or newer
-#include <android/asset_manager_jni.h>
 
 #include "AndroidMessage.h"
-// #include "INativeInterface.h"
+#include "IAppInterface.h"
 #include "IAndroidHandler.h"
 #include "ClassLoader.h"
 #include "NotificationManager.h"
 
 namespace OgreNative
 {
-	typedef void (*MessageCallbackFunction)( const AndroidMessage& );
+//	typedef void (*MessageCallbackFunction)( const AndroidMessage& );
 
 	class NativeActivity
 	{
@@ -70,6 +68,10 @@ namespace OgreNative
 //			virtual void OnSignInFailed();
 
 			virtual void setAssetManager(jobject pAssetManager);
+
+            IAppInterface* GetAppInterface() {
+                return mAppInterface;
+            }
 
 //			// Interfaces
 //			virtual IAppStateInterface* GetAppStateInterface();
@@ -158,9 +160,40 @@ namespace OgreNative
 // 			NativeActivity* m_pActivity;
 // 		};
 
-		// friend class NativeInterface;
+		class AppInterface : public IAppInterface {
+		public:
+			AppInterface(NativeActivity* pActivity);
+			virtual ~AppInterface();
+
+			virtual void PollEvents();
+			virtual void SetEventCallback( MessageCallbackFunction pCallback );
+			virtual void SetEventHandler( IAndroidHandler* pHandler );
+
+			virtual ANativeWindow* GetWindow();
+			virtual AAssetManager* GetAssetManager();
+			virtual bool IsWindowVisible();
+
+			virtual void ShowKeyboard();
+			virtual void HideKeyboard();
+
+			virtual const char* GetAppDir();
+
+			virtual JNIEnv* GetJNIEnv();
+			virtual jobject GetJNIActivity();
+
+			virtual ClassLoader* GetClassLoader();
+			virtual NotificationManager* GetNotificationManager();
+
+		private:
+			NativeActivity* s_NativeActivity;
+		};
+
+		friend class AppInterface;
 		friend void SetJNI( JNIEnv* pEnv, jobject pObj);
 		void InitAppDir();
+
+	private:
+	    AppInterface* mAppInterface;
 	};
 
 }

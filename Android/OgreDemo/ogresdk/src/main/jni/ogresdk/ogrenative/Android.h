@@ -2,32 +2,32 @@
 #define OGRE_ANDROID_H
 
 #include "NativeActivity.h"
-#include "IAndroidHandler.h"
-#include "NotificationManager.h"
+// #include "IAndroidHandler.h"
+// #include "NotificationManager.h"
+// 
+// namespace OgreNative
+// {
+// 	void PollEvents();
+// 	void SetEventCallback( MessageCallbackFunction pCallback );
+// 	void SetEventHandler( IAndroidHandler* pHandler );
 
-namespace OgreNative
-{
-	void PollEvents();
-	void SetEventCallback( MessageCallbackFunction pCallback );
-	void SetEventHandler( IAndroidHandler* pHandler );
+// 	ANativeWindow* GetWindow();
+// 	AAssetManager* GetAssetManager();
+// 	bool IsWindowVisible();
 
-	ANativeWindow* GetWindow();
-	AAssetManager* GetAssetManager();
-	bool IsWindowVisible();
+// 	void ShowKeyboard();
+// 	void HideKeyboard();
 
-	void ShowKeyboard();
-	void HideKeyboard();
+// 	const char* GetAppDir();
 
-	const char* GetAppDir();
+// 	JNIEnv* GetJNIEnv();
+// 	jobject GetJNIActivity();
 
-	JNIEnv* GetJNIEnv();
-	jobject GetJNIActivity();
+// 	ClassLoader& GetClassLoader();
+// 	NotificationManager& GetNotificationManager();
 
-	ClassLoader& GetClassLoader();
-	NotificationManager& GetNotificationManager();
-
-	NativeActivity& GetNativeActivity();
-};
+// 	NativeActivity& GetNativeActivity();
+// };
 
 #ifndef _LIB
 extern "C"

@@ -3,6 +3,8 @@
 
 #include <jni.h>
 
+#include "IAppInterface.h"
+
 /*
  * http://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html
  */
@@ -40,14 +42,14 @@ namespace OgreNative
 		Notification& SetSmallIcon( int iIcon );
 		//Notification& SetLargeIcon( int iIcon );
 
-		void Dispatch( int iNotificationID );
+		void Dispatch( IAppInterface* appInterface, int iNotificationID );
 		jobject Build() const;
 
 	private:
 		jobject m_pNotificationBuilder;
 
 		// JNI
-		static void InitJNI();
+		static void InitJNI(IAppInterface* appInterface);
 
 		static JNIEnv* s_pEnv;
 

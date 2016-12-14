@@ -59,25 +59,26 @@ namespace OgreNative
 		m_pEnv->DeleteLocalRef( string );
 	}
 
-	void NotificationManager::Init()
+	void NotificationManager::Init(IAppInterface* appInterface)
 	{
-		m_pEnv = OgreNative::GetJNIEnv();
-		jobject pObject = GetObject();
+		// m_pEnv = appInterface->GetJNIEnv();
+		// jobject pObject = GetObject();
 
-		jclass hNotificationClass = m_pEnv->GetObjectClass( pObject );
+		// jclass hNotificationClass = m_pEnv->GetObjectClass( pObject );
 
-		m_hCancelMethod 	= m_pEnv->GetMethodID( hNotificationClass, "cancel", "(I)V" );
-		m_hCancelTagMethod 	= m_pEnv->GetMethodID( hNotificationClass, "cancel", "(Ljava/lang/String;I)V" );
-		m_hCancelAllMethod 	= m_pEnv->GetMethodID( hNotificationClass, "cancelAll", "()V" );
-		m_hNotifyMethod 	= m_pEnv->GetMethodID( hNotificationClass, "notify", "(ILandroid/app/Notification;)V" );
-		m_hNotifyTagMethod	= m_pEnv->GetMethodID( hNotificationClass, "notify", "(Ljava/lang/String;ILandroid/app/Notification;)V" );
+		// m_hCancelMethod 	= m_pEnv->GetMethodID( hNotificationClass, "cancel", "(I)V" );
+		// m_hCancelTagMethod 	= m_pEnv->GetMethodID( hNotificationClass, "cancel", "(Ljava/lang/String;I)V" );
+		// m_hCancelAllMethod 	= m_pEnv->GetMethodID( hNotificationClass, "cancelAll", "()V" );
+		// m_hNotifyMethod 	= m_pEnv->GetMethodID( hNotificationClass, "notify", "(ILandroid/app/Notification;)V" );
+		// m_hNotifyTagMethod	= m_pEnv->GetMethodID( hNotificationClass, "notify", "(Ljava/lang/String;ILandroid/app/Notification;)V" );
 	}
 
 	jobject NotificationManager::GetObject()
 	{
-		jobject pNotificationService = OgreNative::GetNativeActivity().GetSystemService( "notification" );
+		// jobject pNotificationService = OgreNative::GetNativeActivity().GetSystemService( "notification" );
 
-		return pNotificationService;
+		// return pNotificationService;
+		return NULL;
 	}
 
 } /* namespace OgreNative */

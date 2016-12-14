@@ -139,6 +139,8 @@ namespace OgreNative
 
 	void NativeActivity::SetJNI( JNIEnv* pEnv, jobject pObj )
 	{
+	    mAppInterface = new AppInterface(this);
+
 		m_pEnv = pEnv;
 		m_pObj = pEnv->NewGlobalRef( pObj );
 
@@ -168,7 +170,7 @@ namespace OgreNative
 		m_hGetSystemServiceMethod = pEnv->GetMethodID( hContextClass, "getSystemService", "(Ljava/lang/String;)Ljava/lang/Object;" );
 
 		m_ClassLoader.InitJNI( pEnv, hContextClass, m_pContext );
-		m_NotificationManager.Init();
+		m_NotificationManager.Init(mAppInterface);
 
 		//GooglePlayServices::Init( pEnv, m_pContext );
 
@@ -455,5 +457,90 @@ namespace OgreNative
 	{
 		return m_pAppDir;
 	}
+
+	/**********************************************************************************/
+	/*                             App interface begin                                */
+	/**********************************************************************************/
+	NativeActivity::AppInterface::AppInterface(NativeActivity* pActivity)
+	:s_NativeActivity(pActivity) {
+
+	}
+	
+	NativeActivity::AppInterface::~AppInterface() {
+		
+	}
+
+//	NativeActivity& NativeActivity::AppInterface::GetNativeActivity()
+//	{
+//		return *s_NativeActivity;
+//	}
+
+	JNIEnv* NativeActivity::AppInterface::GetJNIEnv()
+	{
+		return s_NativeActivity->GetJNI();
+	}
+
+	jobject NativeActivity::AppInterface::GetJNIActivity()
+	{
+		return s_NativeActivity->GetContext();
+	}
+
+	void NativeActivity::AppInterface::PollEvents()
+	{
+		s_NativeActivity->PollEvents();
+	}
+
+	void NativeActivity::AppInterface::SetEventCallback( MessageCallbackFunction pCallback )
+	{
+        s_NativeActivity->SetEventCallback( pCallback );
+    }
+
+	void NativeActivity::AppInterface::SetEventHandler( IAndroidHandler* pHandler )
+	{
+		s_NativeActivity->SetEventHandler( pHandler );
+	}
+
+	ANativeWindow* NativeActivity::AppInterface::GetWindow()
+	{
+		return s_NativeActivity->GetWindow();
+	}
+
+	AAssetManager* NativeActivity::AppInterface::GetAssetManager()
+	{
+		return s_NativeActivity->GetAssetManager();
+	}
+
+	bool NativeActivity::AppInterface::IsWindowVisible()
+	{
+		return s_NativeActivity->IsVisible();
+	}
+
+	void NativeActivity::AppInterface::ShowKeyboard()
+	{
+		s_NativeActivity->ShowKeyboard();
+	}
+
+	void NativeActivity::AppInterface::HideKeyboard()
+	{
+		s_NativeActivity->HideKeyboard();
+	}
+
+	const char* NativeActivity::AppInterface::GetAppDir()
+	{
+		return s_NativeActivity->GetAppDir();
+	}
+
+	ClassLoader* NativeActivity::AppInterface::GetClassLoader()
+	{
+		return &s_NativeActivity->GetClassLoader();
+	}
+
+	NotificationManager* NativeActivity::AppInterface::GetNotificationManager()
+	{
+		return &s_NativeActivity->GetNotificationManager();
+	}
+	/**********************************************************************************/
+	/*                             App interface end                                  */
+	/**********************************************************************************/
 
 }

@@ -2,7 +2,7 @@
 #define OGRE_STATIC_GLES2
 #define OGRE_STATIC_ParticleFX
 #define OGRE_STATIC_OctreeSceneManager
-#define RTSHADER_SYSTEM_BUILD_CORE_SHADERS
+//#define RTSHADER_SYSTEM_BUILD_CORE_SHADERS
 
 #include <jni.h>
 #include <errno.h>
@@ -29,7 +29,7 @@
 
 #include "OgreStaticPluginLoader.h"
 
-#include "../ogrenative/Android.h"
+#include "../ogrenative/IAppInterface.h"
 
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "OgreSample", __VA_ARGS__))
 #define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, "OgreSample", __VA_ARGS__))
@@ -46,14 +46,9 @@ public:
 
 	// Surface
 	virtual void OnSurfaceCreated() {
-		if (mSurfaceWindowCreated) {
-			return ;
-		}
 		InitGameWindow();
 		// InitStartScene();
 		InitGameScene();
-
-		mSurfaceWindowCreated = true;
 	}
 
 	virtual void OnSurfaceChanged( int iPixelFormat, int iWidth, int iHeight ) {
@@ -116,7 +111,7 @@ private:
 			Ogre::ArchiveManager::getSingleton().addArchiveFactory( new Ogre::APKZipArchiveFactory(gAssetMgr) );
 
             Ogre::NameValuePairList opt;
-            opt["externalWindowHandle"] = Ogre::StringConverter::toString((int)OgreNative::GetWindow());
+            opt["externalWindowHandle"] = Ogre::StringConverter::toString((int)mAppInterface->GetWindow());
             opt["androidConfig"] = Ogre::StringConverter::toString((int)config);
 
 			gRenderWnd = gRoot->createRenderWindow("OgreWindow", 0, 0, false, &opt);
@@ -125,7 +120,7 @@ private:
         }
         else
         {
-			static_cast<Ogre::AndroidEGLWindow*>(gRenderWnd)->_createInternalResources(OgreNative::GetWindow(), config);
+			static_cast<Ogre::AndroidEGLWindow*>(gRenderWnd)->_createInternalResources(mAppInterface->GetWindow(), config);
         }
         AConfiguration_delete(config);
 	}
@@ -235,7 +230,9 @@ private:
 	}
 
 public:
-	OgreMainApp() {
+	OgreMainApp(OgreNative::IAppInterface* appInterface) {
+	    mAppInterface = appInterface;
+
 		gRoot = new Ogre::Root();
 		LOGI("android_main create root end");
 		#ifdef OGRE_STATIC_LIB
@@ -248,11 +245,9 @@ public:
         gRoot->setRenderSystem(gRoot->getAvailableRenderers().at(0));
         gRoot->initialise(false);
 
-        gAssetMgr = OgreNative::GetAssetManager();
+        gAssetMgr = mAppInterface->GetAssetManager();
 
         gRenderWnd = NULL;
-
-        mSurfaceWindowCreated = false;
 	}
 
 	virtual ~OgreMainApp() {
@@ -276,21 +271,21 @@ private:
 	Ogre::ConfigFile cf;
 
 private:
-	bool mSurfaceWindowCreated;
+    OgreNative::IAppInterface* mAppInterface;
 };
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void ogreapp_main() {
+void ogreapp_main(OgreNative::IAppInterface* appInterface) {
     LOGI("ogreapp_main start");
-    OgreMainApp* mainApp = new OgreMainApp();
+    OgreMainApp* mainApp = new OgreMainApp(appInterface);
 
-    OgreNative::SetEventHandler(mainApp);
+    appInterface->SetEventHandler(mainApp);
 
     while (true) {
-    	OgreNative::PollEvents();
+    	appInterface->PollEvents();
 
     	mainApp->renderOneFrame();
 

@@ -37,10 +37,10 @@ namespace OgreNative
 
 	jmethodID Notification::s_hBuildMethod 				= NULL;
 
-	void Notification::InitJNI()
+	void Notification::InitJNI(IAppInterface* appInterface)
 	{
-		s_pEnv = OgreNative::GetJNIEnv();
-		s_hClass = (jclass)s_pEnv->NewGlobalRef( (jobject)OgreNative::GetClassLoader().FindClass( "android.support.v4.app.NotificationCompat$Builder" ) );
+		s_pEnv = appInterface->GetJNIEnv();
+		s_hClass = (jclass)s_pEnv->NewGlobalRef( (jobject)appInterface->GetClassLoader()->FindClass( "android.support.v4.app.NotificationCompat$Builder" ) );
 
 		s_hConstructorMethod		= s_pEnv->GetMethodID( s_hClass, "<init>", "(Landroid/content/Context;)V" );
 
@@ -65,16 +65,16 @@ namespace OgreNative
 
 	Notification::Notification()
 	{
-		if ( !s_hClass )
-		{
-			InitJNI();
-		}
+		// if ( !s_hClass )
+		// {
+		// 	InitJNI();
+		// }
 
-		m_pNotificationBuilder = s_pEnv->NewObject( s_hClass, s_hConstructorMethod, OgreNative::GetJNIActivity() );
-		if ( m_pNotificationBuilder != NULL )
-		{
-			m_pNotificationBuilder = s_pEnv->NewGlobalRef( m_pNotificationBuilder );
-		}
+		// m_pNotificationBuilder = s_pEnv->NewObject( s_hClass, s_hConstructorMethod, OgreNative::GetJNIActivity() );
+		// if ( m_pNotificationBuilder != NULL )
+		// {
+		// 	m_pNotificationBuilder = s_pEnv->NewGlobalRef( m_pNotificationBuilder );
+		// }
 	}
 
 	Notification::~Notification()
@@ -202,16 +202,16 @@ namespace OgreNative
 		return s_pEnv->CallObjectMethod( m_pNotificationBuilder, s_hBuildMethod );
 	}
 
-	void Notification::Dispatch( int iNotificationID )
+	void Notification::Dispatch( IAppInterface* appInterface, int iNotificationID )
 	{
-		LOGV( "Dispatching notification" );
-		jobject pNotification = s_pEnv->CallObjectMethod( m_pNotificationBuilder, s_hBuildMethod );
+		// LOGV( "Dispatching notification" );
+		// jobject pNotification = s_pEnv->CallObjectMethod( m_pNotificationBuilder, s_hBuildMethod );
 
-		jobject pNotificationService = OgreNative::GetNativeActivity().GetSystemService( "notification" );
-		jclass hNotificationClass = s_pEnv->GetObjectClass( pNotificationService );
-		jmethodID hNotify = s_pEnv->GetMethodID( hNotificationClass, "notify", "(ILandroid/app/Notification;)V" );
+		// jobject pNotificationService = appInterface->GetNativeActivity()->GetSystemService( "notification" );
+		// jclass hNotificationClass = s_pEnv->GetObjectClass( pNotificationService );
+		// jmethodID hNotify = s_pEnv->GetMethodID( hNotificationClass, "notify", "(ILandroid/app/Notification;)V" );
 
-		s_pEnv->CallVoidMethod( pNotificationService, hNotify, iNotificationID, pNotification );
+		// s_pEnv->CallVoidMethod( pNotificationService, hNotify, iNotificationID, pNotification );
 	}
 
 } /* namespace OgreNative */
