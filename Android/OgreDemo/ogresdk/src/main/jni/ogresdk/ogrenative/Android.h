@@ -11,8 +11,6 @@ namespace OgreNative
 	void SetEventCallback( MessageCallbackFunction pCallback );
 	void SetEventHandler( IAndroidHandler* pHandler );
 
-	void SetJNI( JNIEnv* pEnv, jobject pObj, INativeInterface** pInterface );
-
 	ANativeWindow* GetWindow();
 	AAssetManager* GetAssetManager();
 	bool IsWindowVisible();
@@ -34,7 +32,9 @@ namespace OgreNative
 #ifndef _LIB
 extern "C"
 {
-	void init_native_activity( JNIEnv* pEnv, jobject pObj, OgreNative::INativeInterface** pInterface );
+	void init_native_activity( JNIEnv* pEnv, jobject pObj, OgreNative::NativeActivity** pInterface );
+
+	void uninit_native_activity( JNIEnv* pEnv, jobject pObj, OgreNative::NativeActivity** pInterface );
 }
 
 #endif

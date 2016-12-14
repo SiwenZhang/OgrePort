@@ -6,7 +6,7 @@
 #include <android/asset_manager_jni.h>
 
 #include "AndroidMessage.h"
-#include "INativeInterface.h"
+// #include "INativeInterface.h"
 #include "IAndroidHandler.h"
 #include "ClassLoader.h"
 #include "NotificationManager.h"
@@ -22,7 +22,7 @@ namespace OgreNative
 		void SetEventCallback( MessageCallbackFunction pCallback );
 		void SetEventHandler( IAndroidHandler* pHandler );
 
-		void SetJNI( JNIEnv* pEnv, jobject pObj, INativeInterface** pInterface );
+		void SetJNI( JNIEnv* pEnv, jobject pObj );
 
 		ANativeWindow* GetWindow();
 		AAssetManager* GetAssetManager();
@@ -46,18 +46,46 @@ namespace OgreNative
 
 		jobject GetSystemService( const char* pServiceName );
 
+			// Application state
+			virtual void OnApplicationShutdown();
+			virtual void OnApplicationPaused();
+			virtual void OnApplicationResumed();
+			virtual void OnLowMemory();
+
+			// Surface
+			virtual void OnSurfaceChanged( int iFormat, int iWidth, int iHeight );
+			virtual void OnSurfaceCreated( jobject pSurface );
+			virtual void OnSurfaceDestroyed();
+
+			// Window state
+			virtual void OnWindowHidden();
+			virtual void OnWindowShown();
+
+			// Input
+			virtual void OnTouch( int iPointerID, float fPosX, float fPosY, int iAction );
+			virtual void OnKeyUp( int iKeyCode, int iUnicodeChar );
+
+//			// Play Services
+//			virtual void OnSignInSucceeded( char* pAccountName );
+//			virtual void OnSignInFailed();
+
+			virtual void setAssetManager(jobject pAssetManager);
+
+//			// Interfaces
+//			virtual IAppStateInterface* GetAppStateInterface();
+
 	private:
 		ClassLoader	 m_ClassLoader;
 		NotificationManager m_NotificationManager;
 
 		bool PeekEvent( AndroidMessage& message );
 		void DispatchMessage( const AndroidMessage& message );
-		void DispatchMessage( AndroidMessageType eMessage );
+		// void DispatchMessage( AndroidMessageType eMessage );
 
 		void SetSurface( jobject pSurface );
 		void SetVisible( bool bVisible );
 
-		void setAssetManager(jobject pAssetManager);
+		// void setAssetManager(jobject pAssetManager);
 
 		// Callbacks
 		MessageCallbackFunction m_pMessageCallback;
@@ -92,46 +120,46 @@ namespace OgreNative
 		jclass		m_hMessageClass;
 		jfieldID	m_hMessageIDField;
 
-		class NativeInterface : public INativeInterface
-		{
-		public:
-			NativeInterface( NativeActivity* pActivity );
-			~NativeInterface();
+// 		class NativeInterface : public INativeInterface
+// 		{
+// 		public:
+// 			NativeInterface( NativeActivity* pActivity );
+// 			~NativeInterface();
 
-			// Application state
-			virtual void OnApplicationShutdown();
-			virtual void OnApplicationPaused();
-			virtual void OnApplicationResumed();
-			virtual void OnLowMemory();
+// 			// Application state
+// 			virtual void OnApplicationShutdown();
+// 			virtual void OnApplicationPaused();
+// 			virtual void OnApplicationResumed();
+// 			virtual void OnLowMemory();
 
-			// Surface
-			virtual void OnSurfaceChanged( int iFormat, int iWidth, int iHeight );
-			virtual void OnSurfaceCreated( jobject pSurface );
-			virtual void OnSurfaceDestroyed();
+// 			// Surface
+// 			virtual void OnSurfaceChanged( int iFormat, int iWidth, int iHeight );
+// 			virtual void OnSurfaceCreated( jobject pSurface );
+// 			virtual void OnSurfaceDestroyed();
 
-			// Window state
-			virtual void OnWindowHidden();
-			virtual void OnWindowShown();
+// 			// Window state
+// 			virtual void OnWindowHidden();
+// 			virtual void OnWindowShown();
 
-			// Input
-			virtual void OnTouch( int iPointerID, float fPosX, float fPosY, int iAction );
-			virtual void OnKeyUp( int iKeyCode, int iUnicodeChar );
+// 			// Input
+// 			virtual void OnTouch( int iPointerID, float fPosX, float fPosY, int iAction );
+// 			virtual void OnKeyUp( int iKeyCode, int iUnicodeChar );
 
-//			// Play Services
-//			virtual void OnSignInSucceeded( char* pAccountName );
-//			virtual void OnSignInFailed();
+// //			// Play Services
+// //			virtual void OnSignInSucceeded( char* pAccountName );
+// //			virtual void OnSignInFailed();
 
-			virtual void setAssetManager(jobject pAssetManager);
+// 			virtual void setAssetManager(jobject pAssetManager);
 
-//			// Interfaces
-//			virtual IAppStateInterface* GetAppStateInterface();
+// //			// Interfaces
+// //			virtual IAppStateInterface* GetAppStateInterface();
 
-		private:
-			NativeActivity* m_pActivity;
-		};
+// 		private:
+// 			NativeActivity* m_pActivity;
+// 		};
 
-		friend class NativeInterface;
-		friend void SetJNI( JNIEnv* pEnv, jobject pObj, INativeInterface** pInterface );
+		// friend class NativeInterface;
+		friend void SetJNI( JNIEnv* pEnv, jobject pObj);
 		void InitAppDir();
 	};
 

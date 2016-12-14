@@ -125,19 +125,19 @@ namespace OgreNative
 		}
 	}
 
-	void NativeActivity::DispatchMessage( AndroidMessageType eMessage )
-	{
-		if ( m_pMessageCallback != NULL )
-		{
-			AndroidMessage message;
-			message.iMessageID = eMessage;
+	// void NativeActivity::DispatchMessage( AndroidMessageType eMessage )
+	// {
+	// 	if ( m_pMessageCallback != NULL )
+	// 	{
+	// 		AndroidMessage message;
+	// 		message.iMessageID = eMessage;
 
-			// Send message
-			m_pMessageCallback( message );
-		}
-	}
+	// 		// Send message
+	// 		m_pMessageCallback( message );
+	// 	}
+	// }
 
-	void NativeActivity::SetJNI( JNIEnv* pEnv, jobject pObj, INativeInterface** pInterface )
+	void NativeActivity::SetJNI( JNIEnv* pEnv, jobject pObj )
 	{
 		m_pEnv = pEnv;
 		m_pObj = pEnv->NewGlobalRef( pObj );
@@ -172,7 +172,7 @@ namespace OgreNative
 
 		//GooglePlayServices::Init( pEnv, m_pContext );
 
-		*pInterface = new NativeInterface( this );
+		// *pInterface = new NativeInterface( this );
 	}
 
 	jobject NativeActivity::GetSystemService( const char* pServiceName )
@@ -195,7 +195,7 @@ namespace OgreNative
 				m_pEventHandler->OnSurfaceCreated();
 			}
 
-			DispatchMessage( AndroidMessage_SurfaceCreated );
+			// DispatchMessage( AndroidMessage_SurfaceCreated );
 		}
 
 		else
@@ -210,7 +210,7 @@ namespace OgreNative
 					m_pEventHandler->OnSurfaceDestroyed();
 				}
 
-				DispatchMessage( AndroidMessage_SurfaceDestroyed );
+				// DispatchMessage( AndroidMessage_SurfaceDestroyed );
 			}
 		}
 	}
@@ -253,156 +253,156 @@ namespace OgreNative
 	/**********************************************************************************/
 	/*                                 NativeInterface                                */
 	/**********************************************************************************/
-	NativeActivity::NativeInterface::NativeInterface( NativeActivity* pActivity )
+	// NativeActivity::NativeInterface::NativeInterface( NativeActivity* pActivity )
+	// {
+	// 	m_pActivity = pActivity;
+	// }
+
+	// NativeActivity::NativeInterface::~NativeInterface()
+	// {
+
+	// }
+
+	void NativeActivity::OnSurfaceCreated( jobject pSurface )
 	{
-		m_pActivity = pActivity;
+		SetSurface( pSurface );
 	}
 
-	NativeActivity::NativeInterface::~NativeInterface()
-	{
-
-	}
-
-	void NativeActivity::NativeInterface::OnSurfaceCreated( jobject pSurface )
-	{
-		m_pActivity->SetSurface( pSurface );
-	}
-
-	void NativeActivity::NativeInterface::OnSurfaceChanged( int iFormat, int iWidth, int iHeight )
+	void NativeActivity::OnSurfaceChanged( int iFormat, int iWidth, int iHeight )
 	{
 		//LOGV( "[Native] OnSurfaceChanged: Width: %i, Height: %i, Format: %i.", iWidth, iHeight, iFormat );
 
-		if ( m_pActivity->m_pEventHandler )
+		if ( m_pEventHandler )
 		{
-			m_pActivity->m_pEventHandler->OnSurfaceChanged( iFormat, iWidth, iHeight );
+			m_pEventHandler->OnSurfaceChanged( iFormat, iWidth, iHeight );
 		}
 
-		// Create surface data
-		AndroidSurfaceChanged surfaceChanged;
-		surfaceChanged.iFormat 	= iFormat;
-		surfaceChanged.iWidth	= iWidth;
-		surfaceChanged.iHeight	= iHeight;
+		// // Create surface data
+		// AndroidSurfaceChanged surfaceChanged;
+		// surfaceChanged.iFormat 	= iFormat;
+		// surfaceChanged.iWidth	= iWidth;
+		// surfaceChanged.iHeight	= iHeight;
 
-		// Create message
-		AndroidMessage message;
-		message.iMessageID = AndroidMessage_SurfaceChanged;
-		message.pData = &surfaceChanged;
+		// // Create message
+		// AndroidMessage message;
+		// message.iMessageID = AndroidMessage_SurfaceChanged;
+		// message.pData = &surfaceChanged;
 
-		// Send message
-		m_pActivity->DispatchMessage( message );
+		// // Send message
+		// m_pActivity->DispatchMessage( message );
 	}
 
-	void NativeActivity::NativeInterface::OnSurfaceDestroyed()
+	void NativeActivity::OnSurfaceDestroyed()
 	{
-		m_pActivity->SetSurface( NULL );
+		SetSurface( NULL );
 	}
 
-	void NativeActivity::NativeInterface::OnApplicationPaused()
+	void NativeActivity::OnApplicationPaused()
 	{
-		if ( m_pActivity->m_pEventHandler )
+		if (m_pEventHandler )
 		{
-			m_pActivity->m_pEventHandler->OnPause();
+			m_pEventHandler->OnPause();
 		}
 
-		m_pActivity->DispatchMessage( AndroidMessage_ApplicationPaused );
+		// m_pActivity->DispatchMessage( AndroidMessage_ApplicationPaused );
 	}
 
-	void NativeActivity::NativeInterface::OnApplicationShutdown()
+	void NativeActivity::OnApplicationShutdown()
 	{
-		if ( m_pActivity->m_pEventHandler )
+		if ( m_pEventHandler )
 		{
-			m_pActivity->m_pEventHandler->OnShutdown();
+			m_pEventHandler->OnShutdown();
 		}
 
-		m_pActivity->DispatchMessage( AndroidMessage_ApplicationShutdown );
+		// m_pActivity->DispatchMessage( AndroidMessage_ApplicationShutdown );
 	}
 
-	void NativeActivity::NativeInterface::OnLowMemory()
+	void NativeActivity::OnLowMemory()
 	{
-		if ( m_pActivity->m_pEventHandler )
+		if ( m_pEventHandler )
 		{
-			m_pActivity->m_pEventHandler->OnLowMemory();
+			m_pEventHandler->OnLowMemory();
 		}
 
-		m_pActivity->DispatchMessage( AndroidMessage_LowMemory );
+		// m_pActivity->DispatchMessage( AndroidMessage_LowMemory );
 	}
 
-	void NativeActivity::NativeInterface::OnApplicationResumed()
+	void NativeActivity::OnApplicationResumed()
 	{
-		if ( m_pActivity->m_pEventHandler )
+		if ( m_pEventHandler )
 		{
-			m_pActivity->m_pEventHandler->OnResume();
+			m_pEventHandler->OnResume();
 		}
 
-		m_pActivity->DispatchMessage( AndroidMessage_ApplicationResumed );
+		// m_pActivity->DispatchMessage( AndroidMessage_ApplicationResumed );
 	}
 
-	void NativeActivity::NativeInterface::OnWindowHidden()
+	void NativeActivity::OnWindowHidden()
 	{
-		m_pActivity->SetVisible( false );
+		SetVisible( false );
 
-		if ( m_pActivity->m_pEventHandler )
+		if ( m_pEventHandler )
 		{
-			m_pActivity->m_pEventHandler->OnHidden();
+			m_pEventHandler->OnHidden();
 		}
 
-		m_pActivity->DispatchMessage( AndroidMessage_WindowHidden );
+		// m_pActivity->DispatchMessage( AndroidMessage_WindowHidden );
 	}
 
-	void NativeActivity::NativeInterface::OnWindowShown()
+	void NativeActivity::OnWindowShown()
 	{
-		m_pActivity->SetVisible( true );
+		SetVisible( true );
 
-		if ( m_pActivity->m_pEventHandler )
+		if ( m_pEventHandler )
 		{
-			m_pActivity->m_pEventHandler->OnVisible();
+			m_pEventHandler->OnVisible();
 		}
 
-		m_pActivity->DispatchMessage( AndroidMessage_WindowVisible );
+		// m_pActivity->DispatchMessage( AndroidMessage_WindowVisible );
 	}
 
-	void NativeActivity::NativeInterface::OnTouch( int iPointerID, float fPosX, float fPosY, int iAction )
+	void NativeActivity::OnTouch( int iPointerID, float fPosX, float fPosY, int iAction )
 	{
-		if ( m_pActivity->m_pEventHandler )
+		if ( m_pEventHandler )
 		{
-			m_pActivity->m_pEventHandler->OnTouch( iPointerID, fPosX, fPosY, iAction );
+			m_pEventHandler->OnTouch( iPointerID, fPosX, fPosY, iAction );
 		}
 
-		// Create touch data
-		AndroidTouch touch;
-		touch.iPointerID = iPointerID;
-		touch.fPosX = fPosX;
-		touch.fPosY	= fPosY;
-		touch.iAction = iAction;
+		// // Create touch data
+		// AndroidTouch touch;
+		// touch.iPointerID = iPointerID;
+		// touch.fPosX = fPosX;
+		// touch.fPosY	= fPosY;
+		// touch.iAction = iAction;
 
-		// Create message
-		AndroidMessage message;
-		message.iMessageID = AndroidMessage_OnTouch;
-		message.pData = &touch;
+		// // Create message
+		// AndroidMessage message;
+		// message.iMessageID = AndroidMessage_OnTouch;
+		// message.pData = &touch;
 
-		// Send message
-		m_pActivity->DispatchMessage( message );
+		// // Send message
+		// m_pActivity->DispatchMessage( message );
 	}
 
-	void NativeActivity::NativeInterface::OnKeyUp( int iKeyCode, int iUnicodeChar )
+	void NativeActivity::OnKeyUp( int iKeyCode, int iUnicodeChar )
 	{
-		if ( m_pActivity->m_pEventHandler )
+		if ( m_pEventHandler )
 		{
-			m_pActivity->m_pEventHandler->OnKey( iKeyCode, iUnicodeChar );
+			m_pEventHandler->OnKey( iKeyCode, iUnicodeChar );
 		}
 
-		// Create key data
-		AndroidKey keyMessage;
-		keyMessage.iKeyCode = iKeyCode;
-		keyMessage.iUnicodeChar = (wchar_t)iUnicodeChar;
+		// // Create key data
+		// AndroidKey keyMessage;
+		// keyMessage.iKeyCode = iKeyCode;
+		// keyMessage.iUnicodeChar = (wchar_t)iUnicodeChar;
 
-		// Create message
-		AndroidMessage message;
-		message.iMessageID = AndroidMessage_OnKey;
-		message.pData = &keyMessage;
+		// // Create message
+		// AndroidMessage message;
+		// message.iMessageID = AndroidMessage_OnKey;
+		// message.pData = &keyMessage;
 
-		// Send message
-		m_pActivity->DispatchMessage( message );
+		// // Send message
+		// m_pActivity->DispatchMessage( message );
 	}
 
 //	void NativeActivity::NativeInterface::OnSignInSucceeded( char* pAccountName )
@@ -414,11 +414,11 @@ namespace OgreNative
 //	{
 //		GooglePlayServices::OnSignInFailed();
 //	}
-
-	void NativeActivity::NativeInterface::setAssetManager(jobject pAssetManager) {
-		m_pActivity->setAssetManager( pAssetManager );
-	}
-
+//
+//	void NativeActivity::setAssetManager(jobject pAssetManager) {
+//		setAssetManager( pAssetManager );
+//	}
+//
 //	IAppStateInterface* NativeActivity::NativeInterface::GetAppStateInterface()
 //	{
 //		return &m_AppState;

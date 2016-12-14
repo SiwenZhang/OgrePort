@@ -3,94 +3,99 @@
 
 namespace OgreNative
 {
-	NativeActivity s_NativeActivity = NativeActivity();
-	static JNIEnv* s_pEnv = NULL;
-	static jobject s_pActivity = NULL;
+	OgreNative::NativeActivity* s_NativeActivity = NULL;
+	//static JNIEnv* s_pEnv = NULL;
+	//static jobject s_pActivity = NULL;
 
 	NativeActivity& GetNativeActivity()
 	{
-		return s_NativeActivity;
+		return *s_NativeActivity;
 	}
 
 	JNIEnv* GetJNIEnv()
 	{
-		return s_pEnv;
+		return s_NativeActivity->GetJNI();
 	}
 
 	jobject GetJNIActivity()
 	{
-		return s_pActivity;
+		return s_NativeActivity->GetContext();
 	}
 
 	void PollEvents()
 	{
-		s_NativeActivity.PollEvents();
+		s_NativeActivity->PollEvents();
 	}
 
 	void SetEventCallback( MessageCallbackFunction pCallback )
 	{
-		s_NativeActivity.SetEventCallback( pCallback );
-	}
+        s_NativeActivity->SetEventCallback( pCallback );
+    }
 
 	void SetEventHandler( IAndroidHandler* pHandler )
 	{
-		s_NativeActivity.SetEventHandler( pHandler );
-	}
-
-	void SetJNI( JNIEnv* pEnv, jobject pObj, INativeInterface** pInterface )
-	{
-		LOGV( "[Android]: Setting JNI Environment." );
-		s_pEnv = pEnv;
-
-		s_NativeActivity.SetJNI( pEnv, pObj, pInterface );
-		s_pActivity = s_NativeActivity.GetContext();
+		s_NativeActivity->SetEventHandler( pHandler );
 	}
 
 	ANativeWindow* GetWindow()
 	{
-		return s_NativeActivity.GetWindow();
+		return s_NativeActivity->GetWindow();
 	}
 
 	AAssetManager* GetAssetManager()
 	{
-		return s_NativeActivity.GetAssetManager();
+		return s_NativeActivity->GetAssetManager();
 	}
 
 	bool IsWindowVisible()
 	{
-		return s_NativeActivity.IsVisible();
+		return s_NativeActivity->IsVisible();
 	}
 
 	void ShowKeyboard()
 	{
-		s_NativeActivity.ShowKeyboard();
+		s_NativeActivity->ShowKeyboard();
 	}
 
 	void HideKeyboard()
 	{
-		s_NativeActivity.HideKeyboard();
+		s_NativeActivity->HideKeyboard();
 	}
 
 	const char* GetAppDir()
 	{
-		return s_NativeActivity.GetAppDir();
+		return s_NativeActivity->GetAppDir();
 	}
 
 	ClassLoader& GetClassLoader()
 	{
-		return s_NativeActivity.GetClassLoader();
+		return s_NativeActivity->GetClassLoader();
 	}
 
 	NotificationManager& GetNotificationManager()
 	{
-		return s_NativeActivity.GetNotificationManager();
+		return s_NativeActivity->GetNotificationManager();
 	}
 }
 
 extern "C"
 {
-	void init_native_activity( JNIEnv* pEnv, jobject pObj, OgreNative::INativeInterface** pInterface )
+	void init_native_activity( JNIEnv* pEnv, jobject pObj, OgreNative::NativeActivity** pInterface )
 	{
-		OgreNative::SetJNI( pEnv, pObj, pInterface );
+		LOGV( "[Android]: Setting JNI Environment." );
+		//s_pEnv = pEnv;
+
+		OgreNative::s_NativeActivity = new OgreNative::NativeActivity();
+
+		OgreNative::s_NativeActivity->SetJNI( pEnv, pObj );
+		//s_pActivity = s_NativeActivity->GetContext();
+
+		*pInterface = OgreNative::s_NativeActivity;
 	}
+
+    void uninit_native_activity( JNIEnv* pEnv, jobject pObj, OgreNative::NativeActivity** pInterface )
+    {
+        delete *pInterface;
+        *pInterface = NULL;
+    }
 }

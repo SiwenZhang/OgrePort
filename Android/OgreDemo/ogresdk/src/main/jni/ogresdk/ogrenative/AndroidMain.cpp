@@ -3,7 +3,6 @@
 #include <stdio.h>
 
 #include "AndroidLog.h"
-#include "INativeInterface.h"
 #include "Android.h"
 
 using namespace OgreNative;
@@ -101,7 +100,10 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* pJavaVM, void* reserved)
 //}
 //#endif
 
-INativeInterface* s_pNativeInterface = NULL;
+// INativeInterface* s_pNativeInterface = NULL;
+
+NativeActivity* s_pNativeActivity = NULL;
+
 JNIEXPORT void JNICALL nativeMain( JNIEnv* pEnv, jobject pObj, jstring strApplicationName )
 {
 	// Application Name
@@ -159,115 +161,117 @@ JNIEXPORT void JNICALL nativeMain( JNIEnv* pEnv, jobject pObj, jstring strApplic
 /**********************************************************************************/
 JNIEXPORT void JNICALL nativeOnTouch( JNIEnv* env, jobject obj, int iPointerID, float fPosX, float fPosY, int iAction )
 {
-	if ( s_pNativeInterface )
+	if ( s_pNativeActivity )
 	{
-		s_pNativeInterface->OnTouch( iPointerID, fPosX, fPosY, iAction );
+		s_pNativeActivity->OnTouch( iPointerID, fPosX, fPosY, iAction );
 	}
 }
 
 JNIEXPORT void JNICALL nativeOnKeyUp( JNIEnv* env, jobject obj, int iKeyCode, int iUnicodeChar )
 {
-	if ( s_pNativeInterface )
+	if ( s_pNativeActivity )
 	{
-		s_pNativeInterface->OnKeyUp( iKeyCode, iUnicodeChar );
+		s_pNativeActivity->OnKeyUp( iKeyCode, iUnicodeChar );
 	}
 }
 
 JNIEXPORT void JNICALL nativeOnSurfaceChanged( JNIEnv* env, jobject obj, int iFormat, int iWidth, int iHeight )
 {
 	//LOGV( "[Native]: nativeOnSurfaceChanged." );
-	if ( s_pNativeInterface )
+	if ( s_pNativeActivity )
 	{
-		s_pNativeInterface->OnSurfaceChanged( iFormat, iWidth, iHeight );
+		s_pNativeActivity->OnSurfaceChanged( iFormat, iWidth, iHeight );
 	}
 }
 
 JNIEXPORT void JNICALL nativeOnSurfaceCreated( JNIEnv* pEnv, jobject pObj, jobject pSurface )
 {
 	//LOGV( "[Native]: nativeOnSurfaceCreated." );
-	if ( s_pNativeInterface )
+	if ( s_pNativeActivity )
 	{
-		s_pNativeInterface->OnSurfaceCreated( pSurface );
+		s_pNativeActivity->OnSurfaceCreated( pSurface );
 	}
 }
 
 JNIEXPORT void JNICALL nativeOnSurfaceDestroyed( JNIEnv* pEnv, jobject pObj )
 {
 	//LOGV( "[Native]: nativeOnSurfaceDestroyed." );
-	if ( s_pNativeInterface )
+	if ( s_pNativeActivity )
 	{
-		s_pNativeInterface->OnSurfaceDestroyed();
+		s_pNativeActivity->OnSurfaceDestroyed();
 	}
 }
 
 JNIEXPORT void JNICALL nativeApplicationPaused( JNIEnv* pEnv, jobject pObj )
 {
 	//LOGV( "[Native]: nativeApplicationPaused." );
-	if ( s_pNativeInterface )
+	if ( s_pNativeActivity )
 	{
-		s_pNativeInterface->OnApplicationPaused();
+		s_pNativeActivity->OnApplicationPaused();
 	}
 }
 
 JNIEXPORT void JNICALL nativeApplicationResumed( JNIEnv* pEnv, jobject pObj )
 {
 	//LOGV( "[Native]: nativeApplicationResumed." );
-	if ( s_pNativeInterface )
+	if ( s_pNativeActivity )
 	{
-		s_pNativeInterface->OnApplicationResumed();
+		s_pNativeActivity->OnApplicationResumed();
 	}
 }
 
 JNIEXPORT void JNICALL nativeWindowShown( JNIEnv* pEnv, jobject pObj )
 {
 	//LOGV( "[Native]: nativeWindowShown." );
-	if ( s_pNativeInterface )
+	if ( s_pNativeActivity )
 	{
-		s_pNativeInterface->OnWindowShown();
+		s_pNativeActivity->OnWindowShown();
 	}
 }
 
 JNIEXPORT void JNICALL nativeWindowHidden( JNIEnv* pEnv, jobject pObj )
 {
 	//LOGV( "[Native]: nativeWindowHidden." );
-	if ( s_pNativeInterface )
+	if ( s_pNativeActivity )
 	{
-		s_pNativeInterface->OnWindowHidden();
+		s_pNativeActivity->OnWindowHidden();
 	}
 }
 
 JNIEXPORT void JNICALL nativeOnShutdown( JNIEnv* pEnv, jobject pObj )
 {
 	//LOGV( "[Native]: nativeOnShutdown." );
-	if ( s_pNativeInterface )
+	if ( s_pNativeActivity )
 	{
-		s_pNativeInterface->OnApplicationShutdown();
+		s_pNativeActivity->OnApplicationShutdown();
 	}
 }
 
 JNIEXPORT void JNICALL nativeOnLowMemory( JNIEnv* pEnv, jobject pObj )
 {
 	//LOGV( "[Native]: nativeOnLowMemory." );
-	if ( s_pNativeInterface )
+	if ( s_pNativeActivity )
 	{
-		s_pNativeInterface->OnLowMemory();
+		s_pNativeActivity->OnLowMemory();
 	}
 }
 
 JNIEXPORT void JNICALL nativeInit( JNIEnv* pEnv, jobject pObj, jobject pAssetManager ) {
 	// Init native activity
-	init_native_activity( pEnv, pObj, &s_pNativeInterface );
+	init_native_activity( pEnv, pObj, &s_pNativeActivity );
 
-	if ( s_pNativeInterface )
+	if ( s_pNativeActivity )
 	{
-		s_pNativeInterface->setAssetManager(pAssetManager);
+		s_pNativeActivity->setAssetManager(pAssetManager);
 	}
 }
 
 JNIEXPORT void JNICALL nativeUninit(JNIEnv* pEnv, jobject pObj) {
 	// Release the native interface
-	delete s_pNativeInterface;
-	s_pNativeInterface = NULL;
+//	delete s_pNativeActivity;
+//	s_pNativeActivity = NULL;
+
+	uninit_native_activity( pEnv, pObj, &s_pNativeActivity);
 }
 
 // /*
