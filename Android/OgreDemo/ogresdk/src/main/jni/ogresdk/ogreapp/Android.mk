@@ -17,6 +17,7 @@ LOCAL_C_INCLUDES	:= \
                $(OGRE_ROOT)/RenderSystems/GLES2/include/EGL/Android \
                $(OGRE_ROOT)/PlugIns/OctreeSceneManager/include \
                $(OGRE_ROOT)/Plugins/ParticleFX/include \
+               $(OIS_ROOT)/includes \
 
 LOCAL_LDLIBS		:= -ldl -llog -lz -landroid -lEGL -lGLESv2
 
@@ -30,8 +31,9 @@ LOCAL_STATIC_LIBRARIES := \
                 libogremain \
                 libogrerendersystems \
                 libogreplugins \
-                android_native_app_glue \
                 cpufeatures \
+                libois \
+#                android_native_app_glue \
 
 LOCAL_SHARED_LIBRARIES := \
 				ogrenative
@@ -39,4 +41,4 @@ LOCAL_SHARED_LIBRARIES := \
 include $(BUILD_SHARED_LIBRARY)
 
 $(call import-module,android/cpufeatures)
-$(call import-module,android/native_app_glue)
+#$(call import-module,android/native_app_glue)
