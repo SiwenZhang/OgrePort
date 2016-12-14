@@ -36,7 +36,12 @@
 #define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "OgreSample", __VA_ARGS__))
 #define LOGE(...) ((void)__android_log_print(ANDROID_LOG_ERROR, "OgreSample", __VA_ARGS__))
 
-class OgreMainApp : public IAndroidHandler {
+class OgreMainApp
+        : public IAndroidHandler,
+         public Ogre::WindowEventListener,
+         public Ogre::FrameListener,
+         public Ogre::RenderTargetListener {
+
 public:
 	public:
 	// Application
@@ -116,6 +121,8 @@ private:
 
 			gRenderWnd = gRoot->createRenderWindow("OgreWindow", 0, 0, false, &opt);
 
+            Ogre::WindowEventUtilities::addWindowEventListener(gRenderWnd, this);
+
 			InitStartScene();
         }
         else
@@ -177,6 +184,44 @@ private:
 	 //   	pointLight->setSpecularColour(Ogre::ColourValue::Red);
 
 	//	mRayScnQuery = gSceneMgr->createRayQuery(Ogre::Ray());
+
+	      Ogre::TexturePtr rttTexture =
+            Ogre::TextureManager::getSingleton().createManual(
+              "RttTex",
+              Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
+              Ogre::TEX_TYPE_2D,
+              gRenderWnd->getWidth(), gRenderWnd->getHeight(),
+              0,
+              Ogre::PF_R8G8B8,
+              Ogre::TU_RENDERTARGET);
+
+          Ogre::RenderTexture* renderTexture = rttTexture->getBuffer()->getRenderTarget();
+          renderTexture->addViewport(camera);
+          renderTexture->getViewport(0)->setClearEveryFrame(true);
+          renderTexture->getViewport(0)->setBackgroundColour(Ogre::ColourValue::Black);
+          renderTexture->getViewport(0)->setOverlaysEnabled(false);
+
+//          renderTexture->update();
+//          renderTexture->writeContentsToFile("start.png");
+
+          mMiniscreen = new Ogre::Rectangle2D(true);
+          mMiniscreen->setCorners(.5, 1.0, 1.0, .5);
+          mMiniscreen->setBoundingBox(Ogre::AxisAlignedBox::BOX_INFINITE);
+
+          Ogre::SceneNode* miniscreenNode =
+            gSceneMgr->getRootSceneNode()->createChildSceneNode();
+          miniscreenNode->attachObject(mMiniscreen);
+
+          Ogre::MaterialPtr renderMat =
+            Ogre::MaterialManager::getSingleton().create(
+              "RttMat",
+              Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+          renderMat->getTechnique(0)->getPass(0)->setLightingEnabled(false);
+          renderMat->getTechnique(0)->getPass(0)->createTextureUnitState("RttTex");
+
+          mMiniscreen->setMaterial("RttMat");
+
+          renderTexture->addListener(this);
 	}
 
 	Ogre::DataStreamPtr openAPKFile(const Ogre::String& fileName)
@@ -251,7 +296,7 @@ public:
 	}
 
 	virtual ~OgreMainApp() {
-
+	    Ogre::WindowEventUtilities::removeWindowEventListener(gRenderWnd, this);
 	}
 
 private:
@@ -272,6 +317,25 @@ private:
 
 private:
     OgreNative::IAppInterface* mAppInterface;
+
+private:
+    virtual bool frameRenderingQueued(const Ogre::FrameEvent& fe) {
+        //Do nothing at all
+    }
+
+    //////////////////////
+    // Tutorial Section //
+    //////////////////////
+    virtual void preRenderTargetUpdate(const Ogre::RenderTargetEvent& rte) {
+        mMiniscreen->setVisible(false);
+    }
+
+    virtual void postRenderTargetUpdate(const Ogre::RenderTargetEvent& rte) {
+        mMiniscreen->setVisible(true);
+    }
+
+private:
+    Ogre::Rectangle2D* mMiniscreen;
 };
 
 #ifdef __cplusplus
