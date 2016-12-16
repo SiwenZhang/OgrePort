@@ -147,7 +147,7 @@ namespace OgreNative
 		m_pJavaClass = pEnv->GetObjectClass( pObj );
 
 		// Retrieve Java methods
-		m_hPeekMessageMethod 	= pEnv->GetMethodID( m_pJavaClass, "peekMessage", "()Lcom/ccsu/ogresdk/OgreNativeMessage;" );
+		m_hPeekMessageMethod 	= pEnv->GetMethodID( m_pJavaClass, "peekMessage", "()Lcom/ccsu/ogresdk/OgreMessage;" );
 		m_hPollMessagesMethod 	= pEnv->GetMethodID( m_pJavaClass, "pollMessages", "()V" );
 
 		m_hShowKeyboardMethod 	= pEnv->GetMethodID( m_pJavaClass, "showKeyboard", "()V" );
@@ -156,7 +156,7 @@ namespace OgreNative
 		m_hGetAppDirMethod		= pEnv->GetMethodID( m_pJavaClass, "getAppDir", "()Ljava/lang/String;" );
 
 		// Message class
-		m_hMessageClass 	= pEnv->FindClass( "com/ccsu/ogresdk/OgreNativeMessage" );
+		m_hMessageClass 	= pEnv->FindClass( "com/ccsu/ogresdk/OgreMessage" );
 		m_hMessageIDField 	= pEnv->GetFieldID( m_hMessageClass, "mID", "I" );
 
 		// Init member variables

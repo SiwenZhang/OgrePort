@@ -4,7 +4,7 @@ package com.ccsu.ogresdk;
  * Created by liuenbao on 12/13/16.
  */
 
-public class OgreNativeMessage {
+public class OgreMessage {
     // Events
     public enum NativeEventType {
         ApplicationShutdown(1001),    // Called on shutdown
@@ -51,7 +51,7 @@ public class OgreNativeMessage {
     /**
      * @param eType
      */
-    public OgreNativeMessage(NativeEventType eType) {
+    public OgreMessage(NativeEventType eType) {
         mType = eType;
         mID = eType.getValue();
     }

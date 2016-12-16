@@ -9,13 +9,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.ccsu.ogresdk.OgreNativeActivity"
+        <activity android:name="com.ccsu.ogredemo.MainSceneActivity"
             android:label="OgreGLES2Sample"
             android:configChanges="orientation|keyboardHidden"
-
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
-            <!-- Tell NativeActivity the name of or .so -->
-            <!--<meta-data android:name="android.app.lib_name" android:value="OgreGLES2Sample" />-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

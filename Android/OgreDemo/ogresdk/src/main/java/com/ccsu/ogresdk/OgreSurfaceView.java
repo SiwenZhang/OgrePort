@@ -2,7 +2,9 @@ package com.ccsu.ogresdk;
 
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.content.res.Configuration;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
@@ -22,9 +24,9 @@ import java.util.ArrayList;
  * Created by liuenbao on 12/13/16.
  */
 
-public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
+public class OgreSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
 
-    private static final OgreSDKLogger logger = new OgreSDKLogger(OgreNativeSurfaceView.class.getSimpleName());
+    private static final OgreSDKLogger logger = new OgreSDKLogger(OgreSurfaceView.class.getSimpleName());
 
     // Load native library
     static {
@@ -36,7 +38,7 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
         }
     }
 
-    private final WeakReference<OgreNativeSurfaceView> mThisWeakRef = new WeakReference<OgreNativeSurfaceView>(this);
+    private final WeakReference<OgreSurfaceView> mThisWeakRef = new WeakReference<OgreSurfaceView>(this);
     private Handler mHandler = null;
     private OgreNativeThread mNativeThread = null;
     private Context mContext = null;
@@ -44,15 +46,13 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
     /////////////////////////////////////////////////////////
     //                    Constructors                     //
     /////////////////////////////////////////////////////////
-    public OgreNativeSurfaceView(Context context, Handler handler) {
+    public OgreSurfaceView(Context context) {
         super(context);
-        mHandler = handler;
         Init(context);
     }
 
-    public OgreNativeSurfaceView(Context context, AttributeSet attrs, Handler handler) {
+    public OgreSurfaceView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mHandler = handler;
         Init(context);
     }
 
@@ -84,6 +84,9 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
 //        String strAppName = context.getString(stringId);
 
         String strAppName = "ogreapp";
+
+        //Create handle main thread communication
+        mHandler = new Handler(Looper.getMainLooper());
 
         // Start the NativeThread
         mNativeThread = new OgreNativeThread(strAppName, mThisWeakRef);
@@ -333,8 +336,8 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
         private boolean mExited = false;
 
         private ArrayList<Runnable> mEventQueue = new ArrayList<Runnable>();
-        private ArrayList<OgreNativeMessage> mMessageQueue = new ArrayList<OgreNativeMessage>();
-        private WeakReference<OgreNativeSurfaceView> mNativeSurfaceViewWeakRef = null;
+        private ArrayList<OgreMessage> mMessageQueue = new ArrayList<OgreMessage>();
+        private WeakReference<OgreSurfaceView> mNativeSurfaceViewWeakRef = null;
 
         // Focus and rendering related
         private boolean mPaused = true;
@@ -356,14 +359,14 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
             mHasSurface = false;
             handleVisibility();
 
-            OgreNativeSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
+            OgreSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
             if (pNativeSurfaceView != null) {
                 pNativeSurfaceView.nativeOnSurfaceDestroyed();
             }
         }
 
         public void onSurfaceCreated(Surface surface) {
-            OgreNativeSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
+            OgreSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
             if (pNativeSurfaceView != null) {
                 pNativeSurfaceView.nativeOnSurfaceCreated(surface);
             }
@@ -373,7 +376,7 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
         }
 
         public void onSurfaceChanged(int iFormat, int iWidth, int iHeight) {
-            OgreNativeSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
+            OgreSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
             if (pNativeSurfaceView != null) {
                 pNativeSurfaceView.nativeOnSurfaceChanged(iFormat, iWidth, iHeight);
             }
@@ -383,7 +386,7 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
             if (mIsVisible) {
                 if (isVisible() == false) {
                     // Handle visibility
-                    OgreNativeSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
+                    OgreSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
                     if (pNativeSurfaceView != null) {
                         pNativeSurfaceView.nativeWindowHidden();
                     }
@@ -394,7 +397,7 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
             } else {
                 if (isVisible() == true) {
                     // Handle visibility
-                    OgreNativeSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
+                    OgreSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
                     if (pNativeSurfaceView != null) {
                         pNativeSurfaceView.nativeWindowShown();
                     }
@@ -405,7 +408,7 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
             }
         }
 
-        OgreNativeThread(String applicationName, WeakReference<OgreNativeSurfaceView> pNativeSurfaceView) {
+        OgreNativeThread(String applicationName, WeakReference<OgreSurfaceView> pNativeSurfaceView) {
             super();
 
             mApplicationName = applicationName;
@@ -419,7 +422,7 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
             setName("NativeThread " + getId());
 
             // Run native main loop
-            OgreNativeSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
+            OgreSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
             if (pNativeSurfaceView != null) {
                 pNativeSurfaceView.nativeInit(pNativeSurfaceView.mContext.getAssets());
                 pNativeSurfaceView.nativeMain(mApplicationName);
@@ -433,7 +436,7 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
             }
 
             // Send quit message
-            Message msg = pNativeSurfaceView.mHandler.obtainMessage(OgreNativeMessage.NATIVE_QUIT);
+            Message msg = pNativeSurfaceView.mHandler.obtainMessage(OgreMessage.NATIVE_QUIT);
             pNativeSurfaceView.mHandler.sendMessage(msg);
 
         }
@@ -452,7 +455,7 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
 
             mPaused = true;
 
-            OgreNativeSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
+            OgreSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
             if (pNativeSurfaceView != null) {
                 pNativeSurfaceView.nativeApplicationPaused();
             }
@@ -465,7 +468,7 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
 
             mPaused = false;
 
-            OgreNativeSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
+            OgreSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
             if (pNativeSurfaceView != null) {
                 pNativeSurfaceView.nativeApplicationResumed();
             }
@@ -500,7 +503,7 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
             queueEvent(new Runnable() {
                 @Override
                 public void run() {
-                    OgreNativeSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
+                    OgreSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
                     if (pNativeSurfaceView != null) {
                         logger.debug("Calling native shutdown");
 
@@ -525,14 +528,14 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
         //                        Input                       //
         /////////////////////////////////////////////////////////
         public void onTouch(int iIndex, float fPosX, float fPosY, int iAction) {
-            OgreNativeSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
+            OgreSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
             if (pNativeSurfaceView != null) {
                 pNativeSurfaceView.nativeOnTouch(iIndex, fPosX, fPosY, iAction);
             }
         }
 
         public void onKeyUp(int iKeyCode, KeyEvent event) {
-            OgreNativeSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
+            OgreSurfaceView pNativeSurfaceView = mNativeSurfaceViewWeakRef.get();
             if (pNativeSurfaceView != null) {
                 pNativeSurfaceView.nativeOnKeyUp(iKeyCode, event.getUnicodeChar());
             }
@@ -558,7 +561,7 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
         /**
          * @param message
          */
-        public void queueEvent(OgreNativeMessage message) {
+        public void queueEvent(OgreMessage message) {
             if (message == null) {
                 throw new IllegalArgumentException("[queueEvent]: message must not be null");
             }
@@ -589,7 +592,7 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
          *
          * @param message
          */
-        public void queueMessage(OgreNativeMessage message) {
+        public void queueMessage(OgreMessage message) {
             if (message == null) {
                 throw new IllegalArgumentException("message must not be null");
             }
@@ -603,7 +606,7 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
         /**
          * @return
          */
-        public OgreNativeMessage peekMessage() {
+        public OgreMessage peekMessage() {
             synchronized( mMessageQueue )
             {
                 if (!mMessageQueue.isEmpty()) {
@@ -618,14 +621,14 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
          * into the NativeThread queue
          */
         private class MessageRunnable implements Runnable {
-            private OgreNativeMessage mMessage;
+            private OgreMessage mMessage;
             private OgreNativeThread mNativeThread;
 
             /**
              * @param thread  - the NativeThread
              * @param message - the Message to queue
              */
-            public MessageRunnable(OgreNativeThread thread, OgreNativeMessage message) {
+            public MessageRunnable(OgreNativeThread thread, OgreMessage message) {
                 mMessage = message;
                 mNativeThread = thread;
             }
@@ -707,8 +710,8 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
         return null;
     }
 
-    OgreNativeMessage peekMessage() {
-        OgreNativeMessage message = mNativeThread.peekMessage();
+    OgreMessage peekMessage() {
+        OgreMessage message = mNativeThread.peekMessage();
 
         return message;
     }
@@ -729,14 +732,14 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
     void showKeyboard() {
         logger.debug("[Native]: Show keyboard.");
 
-        Message msg = mHandler.obtainMessage(OgreNativeMessage.NATIVE_KEYBOARD_REQUEST_SHOW);
+        Message msg = mHandler.obtainMessage(OgreMessage.NATIVE_KEYBOARD_REQUEST_SHOW);
         mHandler.sendMessage(msg);
     }
 
     void hideKeyboard() {
         logger.debug("[Native]: Hide keyboard.");
 
-        Message msg = mHandler.obtainMessage(OgreNativeMessage.NATIVE_KEYBOARD_REQUEST_HIDE);
+        Message msg = mHandler.obtainMessage(OgreMessage.NATIVE_KEYBOARD_REQUEST_HIDE);
         mHandler.sendMessage(msg);
     }
 
@@ -744,6 +747,17 @@ public class OgreNativeSurfaceView extends SurfaceView implements SurfaceHolder.
         return getContext().getFilesDir().getAbsolutePath();
     }
 
+    public void onConfigurationChanged(Configuration newConfig) {
+
+    }
+
+    public boolean injectEvent(KeyEvent event) {
+        return true;
+    }
+
+    public boolean injectEvent(MotionEvent event) {
+        return true;
+    }
 
     /* Native methods */
     public native void nativeInit(AssetManager assetManager);

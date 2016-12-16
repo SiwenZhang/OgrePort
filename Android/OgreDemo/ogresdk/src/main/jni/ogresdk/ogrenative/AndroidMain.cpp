@@ -86,7 +86,7 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* pJavaVM, void* reserved)
 
     // Get jclass with pEnv->FindClass.
     // Register methods with pEnv->RegisterNatives.
-    jclass jNativeSurfaceViewClass = pEnv->FindClass( "com/ccsu/ogresdk/OgreNativeSurfaceView" );
+    jclass jNativeSurfaceViewClass = pEnv->FindClass( "com/ccsu/ogresdk/OgreSurfaceView" );
     pEnv->RegisterNatives( jNativeSurfaceViewClass, g_NativActivityeMethods, NELEM( g_NativActivityeMethods ) );
 
     //jclass jCloudSaveHelperClass = pEnv->FindClass( "com/lunarsong/android/CloudSaveHelper" );
