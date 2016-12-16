@@ -41,7 +41,7 @@ namespace MyGUI
 	{
 	}
 
-	void OgreRenderManager::initialise(Ogre::RenderWindow* _window, Ogre::SceneManager* _scene)
+	void OgreRenderManager::initialise(Ogre::RenderTarget* _window, Ogre::SceneManager* _scene)
 	{
 		MYGUI_PLATFORM_ASSERT(!mIsInitialise, getClassTypeName() << " initialised twice");
 		MYGUI_PLATFORM_LOG(Info, "* Initialise: " << getClassTypeName());
@@ -67,8 +67,12 @@ namespace MyGUI
 		mActiveViewport = 0;
 
 		Ogre::Root* root = Ogre::Root::getSingletonPtr();
-		if (root != nullptr)
+		if (root != nullptr) {
+#ifdef DEBUG
+			LOGD("RenderSystem name is : %s", root->getRenderSystem()->getName().c_str());
+#endif
 			setRenderSystem(root->getRenderSystem());
+		}
 		setRenderWindow(_window);
 		setSceneManager(_scene);
 
@@ -114,7 +118,7 @@ namespace MyGUI
 			else if (vertex_type == Ogre::VET_COLOUR_ABGR)
 				mVertexFormat = VertexColourType::ColourABGR;
 
-			updateRenderInfo();
+			// updateRenderInfo();
 
 			//Update for opengles 2
 			if(!mRenderSystem->getFixedPipelineEnabled())
@@ -142,12 +146,12 @@ namespace MyGUI
 		return mRenderSystem;
 	}
 
-	void OgreRenderManager::setRenderWindow(Ogre::RenderWindow* _window)
+	void OgreRenderManager::setRenderWindow(Ogre::RenderTarget* _window)
 	{
 		// отписываемся
 		if (mWindow != nullptr)
 		{
-			Ogre::WindowEventUtilities::removeWindowEventListener(mWindow, this);
+			// Ogre::WindowEventUtilities::removeWindowEventListener(mWindow, this);
 			mWindow = nullptr;
 		}
 
@@ -155,7 +159,7 @@ namespace MyGUI
 
 		if (mWindow != nullptr)
 		{
-			Ogre::WindowEventUtilities::addWindowEventListener(mWindow, this);
+			// Ogre::WindowEventUtilities::addWindowEventListener(mWindow, this);
 
 			if (mWindow->getNumViewports() <= mActiveViewport &&
 				!mWindow->getViewport(mActiveViewport)->getOverlaysEnabled())
@@ -189,8 +193,8 @@ namespace MyGUI
 
 		if (mWindow != nullptr)
 		{
-			Ogre::WindowEventUtilities::removeWindowEventListener(mWindow, this);
-			Ogre::WindowEventUtilities::addWindowEventListener(mWindow, this);
+			// Ogre::WindowEventUtilities::removeWindowEventListener(mWindow, this);
+			// Ogre::WindowEventUtilities::addWindowEventListener(mWindow, this);
 
 			if (mWindow->getNumViewports() <= mActiveViewport)
 			{
@@ -267,7 +271,7 @@ namespace MyGUI
 	}
 
 	// для оповещений об изменении окна рендера
-	void OgreRenderManager::windowResized(Ogre::RenderWindow* _window)
+	void OgreRenderManager::windowResized(Ogre::RenderTarget* _window)
 	{
 		if (_window->getNumViewports() > mActiveViewport)
 		{
@@ -297,10 +301,20 @@ namespace MyGUI
 		{
 			mInfo.maximumDepth = mRenderSystem->getMaximumDepthInputValue();
 			mInfo.hOffset = mRenderSystem->getHorizontalTexelOffset() / float(mViewSize.width);
-			mInfo.vOffset = mRenderSystem->getVerticalTexelOffset() / float(mViewSize.height);
 			mInfo.aspectCoef = float(mViewSize.height) / float(mViewSize.width);
 			mInfo.pixScaleX = 1.0f / float(mViewSize.width);
-			mInfo.pixScaleY = 1.0f / float(mViewSize.height);
+
+			if (mWindow->requiresTextureFlipping()) {
+				mInfo.vOffset = mRenderSystem->getVerticalTexelOffset() / float(mViewSize.height) + 1;
+				mInfo.pixScaleY = -1.0f / float(mViewSize.height);
+			} else {
+				mInfo.vOffset = mRenderSystem->getVerticalTexelOffset() / float(mViewSize.height);
+				mInfo.pixScaleY = 1.0f / float(mViewSize.height);
+			}
+
+#ifdef DEBUG
+			LOGD("OgreRenderManager::updateRenderInfo hOffset : %f vOffset : %f pixScaleX : %f pixScaleY : %f", mInfo.hOffset, mInfo.vOffset, mInfo.pixScaleX, mInfo.pixScaleY);
+#endif
 		}
 	}
 
@@ -487,7 +501,7 @@ namespace MyGUI
 		return mActiveViewport;
 	}
 
-	Ogre::RenderWindow* OgreRenderManager::getRenderWindow()
+	Ogre::RenderTarget* OgreRenderManager::getRenderWindow()
 	{
 		return mWindow;
 	}

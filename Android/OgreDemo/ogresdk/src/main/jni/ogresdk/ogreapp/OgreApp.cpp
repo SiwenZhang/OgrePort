@@ -161,14 +161,6 @@ private:
 	//	vp->setMaterialScheme(Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME);
 
 		loadResources("resources.cfg");
-
-	    mPlatform = new MyGUI::OgrePlatform();
-	    mPlatform->initialise(gRenderWnd, gSceneMgr);
-	    mGUI = new MyGUI::Gui();
-
-	    mGUI->initialise();
-	    mButton = mGUI->createWidget<MyGUI::Button>("Button",10,10,300,50,MyGUI::Align::Default,"Main");
-	    mButton->setCaption("HelloWorld");
 	}
 
 	void InitGameScene()
@@ -217,15 +209,16 @@ private:
 
           renderTexture = rttTexture->getBuffer()->getRenderTarget();
           mRTTViewPort = renderTexture->addViewport(mRTTCamera);
-          // mRTTViewPort->setClearEveryFrame(true);
+          renderTexture->setAutoUpdated(true);
+          mRTTViewPort->setClearEveryFrame(true);
           mRTTViewPort->setBackgroundColour(Ogre::ColourValue::Green);
-          // mRTTViewPort->setOverlaysEnabled(true);
+          mRTTViewPort->setOverlaysEnabled(true);
 
 //          renderTexture->update();
 //          renderTexture->writeContentsToFile("start.png");
 
           mMiniscreen = new Ogre::Rectangle2D(true);
-          mMiniscreen->setCorners(.5, 1.0, 1.0, .5);
+          mMiniscreen->setCorners(-1.0, 1.0, 1.0, -1.0);
           mMiniscreen->setBoundingBox(Ogre::AxisAlignedBox::BOX_INFINITE);
 
           Ogre::SceneNode* miniscreenNode =
@@ -242,6 +235,14 @@ private:
           mMiniscreen->setMaterial("RttMat");
 
           renderTexture->addListener(this);
+
+			mPlatform = new MyGUI::OgrePlatform();
+			mPlatform->initialise(renderTexture, gSceneMgr);
+			mGUI = new MyGUI::Gui();
+
+			mGUI->initialise();
+			mButton = mGUI->createWidget<MyGUI::Button>("Button",10,10,800,600,MyGUI::Align::Default,"Main");
+			mButton->setCaption("HelloWorld");
 	}
 
 	Ogre::DataStreamPtr openAPKFile(const Ogre::String& fileName)
@@ -335,6 +336,8 @@ private:
 	Ogre::RenderTexture* renderTexture;
 	Ogre::Camera* mRTTCamera;
 
+	Ogre::Viewport* mSaveViewport;
+
 	AAssetManager* gAssetMgr;
 
 	Ogre::ConfigFile cf;
@@ -356,10 +359,18 @@ private:
     // Tutorial Section //
     //////////////////////
     virtual void preRenderTargetUpdate(const Ogre::RenderTargetEvent& rte) {
+    	// LOGD("preRenderTargetUpdate");
+    	Ogre::RenderSystem* system = Ogre::Root::getSingleton().getRenderSystem();
+    	mSaveViewport = system->_getViewport();
+    	system->_setViewport(mRTTViewPort);
         mMiniscreen->setVisible(false);
+        system->clearFrameBuffer(Ogre::FBT_COLOUR, Ogre::ColourValue::ZERO);
     }
 
     virtual void postRenderTargetUpdate(const Ogre::RenderTargetEvent& rte) {
+    	// LOGD("postRenderTargetUpdate");
+    	Ogre::RenderSystem* system = Ogre::Root::getSingleton().getRenderSystem();
+		// system->_setViewport(mSaveViewport);
         mMiniscreen->setVisible(true);
     }
 

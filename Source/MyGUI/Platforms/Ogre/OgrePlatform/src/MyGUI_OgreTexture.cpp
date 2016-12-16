@@ -11,6 +11,7 @@
 #include "MyGUI_OgreDiagnostic.h"
 #include "MyGUI_OgreRTTexture.h"
 #include <Ogre.h>
+#include <OgreCommon.h>
 
 #include "MyGUI_LastHeader.h"
 
@@ -112,7 +113,11 @@ namespace MyGUI
 		mTmpData = Ogre::PixelBox(mTexture->getWidth(), mTexture->getHeight(), mTexture->getDepth(), mTexture->getFormat());
 		mTmpData.data = new uint8[mTexture->getBuffer()->getSizeInBytes()];
 
+#ifdef DEBUG
+        LOGD("blitToMemory");
+#endif
 		mTexture->getBuffer()->blitToMemory(mTmpData);
+		//mTexture->getBuffer()->blitToMemory(Ogre::Box(0,0,0,mTexture->getWidth(), mTexture->getHeight(), mTexture->getDepth()), mTmpData);
 
 		return mTmpData.data;
 	}
@@ -214,6 +219,10 @@ namespace MyGUI
 		setFormat(_format);
 		setUsage(_usage);
 
+#ifdef DEBUG
+		LOGD("createManual width : %d height : %d", _width, _height);
+#endif
+
 		mTexture = Ogre::TextureManager::getSingleton().createManual(
 			mName,
 			mGroup,
@@ -234,6 +243,10 @@ namespace MyGUI
 		setUsage(TextureUsage::Default);
 
 		Ogre::TextureManager* manager = Ogre::TextureManager::getSingletonPtr();
+
+#ifdef DEBUG
+		LOGD("loadFromFile with name : %s", _filename.c_str());
+#endif
 
 		if ( !manager->resourceExists(_filename) )
 		{
@@ -302,6 +315,11 @@ namespace MyGUI
 
 	IRenderTarget* OgreTexture::getRenderTarget()
 	{
+
+#ifdef DEBUG
+		LOGD("OgreTexture::getRenderTarget");
+#endif
+
 		if (mRenderTarget == nullptr)
 			mRenderTarget = new OgreRTTexture(mTexture);
 

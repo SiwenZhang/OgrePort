@@ -29,7 +29,7 @@ namespace MyGUI
 	public:
 		OgreRenderManager();
 
-		void initialise(Ogre::RenderWindow* _window, Ogre::SceneManager* _scene);
+		void initialise(Ogre::RenderTarget* _window, Ogre::SceneManager* _scene);
 		void shutdown();
 
 		static OgreRenderManager& getInstance();
@@ -70,7 +70,7 @@ namespace MyGUI
 		void setRenderSystem(Ogre::RenderSystem* _render);
 		Ogre::RenderSystem* getRenderSystem();
 
-		void setRenderWindow(Ogre::RenderWindow* _window);
+		void setRenderWindow(Ogre::RenderTarget* _window);
 
 		/** Set scene manager where MyGUI will be rendered */
 		void setSceneManager(Ogre::SceneManager* _scene);
@@ -81,7 +81,7 @@ namespace MyGUI
 		/** Set GUI viewport index */
 		void setActiveViewport(unsigned short _num);
 
-		Ogre::RenderWindow* getRenderWindow();
+		Ogre::RenderTarget* getRenderWindow();
 
 		bool getManualRender();
 		void setManualRender(bool _value);
@@ -95,7 +95,7 @@ namespace MyGUI
 	private:
 		virtual void renderQueueStarted(Ogre::uint8 queueGroupId, const Ogre::String& invocation, bool& skipThisInvocation);
 		virtual void renderQueueEnded(Ogre::uint8 queueGroupId, const Ogre::String& invocation, bool& repeatThisInvocation);
-		virtual void windowResized(Ogre::RenderWindow* _window);
+		virtual void windowResized(Ogre::RenderTarget* _window);
 
 		// восстанавливаем буферы
 		virtual void eventOccurred(const Ogre::String& eventName, const Ogre::NameValuePairList* parameters);
@@ -114,7 +114,7 @@ namespace MyGUI
 		VertexColourType mVertexFormat;
 
 		// окно, на которое мы подписываемся для изменения размеров
-		Ogre::RenderWindow* mWindow;
+		Ogre::RenderTarget* mWindow;
 
 		// вьюпорт, с которым работает система
 		unsigned short mActiveViewport;
