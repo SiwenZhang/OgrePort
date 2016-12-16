@@ -104,6 +104,8 @@ public:
 		{
 			gRenderWnd->windowMovedOrResized();
 
+			// renderTexture->update();
+
 			gRoot->renderOneFrame();
 		}
 	}
@@ -155,7 +157,7 @@ private:
 		camera->setAutoAspectRatio(true);
 
 		vp = gRenderWnd->addViewport(camera);
-		vp->setBackgroundColour(Ogre::ColourValue(1.0f, 0.0f, 0.0f));
+		// vp->setBackgroundColour(Ogre::ColourValue(1.0f, 0.0f, 0.0f));
 	//	vp->setMaterialScheme(Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME);
 
 		loadResources("resources.cfg");
@@ -196,6 +198,13 @@ private:
 
 	//	mRayScnQuery = gSceneMgr->createRayQuery(Ogre::Ray());
 
+			mRTTCamera = gSceneMgr->createCamera("RTTCamera");
+			mRTTCamera->setNearClipDistance(0.1f);
+			mRTTCamera->setFarClipDistance(1000.0f);
+			mRTTCamera->setPosition(50,0, 0);
+			mRTTCamera->lookAt(0,0,0);
+			mRTTCamera->setAutoAspectRatio(true);
+
 	      Ogre::TexturePtr rttTexture =
             Ogre::TextureManager::getSingleton().createManual(
               "RttTex",
@@ -206,11 +215,11 @@ private:
               Ogre::PF_R8G8B8,
               Ogre::TU_RENDERTARGET);
 
-          Ogre::RenderTexture* renderTexture = rttTexture->getBuffer()->getRenderTarget();
-          renderTexture->addViewport(camera);
-          renderTexture->getViewport(0)->setClearEveryFrame(true);
-          renderTexture->getViewport(0)->setBackgroundColour(Ogre::ColourValue::Black);
-          renderTexture->getViewport(0)->setOverlaysEnabled(false);
+          renderTexture = rttTexture->getBuffer()->getRenderTarget();
+          mRTTViewPort = renderTexture->addViewport(mRTTCamera);
+          // mRTTViewPort->setClearEveryFrame(true);
+          mRTTViewPort->setBackgroundColour(Ogre::ColourValue::Green);
+          // mRTTViewPort->setOverlaysEnabled(true);
 
 //          renderTexture->update();
 //          renderTexture->writeContentsToFile("start.png");
@@ -316,11 +325,15 @@ private:
 	Ogre::SceneManager* gSceneMgr;
 	Ogre::ShaderGeneratorTechniqueResolverListener* gMatListener;
 	Ogre::StaticPluginLoader* gStaticPluginLoader;
-	Ogre::Camera* camera = NULL;
-	Ogre::SceneNode* pNode = NULL;
-	Ogre::RaySceneQuery* mRayScnQuery = NULL;
-	Ogre::TextAreaOverlayElement* textArea = NULL;
-	Ogre::Viewport* vp = NULL;
+	Ogre::Camera* camera;
+	Ogre::SceneNode* pNode;
+	Ogre::RaySceneQuery* mRayScnQuery;
+	Ogre::TextAreaOverlayElement* textArea;
+	Ogre::Viewport* vp;
+
+	Ogre::Viewport* mRTTViewPort;
+	Ogre::RenderTexture* renderTexture;
+	Ogre::Camera* mRTTCamera;
 
 	AAssetManager* gAssetMgr;
 
@@ -366,7 +379,7 @@ void ogreapp_main(OgreNative::IAppInterface* appInterface) {
 
     while (true) {
     	appInterface->PollEvents();
-
+    	
     	mainApp->renderOneFrame();
 
     	usleep(10 * 1000);
