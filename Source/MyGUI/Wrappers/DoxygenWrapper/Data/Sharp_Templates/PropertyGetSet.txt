@@ -1,0 +1,15 @@
+﻿		#region Property #{PropertyName}
+
+		[DllImport(DllName.m_dllName, CallingConvention = CallingConvention.Cdecl)]
+        #{ReturnValueMarshalAs}
+		private static extern #{ReturnTypeName} Export#{ThisName}_Get#{PropertyName}(IntPtr _widget);
+		[DllImport(DllName.m_dllName, CallingConvention = CallingConvention.Cdecl)]
+		private static extern void Export#{ThisName}_Set#{PropertyName}(IntPtr _widget, #{ValueMarshalAs1}#{ValueTypePrefix1}#{TypeName1} _value);
+
+		public #{TypeName} #{PropertyName}
+		{
+			get { return #{ReturnConvertBefore}Export#{ThisName}_Get#{PropertyName}(Native)#{ReturnConvertPost}; }
+			set { Export#{ThisName}_Set#{PropertyName}(Native, #{ValueTypePrefix1}value); }
+		}
+
+		#endregion

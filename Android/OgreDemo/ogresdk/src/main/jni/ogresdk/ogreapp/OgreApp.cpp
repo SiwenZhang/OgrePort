@@ -29,6 +29,9 @@
 
 #include "OgreStaticPluginLoader.h"
 
+#include "MyGUI.h"
+#include "MyGUI_OgrePlatform.h"
+
 #include "../ogrenative/IAppInterface.h"
 
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "OgreSample", __VA_ARGS__))
@@ -156,6 +159,14 @@ private:
 	//	vp->setMaterialScheme(Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME);
 
 		loadResources("resources.cfg");
+
+	    mPlatform = new MyGUI::OgrePlatform();
+	    mPlatform->initialise(gRenderWnd, gSceneMgr);
+	    mGUI = new MyGUI::Gui();
+
+	    mGUI->initialise();
+	    mButton = mGUI->createWidget<MyGUI::Button>("Button",10,10,300,50,MyGUI::Align::Default,"Main");
+	    mButton->setCaption("HelloWorld");
 	}
 
 	void InitGameScene()
@@ -314,6 +325,11 @@ private:
 	AAssetManager* gAssetMgr;
 
 	Ogre::ConfigFile cf;
+
+	//My GUI implement
+	MyGUI::Gui* mGUI;
+	MyGUI::OgrePlatform* mPlatform;
+	MyGUI::ButtonPtr mButton;
 
 private:
     OgreNative::IAppInterface* mAppInterface;

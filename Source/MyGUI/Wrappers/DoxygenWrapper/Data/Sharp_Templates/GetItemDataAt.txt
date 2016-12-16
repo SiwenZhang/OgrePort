@@ -1,0 +1,15 @@
+﻿		#region Method #{MethodName}
+
+		[DllImport(DllName.m_dllName, CallingConvention = CallingConvention.Cdecl)]
+        [return: ValueValueMarshalAs(UnmanagedType.IUnknown)]
+		private static extern object Export#{ThisName}_#{MethodName}_#{ValueName1}(IntPtr _native,
+			#{ValueMarshalAs1}#{ValueTypePrefix1}#{ValueTypeName1} #{ValueName1});
+
+		public object #{MethodName}(
+			#{TypeName1} #{ValueName1})
+		{
+			return Export#{ThisName}_#{MethodName}_#{ValueName1}(Native,
+				#{ValueTypePrefix1} #{ValueName1});
+		}
+
+		#endregion

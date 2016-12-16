@@ -1,0 +1,12 @@
+﻿using System;
+
+namespace MyGUI.Sharp
+{
+	public partial class Gui
+	{
+		private void InitialiseWidgetCreator()
+		{
+			//InsertPoint
+		}
+	}
+}

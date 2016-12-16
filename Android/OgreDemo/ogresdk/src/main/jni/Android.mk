@@ -7,5 +7,6 @@ FREEIMAGE_ROOT = $(SOURCE_ROOT)/FreeImage
 OGRE_ROOT = $(SOURCE_ROOT)/Ogre
 FREETYPE_ROOT = $(SOURCE_ROOT)/FreeType
 OIS_ROOT = $(SOURCE_ROOT)/ois
+MYGUI_ROOT = $(SOURCE_ROOT)/MyGUI
 
 include $(call all-subdir-makefiles)

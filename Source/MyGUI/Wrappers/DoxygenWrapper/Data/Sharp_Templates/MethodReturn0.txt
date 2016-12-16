@@ -1,0 +1,12 @@
+﻿		#region Method #{MethodName}
+
+		[DllImport(DllName.m_dllName, CallingConvention = CallingConvention.Cdecl)]
+        #{ReturnValueMarshalAs}
+		private static extern #{ReturnTypeName} Export#{ThisName}_#{MethodName}(IntPtr _native);
+
+		public #{TypeName} #{MethodName}( )
+		{
+			return #{ReturnConvertBefore}Export#{ThisName}_#{MethodName}(Native)#{ReturnConvertPost};
+		}
+
+		#endregion

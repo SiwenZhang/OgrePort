@@ -1,0 +1,53 @@
+﻿		#region Request #{DelegateName}
+
+		[DllImport(DllName.m_dllName, CallingConvention = CallingConvention.Cdecl)]
+		private static extern void Export#{ThisName}Event_Advise#{DelegateName}(IntPtr _native, bool _advise);
+
+		public delegate void Handle#{DelegateName}(
+			#{ValueTypePrefix1}#{TypeName1} #{ValueName1});
+			
+		private Handle#{DelegateName} mEvent#{DelegateName};
+		public event Handle#{DelegateName} Request#{DelegateName}
+		{
+			add
+			{
+				if (ExportEvent#{DelegateName}.mDelegate == null)
+				{
+					ExportEvent#{DelegateName}.mDelegate = new ExportEvent#{DelegateName}.ExportHandle(OnExport#{DelegateName});
+					ExportEvent#{DelegateName}.Export#{ThisName}Event_Delegate#{DelegateName}(ExportEvent#{DelegateName}.mDelegate);
+				}
+
+				if (mEvent#{DelegateName} == null)
+					Export#{ThisName}Event_Advise#{DelegateName}(Native, true);
+				mEvent#{DelegateName} += value;
+			}
+			remove
+			{
+				mEvent#{DelegateName} -= value;
+				if (mEvent#{DelegateName} == null)
+					Export#{ThisName}Event_Advise#{DelegateName}(Native, false);
+			}
+		}
+
+		private struct ExportEvent#{DelegateName}
+		{
+			[DllImport(DllName.m_dllName, CallingConvention = CallingConvention.Cdecl)]
+			public static extern void Export#{ThisName}Event_Delegate#{DelegateName}(ExportHandle _delegate);
+			[UnmanagedFunctionPointer(CallingConvention.StdCall)]
+			public delegate void ExportHandle(
+				#{ValueMarshalAs1}#{ValueTypePrefix1}#{ValueTypeName1} #{ValueName1});
+				
+			public static ExportHandle mDelegate;
+		}
+
+		private static void OnExport#{DelegateName}(
+			#{ValueTypePrefix1}#{ValueTypeName1} #{ValueName1})
+		{
+			#{ValueTypePrefix1}#{TypeName1} sender = (#{ValueTypePrefix1}#{TypeName1})BaseWidget.GetByNative(#{ValueName1});
+
+			if (sender.mEvent#{DelegateName} != null)
+				sender.mEvent#{DelegateName}(
+					sender);
+		}
+
+		#endregion
