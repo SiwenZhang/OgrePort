@@ -5,7 +5,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE		:= ogreapp
 
 LOCAL_C_INCLUDES	:= \
-               $(LOCAL_PATH)/../../ogre \
+               $(LOCAL_PATH)/../../deps/ogre \
                $(OGRE_ROOT)/OgreMain/include \
                $(OGRE_ROOT)/OgreMain/include/Android \
                $(OGRE_ROOT)/Components/RTShaderSystem/include \

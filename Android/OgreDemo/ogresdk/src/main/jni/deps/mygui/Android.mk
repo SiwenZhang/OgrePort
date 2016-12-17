@@ -4,7 +4,7 @@ include $(CLEAR_VARS)
 
 LOCAL_C_INCLUDES	:= \
 			$(LOCAL_PATH)/../ogre \
-			$(LOCAL_PATH)/../common \
+			$(LOCAL_PATH)/../../common \
             $(MYGUI_ROOT)/MyGUIEngine/include \
             $(MYGUI_ROOT)/Platforms/Ogre/OgrePlatform/include \
             $(OGRE_ROOT)/OgreMain/include \
