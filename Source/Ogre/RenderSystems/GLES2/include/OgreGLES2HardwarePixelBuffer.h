@@ -58,6 +58,8 @@ namespace Ogre {
 
             // Download a box of pixels from the card
             virtual void download(const PixelBox &data);
+
+            virtual int getNativeTextureId() const;
         
         public:
             /// Should be called by HardwareBufferManager
@@ -109,6 +111,8 @@ namespace Ogre {
             {
                 mSliceTRT[zoffset] = 0;
             }
+
+            virtual int getNativeTextureId() const;
 
             // Copy from framebuffer
             void copyFromFramebuffer(size_t zoffset);

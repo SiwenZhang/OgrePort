@@ -54,6 +54,8 @@ namespace Ogre
 		virtual void copyContentsToMemory(const PixelBox &dst, FrameBuffer buffer);
 		PixelFormat suggestPixelFormat() const;
 
+		int getNativeTextureId() const;
+
 	protected:
 		HardwarePixelBuffer *mBuffer;
 		uint32 mZOffset;

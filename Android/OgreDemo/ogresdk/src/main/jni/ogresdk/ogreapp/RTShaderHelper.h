@@ -11,43 +11,43 @@ class ShaderGeneratorTechniqueResolverListener : public MaterialManager::Listene
 {
 public:
 
-	ShaderGeneratorTechniqueResolverListener(RTShader::ShaderGenerator* pShaderGenerator)
-	{
-		mShaderGenerator = pShaderGenerator;
-	}
+    ShaderGeneratorTechniqueResolverListener(RTShader::ShaderGenerator* pShaderGenerator)
+    {
+        mShaderGenerator = pShaderGenerator;
+    }
 
-	virtual Technique* handleSchemeNotFound(unsigned short schemeIndex,
-		const String& schemeName, Material* originalMaterial, unsigned short lodIndex,
-		const Renderable* rend)
-	{
-		// Case this is the default shader generator scheme.
-		if (schemeName == RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME)
-		{
-			MaterialRegisterIterator itFind = mRegisteredMaterials.find(originalMaterial);
-			bool techniqueCreated = false;
+    virtual Technique* handleSchemeNotFound(unsigned short schemeIndex,
+        const String& schemeName, Material* originalMaterial, unsigned short lodIndex,
+        const Renderable* rend)
+    {
+        // Case this is the default shader generator scheme.
+        if (schemeName == RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME)
+        {
+            MaterialRegisterIterator itFind = mRegisteredMaterials.find(originalMaterial);
+            bool techniqueCreated = false;
 
-			// This material was not registered before.
-			if (itFind == mRegisteredMaterials.end())
-			{
-				techniqueCreated = mShaderGenerator->createShaderBasedTechnique(
-					originalMaterial->getName(),
-					MaterialManager::DEFAULT_SCHEME_NAME,
-					schemeName);
-			}
-			mRegisteredMaterials[originalMaterial] = techniqueCreated;
-		}
+            // This material was not registered before.
+            if (itFind == mRegisteredMaterials.end())
+            {
+                techniqueCreated = mShaderGenerator->createShaderBasedTechnique(
+                    originalMaterial->getName(),
+                    MaterialManager::DEFAULT_SCHEME_NAME,
+                    schemeName);
+            }
+            mRegisteredMaterials[originalMaterial] = techniqueCreated;
+        }
 
-		return NULL;
-	}
-
-protected:
-	typedef std::map<Material*, bool>		MaterialRegisterMap;
-	typedef MaterialRegisterMap::iterator	MaterialRegisterIterator;
-
+        return NULL;
+    }
 
 protected:
-	MaterialRegisterMap				mRegisteredMaterials;		// Registered material map.
-	RTShader::ShaderGenerator*		mShaderGenerator;			// The shader generator instance.
+    typedef std::map<Material*, bool>        MaterialRegisterMap;
+    typedef MaterialRegisterMap::iterator    MaterialRegisterIterator;
+
+
+protected:
+    MaterialRegisterMap                mRegisteredMaterials;        // Registered material map.
+    RTShader::ShaderGenerator*        mShaderGenerator;            // The shader generator instance.
 };
 }
 #endif

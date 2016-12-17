@@ -15,12 +15,12 @@ AndroidLogListener::AndroidLogListener()
 
 void AndroidLogListener::messageLogged(const String& message, LogMessageLevel lml, bool maskDebug, const String &logName)
 {
-	if(lml < Ogre::LML_CRITICAL)
-	{
-		LOGI("%s", message.c_str());
-	}
-	else
-	{
-		LOGE("%s", message.c_str());
-	}
+    if(lml < Ogre::LML_CRITICAL)
+    {
+        LOGI("%s", message.c_str());
+    }
+    else
+    {
+        LOGE("%s", message.c_str());
+    }
 }

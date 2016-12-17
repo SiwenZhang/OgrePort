@@ -2,9 +2,9 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE		:= ogrenative
+LOCAL_MODULE        := ogrenative
 
-LOCAL_C_INCLUDES	:= \
+LOCAL_C_INCLUDES    := \
                $(LOCAL_PATH)/ \
 
 LOCAL_SRC_FILES := NativeActivity.cpp \
@@ -16,6 +16,6 @@ LOCAL_SRC_FILES := NativeActivity.cpp \
 
 LOCAL_STATIC_LIBRARIES := \
 
-LOCAL_LDLIBS		:= -ldl -llog -lz -landroid
+LOCAL_LDLIBS        := -ldl -llog -lz -landroid
 
 include $(BUILD_SHARED_LIBRARY)

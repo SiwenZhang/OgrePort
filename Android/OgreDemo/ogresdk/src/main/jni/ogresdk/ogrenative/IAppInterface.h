@@ -17,26 +17,26 @@ class NotificationManager;
 
 class IAppInterface {
 public:
-	virtual void PollEvents() = 0;
-	virtual void SetEventCallback( MessageCallbackFunction pCallback ) = 0;
-	virtual void SetEventHandler( IAndroidHandler* pHandler ) = 0;
+    virtual void PollEvents() = 0;
+    virtual void SetEventCallback( MessageCallbackFunction pCallback ) = 0;
+    virtual void SetEventHandler( IAndroidHandler* pHandler ) = 0;
 
-	virtual ANativeWindow* GetWindow() = 0;
-	virtual AAssetManager* GetAssetManager() = 0;
-	virtual bool IsWindowVisible() = 0;
+    virtual ANativeWindow* GetWindow() = 0;
+    virtual AAssetManager* GetAssetManager() = 0;
+    virtual bool IsWindowVisible() = 0;
 
-	virtual void ShowKeyboard() = 0;
-	virtual void HideKeyboard() = 0;
+    virtual void ShowKeyboard() = 0;
+    virtual void HideKeyboard() = 0;
 
-	virtual const char* GetAppDir() = 0;
+    virtual const char* GetAppDir() = 0;
 
-	virtual JNIEnv* GetJNIEnv() = 0;
-	virtual jobject GetJNIActivity() = 0;
+    virtual JNIEnv* GetJNIEnv() = 0;
+    virtual jobject GetJNIActivity() = 0;
 
-	virtual ClassLoader* GetClassLoader() = 0;
-	virtual NotificationManager* GetNotificationManager() = 0;
+    virtual ClassLoader* GetClassLoader() = 0;
+    virtual NotificationManager* GetNotificationManager() = 0;
 
-	virtual ~IAppInterface() {}
+    virtual ~IAppInterface() {}
 };
 
 }

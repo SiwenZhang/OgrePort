@@ -6,9 +6,9 @@
 class AndroidLogListener : public Ogre::LogListener
 {
 public:
-	AndroidLogListener();
+    AndroidLogListener();
 
-	virtual void messageLogged(const Ogre::String& message, Ogre::LogMessageLevel lml, bool maskDebug, const Ogre::String &logName);
+    virtual void messageLogged(const Ogre::String& message, Ogre::LogMessageLevel lml, bool maskDebug, const Ogre::String &logName);
 };
 
 #endif

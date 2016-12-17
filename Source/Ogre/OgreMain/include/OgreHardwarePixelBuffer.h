@@ -76,6 +76,9 @@ namespace Ogre {
 			Called by RenderTexture when destroyed.
 		*/
 		virtual void _clearSliceRTT(size_t zoffset);
+
+		virtual int getNativeTextureId() const;
+
 		friend class RenderTexture;
     public:
         /// Should be called by HardwareBufferManager

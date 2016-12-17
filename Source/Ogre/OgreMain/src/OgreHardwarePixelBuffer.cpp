@@ -103,6 +103,10 @@ namespace Ogre
             "HardwarePixelBuffer::lockImpl");
     }
 
+    int HardwarePixelBuffer::getNativeTextureId() const {
+        return -1;
+    }
+
     //-----------------------------------------------------------------------------    
 
     void HardwarePixelBuffer::blit(const HardwarePixelBufferSharedPtr &src, const Image::Box &srcBox, const Image::Box &dstBox)

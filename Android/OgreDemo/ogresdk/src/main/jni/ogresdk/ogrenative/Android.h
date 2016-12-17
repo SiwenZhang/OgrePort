@@ -7,34 +7,34 @@
 // 
 // namespace OgreNative
 // {
-// 	void PollEvents();
-// 	void SetEventCallback( MessageCallbackFunction pCallback );
-// 	void SetEventHandler( IAndroidHandler* pHandler );
+//     void PollEvents();
+//     void SetEventCallback( MessageCallbackFunction pCallback );
+//     void SetEventHandler( IAndroidHandler* pHandler );
 
-// 	ANativeWindow* GetWindow();
-// 	AAssetManager* GetAssetManager();
-// 	bool IsWindowVisible();
+//     ANativeWindow* GetWindow();
+//     AAssetManager* GetAssetManager();
+//     bool IsWindowVisible();
 
-// 	void ShowKeyboard();
-// 	void HideKeyboard();
+//     void ShowKeyboard();
+//     void HideKeyboard();
 
-// 	const char* GetAppDir();
+//     const char* GetAppDir();
 
-// 	JNIEnv* GetJNIEnv();
-// 	jobject GetJNIActivity();
+//     JNIEnv* GetJNIEnv();
+//     jobject GetJNIActivity();
 
-// 	ClassLoader& GetClassLoader();
-// 	NotificationManager& GetNotificationManager();
+//     ClassLoader& GetClassLoader();
+//     NotificationManager& GetNotificationManager();
 
-// 	NativeActivity& GetNativeActivity();
+//     NativeActivity& GetNativeActivity();
 // };
 
 #ifndef _LIB
 extern "C"
 {
-	void init_native_activity( JNIEnv* pEnv, jobject pObj, OgreNative::NativeActivity** pInterface );
+    void init_native_activity( JNIEnv* pEnv, jobject pObj, OgreNative::NativeActivity** pInterface );
 
-	void uninit_native_activity( JNIEnv* pEnv, jobject pObj, OgreNative::NativeActivity** pInterface );
+    void uninit_native_activity( JNIEnv* pEnv, jobject pObj, OgreNative::NativeActivity** pInterface );
 }
 
 #endif

@@ -68,6 +68,11 @@ namespace Ogre
 	{
 		return mBuffer->getFormat();
 	}
+
+	int RenderTexture::getNativeTextureId() const {
+		return mBuffer->getNativeTextureId();
+	}
+
 	//-----------------------------------------------------------------------------
 	MultiRenderTarget::MultiRenderTarget(const String &name)
     {

@@ -106,54 +106,54 @@ NativeActivity* s_pNativeActivity = NULL;
 
 JNIEXPORT void JNICALL nativeMain( JNIEnv* pEnv, jobject pObj, jstring strApplicationName )
 {
-	// Application Name
-	const char* pApplicationName = pEnv->GetStringUTFChars( strApplicationName, NULL );
-	char strLibName[ 128 ];
-	sprintf( strLibName, "lib%s.so", pApplicationName );
-	LOGV( "[Native]: Loading dynamic library: %s.", strLibName );
+    // Application Name
+    const char* pApplicationName = pEnv->GetStringUTFChars( strApplicationName, NULL );
+    char strLibName[ 128 ];
+    sprintf( strLibName, "lib%s.so", pApplicationName );
+    LOGV( "[Native]: Loading dynamic library: %s.", strLibName );
 
-	pEnv->ReleaseStringUTFChars( strApplicationName, pApplicationName );
+    pEnv->ReleaseStringUTFChars( strApplicationName, pApplicationName );
 
-	// Error message
-	const char* pErrorString = NULL;
+    // Error message
+    const char* pErrorString = NULL;
 
-	// Library functions
-	void (*ogreapp_main)(OgreNative::IAppInterface* appInterface);
-//	void (*init_native_activity)( JNIEnv*, jobject, INativeInterface** );
+    // Library functions
+    void (*ogreapp_main)(OgreNative::IAppInterface* appInterface);
+//    void (*init_native_activity)( JNIEnv*, jobject, INativeInterface** );
 
-	// Load library
-	void* pLibraryHandle = dlopen( strLibName, RTLD_NOW | RTLD_GLOBAL );
-	if ( !pLibraryHandle )
-	{
-		LOGE( "Could not load library, error: %s", dlerror() );
-		throw "Error";
-	}
+    // Load library
+    void* pLibraryHandle = dlopen( strLibName, RTLD_NOW | RTLD_GLOBAL );
+    if ( !pLibraryHandle )
+    {
+        LOGE( "Could not load library, error: %s", dlerror() );
+        throw "Error";
+    }
 
-	// Clear existing errors
-	dlerror();
+    // Clear existing errors
+    dlerror();
 
-	// Retrieve android_main
-	*(void **) (&ogreapp_main) = dlsym( pLibraryHandle, "ogreapp_main" );
-	if ( ( pErrorString = dlerror() ) != NULL )
-	{
-		LOGE( "Could not find android_main %s", pErrorString );
+    // Retrieve android_main
+    *(void **) (&ogreapp_main) = dlsym( pLibraryHandle, "ogreapp_main" );
+    if ( ( pErrorString = dlerror() ) != NULL )
+    {
+        LOGE( "Could not find android_main %s", pErrorString );
 
-		throw "Error";
-	}
+        throw "Error";
+    }
 
-//	// Retrieve init_native_activity
-//	*(void **) (&init_native_activity) = dlsym( pLibraryHandle, "init_native_activity" );
-//	if ( ( pErrorString = dlerror() ) != NULL )
-//	{
-//		LOGE( "Could not find init_native_activity %s", pErrorString );
+//    // Retrieve init_native_activity
+//    *(void **) (&init_native_activity) = dlsym( pLibraryHandle, "init_native_activity" );
+//    if ( ( pErrorString = dlerror() ) != NULL )
+//    {
+//        LOGE( "Could not find init_native_activity %s", pErrorString );
 //
-//		throw "Error";
-//	}
+//        throw "Error";
+//    }
 
-	// Call user defined main
-	(*ogreapp_main)(s_pNativeActivity->GetAppInterface());
+    // Call user defined main
+    (*ogreapp_main)(s_pNativeActivity->GetAppInterface());
 
-	dlclose( pLibraryHandle );
+    dlclose( pLibraryHandle );
 }
 
 /**********************************************************************************/
@@ -161,117 +161,117 @@ JNIEXPORT void JNICALL nativeMain( JNIEnv* pEnv, jobject pObj, jstring strApplic
 /**********************************************************************************/
 JNIEXPORT void JNICALL nativeOnTouch( JNIEnv* env, jobject obj, int iPointerID, float fPosX, float fPosY, int iAction )
 {
-	if ( s_pNativeActivity )
-	{
-		s_pNativeActivity->OnTouch( iPointerID, fPosX, fPosY, iAction );
-	}
+    if ( s_pNativeActivity )
+    {
+        s_pNativeActivity->OnTouch( iPointerID, fPosX, fPosY, iAction );
+    }
 }
 
 JNIEXPORT void JNICALL nativeOnKeyUp( JNIEnv* env, jobject obj, int iKeyCode, int iUnicodeChar )
 {
-	if ( s_pNativeActivity )
-	{
-		s_pNativeActivity->OnKeyUp( iKeyCode, iUnicodeChar );
-	}
+    if ( s_pNativeActivity )
+    {
+        s_pNativeActivity->OnKeyUp( iKeyCode, iUnicodeChar );
+    }
 }
 
 JNIEXPORT void JNICALL nativeOnSurfaceChanged( JNIEnv* env, jobject obj, int iFormat, int iWidth, int iHeight )
 {
-	//LOGV( "[Native]: nativeOnSurfaceChanged." );
-	if ( s_pNativeActivity )
-	{
-		s_pNativeActivity->OnSurfaceChanged( iFormat, iWidth, iHeight );
-	}
+    //LOGV( "[Native]: nativeOnSurfaceChanged." );
+    if ( s_pNativeActivity )
+    {
+        s_pNativeActivity->OnSurfaceChanged( iFormat, iWidth, iHeight );
+    }
 }
 
 JNIEXPORT void JNICALL nativeOnSurfaceCreated( JNIEnv* pEnv, jobject pObj, jobject pSurface )
 {
-	//LOGV( "[Native]: nativeOnSurfaceCreated." );
-	if ( s_pNativeActivity )
-	{
-		s_pNativeActivity->OnSurfaceCreated( pSurface );
-	}
+    //LOGV( "[Native]: nativeOnSurfaceCreated." );
+    if ( s_pNativeActivity )
+    {
+        s_pNativeActivity->OnSurfaceCreated( pSurface );
+    }
 }
 
 JNIEXPORT void JNICALL nativeOnSurfaceDestroyed( JNIEnv* pEnv, jobject pObj )
 {
-	//LOGV( "[Native]: nativeOnSurfaceDestroyed." );
-	if ( s_pNativeActivity )
-	{
-		s_pNativeActivity->OnSurfaceDestroyed();
-	}
+    //LOGV( "[Native]: nativeOnSurfaceDestroyed." );
+    if ( s_pNativeActivity )
+    {
+        s_pNativeActivity->OnSurfaceDestroyed();
+    }
 }
 
 JNIEXPORT void JNICALL nativeApplicationPaused( JNIEnv* pEnv, jobject pObj )
 {
-	//LOGV( "[Native]: nativeApplicationPaused." );
-	if ( s_pNativeActivity )
-	{
-		s_pNativeActivity->OnApplicationPaused();
-	}
+    //LOGV( "[Native]: nativeApplicationPaused." );
+    if ( s_pNativeActivity )
+    {
+        s_pNativeActivity->OnApplicationPaused();
+    }
 }
 
 JNIEXPORT void JNICALL nativeApplicationResumed( JNIEnv* pEnv, jobject pObj )
 {
-	//LOGV( "[Native]: nativeApplicationResumed." );
-	if ( s_pNativeActivity )
-	{
-		s_pNativeActivity->OnApplicationResumed();
-	}
+    //LOGV( "[Native]: nativeApplicationResumed." );
+    if ( s_pNativeActivity )
+    {
+        s_pNativeActivity->OnApplicationResumed();
+    }
 }
 
 JNIEXPORT void JNICALL nativeWindowShown( JNIEnv* pEnv, jobject pObj )
 {
-	//LOGV( "[Native]: nativeWindowShown." );
-	if ( s_pNativeActivity )
-	{
-		s_pNativeActivity->OnWindowShown();
-	}
+    //LOGV( "[Native]: nativeWindowShown." );
+    if ( s_pNativeActivity )
+    {
+        s_pNativeActivity->OnWindowShown();
+    }
 }
 
 JNIEXPORT void JNICALL nativeWindowHidden( JNIEnv* pEnv, jobject pObj )
 {
-	//LOGV( "[Native]: nativeWindowHidden." );
-	if ( s_pNativeActivity )
-	{
-		s_pNativeActivity->OnWindowHidden();
-	}
+    //LOGV( "[Native]: nativeWindowHidden." );
+    if ( s_pNativeActivity )
+    {
+        s_pNativeActivity->OnWindowHidden();
+    }
 }
 
 JNIEXPORT void JNICALL nativeOnShutdown( JNIEnv* pEnv, jobject pObj )
 {
-	//LOGV( "[Native]: nativeOnShutdown." );
-	if ( s_pNativeActivity )
-	{
-		s_pNativeActivity->OnApplicationShutdown();
-	}
+    //LOGV( "[Native]: nativeOnShutdown." );
+    if ( s_pNativeActivity )
+    {
+        s_pNativeActivity->OnApplicationShutdown();
+    }
 }
 
 JNIEXPORT void JNICALL nativeOnLowMemory( JNIEnv* pEnv, jobject pObj )
 {
-	//LOGV( "[Native]: nativeOnLowMemory." );
-	if ( s_pNativeActivity )
-	{
-		s_pNativeActivity->OnLowMemory();
-	}
+    //LOGV( "[Native]: nativeOnLowMemory." );
+    if ( s_pNativeActivity )
+    {
+        s_pNativeActivity->OnLowMemory();
+    }
 }
 
 JNIEXPORT void JNICALL nativeInit( JNIEnv* pEnv, jobject pObj, jobject pAssetManager ) {
-	// Init native activity
-	init_native_activity( pEnv, pObj, &s_pNativeActivity );
+    // Init native activity
+    init_native_activity( pEnv, pObj, &s_pNativeActivity );
 
-	if ( s_pNativeActivity )
-	{
-		s_pNativeActivity->setAssetManager(pAssetManager);
-	}
+    if ( s_pNativeActivity )
+    {
+        s_pNativeActivity->setAssetManager(pAssetManager);
+    }
 }
 
 JNIEXPORT void JNICALL nativeUninit(JNIEnv* pEnv, jobject pObj) {
-	// Release the native interface
-//	delete s_pNativeActivity;
-//	s_pNativeActivity = NULL;
+    // Release the native interface
+//    delete s_pNativeActivity;
+//    s_pNativeActivity = NULL;
 
-	uninit_native_activity( pEnv, pObj, &s_pNativeActivity);
+    uninit_native_activity( pEnv, pObj, &s_pNativeActivity);
 }
 
 // /*
@@ -279,46 +279,46 @@ JNIEXPORT void JNICALL nativeUninit(JNIEnv* pEnv, jobject pObj) {
 //  */
 // JNIEXPORT void JNICALL nativeOnSignInSucceeded( JNIEnv* pEnv, jobject pObj, jstring strAccountName )
 // {
-// 	jsize iStringLength = pEnv->GetStringLength( strAccountName );
-// 	const char* pString = pEnv->GetStringUTFChars( strAccountName, NULL );
+//     jsize iStringLength = pEnv->GetStringLength( strAccountName );
+//     const char* pString = pEnv->GetStringUTFChars( strAccountName, NULL );
 
-// 	// Copy the string
-// 	char* pAccountName = new char[ iStringLength + 1 ];
-// 	memcpy( pAccountName, pString, iStringLength );
-// 	pAccountName[ iStringLength ] = 0;
+//     // Copy the string
+//     char* pAccountName = new char[ iStringLength + 1 ];
+//     memcpy( pAccountName, pString, iStringLength );
+//     pAccountName[ iStringLength ] = 0;
 
-// 	// Release the java string
-// 	pEnv->ReleaseStringUTFChars( strAccountName, pString );
-// 	if ( s_pNativeInterface )
-// 	{
-// 		s_pNativeInterface->OnSignInSucceeded( pAccountName );
-// 	}
+//     // Release the java string
+//     pEnv->ReleaseStringUTFChars( strAccountName, pString );
+//     if ( s_pNativeInterface )
+//     {
+//         s_pNativeInterface->OnSignInSucceeded( pAccountName );
+//     }
 // }
 
 // JNIEXPORT void JNICALL nativeOnSignInFailed( JNIEnv* pEnv, jobject pObj )
 // {
-// 	LOGE( "sign in failed!" );
-// 	if ( s_pNativeInterface )
-// 	{
-// 		s_pNativeInterface->OnSignInFailed();
-// 	}
+//     LOGE( "sign in failed!" );
+//     if ( s_pNativeInterface )
+//     {
+//         s_pNativeInterface->OnSignInFailed();
+//     }
 // }
 
 // JNIEXPORT void JNICALL nativeOnStateConflict( JNIEnv* pEnv, jobject pObj, const jobject pListener, const int iStateKey, const jstring resolvedVersion, const jbyteArray localData, const jbyteArray serverData )
 // {
-// 	LOGV( "[nativeOnStateLoaded] StateKey: %i.", iStateKey );
-// 	if ( s_pNativeInterface )
-// 	{
-// 		s_pNativeInterface->GetAppStateInterface()->OnStateConflict( pListener, iStateKey, resolvedVersion, localData, serverData );
-// 	}
+//     LOGV( "[nativeOnStateLoaded] StateKey: %i.", iStateKey );
+//     if ( s_pNativeInterface )
+//     {
+//         s_pNativeInterface->GetAppStateInterface()->OnStateConflict( pListener, iStateKey, resolvedVersion, localData, serverData );
+//     }
 // }
 
 // JNIEXPORT void JNICALL nativeOnStateLoaded( JNIEnv* pEnv, jobject pObj, const jobject pListener, const int iStatusCode, const int iStateKey, const jbyteArray data )
 // {
-// 	LOGV( "[nativeOnStateLoaded] Code: %i, key: %i", iStatusCode, iStateKey );
+//     LOGV( "[nativeOnStateLoaded] Code: %i, key: %i", iStatusCode, iStateKey );
 
-// 	if ( s_pNativeInterface )
-// 	{
-// 		s_pNativeInterface->GetAppStateInterface()->OnStateLoaded( pListener, iStatusCode, iStateKey, data );
-// 	}
+//     if ( s_pNativeInterface )
+//     {
+//         s_pNativeInterface->GetAppStateInterface()->OnStateLoaded( pListener, iStatusCode, iStateKey, data );
+//     }
 // }

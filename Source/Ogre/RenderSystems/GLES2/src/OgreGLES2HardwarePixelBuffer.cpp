@@ -41,6 +41,10 @@ THE SOFTWARE.
 #include "OgreGLSLESProgramPipeline.h"
 #include "OgreBitwise.h"
 
+#ifdef DEBUG
+#include "logger.h"
+#endif
+
 namespace Ogre {
     GLES2HardwarePixelBuffer::GLES2HardwarePixelBuffer(uint32 width, uint32 height,
                                                      uint32 depth, PixelFormat format,
@@ -226,6 +230,13 @@ namespace Ogre {
         OGRE_EXCEPT(Exception::ERR_RENDERINGAPI_ERROR,
                     "Framebuffer bind not possible for this pixelbuffer type",
                     "GLES2HardwarePixelBuffer::bindToFramebuffer");
+    }
+
+    int GLES2HardwarePixelBuffer::getNativeTextureId() const {
+#ifdef DEBUG
+        LOGW("GLES2HardwarePixelBuffer::getNativeTextureId never class this");
+#endif
+        return -1;
     }
     
     // TextureBuffer
@@ -733,6 +744,11 @@ namespace Ogre {
         OGRE_CHECK_GL_ERROR(glDeleteFramebuffers(1, &tempFBO));
     }
 #endif
+
+    int GLES2TextureBuffer::getNativeTextureId() const {
+        return mTextureID;
+    }
+
     //-----------------------------------------------------------------------------  
     void GLES2TextureBuffer::bindToFramebuffer(GLenum attachment, size_t zoffset)
     {

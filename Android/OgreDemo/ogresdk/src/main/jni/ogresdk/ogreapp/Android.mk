@@ -2,9 +2,9 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE		:= ogreapp
+LOCAL_MODULE        := ogreapp
 
-LOCAL_C_INCLUDES	:= \
+LOCAL_C_INCLUDES    := \
                $(LOCAL_PATH)/../../deps/ogre \
                $(OGRE_ROOT)/OgreMain/include \
                $(OGRE_ROOT)/OgreMain/include/Android \
@@ -19,11 +19,11 @@ LOCAL_C_INCLUDES	:= \
                $(OGRE_ROOT)/Plugins/ParticleFX/include \
                $(OIS_ROOT)/includes \
                $(MYGUI_ROOT)/MyGUIEngine/include \
-           	   $(MYGUI_ROOT)/Platforms/Ogre/OgrePlatform/include \
+                  $(MYGUI_ROOT)/Platforms/Ogre/OgrePlatform/include \
 
-LOCAL_LDLIBS		:= -ldl -llog -lz -landroid -lEGL -lGLESv2
+LOCAL_LDLIBS        := -ldl -llog -lz -landroid -lEGL -lGLESv2
 
-LOCAL_SRC_FILES		:= \
+LOCAL_SRC_FILES        := \
                 OgreApp.cpp \
                 AndroidLogListener.cpp \
 
@@ -41,7 +41,7 @@ LOCAL_STATIC_LIBRARIES := \
 #                android_native_app_glue \
 
 LOCAL_SHARED_LIBRARIES := \
-				ogrenative
+                ogrenative
 
 include $(BUILD_SHARED_LIBRARY)
 

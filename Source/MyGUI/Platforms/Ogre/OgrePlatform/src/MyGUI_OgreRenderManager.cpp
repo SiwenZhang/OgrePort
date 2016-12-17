@@ -191,6 +191,10 @@ namespace MyGUI
 	{
 		mActiveViewport = _num;
 
+// #ifdef DEBUG
+// 		LOGD("setActiveViewport short num is : %d", mActiveViewport);
+// #endif
+
 		if (mWindow != nullptr)
 		{
 			// Ogre::WindowEventUtilities::removeWindowEventListener(mWindow, this);
@@ -208,6 +212,9 @@ namespace MyGUI
 
 	void OgreRenderManager::renderQueueStarted(Ogre::uint8 queueGroupId, const Ogre::String& invocation, bool& skipThisInvocation)
 	{
+// #ifdef DEBUG
+// 		LOGD("Before OgreRenderManager::renderQueueStarted");
+// #endif
 		Gui* gui = Gui::getInstancePtr();
 		if (gui == nullptr)
 			return;
@@ -240,16 +247,26 @@ namespace MyGUI
 		onRenderToTarget(this, mUpdate);
 		//end();
 
+// #ifdef DEBUG
+// 		LOGD("After OgreRenderManager::renderQueueStarted");
+// #endif
+
 		// сбрасываем флаг
 		mUpdate = false;
 	}
 
 	void OgreRenderManager::renderQueueEnded(Ogre::uint8 queueGroupId, const Ogre::String& invocation, bool& repeatThisInvocation)
 	{
+// #ifdef DEBUG
+// 		LOGD("OgreRenderManager::renderQueueEnded");
+// #endif
 	}
 
 	void OgreRenderManager::eventOccurred(const Ogre::String& eventName, const Ogre::NameValuePairList* parameters)
 	{
+#ifdef DEBUG
+		LOGD("eventOccurred eventName : %s", eventName.c_str());
+#endif
 		if (eventName == "DeviceLost")
 		{
 		}
@@ -312,9 +329,9 @@ namespace MyGUI
 				mInfo.pixScaleY = 1.0f / float(mViewSize.height);
 			}
 
-#ifdef DEBUG
-			LOGD("OgreRenderManager::updateRenderInfo hOffset : %f vOffset : %f pixScaleX : %f pixScaleY : %f", mInfo.hOffset, mInfo.vOffset, mInfo.pixScaleX, mInfo.pixScaleY);
-#endif
+// #ifdef DEBUG
+// 			LOGD("OgreRenderManager::updateRenderInfo hOffset : %f vOffset : %f pixScaleX : %f pixScaleY : %f", mInfo.hOffset, mInfo.vOffset, mInfo.pixScaleX, mInfo.pixScaleY);
+// #endif
 		}
 	}
 

@@ -1046,9 +1046,9 @@ namespace Ogre {
             x = vp->getActualLeft();
             y = vp->getActualTop();
 
-#ifdef DEBUG
-            LOGD("vp width : %d height : %d", vp->getActualWidth(), vp->getActualHeight());
-#endif
+// #ifdef DEBUG
+//             LOGD("vp width : %d height : %d", vp->getActualWidth(), vp->getActualHeight());
+// #endif
             
             if (!target->requiresTextureFlipping())
             {
@@ -1085,9 +1085,9 @@ namespace Ogre {
                 OGRE_CHECK_GL_ERROR(glViewport(x, y, w, h));
             }
 
-#ifdef DEBUG
-            LOGD("The viewport width : %d height : %d", w, h);
-#endif
+// #ifdef DEBUG
+//             LOGD("The viewport width : %d height : %d", w, h);
+// #endif
 
             if(mScissor[0] != x || mScissor[1] != y ||
                mScissor[2] != w || mScissor[3] != h)
