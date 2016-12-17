@@ -54,16 +54,38 @@ public:
 
 	// Surface
 	virtual void OnSurfaceCreated() {
-		InitGameWindow();
-		// InitStartScene();
-		InitGameScene();
+		LOGD("OnSurfaceCreated");
 	}
 
 	virtual void OnSurfaceChanged( int iPixelFormat, int iWidth, int iHeight ) {
+		LOGD("OnSurfaceChanged iWidth : %d iHeight : %d gRoot : %p gRenderWnd : %p", iWidth, iHeight, gRoot, gRenderWnd);
+		// camera->setAspectRatio((float)iWidth / (float)iHeight);
 
+		// if (gRoot && gRenderWnd) {
+		// 	AConfiguration* config = AConfiguration_new();
+  //       	AConfiguration_fromAssetManager(config, gAssetMgr);
+		// 	static_cast<Ogre::AndroidEGLWindow*>(gRenderWnd)->_destroyInternalResources();
+		// 	static_cast<Ogre::AndroidEGLWindow*>(gRenderWnd)->_createInternalResources(mAppInterface->GetWindow(), config);
+		// 	AConfiguration_delete(config);
+		// }
+
+		InitGameWindow();
+		// InitStartScene();
+		InitGameScene();
+
+		LOGD("OnSurfaceChanged vp width : %d height : %d", vp->getWidth(), vp->getHeight());
+
+//		Ogre::Matrix4 mat = camera->getProjectionMatrix();
+//        mat = mat * Ogre::Quaternion(Ogre::Degree(90.0f), Ogre::Vector3::UNIT_Z);
+//        camera->setCustomProjectionMatrix(true, mat);
+		
+		gRenderWnd->windowMovedOrResized();
+
+		// camera->setAspectRatio((float)gRenderWnd->getWidth() / (float)gRenderWnd->getHeight());
 	}
 
 	virtual void OnSurfaceDestroyed() {
+		LOGD("OnSurfaceDestroyed");
         if(gRoot && gRenderWnd)
 			static_cast<Ogre::AndroidEGLWindow*>(gRenderWnd)->_destroyInternalResources();
 	}
@@ -102,7 +124,7 @@ public:
 	void renderOneFrame() {
 		if(gRenderWnd != NULL && gRenderWnd->isActive())
 		{
-			gRenderWnd->windowMovedOrResized();
+			// gRenderWnd->windowMovedOrResized();
 
 			// renderTexture->update();
 
@@ -113,7 +135,8 @@ public:
 private:
 	void InitGameWindow() {
         AConfiguration* config = AConfiguration_new();
-        AConfiguration_fromAssetManager(config, gAssetMgr);
+        // AConfiguration_fromAssetManager(config, gAssetMgr);
+//        AConfiguration_setOrientation(config, 2);
 
         if(!gRenderWnd)
         {
@@ -122,9 +145,9 @@ private:
 
             Ogre::NameValuePairList opt;
             opt["externalWindowHandle"] = Ogre::StringConverter::toString((int)mAppInterface->GetWindow());
-            opt["androidConfig"] = Ogre::StringConverter::toString((int)config);
+            // opt["androidConfig"] = Ogre::StringConverter::toString((int)config);
 
-			gRenderWnd = gRoot->createRenderWindow("OgreWindow", 0, 0, false, &opt);
+			gRenderWnd = gRoot->createRenderWindow("OgreWindow", 1920, 1080, true, &opt);
 
             Ogre::WindowEventUtilities::addWindowEventListener(gRenderWnd, this);
 
@@ -132,7 +155,7 @@ private:
         }
         else
         {
-			static_cast<Ogre::AndroidEGLWindow*>(gRenderWnd)->_createInternalResources(mAppInterface->GetWindow(), config);
+			static_cast<Ogre::AndroidEGLWindow*>(gRenderWnd)->_createInternalResources(mAppInterface->GetWindow(), NULL);
         }
         AConfiguration_delete(config);
 	}
@@ -190,59 +213,61 @@ private:
 
 	//	mRayScnQuery = gSceneMgr->createRayQuery(Ogre::Ray());
 
-			mRTTCamera = gSceneMgr->createCamera("RTTCamera");
-			mRTTCamera->setNearClipDistance(0.1f);
-			mRTTCamera->setFarClipDistance(1000.0f);
-			mRTTCamera->setPosition(50,0, 0);
-			mRTTCamera->lookAt(0,0,0);
-			mRTTCamera->setAutoAspectRatio(true);
+			// mRTTCamera = gSceneMgr->createCamera("RTTCamera");
+			// mRTTCamera->setNearClipDistance(0.1f);
+			// mRTTCamera->setFarClipDistance(1000.0f);
+			// mRTTCamera->setPosition(50,0, 0);
+			// mRTTCamera->lookAt(0,0,0);
+			// mRTTCamera->setAutoAspectRatio(true);
 
-	      Ogre::TexturePtr rttTexture =
-            Ogre::TextureManager::getSingleton().createManual(
-              "RttTex",
-              Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
-              Ogre::TEX_TYPE_2D,
-              gRenderWnd->getWidth(), gRenderWnd->getHeight(),
-              0,
-              Ogre::PF_R8G8B8,
-              Ogre::TU_RENDERTARGET);
+			// LOGD("rttTexture width : %d height : %d", gRenderWnd->getWidth(), gRenderWnd->getHeight());
 
-          renderTexture = rttTexture->getBuffer()->getRenderTarget();
-          mRTTViewPort = renderTexture->addViewport(mRTTCamera);
-          renderTexture->setAutoUpdated(true);
-          mRTTViewPort->setClearEveryFrame(true);
-          mRTTViewPort->setBackgroundColour(Ogre::ColourValue::Green);
-          mRTTViewPort->setOverlaysEnabled(true);
+//	      Ogre::TexturePtr rttTexture =
+//            Ogre::TextureManager::getSingleton().createManual(
+//              "RttTex",
+          //     Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
+          //     Ogre::TEX_TYPE_2D,
+          //     gRenderWnd->getWidth(), gRenderWnd->getHeight(),
+          //     0,
+          //     Ogre::PF_R8G8B8,
+          //     Ogre::TU_RENDERTARGET);
+
+          // renderTexture = rttTexture->getBuffer()->getRenderTarget();
+          // mRTTViewPort = renderTexture->addViewport(mRTTCamera);
+          // renderTexture->setAutoUpdated(true);
+          // mRTTViewPort->setClearEveryFrame(true);
+          // mRTTViewPort->setBackgroundColour(Ogre::ColourValue::Green);
+          // mRTTViewPort->setOverlaysEnabled(true);
 
 //          renderTexture->update();
 //          renderTexture->writeContentsToFile("start.png");
 
-          mMiniscreen = new Ogre::Rectangle2D(true);
-          mMiniscreen->setCorners(-1.0, 1.0, 1.0, -1.0);
-          mMiniscreen->setBoundingBox(Ogre::AxisAlignedBox::BOX_INFINITE);
+          // mMiniscreen = new Ogre::Rectangle2D(true);
+          // mMiniscreen->setCorners(-1.0, 1.0, 1.0, -1.0);
+          // mMiniscreen->setBoundingBox(Ogre::AxisAlignedBox::BOX_INFINITE);
 
-          Ogre::SceneNode* miniscreenNode =
-            gSceneMgr->getRootSceneNode()->createChildSceneNode();
-          miniscreenNode->attachObject(mMiniscreen);
+          // Ogre::SceneNode* miniscreenNode =
+          //   gSceneMgr->getRootSceneNode()->createChildSceneNode();
+          // miniscreenNode->attachObject(mMiniscreen);
 
-          Ogre::MaterialPtr renderMat =
-            Ogre::MaterialManager::getSingleton().create(
-              "RttMat",
-              Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
-          renderMat->getTechnique(0)->getPass(0)->setLightingEnabled(false);
-          renderMat->getTechnique(0)->getPass(0)->createTextureUnitState("RttTex");
+          // Ogre::MaterialPtr renderMat =
+          //   Ogre::MaterialManager::getSingleton().create(
+          //     "RttMat",
+          //     Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+          // renderMat->getTechnique(0)->getPass(0)->setLightingEnabled(false);
+          // renderMat->getTechnique(0)->getPass(0)->createTextureUnitState("RttTex");
 
-          mMiniscreen->setMaterial("RttMat");
+          // mMiniscreen->setMaterial("RttMat");
 
-          renderTexture->addListener(this);
+          // renderTexture->addListener(this);
 
-			mPlatform = new MyGUI::OgrePlatform();
-			mPlatform->initialise(renderTexture, gSceneMgr);
-			mGUI = new MyGUI::Gui();
+			// mPlatform = new MyGUI::OgrePlatform();
+			// mPlatform->initialise(renderTexture, gSceneMgr);
+			// mGUI = new MyGUI::Gui();
 
-			mGUI->initialise();
-			mButton = mGUI->createWidget<MyGUI::Button>("Button",10,10,800,600,MyGUI::Align::Default,"Main");
-			mButton->setCaption("HelloWorld");
+			// mGUI->initialise();
+			// mButton = mGUI->createWidget<MyGUI::Button>("Button",10,10,800,600,MyGUI::Align::Default,"Main");
+			// mButton->setCaption("HelloWorld");
 	}
 
 	Ogre::DataStreamPtr openAPKFile(const Ogre::String& fileName)
@@ -360,18 +385,18 @@ private:
     //////////////////////
     virtual void preRenderTargetUpdate(const Ogre::RenderTargetEvent& rte) {
     	// LOGD("preRenderTargetUpdate");
-    	Ogre::RenderSystem* system = Ogre::Root::getSingleton().getRenderSystem();
-    	mSaveViewport = system->_getViewport();
-    	system->_setViewport(mRTTViewPort);
-        mMiniscreen->setVisible(false);
-        system->clearFrameBuffer(Ogre::FBT_COLOUR, Ogre::ColourValue::ZERO);
+    	// Ogre::RenderSystem* system = Ogre::Root::getSingleton().getRenderSystem();
+    	// mSaveViewport = system->_getViewport();
+    	// system->_setViewport(mRTTViewPort);
+     //    mMiniscreen->setVisible(false);
+     //    system->clearFrameBuffer(Ogre::FBT_COLOUR, Ogre::ColourValue::ZERO);
     }
 
     virtual void postRenderTargetUpdate(const Ogre::RenderTargetEvent& rte) {
     	// LOGD("postRenderTargetUpdate");
-    	Ogre::RenderSystem* system = Ogre::Root::getSingleton().getRenderSystem();
-		// system->_setViewport(mSaveViewport);
-        mMiniscreen->setVisible(true);
+  //   	Ogre::RenderSystem* system = Ogre::Root::getSingleton().getRenderSystem();
+		// // system->_setViewport(mSaveViewport);
+  //       mMiniscreen->setVisible(true);
     }
 
 private:

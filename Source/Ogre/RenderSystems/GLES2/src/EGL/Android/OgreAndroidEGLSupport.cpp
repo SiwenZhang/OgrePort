@@ -38,6 +38,10 @@ THE SOFTWARE.
 #include "OgreAndroidEGLWindow.h"
 #include "OgreAndroidEGLContext.h"
 
+#ifdef DEBUG
+#include "logger.h"
+#endif
+
 namespace Ogre {
 
     AndroidEGLSupport::AndroidEGLSupport()
@@ -74,6 +78,9 @@ namespace Ogre {
     
     RenderWindow* AndroidEGLSupport::newWindow( const String &name, unsigned int width, unsigned int height, bool fullScreen, const NameValuePairList *miscParams)
 	{
+#ifdef DEBUG
+        LOGD("AndroidEGLSupport newWindow name : %s width : %d height : %d fullScreen : %d", name.c_str(), width, height, fullScreen);
+#endif
 		AndroidEGLWindow* window = new AndroidEGLWindow(this);
 		window->create(name, width, height, fullScreen, miscParams);
         

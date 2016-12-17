@@ -14,9 +14,10 @@ LOCAL_C_INCLUDES	:= $(LOCAL_PATH)/../ \
                        $(OGRE_ROOT)/RenderSystems/GLES2/src/StateCacheManager \
                        $(OGRE_ROOT)/Plugins/ParticleFX/include \
                        $(FREEIMAGE_ROOT)/Source \
-                       $(ZZIP_ROOT)
+                       $(ZZIP_ROOT) \
+                       $(LOCAL_PATH)/../../common \
 
-LOCAL_CFLAGS		:= -DFREEIMAGE_LIB=1 -DOGRE_NONCLIENT_BUILD=1
+LOCAL_CFLAGS		:= -DFREEIMAGE_LIB=1 -DOGRE_NONCLIENT_BUILD=1 -DDEBUG
 #LOCAL_LDLIBS		:= -ldl -llog -lz -lEGL -lGLESv2
 
 LOCAL_STATIC_LIBRARIES := \

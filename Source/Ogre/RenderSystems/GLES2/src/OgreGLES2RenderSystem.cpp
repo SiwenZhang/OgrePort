@@ -63,6 +63,10 @@ Ogre::AndroidResourceManager* Ogre::GLES2RenderSystem::mResourceManager = NULL;
 #   include "OgreEGLWindow.h"
 #endif
 
+#ifdef DEBUG
+#include "logger.h"
+#endif
+
 // Convenience macro from ARB_vertex_buffer_object spec
 #define VBO_BUFFER_OFFSET(i) ((char *)NULL + (i))
 
@@ -535,6 +539,10 @@ namespace Ogre {
     RenderWindow* GLES2RenderSystem::_createRenderWindow(const String &name, unsigned int width, unsigned int height,
                                                         bool fullScreen, const NameValuePairList *miscParams)
     {
+#ifdef DEBUG
+        LOGD("_createRenderWindow name : %s width : %d height : %d fullscreen : %d", name.c_str(), width, height, fullScreen);
+#endif
+
         if (mRenderTargets.find(name) != mRenderTargets.end())
         {
             OGRE_EXCEPT(Exception::ERR_INVALIDPARAMS,
@@ -1037,6 +1045,10 @@ namespace Ogre {
             h = vp->getActualHeight();
             x = vp->getActualLeft();
             y = vp->getActualTop();
+
+#ifdef DEBUG
+            LOGD("vp width : %d height : %d", vp->getActualWidth(), vp->getActualHeight());
+#endif
             
             if (!target->requiresTextureFlipping())
             {
@@ -1053,6 +1065,10 @@ namespace Ogre {
                 String val = opt->second.currentValue;
                 String::size_type pos = val.find("Landscape");
                 
+#ifdef DEBUG
+                LOGD("The string Landscape mode pos is : %d String::npos is : %d", pos, String::npos);
+#endif
+
                 if (pos != String::npos)
                 {
                     GLsizei temp = h;
@@ -1068,6 +1084,10 @@ namespace Ogre {
                 mViewport[2] = w; mViewport[3] = h;
                 OGRE_CHECK_GL_ERROR(glViewport(x, y, w, h));
             }
+
+#ifdef DEBUG
+            LOGD("The viewport width : %d height : %d", w, h);
+#endif
 
             if(mScissor[0] != x || mScissor[1] != y ||
                mScissor[2] != w || mScissor[3] != h)
