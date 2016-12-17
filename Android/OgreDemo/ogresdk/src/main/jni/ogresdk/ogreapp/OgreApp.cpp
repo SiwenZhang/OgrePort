@@ -55,6 +55,7 @@ public:
 	// Surface
 	virtual void OnSurfaceCreated() {
 		LOGD("OnSurfaceCreated");
+	    InitGameWindow();
 	}
 
 	virtual void OnSurfaceChanged( int iPixelFormat, int iWidth, int iHeight ) {
@@ -69,7 +70,6 @@ public:
 		// 	AConfiguration_delete(config);
 		// }
 
-		InitGameWindow();
 		// InitStartScene();
 		InitGameScene();
 
@@ -188,6 +188,9 @@ private:
 
 	void InitGameScene()
 	{
+	    if (mSceneInited == true) {
+	        return ;
+	    }
 
 		Ogre::RTShader::ShaderGenerator::getSingletonPtr()->invalidateScheme(Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME);
 		Ogre::ResourceGroupManager::getSingletonPtr()->initialiseAllResourceGroups();
@@ -268,6 +271,8 @@ private:
 			// mGUI->initialise();
 			// mButton = mGUI->createWidget<MyGUI::Button>("Button",10,10,800,600,MyGUI::Align::Default,"Main");
 			// mButton->setCaption("HelloWorld");
+
+			mSceneInited = true;
 	}
 
 	Ogre::DataStreamPtr openAPKFile(const Ogre::String& fileName)
@@ -339,6 +344,8 @@ public:
         gAssetMgr = mAppInterface->GetAssetManager();
 
         gRenderWnd = NULL;
+
+        mSceneInited = false;
 	}
 
 	virtual ~OgreMainApp() {
@@ -371,6 +378,8 @@ private:
 	MyGUI::Gui* mGUI;
 	MyGUI::OgrePlatform* mPlatform;
 	MyGUI::ButtonPtr mButton;
+
+	bool mSceneInited;
 
 private:
     OgreNative::IAppInterface* mAppInterface;
