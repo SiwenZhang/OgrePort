@@ -33,7 +33,7 @@ iPhoneAccelerometer::iPhoneAccelerometer( InputManager* creator, bool buffered )
     
     man->_setAccelerometerUsed(true);
     [man->_getDelegate() setAccelerometerObject:this];
-    [[UIAccelerometer sharedAccelerometer] setDelegate:man->_getDelegate()];
+    [[UIAccelerometer sharedAccelerometer] setDelegate:(id<UIAccelerometerDelegate>)man->_getDelegate()];
     mUpdateInterval = 60.0f;
 }
 

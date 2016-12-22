@@ -41,10 +41,6 @@ THE SOFTWARE.
 #include "OgreGLSLESProgramPipeline.h"
 #include "OgreBitwise.h"
 
-#ifdef DEBUG
-#include "logger.h"
-#endif
-
 namespace Ogre {
     GLES2HardwarePixelBuffer::GLES2HardwarePixelBuffer(uint32 width, uint32 height,
                                                      uint32 depth, PixelFormat format,
@@ -233,9 +229,6 @@ namespace Ogre {
     }
 
     int GLES2HardwarePixelBuffer::getNativeTextureId() const {
-#ifdef DEBUG
-        LOGW("GLES2HardwarePixelBuffer::getNativeTextureId never class this");
-#endif
         return -1;
     }
     

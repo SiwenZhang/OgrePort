@@ -63,10 +63,6 @@ Ogre::AndroidResourceManager* Ogre::GLES2RenderSystem::mResourceManager = NULL;
 #   include "OgreEGLWindow.h"
 #endif
 
-#ifdef DEBUG
-#include "logger.h"
-#endif
-
 // Convenience macro from ARB_vertex_buffer_object spec
 #define VBO_BUFFER_OFFSET(i) ((char *)NULL + (i))
 
@@ -539,10 +535,6 @@ namespace Ogre {
     RenderWindow* GLES2RenderSystem::_createRenderWindow(const String &name, unsigned int width, unsigned int height,
                                                         bool fullScreen, const NameValuePairList *miscParams)
     {
-#ifdef DEBUG
-        LOGD("_createRenderWindow name : %s width : %d height : %d fullscreen : %d", name.c_str(), width, height, fullScreen);
-#endif
-
         if (mRenderTargets.find(name) != mRenderTargets.end())
         {
             OGRE_EXCEPT(Exception::ERR_INVALIDPARAMS,

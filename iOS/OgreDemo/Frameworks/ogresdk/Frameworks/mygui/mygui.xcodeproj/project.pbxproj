@@ -1,0 +1,757 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA1EB3F11E0BAAEB00A20EDB /* MyGUI_ActionController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3901E0BAAEA00A20EDB /* MyGUI_ActionController.cpp */; };
+		FA1EB3F21E0BAAEB00A20EDB /* MyGUI_Any.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3911E0BAAEA00A20EDB /* MyGUI_Any.cpp */; };
+		FA1EB3F31E0BAAEB00A20EDB /* MyGUI_BackwardCompatibility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3921E0BAAEA00A20EDB /* MyGUI_BackwardCompatibility.cpp */; };
+		FA1EB3F41E0BAAEB00A20EDB /* MyGUI_BiIndexBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3931E0BAAEA00A20EDB /* MyGUI_BiIndexBase.cpp */; };
+		FA1EB3F51E0BAAEB00A20EDB /* MyGUI_Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3941E0BAAEA00A20EDB /* MyGUI_Button.cpp */; };
+		FA1EB3F61E0BAAEB00A20EDB /* MyGUI_Canvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3951E0BAAEA00A20EDB /* MyGUI_Canvas.cpp */; };
+		FA1EB3F71E0BAAEB00A20EDB /* MyGUI_ChildSkinInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3961E0BAAEA00A20EDB /* MyGUI_ChildSkinInfo.cpp */; };
+		FA1EB3F81E0BAAEB00A20EDB /* MyGUI_ClipboardManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3971E0BAAEA00A20EDB /* MyGUI_ClipboardManager.cpp */; };
+		FA1EB3F91E0BAAEB00A20EDB /* MyGUI_Colour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3981E0BAAEA00A20EDB /* MyGUI_Colour.cpp */; };
+		FA1EB3FA1E0BAAEB00A20EDB /* MyGUI_ComboBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3991E0BAAEA00A20EDB /* MyGUI_ComboBox.cpp */; };
+		FA1EB3FB1E0BAAEB00A20EDB /* MyGUI_ConsoleLogListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB39A1E0BAAEA00A20EDB /* MyGUI_ConsoleLogListener.cpp */; };
+		FA1EB3FC1E0BAAEB00A20EDB /* MyGUI_Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB39B1E0BAAEA00A20EDB /* MyGUI_Constants.cpp */; };
+		FA1EB3FD1E0BAAEB00A20EDB /* MyGUI_ControllerEdgeHide.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB39C1E0BAAEA00A20EDB /* MyGUI_ControllerEdgeHide.cpp */; };
+		FA1EB3FE1E0BAAEB00A20EDB /* MyGUI_ControllerFadeAlpha.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB39D1E0BAAEA00A20EDB /* MyGUI_ControllerFadeAlpha.cpp */; };
+		FA1EB3FF1E0BAAEB00A20EDB /* MyGUI_ControllerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB39E1E0BAAEA00A20EDB /* MyGUI_ControllerManager.cpp */; };
+		FA1EB4001E0BAAEB00A20EDB /* MyGUI_ControllerPosition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB39F1E0BAAEA00A20EDB /* MyGUI_ControllerPosition.cpp */; };
+		FA1EB4011E0BAAEB00A20EDB /* MyGUI_ControllerRepeatClick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3A01E0BAAEA00A20EDB /* MyGUI_ControllerRepeatClick.cpp */; };
+		FA1EB4021E0BAAEB00A20EDB /* MyGUI_DataFileStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3A11E0BAAEA00A20EDB /* MyGUI_DataFileStream.cpp */; };
+		FA1EB4031E0BAAEB00A20EDB /* MyGUI_DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3A21E0BAAEA00A20EDB /* MyGUI_DataManager.cpp */; };
+		FA1EB4041E0BAAEB00A20EDB /* MyGUI_DataMemoryStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3A31E0BAAEA00A20EDB /* MyGUI_DataMemoryStream.cpp */; };
+		FA1EB4051E0BAAEB00A20EDB /* MyGUI_DataStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3A41E0BAAEA00A20EDB /* MyGUI_DataStream.cpp */; };
+		FA1EB4061E0BAAEB00A20EDB /* MyGUI_DDContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3A51E0BAAEA00A20EDB /* MyGUI_DDContainer.cpp */; };
+		FA1EB4071E0BAAEB00A20EDB /* MyGUI_DynLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3A61E0BAAEA00A20EDB /* MyGUI_DynLib.cpp */; };
+		FA1EB4081E0BAAEB00A20EDB /* MyGUI_DynLibManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3A71E0BAAEA00A20EDB /* MyGUI_DynLibManager.cpp */; };
+		FA1EB4091E0BAAEB00A20EDB /* MyGUI_EditBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3A81E0BAAEA00A20EDB /* MyGUI_EditBox.cpp */; };
+		FA1EB40A1E0BAAEB00A20EDB /* MyGUI_EditText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3A91E0BAAEA00A20EDB /* MyGUI_EditText.cpp */; };
+		FA1EB40B1E0BAAEB00A20EDB /* MyGUI_Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3AA1E0BAAEA00A20EDB /* MyGUI_Exception.cpp */; };
+		FA1EB40C1E0BAAEB00A20EDB /* MyGUI_FactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3AB1E0BAAEA00A20EDB /* MyGUI_FactoryManager.cpp */; };
+		FA1EB40D1E0BAAEB00A20EDB /* MyGUI_FileLogListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3AC1E0BAAEA00A20EDB /* MyGUI_FileLogListener.cpp */; };
+		FA1EB40E1E0BAAEB00A20EDB /* MyGUI_FontManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3AD1E0BAAEA00A20EDB /* MyGUI_FontManager.cpp */; };
+		FA1EB40F1E0BAAEB00A20EDB /* MyGUI_GeometryUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3AE1E0BAAEA00A20EDB /* MyGUI_GeometryUtility.cpp */; };
+		FA1EB4101E0BAAEB00A20EDB /* MyGUI_Gui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3AF1E0BAAEA00A20EDB /* MyGUI_Gui.cpp */; };
+		FA1EB4111E0BAAEB00A20EDB /* MyGUI_ImageBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3B01E0BAAEA00A20EDB /* MyGUI_ImageBox.cpp */; };
+		FA1EB4121E0BAAEB00A20EDB /* MyGUI_InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3B11E0BAAEA00A20EDB /* MyGUI_InputManager.cpp */; };
+		FA1EB4131E0BAAEB00A20EDB /* MyGUI_ItemBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3B21E0BAAEA00A20EDB /* MyGUI_ItemBox.cpp */; };
+		FA1EB4141E0BAAEB00A20EDB /* MyGUI_LanguageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3B31E0BAAEA00A20EDB /* MyGUI_LanguageManager.cpp */; };
+		FA1EB4151E0BAAEB00A20EDB /* MyGUI_LayerItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3B41E0BAAEA00A20EDB /* MyGUI_LayerItem.cpp */; };
+		FA1EB4161E0BAAEB00A20EDB /* MyGUI_LayerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3B51E0BAAEA00A20EDB /* MyGUI_LayerManager.cpp */; };
+		FA1EB4171E0BAAEB00A20EDB /* MyGUI_LayerNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3B61E0BAAEA00A20EDB /* MyGUI_LayerNode.cpp */; };
+		FA1EB4181E0BAAEB00A20EDB /* MyGUI_LayoutManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3B71E0BAAEA00A20EDB /* MyGUI_LayoutManager.cpp */; };
+		FA1EB4191E0BAAEB00A20EDB /* MyGUI_LevelLogFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3B81E0BAAEA00A20EDB /* MyGUI_LevelLogFilter.cpp */; };
+		FA1EB41A1E0BAAEB00A20EDB /* MyGUI_ListBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3B91E0BAAEA00A20EDB /* MyGUI_ListBox.cpp */; };
+		FA1EB41B1E0BAAEB00A20EDB /* MyGUI_LogManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3BA1E0BAAEA00A20EDB /* MyGUI_LogManager.cpp */; };
+		FA1EB41C1E0BAAEB00A20EDB /* MyGUI_LogSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3BB1E0BAAEA00A20EDB /* MyGUI_LogSource.cpp */; };
+		FA1EB41D1E0BAAEB00A20EDB /* MyGUI_MainSkin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3BC1E0BAAEA00A20EDB /* MyGUI_MainSkin.cpp */; };
+		FA1EB41E1E0BAAEB00A20EDB /* MyGUI_MaskPickInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3BD1E0BAAEA00A20EDB /* MyGUI_MaskPickInfo.cpp */; };
+		FA1EB41F1E0BAAEB00A20EDB /* MyGUI_MenuBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3BE1E0BAAEA00A20EDB /* MyGUI_MenuBar.cpp */; };
+		FA1EB4201E0BAAEB00A20EDB /* MyGUI_MenuControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3BF1E0BAAEA00A20EDB /* MyGUI_MenuControl.cpp */; };
+		FA1EB4211E0BAAEB00A20EDB /* MyGUI_MenuItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3C01E0BAAEA00A20EDB /* MyGUI_MenuItem.cpp */; };
+		FA1EB4221E0BAAEB00A20EDB /* MyGUI_MultiListBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3C11E0BAAEA00A20EDB /* MyGUI_MultiListBox.cpp */; };
+		FA1EB4231E0BAAEB00A20EDB /* MyGUI_MultiListItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3C21E0BAAEA00A20EDB /* MyGUI_MultiListItem.cpp */; };
+		FA1EB4241E0BAAEB00A20EDB /* MyGUI_OverlappedLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3C31E0BAAEA00A20EDB /* MyGUI_OverlappedLayer.cpp */; };
+		FA1EB4251E0BAAEB00A20EDB /* MyGUI_PluginManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3C41E0BAAEA00A20EDB /* MyGUI_PluginManager.cpp */; };
+		FA1EB4261E0BAAEB00A20EDB /* MyGUI_PointerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3C51E0BAAEA00A20EDB /* MyGUI_PointerManager.cpp */; };
+		FA1EB4271E0BAAEB00A20EDB /* MyGUI_PolygonalSkin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3C61E0BAAEA00A20EDB /* MyGUI_PolygonalSkin.cpp */; };
+		FA1EB4281E0BAAEB00A20EDB /* MyGUI_PopupMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3C71E0BAAEA00A20EDB /* MyGUI_PopupMenu.cpp */; };
+		FA1EB4291E0BAAEB00A20EDB /* MyGUI_Precompiled.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3C81E0BAAEA00A20EDB /* MyGUI_Precompiled.cpp */; };
+		FA1EB42A1E0BAAEB00A20EDB /* MyGUI_ProgressBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3C91E0BAAEA00A20EDB /* MyGUI_ProgressBar.cpp */; };
+		FA1EB42B1E0BAAEB00A20EDB /* MyGUI_RenderItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3CA1E0BAAEA00A20EDB /* MyGUI_RenderItem.cpp */; };
+		FA1EB42C1E0BAAEB00A20EDB /* MyGUI_RenderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3CB1E0BAAEA00A20EDB /* MyGUI_RenderManager.cpp */; };
+		FA1EB42D1E0BAAEB00A20EDB /* MyGUI_ResourceImageSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3CC1E0BAAEA00A20EDB /* MyGUI_ResourceImageSet.cpp */; };
+		FA1EB42E1E0BAAEB00A20EDB /* MyGUI_ResourceImageSetPointer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3CD1E0BAAEA00A20EDB /* MyGUI_ResourceImageSetPointer.cpp */; };
+		FA1EB42F1E0BAAEB00A20EDB /* MyGUI_ResourceLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3CE1E0BAAEA00A20EDB /* MyGUI_ResourceLayout.cpp */; };
+		FA1EB4301E0BAAEB00A20EDB /* MyGUI_ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3CF1E0BAAEA00A20EDB /* MyGUI_ResourceManager.cpp */; };
+		FA1EB4311E0BAAEB00A20EDB /* MyGUI_ResourceManualFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3D01E0BAAEA00A20EDB /* MyGUI_ResourceManualFont.cpp */; };
+		FA1EB4321E0BAAEB00A20EDB /* MyGUI_ResourceManualPointer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3D11E0BAAEA00A20EDB /* MyGUI_ResourceManualPointer.cpp */; };
+		FA1EB4331E0BAAEB00A20EDB /* MyGUI_ResourceSkin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3D21E0BAAEA00A20EDB /* MyGUI_ResourceSkin.cpp */; };
+		FA1EB4341E0BAAEB00A20EDB /* MyGUI_ResourceTrueTypeFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3D31E0BAAEA00A20EDB /* MyGUI_ResourceTrueTypeFont.cpp */; };
+		FA1EB4351E0BAAEB00A20EDB /* MyGUI_RotatingSkin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3D41E0BAAEA00A20EDB /* MyGUI_RotatingSkin.cpp */; };
+		FA1EB4361E0BAAEB00A20EDB /* MyGUI_ScrollBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3D51E0BAAEA00A20EDB /* MyGUI_ScrollBar.cpp */; };
+		FA1EB4371E0BAAEB00A20EDB /* MyGUI_ScrollView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3D61E0BAAEA00A20EDB /* MyGUI_ScrollView.cpp */; };
+		FA1EB4381E0BAAEB00A20EDB /* MyGUI_ScrollViewBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3D71E0BAAEA00A20EDB /* MyGUI_ScrollViewBase.cpp */; };
+		FA1EB4391E0BAAEB00A20EDB /* MyGUI_SharedLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3D81E0BAAEA00A20EDB /* MyGUI_SharedLayer.cpp */; };
+		FA1EB43A1E0BAAEB00A20EDB /* MyGUI_SharedLayerNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3D91E0BAAEA00A20EDB /* MyGUI_SharedLayerNode.cpp */; };
+		FA1EB43B1E0BAAEB00A20EDB /* MyGUI_SimpleText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3DA1E0BAAEA00A20EDB /* MyGUI_SimpleText.cpp */; };
+		FA1EB43C1E0BAAEB00A20EDB /* MyGUI_SkinItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3DB1E0BAAEA00A20EDB /* MyGUI_SkinItem.cpp */; };
+		FA1EB43D1E0BAAEB00A20EDB /* MyGUI_SkinManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3DC1E0BAAEA00A20EDB /* MyGUI_SkinManager.cpp */; };
+		FA1EB43E1E0BAAEB00A20EDB /* MyGUI_SubSkin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3DD1E0BAAEA00A20EDB /* MyGUI_SubSkin.cpp */; };
+		FA1EB43F1E0BAAEB00A20EDB /* MyGUI_SubWidgetBinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3DE1E0BAAEA00A20EDB /* MyGUI_SubWidgetBinding.cpp */; };
+		FA1EB4401E0BAAEB00A20EDB /* MyGUI_SubWidgetManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3DF1E0BAAEA00A20EDB /* MyGUI_SubWidgetManager.cpp */; };
+		FA1EB4411E0BAAEB00A20EDB /* MyGUI_TabControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3E01E0BAAEA00A20EDB /* MyGUI_TabControl.cpp */; };
+		FA1EB4421E0BAAEB00A20EDB /* MyGUI_TabItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3E11E0BAAEA00A20EDB /* MyGUI_TabItem.cpp */; };
+		FA1EB4431E0BAAEB00A20EDB /* MyGUI_TextBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3E21E0BAAEA00A20EDB /* MyGUI_TextBox.cpp */; };
+		FA1EB4441E0BAAEB00A20EDB /* MyGUI_TextIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3E31E0BAAEA00A20EDB /* MyGUI_TextIterator.cpp */; };
+		FA1EB4451E0BAAEB00A20EDB /* MyGUI_TextureUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3E41E0BAAEB00A20EDB /* MyGUI_TextureUtility.cpp */; };
+		FA1EB4461E0BAAEB00A20EDB /* MyGUI_TextView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3E51E0BAAEB00A20EDB /* MyGUI_TextView.cpp */; };
+		FA1EB4471E0BAAEB00A20EDB /* MyGUI_TileRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3E61E0BAAEB00A20EDB /* MyGUI_TileRect.cpp */; };
+		FA1EB4481E0BAAEB00A20EDB /* MyGUI_Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3E71E0BAAEB00A20EDB /* MyGUI_Timer.cpp */; };
+		FA1EB4491E0BAAEB00A20EDB /* MyGUI_ToolTipManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3E81E0BAAEB00A20EDB /* MyGUI_ToolTipManager.cpp */; };
+		FA1EB44A1E0BAAEB00A20EDB /* MyGUI_UString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3E91E0BAAEB00A20EDB /* MyGUI_UString.cpp */; };
+		FA1EB44B1E0BAAEB00A20EDB /* MyGUI_Widget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3EA1E0BAAEB00A20EDB /* MyGUI_Widget.cpp */; };
+		FA1EB44C1E0BAAEB00A20EDB /* MyGUI_WidgetInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3EB1E0BAAEB00A20EDB /* MyGUI_WidgetInput.cpp */; };
+		FA1EB44D1E0BAAEB00A20EDB /* MyGUI_WidgetManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3EC1E0BAAEB00A20EDB /* MyGUI_WidgetManager.cpp */; };
+		FA1EB44E1E0BAAEB00A20EDB /* MyGUI_WidgetUserData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3ED1E0BAAEB00A20EDB /* MyGUI_WidgetUserData.cpp */; };
+		FA1EB44F1E0BAAEB00A20EDB /* MyGUI_Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3EE1E0BAAEB00A20EDB /* MyGUI_Window.cpp */; };
+		FA1EB4501E0BAAEB00A20EDB /* MyGUI_WindowsClipboardHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3EF1E0BAAEB00A20EDB /* MyGUI_WindowsClipboardHandler.cpp */; };
+		FA1EB4511E0BAAEB00A20EDB /* MyGUI_XmlDocument.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3F01E0BAAEB00A20EDB /* MyGUI_XmlDocument.cpp */; };
+		FA1EB4BF1E0BAB0800A20EDB /* MyGUI_OgreDataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB4931E0BAB0700A20EDB /* MyGUI_OgreDataManager.cpp */; };
+		FA1EB4C01E0BAB0800A20EDB /* MyGUI_OgreDataStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB4941E0BAB0700A20EDB /* MyGUI_OgreDataStream.cpp */; };
+		FA1EB4C11E0BAB0800A20EDB /* MyGUI_OgreRenderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB4951E0BAB0700A20EDB /* MyGUI_OgreRenderManager.cpp */; };
+		FA1EB4C21E0BAB0800A20EDB /* MyGUI_OgreRTTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB4961E0BAB0700A20EDB /* MyGUI_OgreRTTexture.cpp */; };
+		FA1EB4C31E0BAB0800A20EDB /* MyGUI_OgreTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB4971E0BAB0700A20EDB /* MyGUI_OgreTexture.cpp */; };
+		FA1EB4C41E0BAB0800A20EDB /* MyGUI_OgreVertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB4981E0BAB0700A20EDB /* MyGUI_OgreVertexBuffer.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA1EB2C91E0BAA9B00A20EDB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FA1EB2CB1E0BAA9B00A20EDB /* libmygui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmygui.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1EB3901E0BAAEA00A20EDB /* MyGUI_ActionController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ActionController.cpp; sourceTree = "<group>"; };
+		FA1EB3911E0BAAEA00A20EDB /* MyGUI_Any.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_Any.cpp; sourceTree = "<group>"; };
+		FA1EB3921E0BAAEA00A20EDB /* MyGUI_BackwardCompatibility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_BackwardCompatibility.cpp; sourceTree = "<group>"; };
+		FA1EB3931E0BAAEA00A20EDB /* MyGUI_BiIndexBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_BiIndexBase.cpp; sourceTree = "<group>"; };
+		FA1EB3941E0BAAEA00A20EDB /* MyGUI_Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_Button.cpp; sourceTree = "<group>"; };
+		FA1EB3951E0BAAEA00A20EDB /* MyGUI_Canvas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_Canvas.cpp; sourceTree = "<group>"; };
+		FA1EB3961E0BAAEA00A20EDB /* MyGUI_ChildSkinInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ChildSkinInfo.cpp; sourceTree = "<group>"; };
+		FA1EB3971E0BAAEA00A20EDB /* MyGUI_ClipboardManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ClipboardManager.cpp; sourceTree = "<group>"; };
+		FA1EB3981E0BAAEA00A20EDB /* MyGUI_Colour.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_Colour.cpp; sourceTree = "<group>"; };
+		FA1EB3991E0BAAEA00A20EDB /* MyGUI_ComboBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ComboBox.cpp; sourceTree = "<group>"; };
+		FA1EB39A1E0BAAEA00A20EDB /* MyGUI_ConsoleLogListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ConsoleLogListener.cpp; sourceTree = "<group>"; };
+		FA1EB39B1E0BAAEA00A20EDB /* MyGUI_Constants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_Constants.cpp; sourceTree = "<group>"; };
+		FA1EB39C1E0BAAEA00A20EDB /* MyGUI_ControllerEdgeHide.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ControllerEdgeHide.cpp; sourceTree = "<group>"; };
+		FA1EB39D1E0BAAEA00A20EDB /* MyGUI_ControllerFadeAlpha.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ControllerFadeAlpha.cpp; sourceTree = "<group>"; };
+		FA1EB39E1E0BAAEA00A20EDB /* MyGUI_ControllerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ControllerManager.cpp; sourceTree = "<group>"; };
+		FA1EB39F1E0BAAEA00A20EDB /* MyGUI_ControllerPosition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ControllerPosition.cpp; sourceTree = "<group>"; };
+		FA1EB3A01E0BAAEA00A20EDB /* MyGUI_ControllerRepeatClick.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ControllerRepeatClick.cpp; sourceTree = "<group>"; };
+		FA1EB3A11E0BAAEA00A20EDB /* MyGUI_DataFileStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_DataFileStream.cpp; sourceTree = "<group>"; };
+		FA1EB3A21E0BAAEA00A20EDB /* MyGUI_DataManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_DataManager.cpp; sourceTree = "<group>"; };
+		FA1EB3A31E0BAAEA00A20EDB /* MyGUI_DataMemoryStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_DataMemoryStream.cpp; sourceTree = "<group>"; };
+		FA1EB3A41E0BAAEA00A20EDB /* MyGUI_DataStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_DataStream.cpp; sourceTree = "<group>"; };
+		FA1EB3A51E0BAAEA00A20EDB /* MyGUI_DDContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_DDContainer.cpp; sourceTree = "<group>"; };
+		FA1EB3A61E0BAAEA00A20EDB /* MyGUI_DynLib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_DynLib.cpp; sourceTree = "<group>"; };
+		FA1EB3A71E0BAAEA00A20EDB /* MyGUI_DynLibManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_DynLibManager.cpp; sourceTree = "<group>"; };
+		FA1EB3A81E0BAAEA00A20EDB /* MyGUI_EditBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_EditBox.cpp; sourceTree = "<group>"; };
+		FA1EB3A91E0BAAEA00A20EDB /* MyGUI_EditText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_EditText.cpp; sourceTree = "<group>"; };
+		FA1EB3AA1E0BAAEA00A20EDB /* MyGUI_Exception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_Exception.cpp; sourceTree = "<group>"; };
+		FA1EB3AB1E0BAAEA00A20EDB /* MyGUI_FactoryManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_FactoryManager.cpp; sourceTree = "<group>"; };
+		FA1EB3AC1E0BAAEA00A20EDB /* MyGUI_FileLogListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_FileLogListener.cpp; sourceTree = "<group>"; };
+		FA1EB3AD1E0BAAEA00A20EDB /* MyGUI_FontManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_FontManager.cpp; sourceTree = "<group>"; };
+		FA1EB3AE1E0BAAEA00A20EDB /* MyGUI_GeometryUtility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_GeometryUtility.cpp; sourceTree = "<group>"; };
+		FA1EB3AF1E0BAAEA00A20EDB /* MyGUI_Gui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_Gui.cpp; sourceTree = "<group>"; };
+		FA1EB3B01E0BAAEA00A20EDB /* MyGUI_ImageBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ImageBox.cpp; sourceTree = "<group>"; };
+		FA1EB3B11E0BAAEA00A20EDB /* MyGUI_InputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_InputManager.cpp; sourceTree = "<group>"; };
+		FA1EB3B21E0BAAEA00A20EDB /* MyGUI_ItemBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ItemBox.cpp; sourceTree = "<group>"; };
+		FA1EB3B31E0BAAEA00A20EDB /* MyGUI_LanguageManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_LanguageManager.cpp; sourceTree = "<group>"; };
+		FA1EB3B41E0BAAEA00A20EDB /* MyGUI_LayerItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_LayerItem.cpp; sourceTree = "<group>"; };
+		FA1EB3B51E0BAAEA00A20EDB /* MyGUI_LayerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_LayerManager.cpp; sourceTree = "<group>"; };
+		FA1EB3B61E0BAAEA00A20EDB /* MyGUI_LayerNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_LayerNode.cpp; sourceTree = "<group>"; };
+		FA1EB3B71E0BAAEA00A20EDB /* MyGUI_LayoutManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_LayoutManager.cpp; sourceTree = "<group>"; };
+		FA1EB3B81E0BAAEA00A20EDB /* MyGUI_LevelLogFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_LevelLogFilter.cpp; sourceTree = "<group>"; };
+		FA1EB3B91E0BAAEA00A20EDB /* MyGUI_ListBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ListBox.cpp; sourceTree = "<group>"; };
+		FA1EB3BA1E0BAAEA00A20EDB /* MyGUI_LogManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_LogManager.cpp; sourceTree = "<group>"; };
+		FA1EB3BB1E0BAAEA00A20EDB /* MyGUI_LogSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_LogSource.cpp; sourceTree = "<group>"; };
+		FA1EB3BC1E0BAAEA00A20EDB /* MyGUI_MainSkin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_MainSkin.cpp; sourceTree = "<group>"; };
+		FA1EB3BD1E0BAAEA00A20EDB /* MyGUI_MaskPickInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_MaskPickInfo.cpp; sourceTree = "<group>"; };
+		FA1EB3BE1E0BAAEA00A20EDB /* MyGUI_MenuBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_MenuBar.cpp; sourceTree = "<group>"; };
+		FA1EB3BF1E0BAAEA00A20EDB /* MyGUI_MenuControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_MenuControl.cpp; sourceTree = "<group>"; };
+		FA1EB3C01E0BAAEA00A20EDB /* MyGUI_MenuItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_MenuItem.cpp; sourceTree = "<group>"; };
+		FA1EB3C11E0BAAEA00A20EDB /* MyGUI_MultiListBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_MultiListBox.cpp; sourceTree = "<group>"; };
+		FA1EB3C21E0BAAEA00A20EDB /* MyGUI_MultiListItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_MultiListItem.cpp; sourceTree = "<group>"; };
+		FA1EB3C31E0BAAEA00A20EDB /* MyGUI_OverlappedLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_OverlappedLayer.cpp; sourceTree = "<group>"; };
+		FA1EB3C41E0BAAEA00A20EDB /* MyGUI_PluginManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_PluginManager.cpp; sourceTree = "<group>"; };
+		FA1EB3C51E0BAAEA00A20EDB /* MyGUI_PointerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_PointerManager.cpp; sourceTree = "<group>"; };
+		FA1EB3C61E0BAAEA00A20EDB /* MyGUI_PolygonalSkin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_PolygonalSkin.cpp; sourceTree = "<group>"; };
+		FA1EB3C71E0BAAEA00A20EDB /* MyGUI_PopupMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_PopupMenu.cpp; sourceTree = "<group>"; };
+		FA1EB3C81E0BAAEA00A20EDB /* MyGUI_Precompiled.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_Precompiled.cpp; sourceTree = "<group>"; };
+		FA1EB3C91E0BAAEA00A20EDB /* MyGUI_ProgressBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ProgressBar.cpp; sourceTree = "<group>"; };
+		FA1EB3CA1E0BAAEA00A20EDB /* MyGUI_RenderItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_RenderItem.cpp; sourceTree = "<group>"; };
+		FA1EB3CB1E0BAAEA00A20EDB /* MyGUI_RenderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_RenderManager.cpp; sourceTree = "<group>"; };
+		FA1EB3CC1E0BAAEA00A20EDB /* MyGUI_ResourceImageSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ResourceImageSet.cpp; sourceTree = "<group>"; };
+		FA1EB3CD1E0BAAEA00A20EDB /* MyGUI_ResourceImageSetPointer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ResourceImageSetPointer.cpp; sourceTree = "<group>"; };
+		FA1EB3CE1E0BAAEA00A20EDB /* MyGUI_ResourceLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ResourceLayout.cpp; sourceTree = "<group>"; };
+		FA1EB3CF1E0BAAEA00A20EDB /* MyGUI_ResourceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ResourceManager.cpp; sourceTree = "<group>"; };
+		FA1EB3D01E0BAAEA00A20EDB /* MyGUI_ResourceManualFont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ResourceManualFont.cpp; sourceTree = "<group>"; };
+		FA1EB3D11E0BAAEA00A20EDB /* MyGUI_ResourceManualPointer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ResourceManualPointer.cpp; sourceTree = "<group>"; };
+		FA1EB3D21E0BAAEA00A20EDB /* MyGUI_ResourceSkin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ResourceSkin.cpp; sourceTree = "<group>"; };
+		FA1EB3D31E0BAAEA00A20EDB /* MyGUI_ResourceTrueTypeFont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ResourceTrueTypeFont.cpp; sourceTree = "<group>"; };
+		FA1EB3D41E0BAAEA00A20EDB /* MyGUI_RotatingSkin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_RotatingSkin.cpp; sourceTree = "<group>"; };
+		FA1EB3D51E0BAAEA00A20EDB /* MyGUI_ScrollBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ScrollBar.cpp; sourceTree = "<group>"; };
+		FA1EB3D61E0BAAEA00A20EDB /* MyGUI_ScrollView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ScrollView.cpp; sourceTree = "<group>"; };
+		FA1EB3D71E0BAAEA00A20EDB /* MyGUI_ScrollViewBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ScrollViewBase.cpp; sourceTree = "<group>"; };
+		FA1EB3D81E0BAAEA00A20EDB /* MyGUI_SharedLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_SharedLayer.cpp; sourceTree = "<group>"; };
+		FA1EB3D91E0BAAEA00A20EDB /* MyGUI_SharedLayerNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_SharedLayerNode.cpp; sourceTree = "<group>"; };
+		FA1EB3DA1E0BAAEA00A20EDB /* MyGUI_SimpleText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_SimpleText.cpp; sourceTree = "<group>"; };
+		FA1EB3DB1E0BAAEA00A20EDB /* MyGUI_SkinItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_SkinItem.cpp; sourceTree = "<group>"; };
+		FA1EB3DC1E0BAAEA00A20EDB /* MyGUI_SkinManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_SkinManager.cpp; sourceTree = "<group>"; };
+		FA1EB3DD1E0BAAEA00A20EDB /* MyGUI_SubSkin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_SubSkin.cpp; sourceTree = "<group>"; };
+		FA1EB3DE1E0BAAEA00A20EDB /* MyGUI_SubWidgetBinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_SubWidgetBinding.cpp; sourceTree = "<group>"; };
+		FA1EB3DF1E0BAAEA00A20EDB /* MyGUI_SubWidgetManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_SubWidgetManager.cpp; sourceTree = "<group>"; };
+		FA1EB3E01E0BAAEA00A20EDB /* MyGUI_TabControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_TabControl.cpp; sourceTree = "<group>"; };
+		FA1EB3E11E0BAAEA00A20EDB /* MyGUI_TabItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_TabItem.cpp; sourceTree = "<group>"; };
+		FA1EB3E21E0BAAEA00A20EDB /* MyGUI_TextBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_TextBox.cpp; sourceTree = "<group>"; };
+		FA1EB3E31E0BAAEA00A20EDB /* MyGUI_TextIterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_TextIterator.cpp; sourceTree = "<group>"; };
+		FA1EB3E41E0BAAEB00A20EDB /* MyGUI_TextureUtility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_TextureUtility.cpp; sourceTree = "<group>"; };
+		FA1EB3E51E0BAAEB00A20EDB /* MyGUI_TextView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_TextView.cpp; sourceTree = "<group>"; };
+		FA1EB3E61E0BAAEB00A20EDB /* MyGUI_TileRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_TileRect.cpp; sourceTree = "<group>"; };
+		FA1EB3E71E0BAAEB00A20EDB /* MyGUI_Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_Timer.cpp; sourceTree = "<group>"; };
+		FA1EB3E81E0BAAEB00A20EDB /* MyGUI_ToolTipManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ToolTipManager.cpp; sourceTree = "<group>"; };
+		FA1EB3E91E0BAAEB00A20EDB /* MyGUI_UString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_UString.cpp; sourceTree = "<group>"; };
+		FA1EB3EA1E0BAAEB00A20EDB /* MyGUI_Widget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_Widget.cpp; sourceTree = "<group>"; };
+		FA1EB3EB1E0BAAEB00A20EDB /* MyGUI_WidgetInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_WidgetInput.cpp; sourceTree = "<group>"; };
+		FA1EB3EC1E0BAAEB00A20EDB /* MyGUI_WidgetManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_WidgetManager.cpp; sourceTree = "<group>"; };
+		FA1EB3ED1E0BAAEB00A20EDB /* MyGUI_WidgetUserData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_WidgetUserData.cpp; sourceTree = "<group>"; };
+		FA1EB3EE1E0BAAEB00A20EDB /* MyGUI_Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_Window.cpp; sourceTree = "<group>"; };
+		FA1EB3EF1E0BAAEB00A20EDB /* MyGUI_WindowsClipboardHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_WindowsClipboardHandler.cpp; sourceTree = "<group>"; };
+		FA1EB3F01E0BAAEB00A20EDB /* MyGUI_XmlDocument.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_XmlDocument.cpp; sourceTree = "<group>"; };
+		FA1EB4881E0BAB0700A20EDB /* MyGUI_LastHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGUI_LastHeader.h; sourceTree = "<group>"; };
+		FA1EB4891E0BAB0700A20EDB /* MyGUI_OgreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGUI_OgreDataManager.h; sourceTree = "<group>"; };
+		FA1EB48A1E0BAB0700A20EDB /* MyGUI_OgreDataStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGUI_OgreDataStream.h; sourceTree = "<group>"; };
+		FA1EB48B1E0BAB0700A20EDB /* MyGUI_OgreDiagnostic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGUI_OgreDiagnostic.h; sourceTree = "<group>"; };
+		FA1EB48C1E0BAB0700A20EDB /* MyGUI_OgrePlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGUI_OgrePlatform.h; sourceTree = "<group>"; };
+		FA1EB48D1E0BAB0700A20EDB /* MyGUI_OgreRenderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGUI_OgreRenderManager.h; sourceTree = "<group>"; };
+		FA1EB48E1E0BAB0700A20EDB /* MyGUI_OgreRTTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGUI_OgreRTTexture.h; sourceTree = "<group>"; };
+		FA1EB48F1E0BAB0700A20EDB /* MyGUI_OgreTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGUI_OgreTexture.h; sourceTree = "<group>"; };
+		FA1EB4901E0BAB0700A20EDB /* MyGUI_OgreVertexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGUI_OgreVertexBuffer.h; sourceTree = "<group>"; };
+		FA1EB4931E0BAB0700A20EDB /* MyGUI_OgreDataManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_OgreDataManager.cpp; sourceTree = "<group>"; };
+		FA1EB4941E0BAB0700A20EDB /* MyGUI_OgreDataStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_OgreDataStream.cpp; sourceTree = "<group>"; };
+		FA1EB4951E0BAB0700A20EDB /* MyGUI_OgreRenderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_OgreRenderManager.cpp; sourceTree = "<group>"; };
+		FA1EB4961E0BAB0700A20EDB /* MyGUI_OgreRTTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_OgreRTTexture.cpp; sourceTree = "<group>"; };
+		FA1EB4971E0BAB0700A20EDB /* MyGUI_OgreTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_OgreTexture.cpp; sourceTree = "<group>"; };
+		FA1EB4981E0BAB0700A20EDB /* MyGUI_OgreVertexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_OgreVertexBuffer.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA1EB2C81E0BAA9B00A20EDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA1EB2C21E0BAA9B00A20EDB = {
+			isa = PBXGroup;
+			children = (
+				FA1EB2CD1E0BAA9B00A20EDB /* mygui */,
+				FA1EB2CC1E0BAA9B00A20EDB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA1EB2CC1E0BAA9B00A20EDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB2CB1E0BAA9B00A20EDB /* libmygui.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA1EB2CD1E0BAA9B00A20EDB /* mygui */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB4521E0BAB0700A20EDB /* Platforms */,
+				FA1EB2DE1E0BAAEA00A20EDB /* MyGUIEngine */,
+			);
+			path = mygui;
+			sourceTree = "<group>";
+		};
+		FA1EB2DE1E0BAAEA00A20EDB /* MyGUIEngine */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB38F1E0BAAEA00A20EDB /* src */,
+			);
+			name = MyGUIEngine;
+			path = ../../../../../../../Source/MyGUI/MyGUIEngine;
+			sourceTree = "<group>";
+		};
+		FA1EB38F1E0BAAEA00A20EDB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB3901E0BAAEA00A20EDB /* MyGUI_ActionController.cpp */,
+				FA1EB3911E0BAAEA00A20EDB /* MyGUI_Any.cpp */,
+				FA1EB3921E0BAAEA00A20EDB /* MyGUI_BackwardCompatibility.cpp */,
+				FA1EB3931E0BAAEA00A20EDB /* MyGUI_BiIndexBase.cpp */,
+				FA1EB3941E0BAAEA00A20EDB /* MyGUI_Button.cpp */,
+				FA1EB3951E0BAAEA00A20EDB /* MyGUI_Canvas.cpp */,
+				FA1EB3961E0BAAEA00A20EDB /* MyGUI_ChildSkinInfo.cpp */,
+				FA1EB3971E0BAAEA00A20EDB /* MyGUI_ClipboardManager.cpp */,
+				FA1EB3981E0BAAEA00A20EDB /* MyGUI_Colour.cpp */,
+				FA1EB3991E0BAAEA00A20EDB /* MyGUI_ComboBox.cpp */,
+				FA1EB39A1E0BAAEA00A20EDB /* MyGUI_ConsoleLogListener.cpp */,
+				FA1EB39B1E0BAAEA00A20EDB /* MyGUI_Constants.cpp */,
+				FA1EB39C1E0BAAEA00A20EDB /* MyGUI_ControllerEdgeHide.cpp */,
+				FA1EB39D1E0BAAEA00A20EDB /* MyGUI_ControllerFadeAlpha.cpp */,
+				FA1EB39E1E0BAAEA00A20EDB /* MyGUI_ControllerManager.cpp */,
+				FA1EB39F1E0BAAEA00A20EDB /* MyGUI_ControllerPosition.cpp */,
+				FA1EB3A01E0BAAEA00A20EDB /* MyGUI_ControllerRepeatClick.cpp */,
+				FA1EB3A11E0BAAEA00A20EDB /* MyGUI_DataFileStream.cpp */,
+				FA1EB3A21E0BAAEA00A20EDB /* MyGUI_DataManager.cpp */,
+				FA1EB3A31E0BAAEA00A20EDB /* MyGUI_DataMemoryStream.cpp */,
+				FA1EB3A41E0BAAEA00A20EDB /* MyGUI_DataStream.cpp */,
+				FA1EB3A51E0BAAEA00A20EDB /* MyGUI_DDContainer.cpp */,
+				FA1EB3A61E0BAAEA00A20EDB /* MyGUI_DynLib.cpp */,
+				FA1EB3A71E0BAAEA00A20EDB /* MyGUI_DynLibManager.cpp */,
+				FA1EB3A81E0BAAEA00A20EDB /* MyGUI_EditBox.cpp */,
+				FA1EB3A91E0BAAEA00A20EDB /* MyGUI_EditText.cpp */,
+				FA1EB3AA1E0BAAEA00A20EDB /* MyGUI_Exception.cpp */,
+				FA1EB3AB1E0BAAEA00A20EDB /* MyGUI_FactoryManager.cpp */,
+				FA1EB3AC1E0BAAEA00A20EDB /* MyGUI_FileLogListener.cpp */,
+				FA1EB3AD1E0BAAEA00A20EDB /* MyGUI_FontManager.cpp */,
+				FA1EB3AE1E0BAAEA00A20EDB /* MyGUI_GeometryUtility.cpp */,
+				FA1EB3AF1E0BAAEA00A20EDB /* MyGUI_Gui.cpp */,
+				FA1EB3B01E0BAAEA00A20EDB /* MyGUI_ImageBox.cpp */,
+				FA1EB3B11E0BAAEA00A20EDB /* MyGUI_InputManager.cpp */,
+				FA1EB3B21E0BAAEA00A20EDB /* MyGUI_ItemBox.cpp */,
+				FA1EB3B31E0BAAEA00A20EDB /* MyGUI_LanguageManager.cpp */,
+				FA1EB3B41E0BAAEA00A20EDB /* MyGUI_LayerItem.cpp */,
+				FA1EB3B51E0BAAEA00A20EDB /* MyGUI_LayerManager.cpp */,
+				FA1EB3B61E0BAAEA00A20EDB /* MyGUI_LayerNode.cpp */,
+				FA1EB3B71E0BAAEA00A20EDB /* MyGUI_LayoutManager.cpp */,
+				FA1EB3B81E0BAAEA00A20EDB /* MyGUI_LevelLogFilter.cpp */,
+				FA1EB3B91E0BAAEA00A20EDB /* MyGUI_ListBox.cpp */,
+				FA1EB3BA1E0BAAEA00A20EDB /* MyGUI_LogManager.cpp */,
+				FA1EB3BB1E0BAAEA00A20EDB /* MyGUI_LogSource.cpp */,
+				FA1EB3BC1E0BAAEA00A20EDB /* MyGUI_MainSkin.cpp */,
+				FA1EB3BD1E0BAAEA00A20EDB /* MyGUI_MaskPickInfo.cpp */,
+				FA1EB3BE1E0BAAEA00A20EDB /* MyGUI_MenuBar.cpp */,
+				FA1EB3BF1E0BAAEA00A20EDB /* MyGUI_MenuControl.cpp */,
+				FA1EB3C01E0BAAEA00A20EDB /* MyGUI_MenuItem.cpp */,
+				FA1EB3C11E0BAAEA00A20EDB /* MyGUI_MultiListBox.cpp */,
+				FA1EB3C21E0BAAEA00A20EDB /* MyGUI_MultiListItem.cpp */,
+				FA1EB3C31E0BAAEA00A20EDB /* MyGUI_OverlappedLayer.cpp */,
+				FA1EB3C41E0BAAEA00A20EDB /* MyGUI_PluginManager.cpp */,
+				FA1EB3C51E0BAAEA00A20EDB /* MyGUI_PointerManager.cpp */,
+				FA1EB3C61E0BAAEA00A20EDB /* MyGUI_PolygonalSkin.cpp */,
+				FA1EB3C71E0BAAEA00A20EDB /* MyGUI_PopupMenu.cpp */,
+				FA1EB3C81E0BAAEA00A20EDB /* MyGUI_Precompiled.cpp */,
+				FA1EB3C91E0BAAEA00A20EDB /* MyGUI_ProgressBar.cpp */,
+				FA1EB3CA1E0BAAEA00A20EDB /* MyGUI_RenderItem.cpp */,
+				FA1EB3CB1E0BAAEA00A20EDB /* MyGUI_RenderManager.cpp */,
+				FA1EB3CC1E0BAAEA00A20EDB /* MyGUI_ResourceImageSet.cpp */,
+				FA1EB3CD1E0BAAEA00A20EDB /* MyGUI_ResourceImageSetPointer.cpp */,
+				FA1EB3CE1E0BAAEA00A20EDB /* MyGUI_ResourceLayout.cpp */,
+				FA1EB3CF1E0BAAEA00A20EDB /* MyGUI_ResourceManager.cpp */,
+				FA1EB3D01E0BAAEA00A20EDB /* MyGUI_ResourceManualFont.cpp */,
+				FA1EB3D11E0BAAEA00A20EDB /* MyGUI_ResourceManualPointer.cpp */,
+				FA1EB3D21E0BAAEA00A20EDB /* MyGUI_ResourceSkin.cpp */,
+				FA1EB3D31E0BAAEA00A20EDB /* MyGUI_ResourceTrueTypeFont.cpp */,
+				FA1EB3D41E0BAAEA00A20EDB /* MyGUI_RotatingSkin.cpp */,
+				FA1EB3D51E0BAAEA00A20EDB /* MyGUI_ScrollBar.cpp */,
+				FA1EB3D61E0BAAEA00A20EDB /* MyGUI_ScrollView.cpp */,
+				FA1EB3D71E0BAAEA00A20EDB /* MyGUI_ScrollViewBase.cpp */,
+				FA1EB3D81E0BAAEA00A20EDB /* MyGUI_SharedLayer.cpp */,
+				FA1EB3D91E0BAAEA00A20EDB /* MyGUI_SharedLayerNode.cpp */,
+				FA1EB3DA1E0BAAEA00A20EDB /* MyGUI_SimpleText.cpp */,
+				FA1EB3DB1E0BAAEA00A20EDB /* MyGUI_SkinItem.cpp */,
+				FA1EB3DC1E0BAAEA00A20EDB /* MyGUI_SkinManager.cpp */,
+				FA1EB3DD1E0BAAEA00A20EDB /* MyGUI_SubSkin.cpp */,
+				FA1EB3DE1E0BAAEA00A20EDB /* MyGUI_SubWidgetBinding.cpp */,
+				FA1EB3DF1E0BAAEA00A20EDB /* MyGUI_SubWidgetManager.cpp */,
+				FA1EB3E01E0BAAEA00A20EDB /* MyGUI_TabControl.cpp */,
+				FA1EB3E11E0BAAEA00A20EDB /* MyGUI_TabItem.cpp */,
+				FA1EB3E21E0BAAEA00A20EDB /* MyGUI_TextBox.cpp */,
+				FA1EB3E31E0BAAEA00A20EDB /* MyGUI_TextIterator.cpp */,
+				FA1EB3E41E0BAAEB00A20EDB /* MyGUI_TextureUtility.cpp */,
+				FA1EB3E51E0BAAEB00A20EDB /* MyGUI_TextView.cpp */,
+				FA1EB3E61E0BAAEB00A20EDB /* MyGUI_TileRect.cpp */,
+				FA1EB3E71E0BAAEB00A20EDB /* MyGUI_Timer.cpp */,
+				FA1EB3E81E0BAAEB00A20EDB /* MyGUI_ToolTipManager.cpp */,
+				FA1EB3E91E0BAAEB00A20EDB /* MyGUI_UString.cpp */,
+				FA1EB3EA1E0BAAEB00A20EDB /* MyGUI_Widget.cpp */,
+				FA1EB3EB1E0BAAEB00A20EDB /* MyGUI_WidgetInput.cpp */,
+				FA1EB3EC1E0BAAEB00A20EDB /* MyGUI_WidgetManager.cpp */,
+				FA1EB3ED1E0BAAEB00A20EDB /* MyGUI_WidgetUserData.cpp */,
+				FA1EB3EE1E0BAAEB00A20EDB /* MyGUI_Window.cpp */,
+				FA1EB3EF1E0BAAEB00A20EDB /* MyGUI_WindowsClipboardHandler.cpp */,
+				FA1EB3F01E0BAAEB00A20EDB /* MyGUI_XmlDocument.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		FA1EB4521E0BAB0700A20EDB /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB4841E0BAB0700A20EDB /* Ogre */,
+			);
+			name = Platforms;
+			path = ../../../../../../../Source/MyGUI/Platforms;
+			sourceTree = "<group>";
+		};
+		FA1EB4841E0BAB0700A20EDB /* Ogre */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB4851E0BAB0700A20EDB /* OgrePlatform */,
+			);
+			path = Ogre;
+			sourceTree = "<group>";
+		};
+		FA1EB4851E0BAB0700A20EDB /* OgrePlatform */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB4871E0BAB0700A20EDB /* include */,
+				FA1EB4921E0BAB0700A20EDB /* src */,
+			);
+			path = OgrePlatform;
+			sourceTree = "<group>";
+		};
+		FA1EB4871E0BAB0700A20EDB /* include */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB4881E0BAB0700A20EDB /* MyGUI_LastHeader.h */,
+				FA1EB4891E0BAB0700A20EDB /* MyGUI_OgreDataManager.h */,
+				FA1EB48A1E0BAB0700A20EDB /* MyGUI_OgreDataStream.h */,
+				FA1EB48B1E0BAB0700A20EDB /* MyGUI_OgreDiagnostic.h */,
+				FA1EB48C1E0BAB0700A20EDB /* MyGUI_OgrePlatform.h */,
+				FA1EB48D1E0BAB0700A20EDB /* MyGUI_OgreRenderManager.h */,
+				FA1EB48E1E0BAB0700A20EDB /* MyGUI_OgreRTTexture.h */,
+				FA1EB48F1E0BAB0700A20EDB /* MyGUI_OgreTexture.h */,
+				FA1EB4901E0BAB0700A20EDB /* MyGUI_OgreVertexBuffer.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		FA1EB4921E0BAB0700A20EDB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB4931E0BAB0700A20EDB /* MyGUI_OgreDataManager.cpp */,
+				FA1EB4941E0BAB0700A20EDB /* MyGUI_OgreDataStream.cpp */,
+				FA1EB4951E0BAB0700A20EDB /* MyGUI_OgreRenderManager.cpp */,
+				FA1EB4961E0BAB0700A20EDB /* MyGUI_OgreRTTexture.cpp */,
+				FA1EB4971E0BAB0700A20EDB /* MyGUI_OgreTexture.cpp */,
+				FA1EB4981E0BAB0700A20EDB /* MyGUI_OgreVertexBuffer.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA1EB2CA1E0BAA9B00A20EDB /* mygui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA1EB2D41E0BAA9B00A20EDB /* Build configuration list for PBXNativeTarget "mygui" */;
+			buildPhases = (
+				FA1EB2C71E0BAA9B00A20EDB /* Sources */,
+				FA1EB2C81E0BAA9B00A20EDB /* Frameworks */,
+				FA1EB2C91E0BAA9B00A20EDB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mygui;
+			productName = mygui;
+			productReference = FA1EB2CB1E0BAA9B00A20EDB /* libmygui.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA1EB2C31E0BAA9B00A20EDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "liu enbao";
+				TargetAttributes = {
+					FA1EB2CA1E0BAA9B00A20EDB = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FA1EB2C61E0BAA9B00A20EDB /* Build configuration list for PBXProject "mygui" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FA1EB2C21E0BAA9B00A20EDB;
+			productRefGroup = FA1EB2CC1E0BAA9B00A20EDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA1EB2CA1E0BAA9B00A20EDB /* mygui */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA1EB2C71E0BAA9B00A20EDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1EB4001E0BAAEB00A20EDB /* MyGUI_ControllerPosition.cpp in Sources */,
+				FA1EB3F81E0BAAEB00A20EDB /* MyGUI_ClipboardManager.cpp in Sources */,
+				FA1EB42B1E0BAAEB00A20EDB /* MyGUI_RenderItem.cpp in Sources */,
+				FA1EB4311E0BAAEB00A20EDB /* MyGUI_ResourceManualFont.cpp in Sources */,
+				FA1EB4411E0BAAEB00A20EDB /* MyGUI_TabControl.cpp in Sources */,
+				FA1EB4391E0BAAEB00A20EDB /* MyGUI_SharedLayer.cpp in Sources */,
+				FA1EB3FD1E0BAAEB00A20EDB /* MyGUI_ControllerEdgeHide.cpp in Sources */,
+				FA1EB3F51E0BAAEB00A20EDB /* MyGUI_Button.cpp in Sources */,
+				FA1EB4371E0BAAEB00A20EDB /* MyGUI_ScrollView.cpp in Sources */,
+				FA1EB4431E0BAAEB00A20EDB /* MyGUI_TextBox.cpp in Sources */,
+				FA1EB40A1E0BAAEB00A20EDB /* MyGUI_EditText.cpp in Sources */,
+				FA1EB3F31E0BAAEB00A20EDB /* MyGUI_BackwardCompatibility.cpp in Sources */,
+				FA1EB41B1E0BAAEB00A20EDB /* MyGUI_LogManager.cpp in Sources */,
+				FA1EB4261E0BAAEB00A20EDB /* MyGUI_PointerManager.cpp in Sources */,
+				FA1EB42C1E0BAAEB00A20EDB /* MyGUI_RenderManager.cpp in Sources */,
+				FA1EB4321E0BAAEB00A20EDB /* MyGUI_ResourceManualPointer.cpp in Sources */,
+				FA1EB44D1E0BAAEB00A20EDB /* MyGUI_WidgetManager.cpp in Sources */,
+				FA1EB4171E0BAAEB00A20EDB /* MyGUI_LayerNode.cpp in Sources */,
+				FA1EB4BF1E0BAB0800A20EDB /* MyGUI_OgreDataManager.cpp in Sources */,
+				FA1EB4111E0BAAEB00A20EDB /* MyGUI_ImageBox.cpp in Sources */,
+				FA1EB4221E0BAAEB00A20EDB /* MyGUI_MultiListBox.cpp in Sources */,
+				FA1EB4061E0BAAEB00A20EDB /* MyGUI_DDContainer.cpp in Sources */,
+				FA1EB43B1E0BAAEB00A20EDB /* MyGUI_SimpleText.cpp in Sources */,
+				FA1EB3F71E0BAAEB00A20EDB /* MyGUI_ChildSkinInfo.cpp in Sources */,
+				FA1EB4131E0BAAEB00A20EDB /* MyGUI_ItemBox.cpp in Sources */,
+				FA1EB41E1E0BAAEB00A20EDB /* MyGUI_MaskPickInfo.cpp in Sources */,
+				FA1EB4271E0BAAEB00A20EDB /* MyGUI_PolygonalSkin.cpp in Sources */,
+				FA1EB4421E0BAAEB00A20EDB /* MyGUI_TabItem.cpp in Sources */,
+				FA1EB42E1E0BAAEB00A20EDB /* MyGUI_ResourceImageSetPointer.cpp in Sources */,
+				FA1EB4191E0BAAEB00A20EDB /* MyGUI_LevelLogFilter.cpp in Sources */,
+				FA1EB4341E0BAAEB00A20EDB /* MyGUI_ResourceTrueTypeFont.cpp in Sources */,
+				FA1EB4241E0BAAEB00A20EDB /* MyGUI_OverlappedLayer.cpp in Sources */,
+				FA1EB4501E0BAAEB00A20EDB /* MyGUI_WindowsClipboardHandler.cpp in Sources */,
+				FA1EB40B1E0BAAEB00A20EDB /* MyGUI_Exception.cpp in Sources */,
+				FA1EB4081E0BAAEB00A20EDB /* MyGUI_DynLibManager.cpp in Sources */,
+				FA1EB4301E0BAAEB00A20EDB /* MyGUI_ResourceManager.cpp in Sources */,
+				FA1EB42D1E0BAAEB00A20EDB /* MyGUI_ResourceImageSet.cpp in Sources */,
+				FA1EB4351E0BAAEB00A20EDB /* MyGUI_RotatingSkin.cpp in Sources */,
+				FA1EB42A1E0BAAEB00A20EDB /* MyGUI_ProgressBar.cpp in Sources */,
+				FA1EB4071E0BAAEB00A20EDB /* MyGUI_DynLib.cpp in Sources */,
+				FA1EB4381E0BAAEB00A20EDB /* MyGUI_ScrollViewBase.cpp in Sources */,
+				FA1EB4091E0BAAEB00A20EDB /* MyGUI_EditBox.cpp in Sources */,
+				FA1EB40E1E0BAAEB00A20EDB /* MyGUI_FontManager.cpp in Sources */,
+				FA1EB4C31E0BAB0800A20EDB /* MyGUI_OgreTexture.cpp in Sources */,
+				FA1EB43A1E0BAAEB00A20EDB /* MyGUI_SharedLayerNode.cpp in Sources */,
+				FA1EB4281E0BAAEB00A20EDB /* MyGUI_PopupMenu.cpp in Sources */,
+				FA1EB41A1E0BAAEB00A20EDB /* MyGUI_ListBox.cpp in Sources */,
+				FA1EB4481E0BAAEB00A20EDB /* MyGUI_Timer.cpp in Sources */,
+				FA1EB4101E0BAAEB00A20EDB /* MyGUI_Gui.cpp in Sources */,
+				FA1EB43C1E0BAAEB00A20EDB /* MyGUI_SkinItem.cpp in Sources */,
+				FA1EB3F21E0BAAEB00A20EDB /* MyGUI_Any.cpp in Sources */,
+				FA1EB44E1E0BAAEB00A20EDB /* MyGUI_WidgetUserData.cpp in Sources */,
+				FA1EB4201E0BAAEB00A20EDB /* MyGUI_MenuControl.cpp in Sources */,
+				FA1EB3F61E0BAAEB00A20EDB /* MyGUI_Canvas.cpp in Sources */,
+				FA1EB40F1E0BAAEB00A20EDB /* MyGUI_GeometryUtility.cpp in Sources */,
+				FA1EB4401E0BAAEB00A20EDB /* MyGUI_SubWidgetManager.cpp in Sources */,
+				FA1EB40C1E0BAAEB00A20EDB /* MyGUI_FactoryManager.cpp in Sources */,
+				FA1EB4C11E0BAB0800A20EDB /* MyGUI_OgreRenderManager.cpp in Sources */,
+				FA1EB43E1E0BAAEB00A20EDB /* MyGUI_SubSkin.cpp in Sources */,
+				FA1EB4051E0BAAEB00A20EDB /* MyGUI_DataStream.cpp in Sources */,
+				FA1EB4211E0BAAEB00A20EDB /* MyGUI_MenuItem.cpp in Sources */,
+				FA1EB4161E0BAAEB00A20EDB /* MyGUI_LayerManager.cpp in Sources */,
+				FA1EB44C1E0BAAEB00A20EDB /* MyGUI_WidgetInput.cpp in Sources */,
+				FA1EB42F1E0BAAEB00A20EDB /* MyGUI_ResourceLayout.cpp in Sources */,
+				FA1EB3FF1E0BAAEB00A20EDB /* MyGUI_ControllerManager.cpp in Sources */,
+				FA1EB4031E0BAAEB00A20EDB /* MyGUI_DataManager.cpp in Sources */,
+				FA1EB4C01E0BAB0800A20EDB /* MyGUI_OgreDataStream.cpp in Sources */,
+				FA1EB43D1E0BAAEB00A20EDB /* MyGUI_SkinManager.cpp in Sources */,
+				FA1EB4491E0BAAEB00A20EDB /* MyGUI_ToolTipManager.cpp in Sources */,
+				FA1EB41D1E0BAAEB00A20EDB /* MyGUI_MainSkin.cpp in Sources */,
+				FA1EB4291E0BAAEB00A20EDB /* MyGUI_Precompiled.cpp in Sources */,
+				FA1EB4461E0BAAEB00A20EDB /* MyGUI_TextView.cpp in Sources */,
+				FA1EB43F1E0BAAEB00A20EDB /* MyGUI_SubWidgetBinding.cpp in Sources */,
+				FA1EB4471E0BAAEB00A20EDB /* MyGUI_TileRect.cpp in Sources */,
+				FA1EB4331E0BAAEB00A20EDB /* MyGUI_ResourceSkin.cpp in Sources */,
+				FA1EB40D1E0BAAEB00A20EDB /* MyGUI_FileLogListener.cpp in Sources */,
+				FA1EB4021E0BAAEB00A20EDB /* MyGUI_DataFileStream.cpp in Sources */,
+				FA1EB4C41E0BAB0800A20EDB /* MyGUI_OgreVertexBuffer.cpp in Sources */,
+				FA1EB44B1E0BAAEB00A20EDB /* MyGUI_Widget.cpp in Sources */,
+				FA1EB4251E0BAAEB00A20EDB /* MyGUI_PluginManager.cpp in Sources */,
+				FA1EB4181E0BAAEB00A20EDB /* MyGUI_LayoutManager.cpp in Sources */,
+				FA1EB3F41E0BAAEB00A20EDB /* MyGUI_BiIndexBase.cpp in Sources */,
+				FA1EB4041E0BAAEB00A20EDB /* MyGUI_DataMemoryStream.cpp in Sources */,
+				FA1EB41C1E0BAAEB00A20EDB /* MyGUI_LogSource.cpp in Sources */,
+				FA1EB4451E0BAAEB00A20EDB /* MyGUI_TextureUtility.cpp in Sources */,
+				FA1EB4141E0BAAEB00A20EDB /* MyGUI_LanguageManager.cpp in Sources */,
+				FA1EB3FC1E0BAAEB00A20EDB /* MyGUI_Constants.cpp in Sources */,
+				FA1EB4441E0BAAEB00A20EDB /* MyGUI_TextIterator.cpp in Sources */,
+				FA1EB4231E0BAAEB00A20EDB /* MyGUI_MultiListItem.cpp in Sources */,
+				FA1EB4361E0BAAEB00A20EDB /* MyGUI_ScrollBar.cpp in Sources */,
+				FA1EB3F91E0BAAEB00A20EDB /* MyGUI_Colour.cpp in Sources */,
+				FA1EB4C21E0BAB0800A20EDB /* MyGUI_OgreRTTexture.cpp in Sources */,
+				FA1EB4511E0BAAEB00A20EDB /* MyGUI_XmlDocument.cpp in Sources */,
+				FA1EB3FA1E0BAAEB00A20EDB /* MyGUI_ComboBox.cpp in Sources */,
+				FA1EB4011E0BAAEB00A20EDB /* MyGUI_ControllerRepeatClick.cpp in Sources */,
+				FA1EB3FB1E0BAAEB00A20EDB /* MyGUI_ConsoleLogListener.cpp in Sources */,
+				FA1EB44F1E0BAAEB00A20EDB /* MyGUI_Window.cpp in Sources */,
+				FA1EB44A1E0BAAEB00A20EDB /* MyGUI_UString.cpp in Sources */,
+				FA1EB4151E0BAAEB00A20EDB /* MyGUI_LayerItem.cpp in Sources */,
+				FA1EB3FE1E0BAAEB00A20EDB /* MyGUI_ControllerFadeAlpha.cpp in Sources */,
+				FA1EB4121E0BAAEB00A20EDB /* MyGUI_InputManager.cpp in Sources */,
+				FA1EB3F11E0BAAEB00A20EDB /* MyGUI_ActionController.cpp in Sources */,
+				FA1EB41F1E0BAAEB00A20EDB /* MyGUI_MenuBar.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FA1EB2D21E0BAA9B00A20EDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FA1EB2D31E0BAA9B00A20EDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA1EB2D51E0BAA9B00A20EDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SOURCE_ROOT)/../../../../../../Source/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/FreeType/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/MyGUI/MyGUIEngine/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include",
+					"$(SOURCE_ROOT)/../ogre",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FA1EB2D61E0BAA9B00A20EDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SOURCE_ROOT)/../../../../../../Source/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/FreeType/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/MyGUI/MyGUIEngine/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include",
+					"$(SOURCE_ROOT)/../ogre",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA1EB2C61E0BAA9B00A20EDB /* Build configuration list for PBXProject "mygui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1EB2D21E0BAA9B00A20EDB /* Debug */,
+				FA1EB2D31E0BAA9B00A20EDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA1EB2D41E0BAA9B00A20EDB /* Build configuration list for PBXNativeTarget "mygui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1EB2D51E0BAA9B00A20EDB /* Debug */,
+				FA1EB2D61E0BAA9B00A20EDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA1EB2C31E0BAA9B00A20EDB /* Project object */;
+}

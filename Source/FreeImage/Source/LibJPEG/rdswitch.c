@@ -20,7 +20,7 @@
 
 LOCAL(int)
 text_getc (FILE * file)
-/* Read next char, skipping over any comments (# to end of line) */
+/* Read next char, skipping over any comments (# to e#include <unistd.h>nd of line) */
 /* A comment/newline sequence is returned as a newline */
 {
   register int ch;

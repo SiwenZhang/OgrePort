@@ -30,6 +30,16 @@
 using namespace std;
 using namespace OIS;
 
+@interface InputDelegate : UIView <UIAccelerometerDelegate> {
+    OIS::iPhoneAccelerometer    *accelerometerObject;
+    OIS::iPhoneMultiTouch       *touchObject;
+}
+
+@property (assign) OIS::iPhoneAccelerometer     *accelerometerObject;
+@property (assign) OIS::iPhoneMultiTouch        *touchObject;
+
+@end
+
 @implementation InputDelegate
 
 @synthesize touchObject;
@@ -116,7 +126,7 @@ void iPhoneInputManager::_initialize( ParamList &paramList )
     [mDelegate setExclusiveTouch:YES];
     [mDelegate becomeFirstResponder];
 
-    [mWindow addSubview:mDelegate];
+    [mWindow addSubview:(UIView*)mDelegate];
 }
 
 //--------------------------------------------------------------------------------//

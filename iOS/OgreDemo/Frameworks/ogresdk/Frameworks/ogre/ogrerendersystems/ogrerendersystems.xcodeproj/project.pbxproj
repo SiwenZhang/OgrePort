@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA1EB2581E0BA70700A20EDB /* OgreEAGL2Support.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1F81E0BA70700A20EDB /* OgreEAGL2Support.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA1EB2591E0BA70700A20EDB /* OgreEAGL2View.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1F91E0BA70700A20EDB /* OgreEAGL2View.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA1EB25A1E0BA70700A20EDB /* OgreEAGL2ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1FA1E0BA70700A20EDB /* OgreEAGL2ViewController.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA1EB25B1E0BA70700A20EDB /* OgreEAGL2Window.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1FB1E0BA70700A20EDB /* OgreEAGL2Window.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA1EB25C1E0BA70700A20EDB /* OgreEAGLES2Context.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1FC1E0BA70700A20EDB /* OgreEAGLES2Context.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA1EB26E1E0BA70700A20EDB /* gles2w.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2121E0BA70700A20EDB /* gles2w.cpp */; };
+		FA1EB2721E0BA70700A20EDB /* OgreGLSLESExtSupport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2261E0BA70700A20EDB /* OgreGLSLESExtSupport.cpp */; };
+		FA1EB2731E0BA70700A20EDB /* OgreGLSLESGpuProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2271E0BA70700A20EDB /* OgreGLSLESGpuProgram.cpp */; };
+		FA1EB2741E0BA70700A20EDB /* OgreGLSLESLinkProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2281E0BA70700A20EDB /* OgreGLSLESLinkProgram.cpp */; };
+		FA1EB2751E0BA70700A20EDB /* OgreGLSLESLinkProgramManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2291E0BA70700A20EDB /* OgreGLSLESLinkProgramManager.cpp */; };
+		FA1EB2761E0BA70700A20EDB /* OgreGLSLESPreprocessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB22A1E0BA70700A20EDB /* OgreGLSLESPreprocessor.cpp */; };
+		FA1EB2771E0BA70700A20EDB /* OgreGLSLESProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB22B1E0BA70700A20EDB /* OgreGLSLESProgram.cpp */; };
+		FA1EB2781E0BA70700A20EDB /* OgreGLSLESProgramCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB22C1E0BA70700A20EDB /* OgreGLSLESProgramCommon.cpp */; };
+		FA1EB2791E0BA70700A20EDB /* OgreGLSLESProgramFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB22D1E0BA70700A20EDB /* OgreGLSLESProgramFactory.cpp */; };
+		FA1EB27A1E0BA70700A20EDB /* OgreGLSLESProgramManagerCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB22E1E0BA70700A20EDB /* OgreGLSLESProgramManagerCommon.cpp */; };
+		FA1EB27B1E0BA70700A20EDB /* OgreGLSLESProgramPipeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB22F1E0BA70700A20EDB /* OgreGLSLESProgramPipeline.cpp */; };
+		FA1EB27C1E0BA70700A20EDB /* OgreGLSLESProgramPipelineManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2301E0BA70700A20EDB /* OgreGLSLESProgramPipelineManager.cpp */; };
+		FA1EB2801E0BA70700A20EDB /* OgreGLES2Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2351E0BA70700A20EDB /* OgreGLES2Context.cpp */; };
+		FA1EB2811E0BA70700A20EDB /* OgreGLES2DefaultHardwareBufferManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2361E0BA70700A20EDB /* OgreGLES2DefaultHardwareBufferManager.cpp */; };
+		FA1EB2821E0BA70700A20EDB /* OgreGLES2DepthBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2371E0BA70700A20EDB /* OgreGLES2DepthBuffer.cpp */; };
+		FA1EB2831E0BA70700A20EDB /* OgreGLES2EngineDll.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2381E0BA70700A20EDB /* OgreGLES2EngineDll.cpp */; };
+		FA1EB2841E0BA70700A20EDB /* OgreGLES2FBOMultiRenderTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2391E0BA70700A20EDB /* OgreGLES2FBOMultiRenderTarget.cpp */; };
+		FA1EB2851E0BA70700A20EDB /* OgreGLES2FBORenderTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB23A1E0BA70700A20EDB /* OgreGLES2FBORenderTexture.cpp */; };
+		FA1EB2861E0BA70700A20EDB /* OgreGLES2FrameBufferObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB23B1E0BA70700A20EDB /* OgreGLES2FrameBufferObject.cpp */; };
+		FA1EB2871E0BA70700A20EDB /* OgreGLES2GpuProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB23C1E0BA70700A20EDB /* OgreGLES2GpuProgram.cpp */; };
+		FA1EB2881E0BA70700A20EDB /* OgreGLES2GpuProgramManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB23D1E0BA70700A20EDB /* OgreGLES2GpuProgramManager.cpp */; };
+		FA1EB2891E0BA70700A20EDB /* OgreGLES2HardwareBufferManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB23E1E0BA70700A20EDB /* OgreGLES2HardwareBufferManager.cpp */; };
+		FA1EB28A1E0BA70700A20EDB /* OgreGLES2HardwareIndexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB23F1E0BA70700A20EDB /* OgreGLES2HardwareIndexBuffer.cpp */; };
+		FA1EB28B1E0BA70700A20EDB /* OgreGLES2HardwareOcclusionQuery.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2401E0BA70700A20EDB /* OgreGLES2HardwareOcclusionQuery.cpp */; };
+		FA1EB28C1E0BA70700A20EDB /* OgreGLES2HardwarePixelBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2411E0BA70700A20EDB /* OgreGLES2HardwarePixelBuffer.cpp */; };
+		FA1EB28D1E0BA70700A20EDB /* OgreGLES2HardwareUniformBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2421E0BA70700A20EDB /* OgreGLES2HardwareUniformBuffer.cpp */; };
+		FA1EB28E1E0BA70700A20EDB /* OgreGLES2HardwareVertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2431E0BA70700A20EDB /* OgreGLES2HardwareVertexBuffer.cpp */; };
+		FA1EB28F1E0BA70700A20EDB /* OgreGLES2PixelFormat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2441E0BA70700A20EDB /* OgreGLES2PixelFormat.cpp */; };
+		FA1EB2901E0BA70700A20EDB /* OgreGLES2Plugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2451E0BA70700A20EDB /* OgreGLES2Plugin.cpp */; };
+		FA1EB2911E0BA70700A20EDB /* OgreGLES2RenderSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2461E0BA70700A20EDB /* OgreGLES2RenderSystem.cpp */; };
+		FA1EB2921E0BA70700A20EDB /* OgreGLES2RenderTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2471E0BA70700A20EDB /* OgreGLES2RenderTexture.cpp */; };
+		FA1EB2931E0BA70700A20EDB /* OgreGLES2RenderToVertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2481E0BA70700A20EDB /* OgreGLES2RenderToVertexBuffer.cpp */; };
+		FA1EB2941E0BA70700A20EDB /* OgreGLES2StateCacheManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2491E0BA70700A20EDB /* OgreGLES2StateCacheManager.cpp */; };
+		FA1EB2951E0BA70700A20EDB /* OgreGLES2Support.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB24A1E0BA70700A20EDB /* OgreGLES2Support.cpp */; };
+		FA1EB2961E0BA70700A20EDB /* OgreGLES2Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB24B1E0BA70700A20EDB /* OgreGLES2Texture.cpp */; };
+		FA1EB2971E0BA70700A20EDB /* OgreGLES2TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB24C1E0BA70700A20EDB /* OgreGLES2TextureManager.cpp */; };
+		FA1EB2981E0BA70700A20EDB /* OgreGLES2UniformCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB24D1E0BA70700A20EDB /* OgreGLES2UniformCache.cpp */; };
+		FA1EB2991E0BA70700A20EDB /* OgreGLES2VertexDeclaration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB24E1E0BA70700A20EDB /* OgreGLES2VertexDeclaration.cpp */; };
+		FA1EB29A1E0BA70700A20EDB /* OgreGLES2NullStateCacheManagerImp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2501E0BA70700A20EDB /* OgreGLES2NullStateCacheManagerImp.cpp */; };
+		FA1EB29B1E0BA70700A20EDB /* OgreGLES2NullUniformCacheImp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2521E0BA70700A20EDB /* OgreGLES2NullUniformCacheImp.cpp */; };
+		FA1EB29C1E0BA70700A20EDB /* OgreGLES2StateCacheManagerImp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2541E0BA70700A20EDB /* OgreGLES2StateCacheManagerImp.cpp */; };
+		FA1EB29D1E0BA70700A20EDB /* OgreGLES2UniformCacheImp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB2561E0BA70700A20EDB /* OgreGLES2UniformCacheImp.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA1EB0D31E0BA06200A20EDB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FA1EB0D51E0BA06200A20EDB /* libogrerendersystems.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libogrerendersystems.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1EB1F81E0BA70700A20EDB /* OgreEAGL2Support.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OgreEAGL2Support.mm; sourceTree = "<group>"; };
+		FA1EB1F91E0BA70700A20EDB /* OgreEAGL2View.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OgreEAGL2View.mm; sourceTree = "<group>"; };
+		FA1EB1FA1E0BA70700A20EDB /* OgreEAGL2ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OgreEAGL2ViewController.mm; sourceTree = "<group>"; };
+		FA1EB1FB1E0BA70700A20EDB /* OgreEAGL2Window.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OgreEAGL2Window.mm; sourceTree = "<group>"; };
+		FA1EB1FC1E0BA70700A20EDB /* OgreEAGLES2Context.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OgreEAGLES2Context.mm; sourceTree = "<group>"; };
+		FA1EB2121E0BA70700A20EDB /* gles2w.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gles2w.cpp; sourceTree = "<group>"; };
+		FA1EB2161E0BA70700A20EDB /* OgreGLSLESCgProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLSLESCgProgram.h; sourceTree = "<group>"; };
+		FA1EB2171E0BA70700A20EDB /* OgreGLSLESCgProgramFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLSLESCgProgramFactory.h; sourceTree = "<group>"; };
+		FA1EB2181E0BA70700A20EDB /* OgreGLSLESExtSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLSLESExtSupport.h; sourceTree = "<group>"; };
+		FA1EB2191E0BA70700A20EDB /* OgreGLSLESGpuProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLSLESGpuProgram.h; sourceTree = "<group>"; };
+		FA1EB21A1E0BA70700A20EDB /* OgreGLSLESLinkProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLSLESLinkProgram.h; sourceTree = "<group>"; };
+		FA1EB21B1E0BA70700A20EDB /* OgreGLSLESLinkProgramManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLSLESLinkProgramManager.h; sourceTree = "<group>"; };
+		FA1EB21C1E0BA70700A20EDB /* OgreGLSLESPreprocessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLSLESPreprocessor.h; sourceTree = "<group>"; };
+		FA1EB21D1E0BA70700A20EDB /* OgreGLSLESProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLSLESProgram.h; sourceTree = "<group>"; };
+		FA1EB21E1E0BA70700A20EDB /* OgreGLSLESProgramCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLSLESProgramCommon.h; sourceTree = "<group>"; };
+		FA1EB21F1E0BA70700A20EDB /* OgreGLSLESProgramFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLSLESProgramFactory.h; sourceTree = "<group>"; };
+		FA1EB2201E0BA70700A20EDB /* OgreGLSLESProgramManagerCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLSLESProgramManagerCommon.h; sourceTree = "<group>"; };
+		FA1EB2211E0BA70700A20EDB /* OgreGLSLESProgramPipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLSLESProgramPipeline.h; sourceTree = "<group>"; };
+		FA1EB2221E0BA70700A20EDB /* OgreGLSLESProgramPipelineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLSLESProgramPipelineManager.h; sourceTree = "<group>"; };
+		FA1EB2261E0BA70700A20EDB /* OgreGLSLESExtSupport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLSLESExtSupport.cpp; sourceTree = "<group>"; };
+		FA1EB2271E0BA70700A20EDB /* OgreGLSLESGpuProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLSLESGpuProgram.cpp; sourceTree = "<group>"; };
+		FA1EB2281E0BA70700A20EDB /* OgreGLSLESLinkProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLSLESLinkProgram.cpp; sourceTree = "<group>"; };
+		FA1EB2291E0BA70700A20EDB /* OgreGLSLESLinkProgramManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLSLESLinkProgramManager.cpp; sourceTree = "<group>"; };
+		FA1EB22A1E0BA70700A20EDB /* OgreGLSLESPreprocessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLSLESPreprocessor.cpp; sourceTree = "<group>"; };
+		FA1EB22B1E0BA70700A20EDB /* OgreGLSLESProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLSLESProgram.cpp; sourceTree = "<group>"; };
+		FA1EB22C1E0BA70700A20EDB /* OgreGLSLESProgramCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLSLESProgramCommon.cpp; sourceTree = "<group>"; };
+		FA1EB22D1E0BA70700A20EDB /* OgreGLSLESProgramFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLSLESProgramFactory.cpp; sourceTree = "<group>"; };
+		FA1EB22E1E0BA70700A20EDB /* OgreGLSLESProgramManagerCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLSLESProgramManagerCommon.cpp; sourceTree = "<group>"; };
+		FA1EB22F1E0BA70700A20EDB /* OgreGLSLESProgramPipeline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLSLESProgramPipeline.cpp; sourceTree = "<group>"; };
+		FA1EB2301E0BA70700A20EDB /* OgreGLSLESProgramPipelineManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLSLESProgramPipelineManager.cpp; sourceTree = "<group>"; };
+		FA1EB2351E0BA70700A20EDB /* OgreGLES2Context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2Context.cpp; sourceTree = "<group>"; };
+		FA1EB2361E0BA70700A20EDB /* OgreGLES2DefaultHardwareBufferManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2DefaultHardwareBufferManager.cpp; sourceTree = "<group>"; };
+		FA1EB2371E0BA70700A20EDB /* OgreGLES2DepthBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2DepthBuffer.cpp; sourceTree = "<group>"; };
+		FA1EB2381E0BA70700A20EDB /* OgreGLES2EngineDll.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2EngineDll.cpp; sourceTree = "<group>"; };
+		FA1EB2391E0BA70700A20EDB /* OgreGLES2FBOMultiRenderTarget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2FBOMultiRenderTarget.cpp; sourceTree = "<group>"; };
+		FA1EB23A1E0BA70700A20EDB /* OgreGLES2FBORenderTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2FBORenderTexture.cpp; sourceTree = "<group>"; };
+		FA1EB23B1E0BA70700A20EDB /* OgreGLES2FrameBufferObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2FrameBufferObject.cpp; sourceTree = "<group>"; };
+		FA1EB23C1E0BA70700A20EDB /* OgreGLES2GpuProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2GpuProgram.cpp; sourceTree = "<group>"; };
+		FA1EB23D1E0BA70700A20EDB /* OgreGLES2GpuProgramManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2GpuProgramManager.cpp; sourceTree = "<group>"; };
+		FA1EB23E1E0BA70700A20EDB /* OgreGLES2HardwareBufferManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2HardwareBufferManager.cpp; sourceTree = "<group>"; };
+		FA1EB23F1E0BA70700A20EDB /* OgreGLES2HardwareIndexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2HardwareIndexBuffer.cpp; sourceTree = "<group>"; };
+		FA1EB2401E0BA70700A20EDB /* OgreGLES2HardwareOcclusionQuery.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2HardwareOcclusionQuery.cpp; sourceTree = "<group>"; };
+		FA1EB2411E0BA70700A20EDB /* OgreGLES2HardwarePixelBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2HardwarePixelBuffer.cpp; sourceTree = "<group>"; };
+		FA1EB2421E0BA70700A20EDB /* OgreGLES2HardwareUniformBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2HardwareUniformBuffer.cpp; sourceTree = "<group>"; };
+		FA1EB2431E0BA70700A20EDB /* OgreGLES2HardwareVertexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2HardwareVertexBuffer.cpp; sourceTree = "<group>"; };
+		FA1EB2441E0BA70700A20EDB /* OgreGLES2PixelFormat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2PixelFormat.cpp; sourceTree = "<group>"; };
+		FA1EB2451E0BA70700A20EDB /* OgreGLES2Plugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2Plugin.cpp; sourceTree = "<group>"; };
+		FA1EB2461E0BA70700A20EDB /* OgreGLES2RenderSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2RenderSystem.cpp; sourceTree = "<group>"; };
+		FA1EB2471E0BA70700A20EDB /* OgreGLES2RenderTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2RenderTexture.cpp; sourceTree = "<group>"; };
+		FA1EB2481E0BA70700A20EDB /* OgreGLES2RenderToVertexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2RenderToVertexBuffer.cpp; sourceTree = "<group>"; };
+		FA1EB2491E0BA70700A20EDB /* OgreGLES2StateCacheManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2StateCacheManager.cpp; sourceTree = "<group>"; };
+		FA1EB24A1E0BA70700A20EDB /* OgreGLES2Support.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2Support.cpp; sourceTree = "<group>"; };
+		FA1EB24B1E0BA70700A20EDB /* OgreGLES2Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2Texture.cpp; sourceTree = "<group>"; };
+		FA1EB24C1E0BA70700A20EDB /* OgreGLES2TextureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2TextureManager.cpp; sourceTree = "<group>"; };
+		FA1EB24D1E0BA70700A20EDB /* OgreGLES2UniformCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2UniformCache.cpp; sourceTree = "<group>"; };
+		FA1EB24E1E0BA70700A20EDB /* OgreGLES2VertexDeclaration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2VertexDeclaration.cpp; sourceTree = "<group>"; };
+		FA1EB2501E0BA70700A20EDB /* OgreGLES2NullStateCacheManagerImp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2NullStateCacheManagerImp.cpp; sourceTree = "<group>"; };
+		FA1EB2511E0BA70700A20EDB /* OgreGLES2NullStateCacheManagerImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLES2NullStateCacheManagerImp.h; sourceTree = "<group>"; };
+		FA1EB2521E0BA70700A20EDB /* OgreGLES2NullUniformCacheImp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2NullUniformCacheImp.cpp; sourceTree = "<group>"; };
+		FA1EB2531E0BA70700A20EDB /* OgreGLES2NullUniformCacheImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLES2NullUniformCacheImp.h; sourceTree = "<group>"; };
+		FA1EB2541E0BA70700A20EDB /* OgreGLES2StateCacheManagerImp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2StateCacheManagerImp.cpp; sourceTree = "<group>"; };
+		FA1EB2551E0BA70700A20EDB /* OgreGLES2StateCacheManagerImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLES2StateCacheManagerImp.h; sourceTree = "<group>"; };
+		FA1EB2561E0BA70700A20EDB /* OgreGLES2UniformCacheImp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreGLES2UniformCacheImp.cpp; sourceTree = "<group>"; };
+		FA1EB2571E0BA70700A20EDB /* OgreGLES2UniformCacheImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreGLES2UniformCacheImp.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA1EB0D21E0BA06200A20EDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA1EB0CC1E0BA06200A20EDB = {
+			isa = PBXGroup;
+			children = (
+				FA1EB0D71E0BA06200A20EDB /* ogrerendersystems */,
+				FA1EB0D61E0BA06200A20EDB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA1EB0D61E0BA06200A20EDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB0D51E0BA06200A20EDB /* libogrerendersystems.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA1EB0D71E0BA06200A20EDB /* ogrerendersystems */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB1A61E0BA70700A20EDB /* GLES2 */,
+			);
+			path = ogrerendersystems;
+			sourceTree = "<group>";
+		};
+		FA1EB1A61E0BA70700A20EDB /* GLES2 */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB1F61E0BA70700A20EDB /* src */,
+			);
+			name = GLES2;
+			path = ../../../../../../../../../Source/Ogre/RenderSystems/GLES2;
+			sourceTree = "<group>";
+		};
+		FA1EB1F61E0BA70700A20EDB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB1F71E0BA70700A20EDB /* EAGL */,
+				FA1EB2121E0BA70700A20EDB /* gles2w.cpp */,
+				FA1EB2141E0BA70700A20EDB /* GLSLES */,
+				FA1EB2351E0BA70700A20EDB /* OgreGLES2Context.cpp */,
+				FA1EB2361E0BA70700A20EDB /* OgreGLES2DefaultHardwareBufferManager.cpp */,
+				FA1EB2371E0BA70700A20EDB /* OgreGLES2DepthBuffer.cpp */,
+				FA1EB2381E0BA70700A20EDB /* OgreGLES2EngineDll.cpp */,
+				FA1EB2391E0BA70700A20EDB /* OgreGLES2FBOMultiRenderTarget.cpp */,
+				FA1EB23A1E0BA70700A20EDB /* OgreGLES2FBORenderTexture.cpp */,
+				FA1EB23B1E0BA70700A20EDB /* OgreGLES2FrameBufferObject.cpp */,
+				FA1EB23C1E0BA70700A20EDB /* OgreGLES2GpuProgram.cpp */,
+				FA1EB23D1E0BA70700A20EDB /* OgreGLES2GpuProgramManager.cpp */,
+				FA1EB23E1E0BA70700A20EDB /* OgreGLES2HardwareBufferManager.cpp */,
+				FA1EB23F1E0BA70700A20EDB /* OgreGLES2HardwareIndexBuffer.cpp */,
+				FA1EB2401E0BA70700A20EDB /* OgreGLES2HardwareOcclusionQuery.cpp */,
+				FA1EB2411E0BA70700A20EDB /* OgreGLES2HardwarePixelBuffer.cpp */,
+				FA1EB2421E0BA70700A20EDB /* OgreGLES2HardwareUniformBuffer.cpp */,
+				FA1EB2431E0BA70700A20EDB /* OgreGLES2HardwareVertexBuffer.cpp */,
+				FA1EB2441E0BA70700A20EDB /* OgreGLES2PixelFormat.cpp */,
+				FA1EB2451E0BA70700A20EDB /* OgreGLES2Plugin.cpp */,
+				FA1EB2461E0BA70700A20EDB /* OgreGLES2RenderSystem.cpp */,
+				FA1EB2471E0BA70700A20EDB /* OgreGLES2RenderTexture.cpp */,
+				FA1EB2481E0BA70700A20EDB /* OgreGLES2RenderToVertexBuffer.cpp */,
+				FA1EB2491E0BA70700A20EDB /* OgreGLES2StateCacheManager.cpp */,
+				FA1EB24A1E0BA70700A20EDB /* OgreGLES2Support.cpp */,
+				FA1EB24B1E0BA70700A20EDB /* OgreGLES2Texture.cpp */,
+				FA1EB24C1E0BA70700A20EDB /* OgreGLES2TextureManager.cpp */,
+				FA1EB24D1E0BA70700A20EDB /* OgreGLES2UniformCache.cpp */,
+				FA1EB24E1E0BA70700A20EDB /* OgreGLES2VertexDeclaration.cpp */,
+				FA1EB24F1E0BA70700A20EDB /* StateCacheManager */,
+			);
+			name = src;
+			path = ../../../../../../../Source/Ogre/RenderSystems/GLES2/src;
+			sourceTree = "<group>";
+		};
+		FA1EB1F71E0BA70700A20EDB /* EAGL */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB1F81E0BA70700A20EDB /* OgreEAGL2Support.mm */,
+				FA1EB1F91E0BA70700A20EDB /* OgreEAGL2View.mm */,
+				FA1EB1FA1E0BA70700A20EDB /* OgreEAGL2ViewController.mm */,
+				FA1EB1FB1E0BA70700A20EDB /* OgreEAGL2Window.mm */,
+				FA1EB1FC1E0BA70700A20EDB /* OgreEAGLES2Context.mm */,
+			);
+			path = EAGL;
+			sourceTree = "<group>";
+		};
+		FA1EB2141E0BA70700A20EDB /* GLSLES */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB2151E0BA70700A20EDB /* include */,
+				FA1EB2231E0BA70700A20EDB /* src */,
+			);
+			path = GLSLES;
+			sourceTree = "<group>";
+		};
+		FA1EB2151E0BA70700A20EDB /* include */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB2161E0BA70700A20EDB /* OgreGLSLESCgProgram.h */,
+				FA1EB2171E0BA70700A20EDB /* OgreGLSLESCgProgramFactory.h */,
+				FA1EB2181E0BA70700A20EDB /* OgreGLSLESExtSupport.h */,
+				FA1EB2191E0BA70700A20EDB /* OgreGLSLESGpuProgram.h */,
+				FA1EB21A1E0BA70700A20EDB /* OgreGLSLESLinkProgram.h */,
+				FA1EB21B1E0BA70700A20EDB /* OgreGLSLESLinkProgramManager.h */,
+				FA1EB21C1E0BA70700A20EDB /* OgreGLSLESPreprocessor.h */,
+				FA1EB21D1E0BA70700A20EDB /* OgreGLSLESProgram.h */,
+				FA1EB21E1E0BA70700A20EDB /* OgreGLSLESProgramCommon.h */,
+				FA1EB21F1E0BA70700A20EDB /* OgreGLSLESProgramFactory.h */,
+				FA1EB2201E0BA70700A20EDB /* OgreGLSLESProgramManagerCommon.h */,
+				FA1EB2211E0BA70700A20EDB /* OgreGLSLESProgramPipeline.h */,
+				FA1EB2221E0BA70700A20EDB /* OgreGLSLESProgramPipelineManager.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		FA1EB2231E0BA70700A20EDB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB2261E0BA70700A20EDB /* OgreGLSLESExtSupport.cpp */,
+				FA1EB2271E0BA70700A20EDB /* OgreGLSLESGpuProgram.cpp */,
+				FA1EB2281E0BA70700A20EDB /* OgreGLSLESLinkProgram.cpp */,
+				FA1EB2291E0BA70700A20EDB /* OgreGLSLESLinkProgramManager.cpp */,
+				FA1EB22A1E0BA70700A20EDB /* OgreGLSLESPreprocessor.cpp */,
+				FA1EB22B1E0BA70700A20EDB /* OgreGLSLESProgram.cpp */,
+				FA1EB22C1E0BA70700A20EDB /* OgreGLSLESProgramCommon.cpp */,
+				FA1EB22D1E0BA70700A20EDB /* OgreGLSLESProgramFactory.cpp */,
+				FA1EB22E1E0BA70700A20EDB /* OgreGLSLESProgramManagerCommon.cpp */,
+				FA1EB22F1E0BA70700A20EDB /* OgreGLSLESProgramPipeline.cpp */,
+				FA1EB2301E0BA70700A20EDB /* OgreGLSLESProgramPipelineManager.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		FA1EB24F1E0BA70700A20EDB /* StateCacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB2501E0BA70700A20EDB /* OgreGLES2NullStateCacheManagerImp.cpp */,
+				FA1EB2511E0BA70700A20EDB /* OgreGLES2NullStateCacheManagerImp.h */,
+				FA1EB2521E0BA70700A20EDB /* OgreGLES2NullUniformCacheImp.cpp */,
+				FA1EB2531E0BA70700A20EDB /* OgreGLES2NullUniformCacheImp.h */,
+				FA1EB2541E0BA70700A20EDB /* OgreGLES2StateCacheManagerImp.cpp */,
+				FA1EB2551E0BA70700A20EDB /* OgreGLES2StateCacheManagerImp.h */,
+				FA1EB2561E0BA70700A20EDB /* OgreGLES2UniformCacheImp.cpp */,
+				FA1EB2571E0BA70700A20EDB /* OgreGLES2UniformCacheImp.h */,
+			);
+			path = StateCacheManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA1EB0D41E0BA06200A20EDB /* ogrerendersystems */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA1EB0DE1E0BA06200A20EDB /* Build configuration list for PBXNativeTarget "ogrerendersystems" */;
+			buildPhases = (
+				FA1EB0D11E0BA06200A20EDB /* Sources */,
+				FA1EB0D21E0BA06200A20EDB /* Frameworks */,
+				FA1EB0D31E0BA06200A20EDB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ogrerendersystems;
+			productName = ogrerendersystems;
+			productReference = FA1EB0D51E0BA06200A20EDB /* libogrerendersystems.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA1EB0CD1E0BA06200A20EDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "liu enbao";
+				TargetAttributes = {
+					FA1EB0D41E0BA06200A20EDB = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FA1EB0D01E0BA06200A20EDB /* Build configuration list for PBXProject "ogrerendersystems" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FA1EB0CC1E0BA06200A20EDB;
+			productRefGroup = FA1EB0D61E0BA06200A20EDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA1EB0D41E0BA06200A20EDB /* ogrerendersystems */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA1EB0D11E0BA06200A20EDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1EB2951E0BA70700A20EDB /* OgreGLES2Support.cpp in Sources */,
+				FA1EB2581E0BA70700A20EDB /* OgreEAGL2Support.mm in Sources */,
+				FA1EB28D1E0BA70700A20EDB /* OgreGLES2HardwareUniformBuffer.cpp in Sources */,
+				FA1EB2761E0BA70700A20EDB /* OgreGLSLESPreprocessor.cpp in Sources */,
+				FA1EB2921E0BA70700A20EDB /* OgreGLES2RenderTexture.cpp in Sources */,
+				FA1EB28F1E0BA70700A20EDB /* OgreGLES2PixelFormat.cpp in Sources */,
+				FA1EB2871E0BA70700A20EDB /* OgreGLES2GpuProgram.cpp in Sources */,
+				FA1EB2991E0BA70700A20EDB /* OgreGLES2VertexDeclaration.cpp in Sources */,
+				FA1EB2741E0BA70700A20EDB /* OgreGLSLESLinkProgram.cpp in Sources */,
+				FA1EB2811E0BA70700A20EDB /* OgreGLES2DefaultHardwareBufferManager.cpp in Sources */,
+				FA1EB27B1E0BA70700A20EDB /* OgreGLSLESProgramPipeline.cpp in Sources */,
+				FA1EB2591E0BA70700A20EDB /* OgreEAGL2View.mm in Sources */,
+				FA1EB2731E0BA70700A20EDB /* OgreGLSLESGpuProgram.cpp in Sources */,
+				FA1EB26E1E0BA70700A20EDB /* gles2w.cpp in Sources */,
+				FA1EB2981E0BA70700A20EDB /* OgreGLES2UniformCache.cpp in Sources */,
+				FA1EB2851E0BA70700A20EDB /* OgreGLES2FBORenderTexture.cpp in Sources */,
+				FA1EB29C1E0BA70700A20EDB /* OgreGLES2StateCacheManagerImp.cpp in Sources */,
+				FA1EB2751E0BA70700A20EDB /* OgreGLSLESLinkProgramManager.cpp in Sources */,
+				FA1EB2881E0BA70700A20EDB /* OgreGLES2GpuProgramManager.cpp in Sources */,
+				FA1EB29D1E0BA70700A20EDB /* OgreGLES2UniformCacheImp.cpp in Sources */,
+				FA1EB2841E0BA70700A20EDB /* OgreGLES2FBOMultiRenderTarget.cpp in Sources */,
+				FA1EB25C1E0BA70700A20EDB /* OgreEAGLES2Context.mm in Sources */,
+				FA1EB2821E0BA70700A20EDB /* OgreGLES2DepthBuffer.cpp in Sources */,
+				FA1EB2971E0BA70700A20EDB /* OgreGLES2TextureManager.cpp in Sources */,
+				FA1EB2771E0BA70700A20EDB /* OgreGLSLESProgram.cpp in Sources */,
+				FA1EB2831E0BA70700A20EDB /* OgreGLES2EngineDll.cpp in Sources */,
+				FA1EB25B1E0BA70700A20EDB /* OgreEAGL2Window.mm in Sources */,
+				FA1EB2931E0BA70700A20EDB /* OgreGLES2RenderToVertexBuffer.cpp in Sources */,
+				FA1EB25A1E0BA70700A20EDB /* OgreEAGL2ViewController.mm in Sources */,
+				FA1EB29B1E0BA70700A20EDB /* OgreGLES2NullUniformCacheImp.cpp in Sources */,
+				FA1EB2901E0BA70700A20EDB /* OgreGLES2Plugin.cpp in Sources */,
+				FA1EB28A1E0BA70700A20EDB /* OgreGLES2HardwareIndexBuffer.cpp in Sources */,
+				FA1EB2781E0BA70700A20EDB /* OgreGLSLESProgramCommon.cpp in Sources */,
+				FA1EB28B1E0BA70700A20EDB /* OgreGLES2HardwareOcclusionQuery.cpp in Sources */,
+				FA1EB2801E0BA70700A20EDB /* OgreGLES2Context.cpp in Sources */,
+				FA1EB2891E0BA70700A20EDB /* OgreGLES2HardwareBufferManager.cpp in Sources */,
+				FA1EB2721E0BA70700A20EDB /* OgreGLSLESExtSupport.cpp in Sources */,
+				FA1EB27A1E0BA70700A20EDB /* OgreGLSLESProgramManagerCommon.cpp in Sources */,
+				FA1EB2941E0BA70700A20EDB /* OgreGLES2StateCacheManager.cpp in Sources */,
+				FA1EB2961E0BA70700A20EDB /* OgreGLES2Texture.cpp in Sources */,
+				FA1EB2911E0BA70700A20EDB /* OgreGLES2RenderSystem.cpp in Sources */,
+				FA1EB28C1E0BA70700A20EDB /* OgreGLES2HardwarePixelBuffer.cpp in Sources */,
+				FA1EB27C1E0BA70700A20EDB /* OgreGLSLESProgramPipelineManager.cpp in Sources */,
+				FA1EB2791E0BA70700A20EDB /* OgreGLSLESProgramFactory.cpp in Sources */,
+				FA1EB28E1E0BA70700A20EDB /* OgreGLES2HardwareVertexBuffer.cpp in Sources */,
+				FA1EB29A1E0BA70700A20EDB /* OgreGLES2NullStateCacheManagerImp.cpp in Sources */,
+				FA1EB2861E0BA70700A20EDB /* OgreGLES2FrameBufferObject.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FA1EB0DC1E0BA06200A20EDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FA1EB0DD1E0BA06200A20EDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA1EB0DF1E0BA06200A20EDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SOURCE_ROOT)/..",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include/iOS",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/RenderSystems/EGL",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/RenderSystems/GLES2/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/RenderSystems/GLES2/include/EAGL",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FA1EB0E01E0BA06200A20EDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SOURCE_ROOT)/..",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include/iOS",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/RenderSystems/EGL",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/RenderSystems/GLES2/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/RenderSystems/GLES2/include/EAGL",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA1EB0D01E0BA06200A20EDB /* Build configuration list for PBXProject "ogrerendersystems" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1EB0DC1E0BA06200A20EDB /* Debug */,
+				FA1EB0DD1E0BA06200A20EDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA1EB0DE1E0BA06200A20EDB /* Build configuration list for PBXNativeTarget "ogrerendersystems" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1EB0DF1E0BA06200A20EDB /* Debug */,
+				FA1EB0E01E0BA06200A20EDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA1EB0CD1E0BA06200A20EDB /* Project object */;
+}

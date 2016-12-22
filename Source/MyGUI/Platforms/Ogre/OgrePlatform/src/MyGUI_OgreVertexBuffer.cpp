@@ -10,10 +10,6 @@
 
 #include "MyGUI_LastHeader.h"
 
-#ifdef DEBUG
-#include "logger.h"
-#endif
-
 namespace MyGUI
 {
 
@@ -34,9 +30,6 @@ namespace MyGUI
 
 	void OgreVertexBuffer::createVertexBuffer()
 	{
-#ifdef DEBUG
-		LOGD("OgreVertexBuffer::createVertexBuffer");
-#endif
 		mRenderOperation.vertexData = new Ogre::VertexData();
 		mRenderOperation.vertexData->vertexStart = 0;
 
@@ -62,9 +55,6 @@ namespace MyGUI
 
 	void OgreVertexBuffer::destroyVertexBuffer()
 	{
-#ifdef DEBUG
-		LOGD("OgreVertexBuffer::destroyVertexBuffer");
-#endif
 		delete mRenderOperation.vertexData;
 		mRenderOperation.vertexData = 0;
 		mVertexBuffer.setNull();

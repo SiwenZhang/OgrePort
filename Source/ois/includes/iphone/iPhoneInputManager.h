@@ -27,21 +27,11 @@
 #include "OISFactoryCreator.h"
 #include "iphone/iPhonePrereqs.h"
 
-#import <UIKit/UIKit.h>
+//#import <UIKit/UIKit.h>
 namespace OIS {
     class iPhoneAccelerometer;
     class iPhoneMultiTouch;
 }
-
-@interface InputDelegate : UIView <UIAccelerometerDelegate> {
-    OIS::iPhoneAccelerometer    *accelerometerObject;
-    OIS::iPhoneMultiTouch       *touchObject;
-}
-
-@property (assign) OIS::iPhoneAccelerometer     *accelerometerObject;
-@property (assign) OIS::iPhoneMultiTouch        *touchObject;
-
-@end
 
 namespace OIS
 {
@@ -84,17 +74,17 @@ namespace OIS
 		void _setAccelerometerUsed(bool used) { bAccelerometerUsed = used; }
 
         //! methodfor getting the delegate
-        InputDelegate * _getDelegate() { return mDelegate; }
+        void * _getDelegate() { return mDelegate; }
 
         //! method for getting window
-        UIWindow * _getWindow() { return mWindow; }
+        void * _getWindow() { return mWindow; }
 
     protected:        
         void _parseConfigSettings( ParamList& paramList );
 
         // iPhone stuff
-		UIWindow *mWindow;
-        InputDelegate *mDelegate;
+		void *mWindow;
+        void *mDelegate;
 
         // settings
         bool mHideMouse;

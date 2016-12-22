@@ -10,10 +10,6 @@
 #include "MyGUI_RenderManager.h"
 #include "MyGUI_TextureUtility.h"
 
-#ifdef DEBUG
-#include "logger.h"
-#endif
-
 namespace MyGUI
 {
 
@@ -44,15 +40,11 @@ namespace MyGUI
 		{
 			RenderManager& render = RenderManager::getInstance();
 			mTexture = render.getTexture(mSource);
-#ifdef DEBUG
-			LOGD("render.getTexture is : %p", mTexture);
-#endif
+
 			if (mTexture == nullptr)
 			{
 				mTexture = render.createTexture(mSource);
-#ifdef DEBUG
-			LOGD("render.createTexture : %p", mTexture);
-#endif
+                
 				if (mTexture != nullptr)
 					mTexture->loadFromFile(mSource);
 			}

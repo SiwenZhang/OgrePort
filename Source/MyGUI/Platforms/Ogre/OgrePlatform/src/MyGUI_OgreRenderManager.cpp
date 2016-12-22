@@ -13,10 +13,6 @@
 #include "MyGUI_Timer.h"
 #include "MyGUI_Gui.h"
 
-#ifdef DEBUG
-#include "logger.h"
-#endif
-
 namespace MyGUI
 {
 
@@ -68,9 +64,6 @@ namespace MyGUI
 
 		Ogre::Root* root = Ogre::Root::getSingletonPtr();
 		if (root != nullptr) {
-#ifdef DEBUG
-			LOGD("RenderSystem name is : %s", root->getRenderSystem()->getName().c_str());
-#endif
 			setRenderSystem(root->getRenderSystem());
 		}
 		setRenderWindow(_window);
@@ -264,9 +257,6 @@ namespace MyGUI
 
 	void OgreRenderManager::eventOccurred(const Ogre::String& eventName, const Ogre::NameValuePairList* parameters)
 	{
-#ifdef DEBUG
-		LOGD("eventOccurred eventName : %s", eventName.c_str());
-#endif
 		if (eventName == "DeviceLost")
 		{
 		}
@@ -431,10 +421,6 @@ namespace MyGUI
 	{
 		MapTexture::const_iterator item = mTextures.find(_name);
 		MYGUI_PLATFORM_ASSERT(item == mTextures.end(), "Texture '" << _name << "' already exist");
-
-#ifdef DEBUG
-		LOGD("OgreRenderManager::createTexture name : %s", _name.c_str());
-#endif
 
 		OgreTexture* texture = new OgreTexture(_name, OgreDataManager::getInstance().getGroup());
 		mTextures[_name] = texture;

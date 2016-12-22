@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA1EA9D11E0B858100A20EDB /* OISEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9CA1E0B858100A20EDB /* OISEffect.cpp */; };
+		FA1EA9D21E0B858100A20EDB /* OISException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9CB1E0B858100A20EDB /* OISException.cpp */; };
+		FA1EA9D31E0B858100A20EDB /* OISForceFeedback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9CC1E0B858100A20EDB /* OISForceFeedback.cpp */; };
+		FA1EA9D41E0B858100A20EDB /* OISInputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9CD1E0B858100A20EDB /* OISInputManager.cpp */; };
+		FA1EA9D51E0B858100A20EDB /* OISJoyStick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9CE1E0B858100A20EDB /* OISJoyStick.cpp */; };
+		FA1EA9D61E0B858100A20EDB /* OISKeyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9CF1E0B858100A20EDB /* OISKeyboard.cpp */; };
+		FA1EA9D71E0B858100A20EDB /* OISObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9D01E0B858100A20EDB /* OISObject.cpp */; };
+		FA1EA9E01E0B863700A20EDB /* iPhoneAccelerometer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9DD1E0B863700A20EDB /* iPhoneAccelerometer.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA1EA9E11E0B863700A20EDB /* iPhoneInputManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9DE1E0B863700A20EDB /* iPhoneInputManager.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA1EA9E21E0B863700A20EDB /* iPhoneMultiTouch.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9DF1E0B863700A20EDB /* iPhoneMultiTouch.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA1EA9B51E0B853600A20EDB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FA1EA9B71E0B853600A20EDB /* libois.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libois.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1EA9CA1E0B858100A20EDB /* OISEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OISEffect.cpp; path = ../../../../../../../Source/ois/src/OISEffect.cpp; sourceTree = "<group>"; };
+		FA1EA9CB1E0B858100A20EDB /* OISException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OISException.cpp; path = ../../../../../../../Source/ois/src/OISException.cpp; sourceTree = "<group>"; };
+		FA1EA9CC1E0B858100A20EDB /* OISForceFeedback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OISForceFeedback.cpp; path = ../../../../../../../Source/ois/src/OISForceFeedback.cpp; sourceTree = "<group>"; };
+		FA1EA9CD1E0B858100A20EDB /* OISInputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OISInputManager.cpp; path = ../../../../../../../Source/ois/src/OISInputManager.cpp; sourceTree = "<group>"; };
+		FA1EA9CE1E0B858100A20EDB /* OISJoyStick.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OISJoyStick.cpp; path = ../../../../../../../Source/ois/src/OISJoyStick.cpp; sourceTree = "<group>"; };
+		FA1EA9CF1E0B858100A20EDB /* OISKeyboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OISKeyboard.cpp; path = ../../../../../../../Source/ois/src/OISKeyboard.cpp; sourceTree = "<group>"; };
+		FA1EA9D01E0B858100A20EDB /* OISObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OISObject.cpp; path = ../../../../../../../Source/ois/src/OISObject.cpp; sourceTree = "<group>"; };
+		FA1EA9DD1E0B863700A20EDB /* iPhoneAccelerometer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iPhoneAccelerometer.mm; sourceTree = "<group>"; };
+		FA1EA9DE1E0B863700A20EDB /* iPhoneInputManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iPhoneInputManager.mm; sourceTree = "<group>"; };
+		FA1EA9DF1E0B863700A20EDB /* iPhoneMultiTouch.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iPhoneMultiTouch.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA1EA9B41E0B853600A20EDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA1EA9AE1E0B853600A20EDB = {
+			isa = PBXGroup;
+			children = (
+				FA1EA9B91E0B853600A20EDB /* ois */,
+				FA1EA9B81E0B853600A20EDB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA1EA9B81E0B853600A20EDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EA9B71E0B853600A20EDB /* libois.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA1EA9B91E0B853600A20EDB /* ois */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EA9DC1E0B863700A20EDB /* iphone */,
+				FA1EA9CA1E0B858100A20EDB /* OISEffect.cpp */,
+				FA1EA9CB1E0B858100A20EDB /* OISException.cpp */,
+				FA1EA9CC1E0B858100A20EDB /* OISForceFeedback.cpp */,
+				FA1EA9CD1E0B858100A20EDB /* OISInputManager.cpp */,
+				FA1EA9CE1E0B858100A20EDB /* OISJoyStick.cpp */,
+				FA1EA9CF1E0B858100A20EDB /* OISKeyboard.cpp */,
+				FA1EA9D01E0B858100A20EDB /* OISObject.cpp */,
+			);
+			path = ois;
+			sourceTree = "<group>";
+		};
+		FA1EA9DC1E0B863700A20EDB /* iphone */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EA9DD1E0B863700A20EDB /* iPhoneAccelerometer.mm */,
+				FA1EA9DE1E0B863700A20EDB /* iPhoneInputManager.mm */,
+				FA1EA9DF1E0B863700A20EDB /* iPhoneMultiTouch.mm */,
+			);
+			name = iphone;
+			path = ../../../../../../../Source/ois/src/iphone;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA1EA9B61E0B853600A20EDB /* ois */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA1EA9C01E0B853600A20EDB /* Build configuration list for PBXNativeTarget "ois" */;
+			buildPhases = (
+				FA1EA9B31E0B853600A20EDB /* Sources */,
+				FA1EA9B41E0B853600A20EDB /* Frameworks */,
+				FA1EA9B51E0B853600A20EDB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ois;
+			productName = ois;
+			productReference = FA1EA9B71E0B853600A20EDB /* libois.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA1EA9AF1E0B853600A20EDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "liu enbao";
+				TargetAttributes = {
+					FA1EA9B61E0B853600A20EDB = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FA1EA9B21E0B853600A20EDB /* Build configuration list for PBXProject "ois" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FA1EA9AE1E0B853600A20EDB;
+			productRefGroup = FA1EA9B81E0B853600A20EDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA1EA9B61E0B853600A20EDB /* ois */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA1EA9B31E0B853600A20EDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1EA9D11E0B858100A20EDB /* OISEffect.cpp in Sources */,
+				FA1EA9D71E0B858100A20EDB /* OISObject.cpp in Sources */,
+				FA1EA9D21E0B858100A20EDB /* OISException.cpp in Sources */,
+				FA1EA9E11E0B863700A20EDB /* iPhoneInputManager.mm in Sources */,
+				FA1EA9D61E0B858100A20EDB /* OISKeyboard.cpp in Sources */,
+				FA1EA9E01E0B863700A20EDB /* iPhoneAccelerometer.mm in Sources */,
+				FA1EA9D51E0B858100A20EDB /* OISJoyStick.cpp in Sources */,
+				FA1EA9D41E0B858100A20EDB /* OISInputManager.cpp in Sources */,
+				FA1EA9E21E0B863700A20EDB /* iPhoneMultiTouch.mm in Sources */,
+				FA1EA9D31E0B858100A20EDB /* OISForceFeedback.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FA1EA9BE1E0B853600A20EDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FA1EA9BF1E0B853600A20EDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA1EA9C11E0B853600A20EDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/../../../../../../Source/ois/includes";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FA1EA9C21E0B853600A20EDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/../../../../../../Source/ois/includes";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA1EA9B21E0B853600A20EDB /* Build configuration list for PBXProject "ois" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1EA9BE1E0B853600A20EDB /* Debug */,
+				FA1EA9BF1E0B853600A20EDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA1EA9C01E0B853600A20EDB /* Build configuration list for PBXNativeTarget "ois" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1EA9C11E0B853600A20EDB /* Debug */,
+				FA1EA9C21E0B853600A20EDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA1EA9AF1E0B853600A20EDB /* Project object */;
+}

@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA1EB1641E0BA4CF00A20EDB /* OgreShaderCGProgramProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB13E1E0BA4CF00A20EDB /* OgreShaderCGProgramProcessor.cpp */; };
+		FA1EB1651E0BA4CF00A20EDB /* OgreShaderCGProgramWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB13F1E0BA4CF00A20EDB /* OgreShaderCGProgramWriter.cpp */; };
+		FA1EB1661E0BA4CF00A20EDB /* OgreShaderExDualQuaternionSkinning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1401E0BA4CF00A20EDB /* OgreShaderExDualQuaternionSkinning.cpp */; };
+		FA1EB1671E0BA4CF00A20EDB /* OgreShaderExHardwareSkinning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1411E0BA4CF00A20EDB /* OgreShaderExHardwareSkinning.cpp */; };
+		FA1EB1681E0BA4CF00A20EDB /* OgreShaderExHardwareSkinningTechnique.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1421E0BA4CF00A20EDB /* OgreShaderExHardwareSkinningTechnique.cpp */; };
+		FA1EB1691E0BA4CF00A20EDB /* OgreShaderExIntegratedPSSM3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1431E0BA4CF00A20EDB /* OgreShaderExIntegratedPSSM3.cpp */; };
+		FA1EB16A1E0BA4CF00A20EDB /* OgreShaderExLayeredBlending.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1441E0BA4CF00A20EDB /* OgreShaderExLayeredBlending.cpp */; };
+		FA1EB16B1E0BA4CF00A20EDB /* OgreShaderExLinearSkinning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1451E0BA4CF00A20EDB /* OgreShaderExLinearSkinning.cpp */; };
+		FA1EB16C1E0BA4CF00A20EDB /* OgreShaderExNormalMapLighting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1461E0BA4CF00A20EDB /* OgreShaderExNormalMapLighting.cpp */; };
+		FA1EB16D1E0BA4CF00A20EDB /* OgreShaderExPerPixelLighting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1471E0BA4CF00A20EDB /* OgreShaderExPerPixelLighting.cpp */; };
+		FA1EB16E1E0BA4CF00A20EDB /* OgreShaderExTextureAtlasSampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1481E0BA4CF00A20EDB /* OgreShaderExTextureAtlasSampler.cpp */; };
+		FA1EB16F1E0BA4CF00A20EDB /* OgreShaderExTriplanarTexturing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1491E0BA4CF00A20EDB /* OgreShaderExTriplanarTexturing.cpp */; };
+		FA1EB1701E0BA4CF00A20EDB /* OgreShaderFFPColour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB14A1E0BA4CF00A20EDB /* OgreShaderFFPColour.cpp */; };
+		FA1EB1711E0BA4CF00A20EDB /* OgreShaderFFPFog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB14B1E0BA4CF00A20EDB /* OgreShaderFFPFog.cpp */; };
+		FA1EB1721E0BA4CF00A20EDB /* OgreShaderFFPLighting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB14C1E0BA4CF00A20EDB /* OgreShaderFFPLighting.cpp */; };
+		FA1EB1731E0BA4CF00A20EDB /* OgreShaderFFPRenderStateBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB14D1E0BA4CF00A20EDB /* OgreShaderFFPRenderStateBuilder.cpp */; };
+		FA1EB1741E0BA4CF00A20EDB /* OgreShaderFFPTexturing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB14E1E0BA4CF00A20EDB /* OgreShaderFFPTexturing.cpp */; };
+		FA1EB1751E0BA4CF00A20EDB /* OgreShaderFFPTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB14F1E0BA4CF00A20EDB /* OgreShaderFFPTransform.cpp */; };
+		FA1EB1761E0BA4CF00A20EDB /* OgreShaderFunction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1501E0BA4CF00A20EDB /* OgreShaderFunction.cpp */; };
+		FA1EB1771E0BA4CF00A20EDB /* OgreShaderFunctionAtom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1511E0BA4CF00A20EDB /* OgreShaderFunctionAtom.cpp */; };
+		FA1EB1781E0BA4CF00A20EDB /* OgreShaderGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1521E0BA4CF00A20EDB /* OgreShaderGenerator.cpp */; };
+		FA1EB1791E0BA4CF00A20EDB /* OgreShaderGLSLESProgramProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1531E0BA4CF00A20EDB /* OgreShaderGLSLESProgramProcessor.cpp */; };
+		FA1EB17A1E0BA4CF00A20EDB /* OgreShaderGLSLESProgramWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1541E0BA4CF00A20EDB /* OgreShaderGLSLESProgramWriter.cpp */; };
+		FA1EB17B1E0BA4CF00A20EDB /* OgreShaderGLSLProgramProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1551E0BA4CF00A20EDB /* OgreShaderGLSLProgramProcessor.cpp */; };
+		FA1EB17C1E0BA4CF00A20EDB /* OgreShaderGLSLProgramWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1561E0BA4CF00A20EDB /* OgreShaderGLSLProgramWriter.cpp */; };
+		FA1EB17D1E0BA4CF00A20EDB /* OgreShaderHLSLProgramProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1571E0BA4CF00A20EDB /* OgreShaderHLSLProgramProcessor.cpp */; };
+		FA1EB17E1E0BA4CF00A20EDB /* OgreShaderHLSLProgramWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1581E0BA4CF00A20EDB /* OgreShaderHLSLProgramWriter.cpp */; };
+		FA1EB17F1E0BA4CF00A20EDB /* OgreShaderMaterialSerializerListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1591E0BA4CF00A20EDB /* OgreShaderMaterialSerializerListener.cpp */; };
+		FA1EB1801E0BA4CF00A20EDB /* OgreShaderParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB15A1E0BA4CF00A20EDB /* OgreShaderParameter.cpp */; };
+		FA1EB1811E0BA4CF00A20EDB /* OgreShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB15B1E0BA4CF00A20EDB /* OgreShaderProgram.cpp */; };
+		FA1EB1821E0BA4CF00A20EDB /* OgreShaderProgramManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB15C1E0BA4CF00A20EDB /* OgreShaderProgramManager.cpp */; };
+		FA1EB1831E0BA4CF00A20EDB /* OgreShaderProgramProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB15D1E0BA4CF00A20EDB /* OgreShaderProgramProcessor.cpp */; };
+		FA1EB1841E0BA4CF00A20EDB /* OgreShaderProgramSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB15E1E0BA4CF00A20EDB /* OgreShaderProgramSet.cpp */; };
+		FA1EB1851E0BA4CF00A20EDB /* OgreShaderProgramWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB15F1E0BA4CF00A20EDB /* OgreShaderProgramWriter.cpp */; };
+		FA1EB1861E0BA4CF00A20EDB /* OgreShaderProgramWriterManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1601E0BA4CF00A20EDB /* OgreShaderProgramWriterManager.cpp */; };
+		FA1EB1871E0BA4CF00A20EDB /* OgreShaderRenderState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1611E0BA4CF00A20EDB /* OgreShaderRenderState.cpp */; };
+		FA1EB1881E0BA4CF00A20EDB /* OgreShaderScriptTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1621E0BA4CF00A20EDB /* OgreShaderScriptTranslator.cpp */; };
+		FA1EB1891E0BA4CF00A20EDB /* OgreShaderSubRenderState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1631E0BA4CF00A20EDB /* OgreShaderSubRenderState.cpp */; };
+		FA1EB1991E0BA4E900A20EDB /* OgreBorderPanelOverlayElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB18C1E0BA4E900A20EDB /* OgreBorderPanelOverlayElement.cpp */; };
+		FA1EB19A1E0BA4E900A20EDB /* OgreFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB18D1E0BA4E900A20EDB /* OgreFont.cpp */; };
+		FA1EB19B1E0BA4E900A20EDB /* OgreFontManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB18E1E0BA4E900A20EDB /* OgreFontManager.cpp */; };
+		FA1EB19C1E0BA4E900A20EDB /* OgreOverlay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB18F1E0BA4E900A20EDB /* OgreOverlay.cpp */; };
+		FA1EB19D1E0BA4E900A20EDB /* OgreOverlayContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1901E0BA4E900A20EDB /* OgreOverlayContainer.cpp */; };
+		FA1EB19E1E0BA4E900A20EDB /* OgreOverlayElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1911E0BA4E900A20EDB /* OgreOverlayElement.cpp */; };
+		FA1EB19F1E0BA4E900A20EDB /* OgreOverlayElementCommands.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1921E0BA4E900A20EDB /* OgreOverlayElementCommands.cpp */; };
+		FA1EB1A01E0BA4E900A20EDB /* OgreOverlayElementFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1931E0BA4E900A20EDB /* OgreOverlayElementFactory.cpp */; };
+		FA1EB1A11E0BA4E900A20EDB /* OgreOverlayManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1941E0BA4E900A20EDB /* OgreOverlayManager.cpp */; };
+		FA1EB1A21E0BA4E900A20EDB /* OgreOverlayProfileSessionListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1951E0BA4E900A20EDB /* OgreOverlayProfileSessionListener.cpp */; };
+		FA1EB1A31E0BA4E900A20EDB /* OgreOverlaySystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1961E0BA4E900A20EDB /* OgreOverlaySystem.cpp */; };
+		FA1EB1A41E0BA4E900A20EDB /* OgrePanelOverlayElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1971E0BA4E900A20EDB /* OgrePanelOverlayElement.cpp */; };
+		FA1EB1A51E0BA4E900A20EDB /* OgreTextAreaOverlayElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB1981E0BA4E900A20EDB /* OgreTextAreaOverlayElement.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA1EB0BE1E0BA05400A20EDB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FA1EB0C01E0BA05400A20EDB /* libogrecomponents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libogrecomponents.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1EB13E1E0BA4CF00A20EDB /* OgreShaderCGProgramProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderCGProgramProcessor.cpp; sourceTree = "<group>"; };
+		FA1EB13F1E0BA4CF00A20EDB /* OgreShaderCGProgramWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderCGProgramWriter.cpp; sourceTree = "<group>"; };
+		FA1EB1401E0BA4CF00A20EDB /* OgreShaderExDualQuaternionSkinning.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderExDualQuaternionSkinning.cpp; sourceTree = "<group>"; };
+		FA1EB1411E0BA4CF00A20EDB /* OgreShaderExHardwareSkinning.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderExHardwareSkinning.cpp; sourceTree = "<group>"; };
+		FA1EB1421E0BA4CF00A20EDB /* OgreShaderExHardwareSkinningTechnique.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderExHardwareSkinningTechnique.cpp; sourceTree = "<group>"; };
+		FA1EB1431E0BA4CF00A20EDB /* OgreShaderExIntegratedPSSM3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderExIntegratedPSSM3.cpp; sourceTree = "<group>"; };
+		FA1EB1441E0BA4CF00A20EDB /* OgreShaderExLayeredBlending.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderExLayeredBlending.cpp; sourceTree = "<group>"; };
+		FA1EB1451E0BA4CF00A20EDB /* OgreShaderExLinearSkinning.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderExLinearSkinning.cpp; sourceTree = "<group>"; };
+		FA1EB1461E0BA4CF00A20EDB /* OgreShaderExNormalMapLighting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderExNormalMapLighting.cpp; sourceTree = "<group>"; };
+		FA1EB1471E0BA4CF00A20EDB /* OgreShaderExPerPixelLighting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderExPerPixelLighting.cpp; sourceTree = "<group>"; };
+		FA1EB1481E0BA4CF00A20EDB /* OgreShaderExTextureAtlasSampler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderExTextureAtlasSampler.cpp; sourceTree = "<group>"; };
+		FA1EB1491E0BA4CF00A20EDB /* OgreShaderExTriplanarTexturing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderExTriplanarTexturing.cpp; sourceTree = "<group>"; };
+		FA1EB14A1E0BA4CF00A20EDB /* OgreShaderFFPColour.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderFFPColour.cpp; sourceTree = "<group>"; };
+		FA1EB14B1E0BA4CF00A20EDB /* OgreShaderFFPFog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderFFPFog.cpp; sourceTree = "<group>"; };
+		FA1EB14C1E0BA4CF00A20EDB /* OgreShaderFFPLighting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderFFPLighting.cpp; sourceTree = "<group>"; };
+		FA1EB14D1E0BA4CF00A20EDB /* OgreShaderFFPRenderStateBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderFFPRenderStateBuilder.cpp; sourceTree = "<group>"; };
+		FA1EB14E1E0BA4CF00A20EDB /* OgreShaderFFPTexturing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderFFPTexturing.cpp; sourceTree = "<group>"; };
+		FA1EB14F1E0BA4CF00A20EDB /* OgreShaderFFPTransform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderFFPTransform.cpp; sourceTree = "<group>"; };
+		FA1EB1501E0BA4CF00A20EDB /* OgreShaderFunction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderFunction.cpp; sourceTree = "<group>"; };
+		FA1EB1511E0BA4CF00A20EDB /* OgreShaderFunctionAtom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderFunctionAtom.cpp; sourceTree = "<group>"; };
+		FA1EB1521E0BA4CF00A20EDB /* OgreShaderGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderGenerator.cpp; sourceTree = "<group>"; };
+		FA1EB1531E0BA4CF00A20EDB /* OgreShaderGLSLESProgramProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderGLSLESProgramProcessor.cpp; sourceTree = "<group>"; };
+		FA1EB1541E0BA4CF00A20EDB /* OgreShaderGLSLESProgramWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderGLSLESProgramWriter.cpp; sourceTree = "<group>"; };
+		FA1EB1551E0BA4CF00A20EDB /* OgreShaderGLSLProgramProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderGLSLProgramProcessor.cpp; sourceTree = "<group>"; };
+		FA1EB1561E0BA4CF00A20EDB /* OgreShaderGLSLProgramWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderGLSLProgramWriter.cpp; sourceTree = "<group>"; };
+		FA1EB1571E0BA4CF00A20EDB /* OgreShaderHLSLProgramProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderHLSLProgramProcessor.cpp; sourceTree = "<group>"; };
+		FA1EB1581E0BA4CF00A20EDB /* OgreShaderHLSLProgramWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderHLSLProgramWriter.cpp; sourceTree = "<group>"; };
+		FA1EB1591E0BA4CF00A20EDB /* OgreShaderMaterialSerializerListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderMaterialSerializerListener.cpp; sourceTree = "<group>"; };
+		FA1EB15A1E0BA4CF00A20EDB /* OgreShaderParameter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderParameter.cpp; sourceTree = "<group>"; };
+		FA1EB15B1E0BA4CF00A20EDB /* OgreShaderProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderProgram.cpp; sourceTree = "<group>"; };
+		FA1EB15C1E0BA4CF00A20EDB /* OgreShaderProgramManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderProgramManager.cpp; sourceTree = "<group>"; };
+		FA1EB15D1E0BA4CF00A20EDB /* OgreShaderProgramProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderProgramProcessor.cpp; sourceTree = "<group>"; };
+		FA1EB15E1E0BA4CF00A20EDB /* OgreShaderProgramSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderProgramSet.cpp; sourceTree = "<group>"; };
+		FA1EB15F1E0BA4CF00A20EDB /* OgreShaderProgramWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderProgramWriter.cpp; sourceTree = "<group>"; };
+		FA1EB1601E0BA4CF00A20EDB /* OgreShaderProgramWriterManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderProgramWriterManager.cpp; sourceTree = "<group>"; };
+		FA1EB1611E0BA4CF00A20EDB /* OgreShaderRenderState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderRenderState.cpp; sourceTree = "<group>"; };
+		FA1EB1621E0BA4CF00A20EDB /* OgreShaderScriptTranslator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderScriptTranslator.cpp; sourceTree = "<group>"; };
+		FA1EB1631E0BA4CF00A20EDB /* OgreShaderSubRenderState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreShaderSubRenderState.cpp; sourceTree = "<group>"; };
+		FA1EB18C1E0BA4E900A20EDB /* OgreBorderPanelOverlayElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreBorderPanelOverlayElement.cpp; sourceTree = "<group>"; };
+		FA1EB18D1E0BA4E900A20EDB /* OgreFont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreFont.cpp; sourceTree = "<group>"; };
+		FA1EB18E1E0BA4E900A20EDB /* OgreFontManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreFontManager.cpp; sourceTree = "<group>"; };
+		FA1EB18F1E0BA4E900A20EDB /* OgreOverlay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreOverlay.cpp; sourceTree = "<group>"; };
+		FA1EB1901E0BA4E900A20EDB /* OgreOverlayContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreOverlayContainer.cpp; sourceTree = "<group>"; };
+		FA1EB1911E0BA4E900A20EDB /* OgreOverlayElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreOverlayElement.cpp; sourceTree = "<group>"; };
+		FA1EB1921E0BA4E900A20EDB /* OgreOverlayElementCommands.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreOverlayElementCommands.cpp; sourceTree = "<group>"; };
+		FA1EB1931E0BA4E900A20EDB /* OgreOverlayElementFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreOverlayElementFactory.cpp; sourceTree = "<group>"; };
+		FA1EB1941E0BA4E900A20EDB /* OgreOverlayManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreOverlayManager.cpp; sourceTree = "<group>"; };
+		FA1EB1951E0BA4E900A20EDB /* OgreOverlayProfileSessionListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreOverlayProfileSessionListener.cpp; sourceTree = "<group>"; };
+		FA1EB1961E0BA4E900A20EDB /* OgreOverlaySystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreOverlaySystem.cpp; sourceTree = "<group>"; };
+		FA1EB1971E0BA4E900A20EDB /* OgrePanelOverlayElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgrePanelOverlayElement.cpp; sourceTree = "<group>"; };
+		FA1EB1981E0BA4E900A20EDB /* OgreTextAreaOverlayElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreTextAreaOverlayElement.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA1EB0BD1E0BA05400A20EDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA1EB0B71E0BA05400A20EDB = {
+			isa = PBXGroup;
+			children = (
+				FA1EB0C21E0BA05400A20EDB /* ogrecomponents */,
+				FA1EB0C11E0BA05400A20EDB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA1EB0C11E0BA05400A20EDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB0C01E0BA05400A20EDB /* libogrecomponents.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA1EB0C21E0BA05400A20EDB /* ogrecomponents */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB18A1E0BA4D900A20EDB /* Overlay */,
+				FA1EB13C1E0BA4BD00A20EDB /* RTShaderSystem */,
+			);
+			path = ogrecomponents;
+			sourceTree = "<group>";
+		};
+		FA1EB13C1E0BA4BD00A20EDB /* RTShaderSystem */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB13D1E0BA4CF00A20EDB /* src */,
+			);
+			name = RTShaderSystem;
+			sourceTree = "<group>";
+		};
+		FA1EB13D1E0BA4CF00A20EDB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB13E1E0BA4CF00A20EDB /* OgreShaderCGProgramProcessor.cpp */,
+				FA1EB13F1E0BA4CF00A20EDB /* OgreShaderCGProgramWriter.cpp */,
+				FA1EB1401E0BA4CF00A20EDB /* OgreShaderExDualQuaternionSkinning.cpp */,
+				FA1EB1411E0BA4CF00A20EDB /* OgreShaderExHardwareSkinning.cpp */,
+				FA1EB1421E0BA4CF00A20EDB /* OgreShaderExHardwareSkinningTechnique.cpp */,
+				FA1EB1431E0BA4CF00A20EDB /* OgreShaderExIntegratedPSSM3.cpp */,
+				FA1EB1441E0BA4CF00A20EDB /* OgreShaderExLayeredBlending.cpp */,
+				FA1EB1451E0BA4CF00A20EDB /* OgreShaderExLinearSkinning.cpp */,
+				FA1EB1461E0BA4CF00A20EDB /* OgreShaderExNormalMapLighting.cpp */,
+				FA1EB1471E0BA4CF00A20EDB /* OgreShaderExPerPixelLighting.cpp */,
+				FA1EB1481E0BA4CF00A20EDB /* OgreShaderExTextureAtlasSampler.cpp */,
+				FA1EB1491E0BA4CF00A20EDB /* OgreShaderExTriplanarTexturing.cpp */,
+				FA1EB14A1E0BA4CF00A20EDB /* OgreShaderFFPColour.cpp */,
+				FA1EB14B1E0BA4CF00A20EDB /* OgreShaderFFPFog.cpp */,
+				FA1EB14C1E0BA4CF00A20EDB /* OgreShaderFFPLighting.cpp */,
+				FA1EB14D1E0BA4CF00A20EDB /* OgreShaderFFPRenderStateBuilder.cpp */,
+				FA1EB14E1E0BA4CF00A20EDB /* OgreShaderFFPTexturing.cpp */,
+				FA1EB14F1E0BA4CF00A20EDB /* OgreShaderFFPTransform.cpp */,
+				FA1EB1501E0BA4CF00A20EDB /* OgreShaderFunction.cpp */,
+				FA1EB1511E0BA4CF00A20EDB /* OgreShaderFunctionAtom.cpp */,
+				FA1EB1521E0BA4CF00A20EDB /* OgreShaderGenerator.cpp */,
+				FA1EB1531E0BA4CF00A20EDB /* OgreShaderGLSLESProgramProcessor.cpp */,
+				FA1EB1541E0BA4CF00A20EDB /* OgreShaderGLSLESProgramWriter.cpp */,
+				FA1EB1551E0BA4CF00A20EDB /* OgreShaderGLSLProgramProcessor.cpp */,
+				FA1EB1561E0BA4CF00A20EDB /* OgreShaderGLSLProgramWriter.cpp */,
+				FA1EB1571E0BA4CF00A20EDB /* OgreShaderHLSLProgramProcessor.cpp */,
+				FA1EB1581E0BA4CF00A20EDB /* OgreShaderHLSLProgramWriter.cpp */,
+				FA1EB1591E0BA4CF00A20EDB /* OgreShaderMaterialSerializerListener.cpp */,
+				FA1EB15A1E0BA4CF00A20EDB /* OgreShaderParameter.cpp */,
+				FA1EB15B1E0BA4CF00A20EDB /* OgreShaderProgram.cpp */,
+				FA1EB15C1E0BA4CF00A20EDB /* OgreShaderProgramManager.cpp */,
+				FA1EB15D1E0BA4CF00A20EDB /* OgreShaderProgramProcessor.cpp */,
+				FA1EB15E1E0BA4CF00A20EDB /* OgreShaderProgramSet.cpp */,
+				FA1EB15F1E0BA4CF00A20EDB /* OgreShaderProgramWriter.cpp */,
+				FA1EB1601E0BA4CF00A20EDB /* OgreShaderProgramWriterManager.cpp */,
+				FA1EB1611E0BA4CF00A20EDB /* OgreShaderRenderState.cpp */,
+				FA1EB1621E0BA4CF00A20EDB /* OgreShaderScriptTranslator.cpp */,
+				FA1EB1631E0BA4CF00A20EDB /* OgreShaderSubRenderState.cpp */,
+			);
+			name = src;
+			path = ../../../../../../../../Source/Ogre/Components/RTShaderSystem/src;
+			sourceTree = "<group>";
+		};
+		FA1EB18A1E0BA4D900A20EDB /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB18B1E0BA4E900A20EDB /* src */,
+			);
+			name = Overlay;
+			sourceTree = "<group>";
+		};
+		FA1EB18B1E0BA4E900A20EDB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FA1EB18C1E0BA4E900A20EDB /* OgreBorderPanelOverlayElement.cpp */,
+				FA1EB18D1E0BA4E900A20EDB /* OgreFont.cpp */,
+				FA1EB18E1E0BA4E900A20EDB /* OgreFontManager.cpp */,
+				FA1EB18F1E0BA4E900A20EDB /* OgreOverlay.cpp */,
+				FA1EB1901E0BA4E900A20EDB /* OgreOverlayContainer.cpp */,
+				FA1EB1911E0BA4E900A20EDB /* OgreOverlayElement.cpp */,
+				FA1EB1921E0BA4E900A20EDB /* OgreOverlayElementCommands.cpp */,
+				FA1EB1931E0BA4E900A20EDB /* OgreOverlayElementFactory.cpp */,
+				FA1EB1941E0BA4E900A20EDB /* OgreOverlayManager.cpp */,
+				FA1EB1951E0BA4E900A20EDB /* OgreOverlayProfileSessionListener.cpp */,
+				FA1EB1961E0BA4E900A20EDB /* OgreOverlaySystem.cpp */,
+				FA1EB1971E0BA4E900A20EDB /* OgrePanelOverlayElement.cpp */,
+				FA1EB1981E0BA4E900A20EDB /* OgreTextAreaOverlayElement.cpp */,
+			);
+			name = src;
+			path = ../../../../../../../../Source/Ogre/Components/Overlay/src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA1EB0BF1E0BA05400A20EDB /* ogrecomponents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA1EB0C91E0BA05400A20EDB /* Build configuration list for PBXNativeTarget "ogrecomponents" */;
+			buildPhases = (
+				FA1EB0BC1E0BA05400A20EDB /* Sources */,
+				FA1EB0BD1E0BA05400A20EDB /* Frameworks */,
+				FA1EB0BE1E0BA05400A20EDB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ogrecomponents;
+			productName = ogrecomponents;
+			productReference = FA1EB0C01E0BA05400A20EDB /* libogrecomponents.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA1EB0B81E0BA05400A20EDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "liu enbao";
+				TargetAttributes = {
+					FA1EB0BF1E0BA05400A20EDB = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FA1EB0BB1E0BA05400A20EDB /* Build configuration list for PBXProject "ogrecomponents" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FA1EB0B71E0BA05400A20EDB;
+			productRefGroup = FA1EB0C11E0BA05400A20EDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA1EB0BF1E0BA05400A20EDB /* ogrecomponents */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA1EB0BC1E0BA05400A20EDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1EB1A21E0BA4E900A20EDB /* OgreOverlayProfileSessionListener.cpp in Sources */,
+				FA1EB1691E0BA4CF00A20EDB /* OgreShaderExIntegratedPSSM3.cpp in Sources */,
+				FA1EB19C1E0BA4E900A20EDB /* OgreOverlay.cpp in Sources */,
+				FA1EB19F1E0BA4E900A20EDB /* OgreOverlayElementCommands.cpp in Sources */,
+				FA1EB1801E0BA4CF00A20EDB /* OgreShaderParameter.cpp in Sources */,
+				FA1EB1991E0BA4E900A20EDB /* OgreBorderPanelOverlayElement.cpp in Sources */,
+				FA1EB19E1E0BA4E900A20EDB /* OgreOverlayElement.cpp in Sources */,
+				FA1EB1A41E0BA4E900A20EDB /* OgrePanelOverlayElement.cpp in Sources */,
+				FA1EB1721E0BA4CF00A20EDB /* OgreShaderFFPLighting.cpp in Sources */,
+				FA1EB19D1E0BA4E900A20EDB /* OgreOverlayContainer.cpp in Sources */,
+				FA1EB1681E0BA4CF00A20EDB /* OgreShaderExHardwareSkinningTechnique.cpp in Sources */,
+				FA1EB1701E0BA4CF00A20EDB /* OgreShaderFFPColour.cpp in Sources */,
+				FA1EB1641E0BA4CF00A20EDB /* OgreShaderCGProgramProcessor.cpp in Sources */,
+				FA1EB1811E0BA4CF00A20EDB /* OgreShaderProgram.cpp in Sources */,
+				FA1EB17C1E0BA4CF00A20EDB /* OgreShaderGLSLProgramWriter.cpp in Sources */,
+				FA1EB1661E0BA4CF00A20EDB /* OgreShaderExDualQuaternionSkinning.cpp in Sources */,
+				FA1EB1771E0BA4CF00A20EDB /* OgreShaderFunctionAtom.cpp in Sources */,
+				FA1EB1A51E0BA4E900A20EDB /* OgreTextAreaOverlayElement.cpp in Sources */,
+				FA1EB17F1E0BA4CF00A20EDB /* OgreShaderMaterialSerializerListener.cpp in Sources */,
+				FA1EB1831E0BA4CF00A20EDB /* OgreShaderProgramProcessor.cpp in Sources */,
+				FA1EB17D1E0BA4CF00A20EDB /* OgreShaderHLSLProgramProcessor.cpp in Sources */,
+				FA1EB1841E0BA4CF00A20EDB /* OgreShaderProgramSet.cpp in Sources */,
+				FA1EB1A11E0BA4E900A20EDB /* OgreOverlayManager.cpp in Sources */,
+				FA1EB16D1E0BA4CF00A20EDB /* OgreShaderExPerPixelLighting.cpp in Sources */,
+				FA1EB1751E0BA4CF00A20EDB /* OgreShaderFFPTransform.cpp in Sources */,
+				FA1EB19B1E0BA4E900A20EDB /* OgreFontManager.cpp in Sources */,
+				FA1EB1881E0BA4CF00A20EDB /* OgreShaderScriptTranslator.cpp in Sources */,
+				FA1EB1A31E0BA4E900A20EDB /* OgreOverlaySystem.cpp in Sources */,
+				FA1EB1761E0BA4CF00A20EDB /* OgreShaderFunction.cpp in Sources */,
+				FA1EB16B1E0BA4CF00A20EDB /* OgreShaderExLinearSkinning.cpp in Sources */,
+				FA1EB1671E0BA4CF00A20EDB /* OgreShaderExHardwareSkinning.cpp in Sources */,
+				FA1EB1871E0BA4CF00A20EDB /* OgreShaderRenderState.cpp in Sources */,
+				FA1EB1A01E0BA4E900A20EDB /* OgreOverlayElementFactory.cpp in Sources */,
+				FA1EB16F1E0BA4CF00A20EDB /* OgreShaderExTriplanarTexturing.cpp in Sources */,
+				FA1EB1891E0BA4CF00A20EDB /* OgreShaderSubRenderState.cpp in Sources */,
+				FA1EB1741E0BA4CF00A20EDB /* OgreShaderFFPTexturing.cpp in Sources */,
+				FA1EB19A1E0BA4E900A20EDB /* OgreFont.cpp in Sources */,
+				FA1EB17E1E0BA4CF00A20EDB /* OgreShaderHLSLProgramWriter.cpp in Sources */,
+				FA1EB1711E0BA4CF00A20EDB /* OgreShaderFFPFog.cpp in Sources */,
+				FA1EB1781E0BA4CF00A20EDB /* OgreShaderGenerator.cpp in Sources */,
+				FA1EB16E1E0BA4CF00A20EDB /* OgreShaderExTextureAtlasSampler.cpp in Sources */,
+				FA1EB1821E0BA4CF00A20EDB /* OgreShaderProgramManager.cpp in Sources */,
+				FA1EB1861E0BA4CF00A20EDB /* OgreShaderProgramWriterManager.cpp in Sources */,
+				FA1EB17A1E0BA4CF00A20EDB /* OgreShaderGLSLESProgramWriter.cpp in Sources */,
+				FA1EB1791E0BA4CF00A20EDB /* OgreShaderGLSLESProgramProcessor.cpp in Sources */,
+				FA1EB1731E0BA4CF00A20EDB /* OgreShaderFFPRenderStateBuilder.cpp in Sources */,
+				FA1EB16A1E0BA4CF00A20EDB /* OgreShaderExLayeredBlending.cpp in Sources */,
+				FA1EB17B1E0BA4CF00A20EDB /* OgreShaderGLSLProgramProcessor.cpp in Sources */,
+				FA1EB1651E0BA4CF00A20EDB /* OgreShaderCGProgramWriter.cpp in Sources */,
+				FA1EB16C1E0BA4CF00A20EDB /* OgreShaderExNormalMapLighting.cpp in Sources */,
+				FA1EB1851E0BA4CF00A20EDB /* OgreShaderProgramWriter.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FA1EB0C71E0BA05400A20EDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FA1EB0C81E0BA05400A20EDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA1EB0CA1E0BA05400A20EDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SOURCE_ROOT)/..",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/Components/RTShaderSystem/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/Components/Overlay/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/FreeType/include",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FA1EB0CB1E0BA05400A20EDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SOURCE_ROOT)/..",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/Components/RTShaderSystem/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/Components/Overlay/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/FreeType/include",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA1EB0BB1E0BA05400A20EDB /* Build configuration list for PBXProject "ogrecomponents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1EB0C71E0BA05400A20EDB /* Debug */,
+				FA1EB0C81E0BA05400A20EDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA1EB0C91E0BA05400A20EDB /* Build configuration list for PBXNativeTarget "ogrecomponents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1EB0CA1E0BA05400A20EDB /* Debug */,
+				FA1EB0CB1E0BA05400A20EDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA1EB0B81E0BA05400A20EDB /* Project object */;
+}

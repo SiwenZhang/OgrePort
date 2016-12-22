@@ -8,10 +8,6 @@
 #include "MyGUI_OgreRTTexture.h"
 #include "MyGUI_OgreRenderManager.h"
 
-#ifdef DEBUG
-#include "logger.h"
-#endif
-
 namespace MyGUI
 {
 
@@ -38,8 +34,6 @@ namespace MyGUI
 				mRenderTargetInfo.pixScaleY = 1.0f / float(height);
 			}
 
-			LOGD("requiresTextureFlipping : %d", mTexture->getBuffer()->getRenderTarget()->requiresTextureFlipping());
-
 			if (mTexture->getBuffer()->getRenderTarget()->requiresTextureFlipping())
 			{
 				mProjectMatrix[1][0] = -mProjectMatrix[1][0];
@@ -65,10 +59,6 @@ namespace MyGUI
 			mViewport->setOverlaysEnabled(false);
 		}
 
-#ifdef DEBUG
-		LOGD("OgreRTTexture begin");
-#endif
-
 		Ogre::RenderSystem* system = Ogre::Root::getSingleton().getRenderSystem();
 		system->_setProjectionMatrix(mProjectMatrix);
 		mSaveViewport = system->_getViewport();
@@ -81,10 +71,6 @@ namespace MyGUI
 		Ogre::RenderSystem* system = Ogre::Root::getSingleton().getRenderSystem();
 		system->_setViewport(mSaveViewport);
 #if OGRE_VERSION >= MYGUI_DEFINE_VERSION(1, 7, 0) && OGRE_NO_VIEWPORT_ORIENTATIONMODE == 0
-
-#ifdef DEBUG
-		LOGD("OgreRTTexture end");
-#endif
 		Ogre::OrientationMode orient = mSaveViewport->getOrientationMode();
 		system->_setProjectionMatrix(Ogre::Matrix4::IDENTITY * Ogre::Quaternion(Ogre::Degree(orient * 90.f), Ogre::Vector3::UNIT_Z));
 #else
