@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA1EA97D1E0B82F000A20EDB /* ogresdk.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA97C1E0B82F000A20EDB /* ogresdk.m */; };
-		FA1EA97E1E0B82F000A20EDB /* ogresdk.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA1EA97B1E0B82F000A20EDB /* ogresdk.h */; };
+		FA10129D1E0BDA1400D8715B /* OgrePlayerViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA10129C1E0BDA1400D8715B /* OgrePlayerViewController.mm */; };
+		FA1012A01E0BDA3600D8715B /* OgrePlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA10129F1E0BDA3600D8715B /* OgrePlayer.mm */; };
+		FA1012A41E0C058C00D8715B /* libogrecomponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1010841E0BAD7F00D8715B /* libogrecomponents.a */; };
+		FA1012A51E0C058C00D8715B /* libogremain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA10108A1E0BAD8700D8715B /* libogremain.a */; };
+		FA1012A61E0C058C00D8715B /* libogreplugins.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1010901E0BAD8F00D8715B /* libogreplugins.a */; };
+		FA1012A71E0C058C00D8715B /* libogrerendersystems.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1010961E0BAD9700D8715B /* libogrerendersystems.a */; };
 		FA1EA9911E0B832C00A20EDB /* libzzip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1EA9901E0B832400A20EDB /* libzzip.a */; };
 		FA1EA9D81E0B858900A20EDB /* libois.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1EA9C81E0B854D00A20EDB /* libois.a */; };
 		FA1EAA001E0B907200A20EDB /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1EA9FD1E0B906300A20EDB /* libfreetype.a */; };
@@ -89,7 +93,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				FA1EA97E1E0B82F000A20EDB /* ogresdk.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,9 +103,14 @@
 		FA1010851E0BAD8600D8715B /* ogremain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ogremain.xcodeproj; path = Frameworks/ogre/ogremain/ogremain.xcodeproj; sourceTree = "<group>"; };
 		FA10108B1E0BAD8F00D8715B /* ogreplugins.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ogreplugins.xcodeproj; path = Frameworks/ogre/ogreplugins/ogreplugins.xcodeproj; sourceTree = "<group>"; };
 		FA1010911E0BAD9700D8715B /* ogrerendersystems.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ogrerendersystems.xcodeproj; path = Frameworks/ogre/ogrerendersystems/ogrerendersystems.xcodeproj; sourceTree = "<group>"; };
+		FA10129B1E0BDA1400D8715B /* OgrePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgrePlayerViewController.h; sourceTree = "<group>"; };
+		FA10129C1E0BDA1400D8715B /* OgrePlayerViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OgrePlayerViewController.mm; sourceTree = "<group>"; };
+		FA10129E1E0BDA3600D8715B /* OgrePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgrePlayer.h; sourceTree = "<group>"; };
+		FA10129F1E0BDA3600D8715B /* OgrePlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OgrePlayer.mm; sourceTree = "<group>"; };
+		FA1013AF1E0C1BC300D8715B /* OgreStaticPluginLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreStaticPluginLoader.h; sourceTree = "<group>"; };
+		FA1013B01E0C1BC300D8715B /* RTShaderHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTShaderHelper.h; sourceTree = "<group>"; };
+		FA1013C41E0C296C00D8715B /* IAndroidHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAndroidHandler.h; sourceTree = "<group>"; };
 		FA1EA9781E0B82F000A20EDB /* libogresdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libogresdk.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA1EA97B1E0B82F000A20EDB /* ogresdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ogresdk.h; sourceTree = "<group>"; };
-		FA1EA97C1E0B82F000A20EDB /* ogresdk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ogresdk.m; sourceTree = "<group>"; };
 		FA1EA98B1E0B832400A20EDB /* zzip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = zzip.xcodeproj; path = Frameworks/zzip/zzip.xcodeproj; sourceTree = "<group>"; };
 		FA1EA9C31E0B854D00A20EDB /* ois.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ois.xcodeproj; path = Frameworks/ois/ois.xcodeproj; sourceTree = "<group>"; };
 		FA1EA9F81E0B906300A20EDB /* freetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype.xcodeproj; path = Frameworks/freetype/freetype.xcodeproj; sourceTree = "<group>"; };
@@ -115,6 +123,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1012A41E0C058C00D8715B /* libogrecomponents.a in Frameworks */,
+				FA1012A51E0C058C00D8715B /* libogremain.a in Frameworks */,
+				FA1012A61E0C058C00D8715B /* libogreplugins.a in Frameworks */,
+				FA1012A71E0C058C00D8715B /* libogrerendersystems.a in Frameworks */,
 				FA1EB2DD1E0BAAD200A20EDB /* libmygui.a in Frameworks */,
 				FA1EAA7D1E0B95BA00A20EDB /* libfreeimage.a in Frameworks */,
 				FA1EAA001E0B907200A20EDB /* libfreetype.a in Frameworks */,
@@ -178,8 +190,13 @@
 		FA1EA97A1E0B82F000A20EDB /* ogresdk */ = {
 			isa = PBXGroup;
 			children = (
-				FA1EA97B1E0B82F000A20EDB /* ogresdk.h */,
-				FA1EA97C1E0B82F000A20EDB /* ogresdk.m */,
+				FA1013C41E0C296C00D8715B /* IAndroidHandler.h */,
+				FA1013AF1E0C1BC300D8715B /* OgreStaticPluginLoader.h */,
+				FA1013B01E0C1BC300D8715B /* RTShaderHelper.h */,
+				FA10129B1E0BDA1400D8715B /* OgrePlayerViewController.h */,
+				FA10129C1E0BDA1400D8715B /* OgrePlayerViewController.mm */,
+				FA10129E1E0BDA3600D8715B /* OgrePlayer.h */,
+				FA10129F1E0BDA3600D8715B /* OgrePlayer.mm */,
 			);
 			path = ogresdk;
 			sourceTree = "<group>";
@@ -401,7 +418,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA1EA97D1E0B82F000A20EDB /* ogresdk.m in Sources */,
+				FA10129D1E0BDA1400D8715B /* OgrePlayerViewController.mm in Sources */,
+				FA1012A01E0BDA3600D8715B /* OgrePlayer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,18 +517,28 @@
 		FA1EA9821E0B82F000A20EDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SOURCE_ROOT)/../../../../Source/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/ogre $(SOURCE_ROOT)/../../../../Source/Ogre/OgreMain/include $(SOURCE_ROOT)/../../../../Source/Ogre/Components/RTShaderSystem/include $(SOURCE_ROOT)/../../../../Source/Ogre/Components/Overlay/include $(SOURCE_ROOT)/../../../../Source/Ogre/PlugIns/OctreeSceneManager/include $(SOURCE_ROOT)/../../../../Source/Ogre/PlugIns/ParticleFX/include $(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include $(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include/EAGL $(SOURCE_ROOT)/../../../../Source/MyGUI/MyGUIEngine/include $(SOURCE_ROOT)/../../../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include";
 			};
 			name = Debug;
 		};
 		FA1EA9831E0B82F000A20EDB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SOURCE_ROOT)/../../../../Source/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/ogre $(SOURCE_ROOT)/../../../../Source/Ogre/OgreMain/include $(SOURCE_ROOT)/../../../../Source/Ogre/Components/RTShaderSystem/include $(SOURCE_ROOT)/../../../../Source/Ogre/Components/Overlay/include $(SOURCE_ROOT)/../../../../Source/Ogre/PlugIns/OctreeSceneManager/include $(SOURCE_ROOT)/../../../../Source/Ogre/PlugIns/ParticleFX/include $(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include $(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include/EAGL $(SOURCE_ROOT)/../../../../Source/MyGUI/MyGUIEngine/include $(SOURCE_ROOT)/../../../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include";
 			};
 			name = Release;
 		};

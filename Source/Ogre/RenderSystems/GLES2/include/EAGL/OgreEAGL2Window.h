@@ -57,7 +57,7 @@ namespace Ogre {
             /// Is this using an external view handle?
             bool mUsingExternalView;
             /// Is this using an external view controller handle?
-            bool mUsingExternalViewController;
+//            bool mUsingExternalViewController;
 
             // iOS 4 content scaling
             bool mIsContentScalingSupported;
@@ -68,7 +68,7 @@ namespace Ogre {
 #ifdef __OBJC__
 			NativeWindowType mWindow;
             EAGL2View *mView;
-            EAGL2ViewController *mViewController;
+//            EAGL2ViewController *mViewController;
 #endif
 
             void switchFullScreen(bool fullscreen) { }

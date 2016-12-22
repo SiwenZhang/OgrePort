@@ -14,6 +14,15 @@
 
 @implementation ViewController
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        mResourcesRoot = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/assets/"];
+        
+        NSLog(@"mResourcesRoot is : %@", mResourcesRoot);
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -25,5 +34,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(BOOL)shouldAutorotate {
+    return YES;
+}
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskLandscape;
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationLandscapeLeft | UIInterfaceOrientationLandscapeRight;
+}
 
 @end

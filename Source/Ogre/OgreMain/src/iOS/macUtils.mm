@@ -28,6 +28,7 @@ THE SOFTWARE.
 
 #include <CoreFoundation/CoreFoundation.h>
 #include <Foundation/Foundation.h>
+#import <UIKit/UIDevice.h>
 
 #include "OgreString.h"
 #include "macUtils.h"
@@ -87,6 +88,42 @@ namespace Ogre {
         NSString *cachesDirectory = [paths objectAtIndex:0];
 
         return [[cachesDirectory stringByAppendingString:@"/"] cStringUsingEncoding:NSASCIIStringEncoding];
+    }
+    
+    CFURLRef iOSBundleUrl() {
+        CFURLRef bundleURL = NULL;
+        CFStringRef frameworkPath = CFSTR("/System/Library/Frameworks/OpenGLES.framework");
+        NSString *sysVersion = [UIDevice currentDevice].systemVersion;
+        NSArray *sysVersionComponents = [sysVersion componentsSeparatedByString:@"."];
+        
+//        BOOL isSimulator = ([[UIDevice currentDevice].model rangeOfString:@"Simulator"].location != NSNotFound);
+//        if(isSimulator)
+//        {
+#if TARGET_IPHONE_SIMULATOR
+            // Ask where Xcode is installed
+            std::string xcodePath = "/Applications/Xcode.app/Contents/Developer\n";
+            
+            // The result contains an end line character. Remove it.
+            size_t pos = xcodePath.find("\n");
+            xcodePath.erase(pos);
+            
+            char tempPath[PATH_MAX];
+            sprintf(tempPath,
+                    "%s/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator%s.%s.sdk/System/Library/Frameworks/OpenGLES.framework",
+                    xcodePath.c_str(),
+                    [[sysVersionComponents objectAtIndex:0] cStringUsingEncoding:NSUTF8StringEncoding],
+                    [[sysVersionComponents objectAtIndex:1] cStringUsingEncoding:NSUTF8StringEncoding]);
+            frameworkPath = CFStringCreateWithCString(kCFAllocatorDefault, tempPath, kCFStringEncodingUTF8);
+#endif
+//        }
+        
+        bundleURL = CFURLCreateWithFileSystemPath(kCFAllocatorDefault,
+                                                  frameworkPath,
+                                                  kCFURLPOSIXPathStyle, true);
+        
+        CFRelease(frameworkPath);
+        
+        return bundleURL;
     }
 
 }

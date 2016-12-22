@@ -35,4 +35,6 @@ namespace Ogre {
     _OgreExport String macBundlePath(void);
     _OgreExport String macTempFileName(void);
     _OgreExport String iOSDocumentsDirectory(void);
+    
+    _OgreExport CFURLRef iOSBundleUrl(void);
 }

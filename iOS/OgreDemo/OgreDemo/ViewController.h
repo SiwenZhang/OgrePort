@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OgrePlayerViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : OgrePlayerViewController
 
 
 @end

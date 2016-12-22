@@ -44,14 +44,14 @@ namespace Ogre {
             mVisible(false),
             mIsExternal(false),
             mUsingExternalView(false),
-            mUsingExternalViewController(false),
+//            mUsingExternalViewController(false),
             mIsContentScalingSupported(false),
             mContentScalingFactor(1.0),
             mGLSupport(glsupport),
             mContext(NULL),
             mWindow(nil),
-            mView(nil),
-            mViewController(nil)
+            mView(nil)
+//    ,mViewController(nil)
     {
         mIsFullScreen = true;
         mActive = true;
@@ -97,8 +97,8 @@ namespace Ogre {
             switchFullScreen(false);
         }
 
-        if(!mUsingExternalViewController)
-            [mViewController release];
+//        if(!mUsingExternalViewController)
+//            [mViewController release];
     }
 
     void EAGL2Window::setFullscreen(bool fullscreen, uint width, uint height)
@@ -221,16 +221,16 @@ namespace Ogre {
         eaglLayer.drawableProperties = [NSDictionary dictionaryWithObjectsAndKeys:
                                         [NSNumber numberWithBool:retainedBacking], kEAGLDrawablePropertyRetainedBacking,
                                         kEAGLColorFormatRGBA8, kEAGLDrawablePropertyColorFormat, nil];
-        // Set up the view controller
-        if(!mUsingExternalViewController)
-        {
-            mViewController = [[EAGL2ViewController alloc] init];
-        }
-        
-        OgreAssert(mViewController != nil, "EAGL2Window: Failed to create view controller");
-        
-        if(mViewController.view != mView)
-            mViewController.view = mView;
+//        // Set up the view controller
+//        if(!mUsingExternalViewController)
+//        {
+//            mViewController = [[EAGL2ViewController alloc] init];
+//        }
+//        
+//        OgreAssert(mViewController != nil, "EAGL2Window: Failed to create view controller");
+//        
+//        if(mViewController.view != mView)
+//            mViewController.view = mView;
 
         if(eaglLayer)
         {
@@ -250,19 +250,19 @@ namespace Ogre {
         
         OgreAssert(mContext != nil, "EAGL2Window: Failed to create OpenGL ES context");
 
-        if(!mUsingExternalViewController)
-            [mWindow addSubview:mViewController.view];
-        
-        mViewController.mGLSupport = mGLSupport;
-        
-        if(!mUsingExternalViewController)
-            mWindow.rootViewController = mViewController;
+//        if(!mUsingExternalViewController)
+//            [mWindow addSubview:mViewController.view];
+//        
+//        mViewController.mGLSupport = mGLSupport;
+//        
+//        if(!mUsingExternalViewController)
+//            mWindow.rootViewController = mViewController;
         
         if(!mUsingExternalView)
             [mView release];
     
-        if(!mUsingExternalViewController)
-            [mWindow makeKeyAndVisible];
+//        if(!mUsingExternalViewController)
+//            [mWindow makeKeyAndVisible];
 
         mContext->createFramebuffer();
         
@@ -360,14 +360,14 @@ namespace Ogre {
                 LogManager::getSingleton().logMessage("iOS: Using an external view handle");
             }
         
-            if ((opt = miscParams->find("externalViewControllerHandle")) != end)
-            {
-                mViewController = (EAGL2ViewController *)StringConverter::parseUnsignedLong(opt->second);
-                if(mViewController.view != nil)
-                    mView = (EAGL2View *)mViewController.view;
-                mUsingExternalViewController = true;
-                LogManager::getSingleton().logMessage("iOS: Using an external view controller handle");
-            }
+//            if ((opt = miscParams->find("externalViewControllerHandle")) != end)
+//            {
+//                mViewController = (EAGL2ViewController *)StringConverter::parseUnsignedLong(opt->second);
+//                if(mViewController.view != nil)
+//                    mView = (EAGL2View *)mViewController.view;
+//                mUsingExternalViewController = true;
+//                LogManager::getSingleton().logMessage("iOS: Using an external view controller handle");
+//            }
 		}
         
         initNativeCreatedWindow(miscParams);
@@ -463,17 +463,17 @@ namespace Ogre {
 			return;
 		}
         
-		if( name == "VIEW" )
-		{
-            *(void**)(pData) = mViewController.view;
-            return;
-		}
-
-        if( name == "VIEWCONTROLLER" )
-		{
-            *(void**)(pData) = mViewController;
-            return;
-		}
+//		if( name == "VIEW" )
+//		{
+//            *(void**)(pData) = mViewController.view;
+//            return;
+//		}
+//
+//        if( name == "VIEWCONTROLLER" )
+//		{
+//            *(void**)(pData) = mViewController;
+//            return;
+//		}
 	}
 
     void EAGL2Window::copyContentsToMemory(const PixelBox &dst, FrameBuffer buffer)
