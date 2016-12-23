@@ -291,8 +291,9 @@ private:
         mGUI = new MyGUI::Gui();
         
         mGUI->initialise();
-        mButton = mGUI->createWidget<MyGUI::Button>("Button",10,10,800,600,MyGUI::Align::Default,"Main");
-        mButton->setCaption("HelloWorld");
+        mButton = mGUI->createWidget<MyGUI::Button>("Button",10,10,200,100,MyGUI::Align::Stretch,"Main");
+        mButton->setCaption("中文");
+        mButton->setFontHeight(40);
         
         mSceneInited = true;
     }
@@ -453,10 +454,10 @@ private:
     virtual void preViewportUpdate(const Ogre::RenderTargetViewportEvent& evt) {
         if (evt.source == mRTTLeftViewport) {
             // LOGD("preViewportUpdate mRTTLeftViewport");
-            mPlatform->getRenderManagerPtr()->setActiveViewport(-1);
+            mPlatform->getRenderManagerPtr()->setActiveViewport(0);
         } else if (evt.source == mRTTRightViewport) {
             // LOGD("preViewportUpdate mRTTRightViewport");
-            mPlatform->getRenderManagerPtr()->setActiveViewport(-1);
+            mPlatform->getRenderManagerPtr()->setActiveViewport(1);
         } else {
             
         }

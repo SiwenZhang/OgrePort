@@ -708,6 +708,7 @@
 					"$(SOURCE_ROOT)/../../../../../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include",
 					"$(SOURCE_ROOT)/../ogre",
 				);
+				OTHER_CFLAGS = "-DMYGUI_USE_FREETYPE";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -724,6 +725,7 @@
 					"$(SOURCE_ROOT)/../../../../../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include",
 					"$(SOURCE_ROOT)/../ogre",
 				);
+				OTHER_CFLAGS = "-DMYGUI_USE_FREETYPE";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
