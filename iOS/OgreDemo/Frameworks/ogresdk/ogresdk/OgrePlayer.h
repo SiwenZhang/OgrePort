@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "OgreEAGL2View.h"
-
-@interface OgrePlayer : EAGL2View
+@interface OgrePlayer : UIView
 
 - (instancetype)initWithFrame:(CGRect)frame resourceRoot:(NSString*)resourceRoot;
 

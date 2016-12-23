@@ -37,6 +37,7 @@ THE SOFTWARE.
 
 // Forward declarations
 @class CAEAGLLayer;
+@class UIView;
 
 // Define the native window type
 typedef UIWindow *NativeWindowType;
@@ -67,7 +68,8 @@ namespace Ogre {
             EAGLES2Context* mContext;
 #ifdef __OBJC__
 			NativeWindowType mWindow;
-            EAGL2View *mView;
+            UIView* mView;
+//            EAGL2View *mView;
 //            EAGL2ViewController *mViewController;
 #endif
 
