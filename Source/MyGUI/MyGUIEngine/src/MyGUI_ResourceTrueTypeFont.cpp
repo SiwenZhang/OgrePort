@@ -39,6 +39,9 @@
 
 #endif // MYGUI_USE_FREETYPE
 
+//iOS system font support
+#include "iOS/system_font_loader.h"
+
 namespace MyGUI
 {
 
@@ -783,19 +786,23 @@ namespace MyGUI
 	FT_Face ResourceTrueTypeFont::loadFace(const FT_Library& _ftLibrary, uint8*& _fontBuffer)
 	{
 		FT_Face result = nullptr;
+        size_t fontBufferSize = 0;
 
-		// Load the font file.
-		IDataStream* datastream = DataManager::getInstance().getData(mSource);
+        if (!loadsystemfontData(mSource, _fontBuffer, fontBufferSize)) {
 
-		if (datastream == nullptr)
-			return result;
+            // Load the font file.
+            IDataStream* datastream = DataManager::getInstance().getData(mSource);
 
-		size_t fontBufferSize = datastream->size();
-		_fontBuffer = new uint8[fontBufferSize];
-		datastream->read(_fontBuffer, fontBufferSize);
+            if (datastream == nullptr)
+                return result;
 
-		DataManager::getInstance().freeData(datastream);
-		datastream = nullptr;
+            fontBufferSize = datastream->size();
+            _fontBuffer = new uint8[fontBufferSize];
+            datastream->read(_fontBuffer, fontBufferSize);
+
+            DataManager::getInstance().freeData(datastream);
+            datastream = nullptr;
+        }
 
 		// Determine how many faces the font contains.
 		if (FT_New_Memory_Face(_ftLibrary, _fontBuffer, (FT_Long)fontBufferSize, -1, &result) != 0)

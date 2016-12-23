@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1014011E0D9AE600D8715B /* system_font_loader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1013FF1E0D9AE600D8715B /* system_font_loader.cpp */; };
 		FA1EB3F11E0BAAEB00A20EDB /* MyGUI_ActionController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3901E0BAAEA00A20EDB /* MyGUI_ActionController.cpp */; };
 		FA1EB3F21E0BAAEB00A20EDB /* MyGUI_Any.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3911E0BAAEA00A20EDB /* MyGUI_Any.cpp */; };
 		FA1EB3F31E0BAAEB00A20EDB /* MyGUI_BackwardCompatibility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB3921E0BAAEA00A20EDB /* MyGUI_BackwardCompatibility.cpp */; };
@@ -125,6 +126,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA1013FF1E0D9AE600D8715B /* system_font_loader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = system_font_loader.cpp; sourceTree = "<group>"; };
+		FA1014001E0D9AE600D8715B /* system_font_loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = system_font_loader.h; sourceTree = "<group>"; };
 		FA1EB2CB1E0BAA9B00A20EDB /* libmygui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmygui.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1EB3901E0BAAEA00A20EDB /* MyGUI_ActionController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_ActionController.cpp; sourceTree = "<group>"; };
 		FA1EB3911E0BAAEA00A20EDB /* MyGUI_Any.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGUI_Any.cpp; sourceTree = "<group>"; };
@@ -251,6 +254,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA1013FE1E0D9AE600D8715B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FA1013FF1E0D9AE600D8715B /* system_font_loader.cpp */,
+				FA1014001E0D9AE600D8715B /* system_font_loader.h */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		FA1EB2C21E0BAA9B00A20EDB = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +300,7 @@
 		FA1EB38F1E0BAAEA00A20EDB /* src */ = {
 			isa = PBXGroup;
 			children = (
+				FA1013FE1E0D9AE600D8715B /* iOS */,
 				FA1EB3901E0BAAEA00A20EDB /* MyGUI_ActionController.cpp */,
 				FA1EB3911E0BAAEA00A20EDB /* MyGUI_Any.cpp */,
 				FA1EB3921E0BAAEA00A20EDB /* MyGUI_BackwardCompatibility.cpp */,
@@ -573,6 +586,7 @@
 				FA1EB41D1E0BAAEB00A20EDB /* MyGUI_MainSkin.cpp in Sources */,
 				FA1EB4291E0BAAEB00A20EDB /* MyGUI_Precompiled.cpp in Sources */,
 				FA1EB4461E0BAAEB00A20EDB /* MyGUI_TextView.cpp in Sources */,
+				FA1014011E0D9AE600D8715B /* system_font_loader.cpp in Sources */,
 				FA1EB43F1E0BAAEB00A20EDB /* MyGUI_SubWidgetBinding.cpp in Sources */,
 				FA1EB4471E0BAAEB00A20EDB /* MyGUI_TileRect.cpp in Sources */,
 				FA1EB4331E0BAAEB00A20EDB /* MyGUI_ResourceSkin.cpp in Sources */,

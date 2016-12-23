@@ -31,6 +31,7 @@
 - (void)localInit {
     mResourcesRoot = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/assets/"];
     
+    
     NSLog(@"mResourcesRoot is : %@", mResourcesRoot);
 }
 

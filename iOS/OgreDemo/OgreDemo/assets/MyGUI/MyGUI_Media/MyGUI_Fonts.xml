@@ -20,7 +20,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Resource" version="1.1">
     <Resource type="ResourceTrueTypeFont" name="Simhei">
-        <Property key="Source" value="simhei.ttf"/>
+        <Property key="Source" value="STHeitiTC-Medium"/>
         <Property key="Size" value="19"/>
         <Property key="Resolution" value="50"/>
         <Property key="Antialias" value="false"/>
