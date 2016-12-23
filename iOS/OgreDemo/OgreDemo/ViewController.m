@@ -14,13 +14,24 @@
 
 @implementation ViewController
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    if (self = [super initWithCoder:aDecoder]) {
-        mResourcesRoot = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/assets/"];
-        
-        NSLog(@"mResourcesRoot is : %@", mResourcesRoot);
+- (instancetype)init {
+    if (self = [super init]) {
+        [self localInit];
     }
     return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        [self localInit];
+    }
+    return self;
+}
+
+- (void)localInit {
+    mResourcesRoot = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/assets/"];
+    
+    NSLog(@"mResourcesRoot is : %@", mResourcesRoot);
 }
 
 - (void)viewDidLoad {
