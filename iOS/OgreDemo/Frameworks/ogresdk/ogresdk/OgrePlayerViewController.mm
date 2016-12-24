@@ -22,28 +22,44 @@
     
     mOgrePlayer = [[OgrePlayer alloc] initWithFrame:self.view.bounds resourceRoot:mResourcesRoot];
     [self.view addSubview:mOgrePlayer];
-    [mOgrePlayer viewDidLoad];
+    [mOgrePlayer ogreViewDidLoad];
 }
 
 - (void)viewDidUnload {
-    [mOgrePlayer viewDidUnload];
+    [mOgrePlayer ogreViewDidUnload];
     [mOgrePlayer removeFromSuperview];
     [super viewDidUnload];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [mOgrePlayer viewDidAppear:animated];
+    [mOgrePlayer ogreViewDidAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [mOgrePlayer viewWillDisappear:animated];
+    [mOgrePlayer ogreViewWillDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
-    [mOgrePlayer didReceiveMemoryWarning];
+    [mOgrePlayer ogreDidReceiveMemoryWarning];
     [super didReceiveMemoryWarning];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [mOgrePlayer ogreTouchesBegan:touches withEvent:event];
+}
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [mOgrePlayer ogreTouchesMoved:touches withEvent:event];
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [mOgrePlayer ogreTouchesEnded:touches withEvent:event];
+}
+
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [mOgrePlayer ogreTouchesCancelled:touches withEvent:event];
 }
 
 @end

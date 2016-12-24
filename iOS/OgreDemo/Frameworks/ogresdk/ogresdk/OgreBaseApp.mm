@@ -8,6 +8,7 @@
 
 #include "OgreBaseApp.h"
 #include "IAppInterface.h"
+#include "OgreMultiTouch.h"
 
 #import <UIKit/UIApplication.h>
 
@@ -21,6 +22,9 @@ void OgreBaseApp::InitGameWindow() {
     opt["contentScalingFactor"] = Ogre::StringConverter::toString(1);
     
     gRenderWnd = gRoot->createRenderWindow("OgreWindow", 0, 0, true, &opt);
+    
+    mOgreMultiTouch = new OgreMultiTouch();
+    mOgreMultiTouch->setEventCallback(this);
     
     InitStartScene();
     
@@ -48,6 +52,11 @@ void OgreBaseApp::InitGameWindow() {
     //            static_cast<Ogre::AndroidEGLWindow*>(gRenderWnd)->_createInternalResources(mAppInterface->GetWindow(), NULL);
     //        }
     //        AConfiguration_delete(config);
+}
+
+void OgreBaseApp::OnTouch( int iPointerID, float fPosX, float fPosY, int iAction ) {
+    printf("fPosX : %f fPosY: %f\n", fPosX, fPosY);
+    mOgreMultiTouch->injectTouchEvent(iPointerID, iAction, fPosX, fPosY, gRenderWnd->getWidth(), gRenderWnd->getHeight());
 }
 
 void OgreBaseApp::go(IAppInterface* appInterface) {

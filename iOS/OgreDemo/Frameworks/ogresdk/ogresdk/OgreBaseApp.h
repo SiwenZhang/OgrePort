@@ -34,13 +34,17 @@
 #include "MyGUI.h"
 #include "MyGUI_OgrePlatform.h"
 
+#include "OIS.h"
+
 class IAppInterface;
+class OgreMultiTouch;
 
 class OgreBaseApp
         :public IAppLifeCycle,
         public Ogre::WindowEventListener,
         public Ogre::FrameListener,
-        public Ogre::RenderTargetListener {
+        public Ogre::RenderTargetListener,
+        public OIS::MultiTouchListener {
 
 public:
     // Application
@@ -118,9 +122,7 @@ public:
         
     }
     
-    virtual void OnTouch( int iPointerID, float fPosX, float fPosY, int iAction ) {
-        
-    }
+    virtual void OnTouch( int iPointerID, float fPosX, float fPosY, int iAction );
     
 public:
     void renderOneFrame() {
@@ -174,7 +176,7 @@ private:
         gSceneMgr->setAmbientLight(Ogre::ColourValue(1.0f, 1.0f, 1.0f));
         
         Ogre::Entity* pEntity = gSceneMgr->createEntity("Sinbad", "Sinbad.mesh");
-        Ogre::SceneNode* pNode = gSceneMgr->getRootSceneNode()->createChildSceneNode("Sinbad");
+        pNode = gSceneMgr->getRootSceneNode()->createChildSceneNode("Sinbad");
         pNode->attachObject(pEntity);
         //pNode->setPosition(0, 0, 0);
         
@@ -345,8 +347,24 @@ public:
     virtual ~OgreBaseApp() {
         //        Ogre::WindowEventUtilities::removeWindowEventListener(gRenderWnd, this);
     }
+            
+    virtual bool touchMoved( const OIS::MultiTouchEvent &arg ) {
+        return true;
+    }
     
-private:
+    virtual bool touchPressed( const OIS::MultiTouchEvent &arg ) {
+        return true;
+    }
+            
+    virtual bool touchReleased( const OIS::MultiTouchEvent &arg ) {
+        return true;
+    }
+    
+    virtual bool touchCancelled( const OIS::MultiTouchEvent &arg ) {
+        return true;
+    }
+            
+protected:
     Ogre::RenderWindow* gRenderWnd;
     Ogre::Root* gRoot;
     Ogre::SceneManager* gSceneMgr;
@@ -378,6 +396,8 @@ private:
     bool mSceneInited;
     int mWidth;
     int mHeight;
+            
+    OgreMultiTouch* mOgreMultiTouch;
     
 private:
     virtual bool frameRenderingQueued(const Ogre::FrameEvent& fe) {

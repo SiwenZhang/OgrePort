@@ -12,14 +12,24 @@
 
 - (instancetype)initWithFrame:(CGRect)frame resourceRoot:(NSString*)resourceRoot;
 
-- (void)viewDidLoad;
+- (void)ogreQueueEvent:(NSOperation*)op;
 
-- (void)viewDidUnload;
+- (void)ogreViewDidLoad;
 
-- (void)viewDidAppear:(BOOL)animated;
+- (void)ogreViewDidUnload;
 
-- (void)viewWillDisappear:(BOOL)animated;
+- (void)ogreViewDidAppear:(BOOL)animated;
 
-- (void)didReceiveMemoryWarning;
+- (void)ogreViewWillDisappear:(BOOL)animated;
+
+- (void)ogreDidReceiveMemoryWarning;
+
+- (void)ogreTouchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event;
+
+- (void)ogreTouchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event;
+
+- (void)ogreTouchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event;
+
+- (void)ogreTouchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event;
 
 @end

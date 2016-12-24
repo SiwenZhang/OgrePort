@@ -18,6 +18,25 @@ class OgreApplication: public OgreBaseApp {
 public:
     OgreApplication();
     virtual ~OgreApplication();
+    
+protected:
+    virtual bool touchMoved( const OIS::MultiTouchEvent &arg ) {
+        pNode->yaw(Ogre::Radian(Ogre::Degree(arg.state.X.rel)));
+//        mRTTRightCamera->yaw(Ogre::Radian(Ogre::Degree(-arg.state.X.rel)));
+        return true;
+    }
+    
+    virtual bool touchPressed( const OIS::MultiTouchEvent &arg ) {
+        return true;
+    }
+    
+    virtual bool touchReleased( const OIS::MultiTouchEvent &arg ) {
+        return true;
+    }
+    
+    virtual bool touchCancelled( const OIS::MultiTouchEvent &arg ) {
+        return true;
+    }
 };
 
 #endif /* OGRE_APPLICATION_H */

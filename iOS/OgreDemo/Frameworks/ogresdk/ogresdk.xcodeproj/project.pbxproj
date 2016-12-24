@@ -20,6 +20,7 @@
 		FA678C521E0E6AD200EFD8BB /* libzzip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA678C491E0E6A5E00EFD8BB /* libzzip.a */; };
 		FA6795CB1E0E777300EFD8BB /* OgreBaseApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA6795C91E0E777300EFD8BB /* OgreBaseApp.mm */; };
 		FA6795DD1E0E822200EFD8BB /* ReflexCpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA6795DC1E0E822200EFD8BB /* ReflexCpp.cpp */; };
+		FA6795E11E0EC22700EFD8BB /* OgreMultiTouch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA6795E01E0EC22700EFD8BB /* OgreMultiTouch.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,8 @@
 		FA6795DB1E0E812F00EFD8BB /* ReflexCpp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReflexCpp.h; sourceTree = "<group>"; };
 		FA6795DC1E0E822200EFD8BB /* ReflexCpp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReflexCpp.cpp; sourceTree = "<group>"; };
 		FA6795DE1E0E8C0900EFD8BB /* Any.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Any.h; sourceTree = "<group>"; };
+		FA6795DF1E0EBCEC00EFD8BB /* OgreMultiTouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OgreMultiTouch.h; sourceTree = "<group>"; };
+		FA6795E01E0EC22700EFD8BB /* OgreMultiTouch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreMultiTouch.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +185,8 @@
 				FA6795DA1E0E80A400EFD8BB /* OgreApplicationMain.h */,
 				FA6795DB1E0E812F00EFD8BB /* ReflexCpp.h */,
 				FA6795DC1E0E822200EFD8BB /* ReflexCpp.cpp */,
+				FA6795DF1E0EBCEC00EFD8BB /* OgreMultiTouch.h */,
+				FA6795E01E0EC22700EFD8BB /* OgreMultiTouch.cpp */,
 			);
 			path = ogresdk;
 			sourceTree = "<group>";
@@ -516,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6795E11E0EC22700EFD8BB /* OgreMultiTouch.cpp in Sources */,
 				FA10129D1E0BDA1400D8715B /* OgrePlayerViewController.mm in Sources */,
 				FA6795DD1E0E822200EFD8BB /* ReflexCpp.cpp in Sources */,
 				FA1012A01E0BDA3600D8715B /* OgrePlayer.mm in Sources */,
@@ -620,11 +626,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SOURCE_ROOT)/../../../../Source/Ogre/OgreMain/include",
 					"$(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include",
+					"$(SOURCE_ROOT)/../../../../Source/ois/includes",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/ogre $(SOURCE_ROOT)/../../../../Source/Ogre/OgreMain/include $(SOURCE_ROOT)/../../../../Source/Ogre/Components/RTShaderSystem/include $(SOURCE_ROOT)/../../../../Source/Ogre/Components/Overlay/include $(SOURCE_ROOT)/../../../../Source/Ogre/PlugIns/OctreeSceneManager/include $(SOURCE_ROOT)/../../../../Source/Ogre/PlugIns/ParticleFX/include $(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include $(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include/EAGL $(SOURCE_ROOT)/../../../../Source/MyGUI/MyGUIEngine/include $(SOURCE_ROOT)/../../../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/ogre $(SOURCE_ROOT)/../../../../Source/Ogre/OgreMain/include $(SOURCE_ROOT)/../../../../Source/Ogre/Components/RTShaderSystem/include $(SOURCE_ROOT)/../../../../Source/Ogre/Components/Overlay/include $(SOURCE_ROOT)/../../../../Source/Ogre/PlugIns/OctreeSceneManager/include $(SOURCE_ROOT)/../../../../Source/Ogre/PlugIns/ParticleFX/include $(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include $(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include/EAGL $(SOURCE_ROOT)/../../../../Source/MyGUI/MyGUIEngine/include $(SOURCE_ROOT)/../../../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include $(SOURCE_ROOT)/../../../../Source/ois/includes";
 			};
 			name = Debug;
 		};
@@ -634,11 +641,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SOURCE_ROOT)/../../../../Source/Ogre/OgreMain/include",
 					"$(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include",
+					"$(SOURCE_ROOT)/../../../../Source/ois/includes",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/ogre $(SOURCE_ROOT)/../../../../Source/Ogre/OgreMain/include $(SOURCE_ROOT)/../../../../Source/Ogre/Components/RTShaderSystem/include $(SOURCE_ROOT)/../../../../Source/Ogre/Components/Overlay/include $(SOURCE_ROOT)/../../../../Source/Ogre/PlugIns/OctreeSceneManager/include $(SOURCE_ROOT)/../../../../Source/Ogre/PlugIns/ParticleFX/include $(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include $(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include/EAGL $(SOURCE_ROOT)/../../../../Source/MyGUI/MyGUIEngine/include $(SOURCE_ROOT)/../../../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/ogre $(SOURCE_ROOT)/../../../../Source/Ogre/OgreMain/include $(SOURCE_ROOT)/../../../../Source/Ogre/Components/RTShaderSystem/include $(SOURCE_ROOT)/../../../../Source/Ogre/Components/Overlay/include $(SOURCE_ROOT)/../../../../Source/Ogre/PlugIns/OctreeSceneManager/include $(SOURCE_ROOT)/../../../../Source/Ogre/PlugIns/ParticleFX/include $(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include $(SOURCE_ROOT)/../../../../Source/Ogre/RenderSystems/GLES2/include/EAGL $(SOURCE_ROOT)/../../../../Source/MyGUI/MyGUIEngine/include $(SOURCE_ROOT)/../../../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include $(SOURCE_ROOT)/../../../../Source/ois/includes";
 			};
 			name = Release;
 		};

@@ -319,7 +319,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ccsu.OgreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/ogresdk/ogresdk $(SOURCE_ROOT)/Frameworks/ogresdk/Frameworks/ogre $(SOURCE_ROOT)/../../Source/Ogre/OgreMain/include $(SOURCE_ROOT)/../../Source/Ogre/Components/RTShaderSystem/include $(SOURCE_ROOT)/../../Source/Ogre/Components/Overlay/include $(SOURCE_ROOT)/../../Source/Ogre/PlugIns/OctreeSceneManager/include $(SOURCE_ROOT)/../../Source/Ogre/PlugIns/ParticleFX/include $(SOURCE_ROOT)/../../Source/Ogre/RenderSystems/GLES2/include $(SOURCE_ROOT)/../../Source/MyGUI/MyGUIEngine/include $(SOURCE_ROOT)/../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/ogresdk/ogresdk $(SOURCE_ROOT)/Frameworks/ogresdk/Frameworks/ogre $(SOURCE_ROOT)/../../Source/Ogre/OgreMain/include $(SOURCE_ROOT)/../../Source/Ogre/Components/RTShaderSystem/include $(SOURCE_ROOT)/../../Source/Ogre/Components/Overlay/include $(SOURCE_ROOT)/../../Source/Ogre/PlugIns/OctreeSceneManager/include $(SOURCE_ROOT)/../../Source/Ogre/PlugIns/ParticleFX/include $(SOURCE_ROOT)/../../Source/Ogre/RenderSystems/GLES2/include $(SOURCE_ROOT)/../../Source/MyGUI/MyGUIEngine/include $(SOURCE_ROOT)/../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include $(SOURCE_ROOT)/../../Source/ois/includes";
 			};
 			name = Debug;
 		};
@@ -337,7 +337,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ccsu.OgreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/ogresdk/ogresdk $(SOURCE_ROOT)/Frameworks/ogresdk/Frameworks/ogre $(SOURCE_ROOT)/../../Source/Ogre/OgreMain/include $(SOURCE_ROOT)/../../Source/Ogre/Components/RTShaderSystem/include $(SOURCE_ROOT)/../../Source/Ogre/Components/Overlay/include $(SOURCE_ROOT)/../../Source/Ogre/PlugIns/OctreeSceneManager/include $(SOURCE_ROOT)/../../Source/Ogre/PlugIns/ParticleFX/include $(SOURCE_ROOT)/../../Source/Ogre/RenderSystems/GLES2/include $(SOURCE_ROOT)/../../Source/MyGUI/MyGUIEngine/include $(SOURCE_ROOT)/../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/ogresdk/ogresdk $(SOURCE_ROOT)/Frameworks/ogresdk/Frameworks/ogre $(SOURCE_ROOT)/../../Source/Ogre/OgreMain/include $(SOURCE_ROOT)/../../Source/Ogre/Components/RTShaderSystem/include $(SOURCE_ROOT)/../../Source/Ogre/Components/Overlay/include $(SOURCE_ROOT)/../../Source/Ogre/PlugIns/OctreeSceneManager/include $(SOURCE_ROOT)/../../Source/Ogre/PlugIns/ParticleFX/include $(SOURCE_ROOT)/../../Source/Ogre/RenderSystems/GLES2/include $(SOURCE_ROOT)/../../Source/MyGUI/MyGUIEngine/include $(SOURCE_ROOT)/../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include $(SOURCE_ROOT)/../../Source/ois/includes";
 			};
 			name = Release;
 		};
