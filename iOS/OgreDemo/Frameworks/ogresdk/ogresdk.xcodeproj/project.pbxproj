@@ -18,6 +18,8 @@
 		FA678C501E0E6AD200EFD8BB /* libogrerendersystems.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA678C431E0E6A5E00EFD8BB /* libogrerendersystems.a */; };
 		FA678C511E0E6AD200EFD8BB /* libois.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA678C461E0E6A5E00EFD8BB /* libois.a */; };
 		FA678C521E0E6AD200EFD8BB /* libzzip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA678C491E0E6A5E00EFD8BB /* libzzip.a */; };
+		FA6795CB1E0E777300EFD8BB /* OgreBaseApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA6795C91E0E777300EFD8BB /* OgreBaseApp.mm */; };
+		FA6795DD1E0E822200EFD8BB /* ReflexCpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA6795DC1E0E822200EFD8BB /* ReflexCpp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,7 +107,7 @@
 		FA10129F1E0BDA3600D8715B /* OgrePlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OgrePlayer.mm; sourceTree = "<group>"; };
 		FA1013AF1E0C1BC300D8715B /* OgreStaticPluginLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreStaticPluginLoader.h; sourceTree = "<group>"; };
 		FA1013B01E0C1BC300D8715B /* RTShaderHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTShaderHelper.h; sourceTree = "<group>"; };
-		FA1013C41E0C296C00D8715B /* IAndroidHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAndroidHandler.h; sourceTree = "<group>"; };
+		FA1013C41E0C296C00D8715B /* IAppLifeCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAppLifeCycle.h; sourceTree = "<group>"; };
 		FA1EA9781E0B82F000A20EDB /* libogresdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libogresdk.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA678C021E0E6A5D00EFD8BB /* freeimage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = freeimage.xcodeproj; sourceTree = "<group>"; };
 		FA678C071E0E6A5E00EFD8BB /* freetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = freetype.xcodeproj; sourceTree = "<group>"; };
@@ -117,6 +119,13 @@
 		FA678C221E0E6A5E00EFD8BB /* ogrerendersystems.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ogrerendersystems.xcodeproj; sourceTree = "<group>"; };
 		FA678C271E0E6A5E00EFD8BB /* ois.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ois.xcodeproj; sourceTree = "<group>"; };
 		FA678C2C1E0E6A5E00EFD8BB /* zzip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = zzip.xcodeproj; sourceTree = "<group>"; };
+		FA6795C91E0E777300EFD8BB /* OgreBaseApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OgreBaseApp.mm; sourceTree = "<group>"; };
+		FA6795CA1E0E777300EFD8BB /* OgreBaseApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreBaseApp.h; sourceTree = "<group>"; };
+		FA6795D91E0E7DE000EFD8BB /* IAppInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAppInterface.h; sourceTree = "<group>"; };
+		FA6795DA1E0E80A400EFD8BB /* OgreApplicationMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OgreApplicationMain.h; sourceTree = "<group>"; };
+		FA6795DB1E0E812F00EFD8BB /* ReflexCpp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReflexCpp.h; sourceTree = "<group>"; };
+		FA6795DC1E0E822200EFD8BB /* ReflexCpp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReflexCpp.cpp; sourceTree = "<group>"; };
+		FA6795DE1E0E8C0900EFD8BB /* Any.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Any.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,13 +168,20 @@
 		FA1EA97A1E0B82F000A20EDB /* ogresdk */ = {
 			isa = PBXGroup;
 			children = (
-				FA1013C41E0C296C00D8715B /* IAndroidHandler.h */,
+				FA6795DE1E0E8C0900EFD8BB /* Any.h */,
+				FA1013C41E0C296C00D8715B /* IAppLifeCycle.h */,
 				FA1013AF1E0C1BC300D8715B /* OgreStaticPluginLoader.h */,
 				FA1013B01E0C1BC300D8715B /* RTShaderHelper.h */,
 				FA10129B1E0BDA1400D8715B /* OgrePlayerViewController.h */,
 				FA10129C1E0BDA1400D8715B /* OgrePlayerViewController.mm */,
 				FA10129E1E0BDA3600D8715B /* OgrePlayer.h */,
 				FA10129F1E0BDA3600D8715B /* OgrePlayer.mm */,
+				FA6795C91E0E777300EFD8BB /* OgreBaseApp.mm */,
+				FA6795CA1E0E777300EFD8BB /* OgreBaseApp.h */,
+				FA6795D91E0E7DE000EFD8BB /* IAppInterface.h */,
+				FA6795DA1E0E80A400EFD8BB /* OgreApplicationMain.h */,
+				FA6795DB1E0E812F00EFD8BB /* ReflexCpp.h */,
+				FA6795DC1E0E822200EFD8BB /* ReflexCpp.cpp */,
 			);
 			path = ogresdk;
 			sourceTree = "<group>";
@@ -501,7 +517,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA10129D1E0BDA1400D8715B /* OgrePlayerViewController.mm in Sources */,
+				FA6795DD1E0E822200EFD8BB /* ReflexCpp.cpp in Sources */,
 				FA1012A01E0BDA3600D8715B /* OgrePlayer.mm in Sources */,
+				FA6795CB1E0E777300EFD8BB /* OgreBaseApp.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

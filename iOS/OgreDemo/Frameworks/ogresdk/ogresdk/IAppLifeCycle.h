@@ -1,7 +1,7 @@
 #ifndef OGRE_IANDROID_HANDLER
 #define OGRE_IANDROID_HANDLER
 
-class IAndroidHandler
+class IAppLifeCycle
 {
 public:
     // Application
@@ -25,7 +25,7 @@ public:
     virtual void OnKey( int iKeyCode, wchar_t iUnicodeChar ) = 0;
     virtual void OnTouch( int iPointerID, float fPosX, float fPosY, int iAction ) = 0;
 
-    virtual ~IAndroidHandler() { }
+    virtual ~IAppLifeCycle() { }
 };
 
 #endif

@@ -15,6 +15,7 @@
 		FA1EA92E1E0B812300A20EDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA92D1E0B812300A20EDB /* ViewController.m */; };
 		FA1EA9331E0B812300A20EDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1EA9321E0B812300A20EDB /* Assets.xcassets */; };
 		FA1EA9921E0B833900A20EDB /* libogresdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1EA9891E0B830E00A20EDB /* libogresdk.a */; };
+		FA6795D71E0E79BB00EFD8BB /* OgreApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA6795D51E0E79BB00EFD8BB /* OgreApplication.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		FA1EA9321E0B812300A20EDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA1EA9371E0B812300A20EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA1EA9841E0B830D00A20EDB /* ogresdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ogresdk.xcodeproj; path = ogresdk/ogresdk.xcodeproj; sourceTree = "<group>"; };
+		FA6795D51E0E79BB00EFD8BB /* OgreApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreApplication.cpp; sourceTree = "<group>"; };
+		FA6795D61E0E79BB00EFD8BB /* OgreApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreApplication.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				FA1EA92A1E0B812300A20EDB /* AppDelegate.m */,
 				FA1EA92C1E0B812300A20EDB /* ViewController.h */,
 				FA1EA92D1E0B812300A20EDB /* ViewController.m */,
+				FA6795D51E0E79BB00EFD8BB /* OgreApplication.cpp */,
+				FA6795D61E0E79BB00EFD8BB /* OgreApplication.h */,
 				FA1EA9321E0B812300A20EDB /* Assets.xcassets */,
 				FA1EA9371E0B812300A20EDB /* Info.plist */,
 				FA1EA9261E0B812300A20EDB /* Supporting Files */,
@@ -201,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1EA92E1E0B812300A20EDB /* ViewController.m in Sources */,
+				FA6795D71E0E79BB00EFD8BB /* OgreApplication.cpp in Sources */,
 				FA1EA92B1E0B812300A20EDB /* AppDelegate.m in Sources */,
 				FA1EA9281E0B812300A20EDB /* main.m in Sources */,
 			);
@@ -303,12 +309,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(SOURCE_ROOT)/../../Source/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../Source/Ogre/PlugIns/OctreeSceneManager/include",
+					"$(SOURCE_ROOT)/../../Source/Ogre/RenderSystems/GLES2/include",
+				);
 				INFOPLIST_FILE = OgreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ccsu.OgreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/ogresdk/ogresdk";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/ogresdk/ogresdk $(SOURCE_ROOT)/Frameworks/ogresdk/Frameworks/ogre $(SOURCE_ROOT)/../../Source/Ogre/OgreMain/include $(SOURCE_ROOT)/../../Source/Ogre/Components/RTShaderSystem/include $(SOURCE_ROOT)/../../Source/Ogre/Components/Overlay/include $(SOURCE_ROOT)/../../Source/Ogre/PlugIns/OctreeSceneManager/include $(SOURCE_ROOT)/../../Source/Ogre/PlugIns/ParticleFX/include $(SOURCE_ROOT)/../../Source/Ogre/RenderSystems/GLES2/include $(SOURCE_ROOT)/../../Source/MyGUI/MyGUIEngine/include $(SOURCE_ROOT)/../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include";
 			};
 			name = Debug;
 		};
@@ -316,12 +327,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(SOURCE_ROOT)/../../Source/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../Source/Ogre/PlugIns/OctreeSceneManager/include",
+					"$(SOURCE_ROOT)/../../Source/Ogre/RenderSystems/GLES2/include",
+				);
 				INFOPLIST_FILE = OgreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ccsu.OgreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/ogresdk/ogresdk";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/ogresdk/ogresdk $(SOURCE_ROOT)/Frameworks/ogresdk/Frameworks/ogre $(SOURCE_ROOT)/../../Source/Ogre/OgreMain/include $(SOURCE_ROOT)/../../Source/Ogre/Components/RTShaderSystem/include $(SOURCE_ROOT)/../../Source/Ogre/Components/Overlay/include $(SOURCE_ROOT)/../../Source/Ogre/PlugIns/OctreeSceneManager/include $(SOURCE_ROOT)/../../Source/Ogre/PlugIns/ParticleFX/include $(SOURCE_ROOT)/../../Source/Ogre/RenderSystems/GLES2/include $(SOURCE_ROOT)/../../Source/MyGUI/MyGUIEngine/include $(SOURCE_ROOT)/../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include";
 			};
 			name = Release;
 		};
