@@ -9,80 +9,80 @@
 /* Begin PBXBuildFile section */
 		FA10129D1E0BDA1400D8715B /* OgrePlayerViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA10129C1E0BDA1400D8715B /* OgrePlayerViewController.mm */; };
 		FA1012A01E0BDA3600D8715B /* OgrePlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA10129F1E0BDA3600D8715B /* OgrePlayer.mm */; };
-		FA1012A41E0C058C00D8715B /* libogrecomponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1010841E0BAD7F00D8715B /* libogrecomponents.a */; };
-		FA1012A51E0C058C00D8715B /* libogremain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA10108A1E0BAD8700D8715B /* libogremain.a */; };
-		FA1012A61E0C058C00D8715B /* libogreplugins.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1010901E0BAD8F00D8715B /* libogreplugins.a */; };
-		FA1012A71E0C058C00D8715B /* libogrerendersystems.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1010961E0BAD9700D8715B /* libogrerendersystems.a */; };
-		FA1EA9911E0B832C00A20EDB /* libzzip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1EA9901E0B832400A20EDB /* libzzip.a */; };
-		FA1EA9D81E0B858900A20EDB /* libois.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1EA9C81E0B854D00A20EDB /* libois.a */; };
-		FA1EAA001E0B907200A20EDB /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1EA9FD1E0B906300A20EDB /* libfreetype.a */; };
-		FA1EAA7D1E0B95BA00A20EDB /* libfreeimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1EAA781E0B959000A20EDB /* libfreeimage.a */; };
-		FA1EB2DD1E0BAAD200A20EDB /* libmygui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1EB2DC1E0BAAC500A20EDB /* libmygui.a */; };
+		FA678C4A1E0E6AD200EFD8BB /* libfreeimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA678C311E0E6A5E00EFD8BB /* libfreeimage.a */; };
+		FA678C4B1E0E6AD200EFD8BB /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA678C341E0E6A5E00EFD8BB /* libfreetype.a */; };
+		FA678C4C1E0E6AD200EFD8BB /* libmygui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA678C371E0E6A5E00EFD8BB /* libmygui.a */; };
+		FA678C4D1E0E6AD200EFD8BB /* libogrecomponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA678C3A1E0E6A5E00EFD8BB /* libogrecomponents.a */; };
+		FA678C4E1E0E6AD200EFD8BB /* libogremain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA678C3D1E0E6A5E00EFD8BB /* libogremain.a */; };
+		FA678C4F1E0E6AD200EFD8BB /* libogreplugins.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA678C401E0E6A5E00EFD8BB /* libogreplugins.a */; };
+		FA678C501E0E6AD200EFD8BB /* libogrerendersystems.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA678C431E0E6A5E00EFD8BB /* libogrerendersystems.a */; };
+		FA678C511E0E6AD200EFD8BB /* libois.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA678C461E0E6A5E00EFD8BB /* libois.a */; };
+		FA678C521E0E6AD200EFD8BB /* libzzip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA678C491E0E6A5E00EFD8BB /* libzzip.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FA1010831E0BAD7F00D8715B /* PBXContainerItemProxy */ = {
+		FA678C301E0E6A5E00EFD8BB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FA10107F1E0BAD7F00D8715B /* ogrecomponents.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FA1EB0C01E0BA05400A20EDB;
-			remoteInfo = ogrecomponents;
-		};
-		FA1010891E0BAD8700D8715B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA1010851E0BAD8600D8715B /* ogremain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FA1EAEA11E0B9FE200A20EDB;
-			remoteInfo = ogremain;
-		};
-		FA10108F1E0BAD8F00D8715B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA10108B1E0BAD8F00D8715B /* ogreplugins.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FA1EB0AB1E0BA04200A20EDB;
-			remoteInfo = ogreplugins;
-		};
-		FA1010951E0BAD9700D8715B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA1010911E0BAD9700D8715B /* ogrerendersystems.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FA1EB0D51E0BA06200A20EDB;
-			remoteInfo = ogrerendersystems;
-		};
-		FA1EA98F1E0B832400A20EDB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA1EA98B1E0B832400A20EDB /* zzip.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FA1EA9471E0B825F00A20EDB;
-			remoteInfo = zzip;
-		};
-		FA1EA9C71E0B854D00A20EDB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA1EA9C31E0B854D00A20EDB /* ois.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FA1EA9B71E0B853600A20EDB;
-			remoteInfo = ois;
-		};
-		FA1EA9FC1E0B906300A20EDB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA1EA9F81E0B906300A20EDB /* freetype.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FA1EA9EC1E0B905900A20EDB;
-			remoteInfo = freetype;
-		};
-		FA1EAA771E0B959000A20EDB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA1EAA731E0B958F00A20EDB /* freeimage.xcodeproj */;
+			containerPortal = FA678C021E0E6A5D00EFD8BB /* freeimage.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = FA1EAA671E0B958400A20EDB;
 			remoteInfo = freeimage;
 		};
-		FA1EB2DB1E0BAAC500A20EDB /* PBXContainerItemProxy */ = {
+		FA678C331E0E6A5E00EFD8BB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FA1EB2D71E0BAAC500A20EDB /* mygui.xcodeproj */;
+			containerPortal = FA678C071E0E6A5E00EFD8BB /* freetype.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FA1EA9EC1E0B905900A20EDB;
+			remoteInfo = freetype;
+		};
+		FA678C361E0E6A5E00EFD8BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA678C0C1E0E6A5E00EFD8BB /* mygui.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = FA1EB2CB1E0BAA9B00A20EDB;
 			remoteInfo = mygui;
+		};
+		FA678C391E0E6A5E00EFD8BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA678C131E0E6A5E00EFD8BB /* ogrecomponents.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FA1EB0C01E0BA05400A20EDB;
+			remoteInfo = ogrecomponents;
+		};
+		FA678C3C1E0E6A5E00EFD8BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA678C181E0E6A5E00EFD8BB /* ogremain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FA1EAEA11E0B9FE200A20EDB;
+			remoteInfo = ogremain;
+		};
+		FA678C3F1E0E6A5E00EFD8BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA678C1D1E0E6A5E00EFD8BB /* ogreplugins.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FA1EB0AB1E0BA04200A20EDB;
+			remoteInfo = ogreplugins;
+		};
+		FA678C421E0E6A5E00EFD8BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA678C221E0E6A5E00EFD8BB /* ogrerendersystems.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FA1EB0D51E0BA06200A20EDB;
+			remoteInfo = ogrerendersystems;
+		};
+		FA678C451E0E6A5E00EFD8BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA678C271E0E6A5E00EFD8BB /* ois.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FA1EA9B71E0B853600A20EDB;
+			remoteInfo = ois;
+		};
+		FA678C481E0E6A5E00EFD8BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA678C2C1E0E6A5E00EFD8BB /* zzip.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FA1EA9471E0B825F00A20EDB;
+			remoteInfo = zzip;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -99,10 +99,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FA10107F1E0BAD7F00D8715B /* ogrecomponents.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ogrecomponents.xcodeproj; path = Frameworks/ogre/ogrecomponents/ogrecomponents.xcodeproj; sourceTree = "<group>"; };
-		FA1010851E0BAD8600D8715B /* ogremain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ogremain.xcodeproj; path = Frameworks/ogre/ogremain/ogremain.xcodeproj; sourceTree = "<group>"; };
-		FA10108B1E0BAD8F00D8715B /* ogreplugins.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ogreplugins.xcodeproj; path = Frameworks/ogre/ogreplugins/ogreplugins.xcodeproj; sourceTree = "<group>"; };
-		FA1010911E0BAD9700D8715B /* ogrerendersystems.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ogrerendersystems.xcodeproj; path = Frameworks/ogre/ogrerendersystems/ogrerendersystems.xcodeproj; sourceTree = "<group>"; };
 		FA10129B1E0BDA1400D8715B /* OgrePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgrePlayerViewController.h; sourceTree = "<group>"; };
 		FA10129C1E0BDA1400D8715B /* OgrePlayerViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OgrePlayerViewController.mm; sourceTree = "<group>"; };
 		FA10129E1E0BDA3600D8715B /* OgrePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgrePlayer.h; sourceTree = "<group>"; };
@@ -111,11 +107,16 @@
 		FA1013B01E0C1BC300D8715B /* RTShaderHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTShaderHelper.h; sourceTree = "<group>"; };
 		FA1013C41E0C296C00D8715B /* IAndroidHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAndroidHandler.h; sourceTree = "<group>"; };
 		FA1EA9781E0B82F000A20EDB /* libogresdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libogresdk.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA1EA98B1E0B832400A20EDB /* zzip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = zzip.xcodeproj; path = Frameworks/zzip/zzip.xcodeproj; sourceTree = "<group>"; };
-		FA1EA9C31E0B854D00A20EDB /* ois.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ois.xcodeproj; path = Frameworks/ois/ois.xcodeproj; sourceTree = "<group>"; };
-		FA1EA9F81E0B906300A20EDB /* freetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype.xcodeproj; path = Frameworks/freetype/freetype.xcodeproj; sourceTree = "<group>"; };
-		FA1EAA731E0B958F00A20EDB /* freeimage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freeimage.xcodeproj; path = Frameworks/freeimage/freeimage.xcodeproj; sourceTree = "<group>"; };
-		FA1EB2D71E0BAAC500A20EDB /* mygui.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mygui.xcodeproj; path = Frameworks/mygui/mygui.xcodeproj; sourceTree = "<group>"; };
+		FA678C021E0E6A5D00EFD8BB /* freeimage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = freeimage.xcodeproj; sourceTree = "<group>"; };
+		FA678C071E0E6A5E00EFD8BB /* freetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = freetype.xcodeproj; sourceTree = "<group>"; };
+		FA678C0C1E0E6A5E00EFD8BB /* mygui.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = mygui.xcodeproj; sourceTree = "<group>"; };
+		FA678C101E0E6A5E00EFD8BB /* OgreBuildSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreBuildSettings.h; sourceTree = "<group>"; };
+		FA678C131E0E6A5E00EFD8BB /* ogrecomponents.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ogrecomponents.xcodeproj; sourceTree = "<group>"; };
+		FA678C181E0E6A5E00EFD8BB /* ogremain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ogremain.xcodeproj; sourceTree = "<group>"; };
+		FA678C1D1E0E6A5E00EFD8BB /* ogreplugins.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ogreplugins.xcodeproj; sourceTree = "<group>"; };
+		FA678C221E0E6A5E00EFD8BB /* ogrerendersystems.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ogrerendersystems.xcodeproj; sourceTree = "<group>"; };
+		FA678C271E0E6A5E00EFD8BB /* ois.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ois.xcodeproj; sourceTree = "<group>"; };
+		FA678C2C1E0E6A5E00EFD8BB /* zzip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = zzip.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,57 +124,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA1012A41E0C058C00D8715B /* libogrecomponents.a in Frameworks */,
-				FA1012A51E0C058C00D8715B /* libogremain.a in Frameworks */,
-				FA1012A61E0C058C00D8715B /* libogreplugins.a in Frameworks */,
-				FA1012A71E0C058C00D8715B /* libogrerendersystems.a in Frameworks */,
-				FA1EB2DD1E0BAAD200A20EDB /* libmygui.a in Frameworks */,
-				FA1EAA7D1E0B95BA00A20EDB /* libfreeimage.a in Frameworks */,
-				FA1EAA001E0B907200A20EDB /* libfreetype.a in Frameworks */,
-				FA1EA9D81E0B858900A20EDB /* libois.a in Frameworks */,
-				FA1EA9911E0B832C00A20EDB /* libzzip.a in Frameworks */,
+				FA678C4A1E0E6AD200EFD8BB /* libfreeimage.a in Frameworks */,
+				FA678C4B1E0E6AD200EFD8BB /* libfreetype.a in Frameworks */,
+				FA678C4C1E0E6AD200EFD8BB /* libmygui.a in Frameworks */,
+				FA678C4D1E0E6AD200EFD8BB /* libogrecomponents.a in Frameworks */,
+				FA678C4E1E0E6AD200EFD8BB /* libogremain.a in Frameworks */,
+				FA678C4F1E0E6AD200EFD8BB /* libogreplugins.a in Frameworks */,
+				FA678C501E0E6AD200EFD8BB /* libogrerendersystems.a in Frameworks */,
+				FA678C511E0E6AD200EFD8BB /* libois.a in Frameworks */,
+				FA678C521E0E6AD200EFD8BB /* libzzip.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FA1010801E0BAD7F00D8715B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FA1010841E0BAD7F00D8715B /* libogrecomponents.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FA1010861E0BAD8600D8715B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FA10108A1E0BAD8700D8715B /* libogremain.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FA10108C1E0BAD8F00D8715B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FA1010901E0BAD8F00D8715B /* libogreplugins.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FA1010921E0BAD9700D8715B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FA1010961E0BAD9700D8715B /* libogrerendersystems.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		FA1EA96F1E0B82F000A20EDB = {
 			isa = PBXGroup;
 			children = (
-				FA1EA98A1E0B831900A20EDB /* Frameworks */,
+				FA678BFF1E0E6A5D00EFD8BB /* Frameworks */,
 				FA1EA97A1E0B82F000A20EDB /* ogresdk */,
 				FA1EA9791E0B82F000A20EDB /* Products */,
 			);
@@ -201,58 +170,171 @@
 			path = ogresdk;
 			sourceTree = "<group>";
 		};
-		FA1EA98A1E0B831900A20EDB /* Frameworks */ = {
+		FA678BFF1E0E6A5D00EFD8BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FA1010911E0BAD9700D8715B /* ogrerendersystems.xcodeproj */,
-				FA10108B1E0BAD8F00D8715B /* ogreplugins.xcodeproj */,
-				FA1010851E0BAD8600D8715B /* ogremain.xcodeproj */,
-				FA10107F1E0BAD7F00D8715B /* ogrecomponents.xcodeproj */,
-				FA1EB2D71E0BAAC500A20EDB /* mygui.xcodeproj */,
-				FA1EAA731E0B958F00A20EDB /* freeimage.xcodeproj */,
-				FA1EA9F81E0B906300A20EDB /* freetype.xcodeproj */,
-				FA1EA9C31E0B854D00A20EDB /* ois.xcodeproj */,
-				FA1EA98B1E0B832400A20EDB /* zzip.xcodeproj */,
+				FA678C001E0E6A5D00EFD8BB /* freeimage */,
+				FA678C051E0E6A5E00EFD8BB /* freetype */,
+				FA678C0A1E0E6A5E00EFD8BB /* mygui */,
+				FA678C0F1E0E6A5E00EFD8BB /* ogre */,
+				FA678C251E0E6A5E00EFD8BB /* ois */,
+				FA678C2A1E0E6A5E00EFD8BB /* zzip */,
 			);
-			name = Frameworks;
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		FA1EA98C1E0B832400A20EDB /* Products */ = {
+		FA678C001E0E6A5D00EFD8BB /* freeimage */ = {
 			isa = PBXGroup;
 			children = (
-				FA1EA9901E0B832400A20EDB /* libzzip.a */,
+				FA678C021E0E6A5D00EFD8BB /* freeimage.xcodeproj */,
 			);
-			name = Products;
+			path = freeimage;
 			sourceTree = "<group>";
 		};
-		FA1EA9C41E0B854D00A20EDB /* Products */ = {
+		FA678C031E0E6A5D00EFD8BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA1EA9C81E0B854D00A20EDB /* libois.a */,
+				FA678C311E0E6A5E00EFD8BB /* libfreeimage.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA1EA9F91E0B906300A20EDB /* Products */ = {
+		FA678C051E0E6A5E00EFD8BB /* freetype */ = {
 			isa = PBXGroup;
 			children = (
-				FA1EA9FD1E0B906300A20EDB /* libfreetype.a */,
+				FA678C071E0E6A5E00EFD8BB /* freetype.xcodeproj */,
+			);
+			path = freetype;
+			sourceTree = "<group>";
+		};
+		FA678C081E0E6A5E00EFD8BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA678C341E0E6A5E00EFD8BB /* libfreetype.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA1EAA741E0B958F00A20EDB /* Products */ = {
+		FA678C0A1E0E6A5E00EFD8BB /* mygui */ = {
 			isa = PBXGroup;
 			children = (
-				FA1EAA781E0B959000A20EDB /* libfreeimage.a */,
+				FA678C0C1E0E6A5E00EFD8BB /* mygui.xcodeproj */,
+			);
+			path = mygui;
+			sourceTree = "<group>";
+		};
+		FA678C0D1E0E6A5E00EFD8BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA678C371E0E6A5E00EFD8BB /* libmygui.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA1EB2D81E0BAAC500A20EDB /* Products */ = {
+		FA678C0F1E0E6A5E00EFD8BB /* ogre */ = {
 			isa = PBXGroup;
 			children = (
-				FA1EB2DC1E0BAAC500A20EDB /* libmygui.a */,
+				FA678C101E0E6A5E00EFD8BB /* OgreBuildSettings.h */,
+				FA678C111E0E6A5E00EFD8BB /* ogrecomponents */,
+				FA678C161E0E6A5E00EFD8BB /* ogremain */,
+				FA678C1B1E0E6A5E00EFD8BB /* ogreplugins */,
+				FA678C201E0E6A5E00EFD8BB /* ogrerendersystems */,
+			);
+			path = ogre;
+			sourceTree = "<group>";
+		};
+		FA678C111E0E6A5E00EFD8BB /* ogrecomponents */ = {
+			isa = PBXGroup;
+			children = (
+				FA678C131E0E6A5E00EFD8BB /* ogrecomponents.xcodeproj */,
+			);
+			path = ogrecomponents;
+			sourceTree = "<group>";
+		};
+		FA678C141E0E6A5E00EFD8BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA678C3A1E0E6A5E00EFD8BB /* libogrecomponents.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA678C161E0E6A5E00EFD8BB /* ogremain */ = {
+			isa = PBXGroup;
+			children = (
+				FA678C181E0E6A5E00EFD8BB /* ogremain.xcodeproj */,
+			);
+			path = ogremain;
+			sourceTree = "<group>";
+		};
+		FA678C191E0E6A5E00EFD8BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA678C3D1E0E6A5E00EFD8BB /* libogremain.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA678C1B1E0E6A5E00EFD8BB /* ogreplugins */ = {
+			isa = PBXGroup;
+			children = (
+				FA678C1D1E0E6A5E00EFD8BB /* ogreplugins.xcodeproj */,
+			);
+			path = ogreplugins;
+			sourceTree = "<group>";
+		};
+		FA678C1E1E0E6A5E00EFD8BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA678C401E0E6A5E00EFD8BB /* libogreplugins.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA678C201E0E6A5E00EFD8BB /* ogrerendersystems */ = {
+			isa = PBXGroup;
+			children = (
+				FA678C221E0E6A5E00EFD8BB /* ogrerendersystems.xcodeproj */,
+			);
+			path = ogrerendersystems;
+			sourceTree = "<group>";
+		};
+		FA678C231E0E6A5E00EFD8BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA678C431E0E6A5E00EFD8BB /* libogrerendersystems.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA678C251E0E6A5E00EFD8BB /* ois */ = {
+			isa = PBXGroup;
+			children = (
+				FA678C271E0E6A5E00EFD8BB /* ois.xcodeproj */,
+			);
+			path = ois;
+			sourceTree = "<group>";
+		};
+		FA678C281E0E6A5E00EFD8BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA678C461E0E6A5E00EFD8BB /* libois.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA678C2A1E0E6A5E00EFD8BB /* zzip */ = {
+			isa = PBXGroup;
+			children = (
+				FA678C2C1E0E6A5E00EFD8BB /* zzip.xcodeproj */,
+			);
+			path = zzip;
+			sourceTree = "<group>";
+		};
+		FA678C2D1E0E6A5E00EFD8BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA678C491E0E6A5E00EFD8BB /* libzzip.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,40 +386,40 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = FA1EAA741E0B958F00A20EDB /* Products */;
-					ProjectRef = FA1EAA731E0B958F00A20EDB /* freeimage.xcodeproj */;
+					ProductGroup = FA678C031E0E6A5D00EFD8BB /* Products */;
+					ProjectRef = FA678C021E0E6A5D00EFD8BB /* freeimage.xcodeproj */;
 				},
 				{
-					ProductGroup = FA1EA9F91E0B906300A20EDB /* Products */;
-					ProjectRef = FA1EA9F81E0B906300A20EDB /* freetype.xcodeproj */;
+					ProductGroup = FA678C081E0E6A5E00EFD8BB /* Products */;
+					ProjectRef = FA678C071E0E6A5E00EFD8BB /* freetype.xcodeproj */;
 				},
 				{
-					ProductGroup = FA1EB2D81E0BAAC500A20EDB /* Products */;
-					ProjectRef = FA1EB2D71E0BAAC500A20EDB /* mygui.xcodeproj */;
+					ProductGroup = FA678C0D1E0E6A5E00EFD8BB /* Products */;
+					ProjectRef = FA678C0C1E0E6A5E00EFD8BB /* mygui.xcodeproj */;
 				},
 				{
-					ProductGroup = FA1010801E0BAD7F00D8715B /* Products */;
-					ProjectRef = FA10107F1E0BAD7F00D8715B /* ogrecomponents.xcodeproj */;
+					ProductGroup = FA678C141E0E6A5E00EFD8BB /* Products */;
+					ProjectRef = FA678C131E0E6A5E00EFD8BB /* ogrecomponents.xcodeproj */;
 				},
 				{
-					ProductGroup = FA1010861E0BAD8600D8715B /* Products */;
-					ProjectRef = FA1010851E0BAD8600D8715B /* ogremain.xcodeproj */;
+					ProductGroup = FA678C191E0E6A5E00EFD8BB /* Products */;
+					ProjectRef = FA678C181E0E6A5E00EFD8BB /* ogremain.xcodeproj */;
 				},
 				{
-					ProductGroup = FA10108C1E0BAD8F00D8715B /* Products */;
-					ProjectRef = FA10108B1E0BAD8F00D8715B /* ogreplugins.xcodeproj */;
+					ProductGroup = FA678C1E1E0E6A5E00EFD8BB /* Products */;
+					ProjectRef = FA678C1D1E0E6A5E00EFD8BB /* ogreplugins.xcodeproj */;
 				},
 				{
-					ProductGroup = FA1010921E0BAD9700D8715B /* Products */;
-					ProjectRef = FA1010911E0BAD9700D8715B /* ogrerendersystems.xcodeproj */;
+					ProductGroup = FA678C231E0E6A5E00EFD8BB /* Products */;
+					ProjectRef = FA678C221E0E6A5E00EFD8BB /* ogrerendersystems.xcodeproj */;
 				},
 				{
-					ProductGroup = FA1EA9C41E0B854D00A20EDB /* Products */;
-					ProjectRef = FA1EA9C31E0B854D00A20EDB /* ois.xcodeproj */;
+					ProductGroup = FA678C281E0E6A5E00EFD8BB /* Products */;
+					ProjectRef = FA678C271E0E6A5E00EFD8BB /* ois.xcodeproj */;
 				},
 				{
-					ProductGroup = FA1EA98C1E0B832400A20EDB /* Products */;
-					ProjectRef = FA1EA98B1E0B832400A20EDB /* zzip.xcodeproj */;
+					ProductGroup = FA678C2D1E0E6A5E00EFD8BB /* Products */;
+					ProjectRef = FA678C2C1E0E6A5E00EFD8BB /* zzip.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -348,67 +430,67 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		FA1010841E0BAD7F00D8715B /* libogrecomponents.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libogrecomponents.a;
-			remoteRef = FA1010831E0BAD7F00D8715B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FA10108A1E0BAD8700D8715B /* libogremain.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libogremain.a;
-			remoteRef = FA1010891E0BAD8700D8715B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FA1010901E0BAD8F00D8715B /* libogreplugins.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libogreplugins.a;
-			remoteRef = FA10108F1E0BAD8F00D8715B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FA1010961E0BAD9700D8715B /* libogrerendersystems.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libogrerendersystems.a;
-			remoteRef = FA1010951E0BAD9700D8715B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FA1EA9901E0B832400A20EDB /* libzzip.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libzzip.a;
-			remoteRef = FA1EA98F1E0B832400A20EDB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FA1EA9C81E0B854D00A20EDB /* libois.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libois.a;
-			remoteRef = FA1EA9C71E0B854D00A20EDB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FA1EA9FD1E0B906300A20EDB /* libfreetype.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libfreetype.a;
-			remoteRef = FA1EA9FC1E0B906300A20EDB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FA1EAA781E0B959000A20EDB /* libfreeimage.a */ = {
+		FA678C311E0E6A5E00EFD8BB /* libfreeimage.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libfreeimage.a;
-			remoteRef = FA1EAA771E0B959000A20EDB /* PBXContainerItemProxy */;
+			remoteRef = FA678C301E0E6A5E00EFD8BB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FA1EB2DC1E0BAAC500A20EDB /* libmygui.a */ = {
+		FA678C341E0E6A5E00EFD8BB /* libfreetype.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfreetype.a;
+			remoteRef = FA678C331E0E6A5E00EFD8BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA678C371E0E6A5E00EFD8BB /* libmygui.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libmygui.a;
-			remoteRef = FA1EB2DB1E0BAAC500A20EDB /* PBXContainerItemProxy */;
+			remoteRef = FA678C361E0E6A5E00EFD8BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA678C3A1E0E6A5E00EFD8BB /* libogrecomponents.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libogrecomponents.a;
+			remoteRef = FA678C391E0E6A5E00EFD8BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA678C3D1E0E6A5E00EFD8BB /* libogremain.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libogremain.a;
+			remoteRef = FA678C3C1E0E6A5E00EFD8BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA678C401E0E6A5E00EFD8BB /* libogreplugins.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libogreplugins.a;
+			remoteRef = FA678C3F1E0E6A5E00EFD8BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA678C431E0E6A5E00EFD8BB /* libogrerendersystems.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libogrerendersystems.a;
+			remoteRef = FA678C421E0E6A5E00EFD8BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA678C461E0E6A5E00EFD8BB /* libois.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libois.a;
+			remoteRef = FA678C451E0E6A5E00EFD8BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA678C491E0E6A5E00EFD8BB /* libzzip.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libzzip.a;
+			remoteRef = FA678C481E0E6A5E00EFD8BB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

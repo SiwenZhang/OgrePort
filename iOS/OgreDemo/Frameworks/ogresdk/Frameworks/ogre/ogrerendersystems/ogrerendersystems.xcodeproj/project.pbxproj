@@ -191,8 +191,7 @@
 				FA1012B41E0C063200D8715B /* include */,
 				FA1013021E0C063200D8715B /* src */,
 			);
-			name = GLES2;
-			path = ../../../../../../../../Source/Ogre/RenderSystems/GLES2;
+			path = GLES2;
 			sourceTree = "<group>";
 		};
 		FA1012B41E0C063200D8715B /* include */ = {
@@ -388,7 +387,8 @@
 			children = (
 				FA1012B21E0C063200D8715B /* GLES2 */,
 			);
-			path = ogrerendersystems;
+			name = ogrerendersystems;
+			path = ../../../../../../../Source/Ogre/RenderSystems;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

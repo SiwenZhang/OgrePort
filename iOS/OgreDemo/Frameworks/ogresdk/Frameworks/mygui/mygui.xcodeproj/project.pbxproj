@@ -285,7 +285,8 @@
 				FA1EB4521E0BAB0700A20EDB /* Platforms */,
 				FA1EB2DE1E0BAAEA00A20EDB /* MyGUIEngine */,
 			);
-			path = mygui;
+			name = mygui;
+			path = ../../../../../../Source/MyGUI;
 			sourceTree = "<group>";
 		};
 		FA1EB2DE1E0BAAEA00A20EDB /* MyGUIEngine */ = {
@@ -293,8 +294,7 @@
 			children = (
 				FA1EB38F1E0BAAEA00A20EDB /* src */,
 			);
-			name = MyGUIEngine;
-			path = ../../../../../../../Source/MyGUI/MyGUIEngine;
+			path = MyGUIEngine;
 			sourceTree = "<group>";
 		};
 		FA1EB38F1E0BAAEA00A20EDB /* src */ = {
@@ -407,8 +407,7 @@
 			children = (
 				FA1EB4841E0BAB0700A20EDB /* Ogre */,
 			);
-			name = Platforms;
-			path = ../../../../../../../Source/MyGUI/Platforms;
+			path = Platforms;
 			sourceTree = "<group>";
 		};
 		FA1EB4841E0BAB0700A20EDB /* Ogre */ = {

@@ -160,7 +160,8 @@
 				FA1EB18A1E0BA4D900A20EDB /* Overlay */,
 				FA1EB13C1E0BA4BD00A20EDB /* RTShaderSystem */,
 			);
-			path = ogrecomponents;
+			name = ogrecomponents;
+			path = ../../../../../../../Source/Ogre/Components;
 			sourceTree = "<group>";
 		};
 		FA1EB13C1E0BA4BD00A20EDB /* RTShaderSystem */ = {
@@ -168,7 +169,7 @@
 			children = (
 				FA1EB13D1E0BA4CF00A20EDB /* src */,
 			);
-			name = RTShaderSystem;
+			path = RTShaderSystem;
 			sourceTree = "<group>";
 		};
 		FA1EB13D1E0BA4CF00A20EDB /* src */ = {
@@ -213,8 +214,7 @@
 				FA1EB1621E0BA4CF00A20EDB /* OgreShaderScriptTranslator.cpp */,
 				FA1EB1631E0BA4CF00A20EDB /* OgreShaderSubRenderState.cpp */,
 			);
-			name = src;
-			path = ../../../../../../../../Source/Ogre/Components/RTShaderSystem/src;
+			path = src;
 			sourceTree = "<group>";
 		};
 		FA1EB18A1E0BA4D900A20EDB /* Overlay */ = {
@@ -222,7 +222,7 @@
 			children = (
 				FA1EB18B1E0BA4E900A20EDB /* src */,
 			);
-			name = Overlay;
+			path = Overlay;
 			sourceTree = "<group>";
 		};
 		FA1EB18B1E0BA4E900A20EDB /* src */ = {
@@ -242,8 +242,7 @@
 				FA1EB1971E0BA4E900A20EDB /* OgrePanelOverlayElement.cpp */,
 				FA1EB1981E0BA4E900A20EDB /* OgreTextAreaOverlayElement.cpp */,
 			);
-			name = src;
-			path = ../../../../../../../../Source/Ogre/Components/Overlay/src;
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

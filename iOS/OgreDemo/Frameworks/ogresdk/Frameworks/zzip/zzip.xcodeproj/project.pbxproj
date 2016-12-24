@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA1EA9A21E0B841500A20EDB /* dir.c in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9961E0B841500A20EDB /* dir.c */; };
-		FA1EA9A31E0B841500A20EDB /* err.c in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9971E0B841500A20EDB /* err.c */; };
-		FA1EA9A41E0B841500A20EDB /* fetch.c in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9981E0B841500A20EDB /* fetch.c */; };
-		FA1EA9A51E0B841500A20EDB /* file.c in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9991E0B841500A20EDB /* file.c */; };
-		FA1EA9A61E0B841500A20EDB /* fseeko.c in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA99A1E0B841500A20EDB /* fseeko.c */; };
-		FA1EA9A71E0B841500A20EDB /* info.c in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA99B1E0B841500A20EDB /* info.c */; };
-		FA1EA9A81E0B841500A20EDB /* memdisk.c in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA99C1E0B841500A20EDB /* memdisk.c */; };
-		FA1EA9A91E0B841500A20EDB /* mmapped.c in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA99D1E0B841500A20EDB /* mmapped.c */; };
-		FA1EA9AA1E0B841500A20EDB /* plugin.c in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA99E1E0B841500A20EDB /* plugin.c */; };
-		FA1EA9AB1E0B841500A20EDB /* stat.c in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA99F1E0B841500A20EDB /* stat.c */; };
-		FA1EA9AC1E0B841500A20EDB /* write.c in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9A01E0B841500A20EDB /* write.c */; };
-		FA1EA9AD1E0B841500A20EDB /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9A11E0B841500A20EDB /* zip.c */; };
+		FA678C5F1E0E6B9000EFD8BB /* dir.c in Sources */ = {isa = PBXBuildFile; fileRef = FA678C531E0E6B9000EFD8BB /* dir.c */; };
+		FA678C601E0E6B9000EFD8BB /* err.c in Sources */ = {isa = PBXBuildFile; fileRef = FA678C541E0E6B9000EFD8BB /* err.c */; };
+		FA678C611E0E6B9000EFD8BB /* fetch.c in Sources */ = {isa = PBXBuildFile; fileRef = FA678C551E0E6B9000EFD8BB /* fetch.c */; };
+		FA678C621E0E6B9000EFD8BB /* file.c in Sources */ = {isa = PBXBuildFile; fileRef = FA678C561E0E6B9000EFD8BB /* file.c */; };
+		FA678C631E0E6B9000EFD8BB /* fseeko.c in Sources */ = {isa = PBXBuildFile; fileRef = FA678C571E0E6B9000EFD8BB /* fseeko.c */; };
+		FA678C641E0E6B9000EFD8BB /* info.c in Sources */ = {isa = PBXBuildFile; fileRef = FA678C581E0E6B9000EFD8BB /* info.c */; };
+		FA678C651E0E6B9000EFD8BB /* memdisk.c in Sources */ = {isa = PBXBuildFile; fileRef = FA678C591E0E6B9000EFD8BB /* memdisk.c */; };
+		FA678C661E0E6B9000EFD8BB /* mmapped.c in Sources */ = {isa = PBXBuildFile; fileRef = FA678C5A1E0E6B9000EFD8BB /* mmapped.c */; };
+		FA678C671E0E6B9000EFD8BB /* plugin.c in Sources */ = {isa = PBXBuildFile; fileRef = FA678C5B1E0E6B9000EFD8BB /* plugin.c */; };
+		FA678C681E0E6B9000EFD8BB /* stat.c in Sources */ = {isa = PBXBuildFile; fileRef = FA678C5C1E0E6B9000EFD8BB /* stat.c */; };
+		FA678C691E0E6B9000EFD8BB /* write.c in Sources */ = {isa = PBXBuildFile; fileRef = FA678C5D1E0E6B9000EFD8BB /* write.c */; };
+		FA678C6A1E0E6B9000EFD8BB /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = FA678C5E1E0E6B9000EFD8BB /* zip.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,18 +35,18 @@
 
 /* Begin PBXFileReference section */
 		FA1EA9471E0B825F00A20EDB /* libzzip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libzzip.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA1EA9961E0B841500A20EDB /* dir.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dir.c; path = ../../../../../../../Source/Zzip/zzip/dir.c; sourceTree = "<group>"; };
-		FA1EA9971E0B841500A20EDB /* err.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = err.c; path = ../../../../../../../Source/Zzip/zzip/err.c; sourceTree = "<group>"; };
-		FA1EA9981E0B841500A20EDB /* fetch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fetch.c; path = ../../../../../../../Source/Zzip/zzip/fetch.c; sourceTree = "<group>"; };
-		FA1EA9991E0B841500A20EDB /* file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = file.c; path = ../../../../../../../Source/Zzip/zzip/file.c; sourceTree = "<group>"; };
-		FA1EA99A1E0B841500A20EDB /* fseeko.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fseeko.c; path = ../../../../../../../Source/Zzip/zzip/fseeko.c; sourceTree = "<group>"; };
-		FA1EA99B1E0B841500A20EDB /* info.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = info.c; path = ../../../../../../../Source/Zzip/zzip/info.c; sourceTree = "<group>"; };
-		FA1EA99C1E0B841500A20EDB /* memdisk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = memdisk.c; path = ../../../../../../../Source/Zzip/zzip/memdisk.c; sourceTree = "<group>"; };
-		FA1EA99D1E0B841500A20EDB /* mmapped.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mmapped.c; path = ../../../../../../../Source/Zzip/zzip/mmapped.c; sourceTree = "<group>"; };
-		FA1EA99E1E0B841500A20EDB /* plugin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = plugin.c; path = ../../../../../../../Source/Zzip/zzip/plugin.c; sourceTree = "<group>"; };
-		FA1EA99F1E0B841500A20EDB /* stat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stat.c; path = ../../../../../../../Source/Zzip/zzip/stat.c; sourceTree = "<group>"; };
-		FA1EA9A01E0B841500A20EDB /* write.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = write.c; path = ../../../../../../../Source/Zzip/zzip/write.c; sourceTree = "<group>"; };
-		FA1EA9A11E0B841500A20EDB /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zip.c; path = ../../../../../../../Source/Zzip/zzip/zip.c; sourceTree = "<group>"; };
+		FA678C531E0E6B9000EFD8BB /* dir.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dir.c; sourceTree = "<group>"; };
+		FA678C541E0E6B9000EFD8BB /* err.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = err.c; sourceTree = "<group>"; };
+		FA678C551E0E6B9000EFD8BB /* fetch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fetch.c; sourceTree = "<group>"; };
+		FA678C561E0E6B9000EFD8BB /* file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = file.c; sourceTree = "<group>"; };
+		FA678C571E0E6B9000EFD8BB /* fseeko.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fseeko.c; sourceTree = "<group>"; };
+		FA678C581E0E6B9000EFD8BB /* info.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = info.c; sourceTree = "<group>"; };
+		FA678C591E0E6B9000EFD8BB /* memdisk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = memdisk.c; sourceTree = "<group>"; };
+		FA678C5A1E0E6B9000EFD8BB /* mmapped.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mmapped.c; sourceTree = "<group>"; };
+		FA678C5B1E0E6B9000EFD8BB /* plugin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = plugin.c; sourceTree = "<group>"; };
+		FA678C5C1E0E6B9000EFD8BB /* stat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stat.c; sourceTree = "<group>"; };
+		FA678C5D1E0E6B9000EFD8BB /* write.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = write.c; sourceTree = "<group>"; };
+		FA678C5E1E0E6B9000EFD8BB /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,20 +79,21 @@
 		FA1EA9491E0B825F00A20EDB /* zzip */ = {
 			isa = PBXGroup;
 			children = (
-				FA1EA9961E0B841500A20EDB /* dir.c */,
-				FA1EA9971E0B841500A20EDB /* err.c */,
-				FA1EA9981E0B841500A20EDB /* fetch.c */,
-				FA1EA9991E0B841500A20EDB /* file.c */,
-				FA1EA99A1E0B841500A20EDB /* fseeko.c */,
-				FA1EA99B1E0B841500A20EDB /* info.c */,
-				FA1EA99C1E0B841500A20EDB /* memdisk.c */,
-				FA1EA99D1E0B841500A20EDB /* mmapped.c */,
-				FA1EA99E1E0B841500A20EDB /* plugin.c */,
-				FA1EA99F1E0B841500A20EDB /* stat.c */,
-				FA1EA9A01E0B841500A20EDB /* write.c */,
-				FA1EA9A11E0B841500A20EDB /* zip.c */,
+				FA678C531E0E6B9000EFD8BB /* dir.c */,
+				FA678C541E0E6B9000EFD8BB /* err.c */,
+				FA678C551E0E6B9000EFD8BB /* fetch.c */,
+				FA678C561E0E6B9000EFD8BB /* file.c */,
+				FA678C571E0E6B9000EFD8BB /* fseeko.c */,
+				FA678C581E0E6B9000EFD8BB /* info.c */,
+				FA678C591E0E6B9000EFD8BB /* memdisk.c */,
+				FA678C5A1E0E6B9000EFD8BB /* mmapped.c */,
+				FA678C5B1E0E6B9000EFD8BB /* plugin.c */,
+				FA678C5C1E0E6B9000EFD8BB /* stat.c */,
+				FA678C5D1E0E6B9000EFD8BB /* write.c */,
+				FA678C5E1E0E6B9000EFD8BB /* zip.c */,
 			);
-			path = zzip;
+			name = zzip;
+			path = ../../../../../../Source/Zzip/zzip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,18 +153,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA1EA9A61E0B841500A20EDB /* fseeko.c in Sources */,
-				FA1EA9A41E0B841500A20EDB /* fetch.c in Sources */,
-				FA1EA9A21E0B841500A20EDB /* dir.c in Sources */,
-				FA1EA9A31E0B841500A20EDB /* err.c in Sources */,
-				FA1EA9A51E0B841500A20EDB /* file.c in Sources */,
-				FA1EA9AB1E0B841500A20EDB /* stat.c in Sources */,
-				FA1EA9A81E0B841500A20EDB /* memdisk.c in Sources */,
-				FA1EA9AA1E0B841500A20EDB /* plugin.c in Sources */,
-				FA1EA9AC1E0B841500A20EDB /* write.c in Sources */,
-				FA1EA9AD1E0B841500A20EDB /* zip.c in Sources */,
-				FA1EA9A91E0B841500A20EDB /* mmapped.c in Sources */,
-				FA1EA9A71E0B841500A20EDB /* info.c in Sources */,
+				FA678C631E0E6B9000EFD8BB /* fseeko.c in Sources */,
+				FA678C611E0E6B9000EFD8BB /* fetch.c in Sources */,
+				FA678C5F1E0E6B9000EFD8BB /* dir.c in Sources */,
+				FA678C601E0E6B9000EFD8BB /* err.c in Sources */,
+				FA678C621E0E6B9000EFD8BB /* file.c in Sources */,
+				FA678C681E0E6B9000EFD8BB /* stat.c in Sources */,
+				FA678C651E0E6B9000EFD8BB /* memdisk.c in Sources */,
+				FA678C671E0E6B9000EFD8BB /* plugin.c in Sources */,
+				FA678C691E0E6B9000EFD8BB /* write.c in Sources */,
+				FA678C6A1E0E6B9000EFD8BB /* zip.c in Sources */,
+				FA678C661E0E6B9000EFD8BB /* mmapped.c in Sources */,
+				FA678C641E0E6B9000EFD8BB /* info.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

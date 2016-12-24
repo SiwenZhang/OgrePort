@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA1EA9D11E0B858100A20EDB /* OISEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9CA1E0B858100A20EDB /* OISEffect.cpp */; };
-		FA1EA9D21E0B858100A20EDB /* OISException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9CB1E0B858100A20EDB /* OISException.cpp */; };
-		FA1EA9D31E0B858100A20EDB /* OISForceFeedback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9CC1E0B858100A20EDB /* OISForceFeedback.cpp */; };
-		FA1EA9D41E0B858100A20EDB /* OISInputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9CD1E0B858100A20EDB /* OISInputManager.cpp */; };
-		FA1EA9D51E0B858100A20EDB /* OISJoyStick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9CE1E0B858100A20EDB /* OISJoyStick.cpp */; };
-		FA1EA9D61E0B858100A20EDB /* OISKeyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9CF1E0B858100A20EDB /* OISKeyboard.cpp */; };
-		FA1EA9D71E0B858100A20EDB /* OISObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9D01E0B858100A20EDB /* OISObject.cpp */; };
-		FA1EA9E01E0B863700A20EDB /* iPhoneAccelerometer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9DD1E0B863700A20EDB /* iPhoneAccelerometer.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FA1EA9E11E0B863700A20EDB /* iPhoneInputManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9DE1E0B863700A20EDB /* iPhoneInputManager.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FA1EA9E21E0B863700A20EDB /* iPhoneMultiTouch.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9DF1E0B863700A20EDB /* iPhoneMultiTouch.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA678CDD1E0E6BCA00EFD8BB /* iPhoneAccelerometer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA678CA81E0E6BC900EFD8BB /* iPhoneAccelerometer.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA678CDE1E0E6BCA00EFD8BB /* iPhoneInputManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA678CA91E0E6BC900EFD8BB /* iPhoneInputManager.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA678CDF1E0E6BCA00EFD8BB /* iPhoneMultiTouch.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA678CAA1E0E6BC900EFD8BB /* iPhoneMultiTouch.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA678CEC1E0E6BCA00EFD8BB /* OISEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA678CBA1E0E6BC900EFD8BB /* OISEffect.cpp */; };
+		FA678CED1E0E6BCA00EFD8BB /* OISException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA678CBB1E0E6BC900EFD8BB /* OISException.cpp */; };
+		FA678CEE1E0E6BCA00EFD8BB /* OISForceFeedback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA678CBC1E0E6BC900EFD8BB /* OISForceFeedback.cpp */; };
+		FA678CEF1E0E6BCA00EFD8BB /* OISInputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA678CBD1E0E6BC900EFD8BB /* OISInputManager.cpp */; };
+		FA678CF01E0E6BCA00EFD8BB /* OISJoyStick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA678CBE1E0E6BCA00EFD8BB /* OISJoyStick.cpp */; };
+		FA678CF11E0E6BCA00EFD8BB /* OISKeyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA678CBF1E0E6BCA00EFD8BB /* OISKeyboard.cpp */; };
+		FA678CF21E0E6BCA00EFD8BB /* OISObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA678CC01E0E6BCA00EFD8BB /* OISObject.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,16 +33,37 @@
 
 /* Begin PBXFileReference section */
 		FA1EA9B71E0B853600A20EDB /* libois.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libois.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA1EA9CA1E0B858100A20EDB /* OISEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OISEffect.cpp; path = ../../../../../../../Source/ois/src/OISEffect.cpp; sourceTree = "<group>"; };
-		FA1EA9CB1E0B858100A20EDB /* OISException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OISException.cpp; path = ../../../../../../../Source/ois/src/OISException.cpp; sourceTree = "<group>"; };
-		FA1EA9CC1E0B858100A20EDB /* OISForceFeedback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OISForceFeedback.cpp; path = ../../../../../../../Source/ois/src/OISForceFeedback.cpp; sourceTree = "<group>"; };
-		FA1EA9CD1E0B858100A20EDB /* OISInputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OISInputManager.cpp; path = ../../../../../../../Source/ois/src/OISInputManager.cpp; sourceTree = "<group>"; };
-		FA1EA9CE1E0B858100A20EDB /* OISJoyStick.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OISJoyStick.cpp; path = ../../../../../../../Source/ois/src/OISJoyStick.cpp; sourceTree = "<group>"; };
-		FA1EA9CF1E0B858100A20EDB /* OISKeyboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OISKeyboard.cpp; path = ../../../../../../../Source/ois/src/OISKeyboard.cpp; sourceTree = "<group>"; };
-		FA1EA9D01E0B858100A20EDB /* OISObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OISObject.cpp; path = ../../../../../../../Source/ois/src/OISObject.cpp; sourceTree = "<group>"; };
-		FA1EA9DD1E0B863700A20EDB /* iPhoneAccelerometer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iPhoneAccelerometer.mm; sourceTree = "<group>"; };
-		FA1EA9DE1E0B863700A20EDB /* iPhoneInputManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iPhoneInputManager.mm; sourceTree = "<group>"; };
-		FA1EA9DF1E0B863700A20EDB /* iPhoneMultiTouch.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iPhoneMultiTouch.mm; sourceTree = "<group>"; };
+		FA678C6D1E0E6BC900EFD8BB /* iPhoneAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneAccelerometer.h; sourceTree = "<group>"; };
+		FA678C6E1E0E6BC900EFD8BB /* iPhoneHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneHelpers.h; sourceTree = "<group>"; };
+		FA678C6F1E0E6BC900EFD8BB /* iPhoneInputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneInputManager.h; sourceTree = "<group>"; };
+		FA678C701E0E6BC900EFD8BB /* iPhoneMultiTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneMultiTouch.h; sourceTree = "<group>"; };
+		FA678C711E0E6BC900EFD8BB /* iPhonePrereqs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhonePrereqs.h; sourceTree = "<group>"; };
+		FA678C831E0E6BC900EFD8BB /* OIS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OIS.h; sourceTree = "<group>"; };
+		FA678C841E0E6BC900EFD8BB /* OISConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OISConfig.h; sourceTree = "<group>"; };
+		FA678C851E0E6BC900EFD8BB /* OISEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OISEffect.h; sourceTree = "<group>"; };
+		FA678C861E0E6BC900EFD8BB /* OISEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OISEvents.h; sourceTree = "<group>"; };
+		FA678C871E0E6BC900EFD8BB /* OISException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OISException.h; sourceTree = "<group>"; };
+		FA678C881E0E6BC900EFD8BB /* OISFactoryCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OISFactoryCreator.h; sourceTree = "<group>"; };
+		FA678C891E0E6BC900EFD8BB /* OISForceFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OISForceFeedback.h; sourceTree = "<group>"; };
+		FA678C8A1E0E6BC900EFD8BB /* OISInputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OISInputManager.h; sourceTree = "<group>"; };
+		FA678C8B1E0E6BC900EFD8BB /* OISInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OISInterface.h; sourceTree = "<group>"; };
+		FA678C8C1E0E6BC900EFD8BB /* OISJoyStick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OISJoyStick.h; sourceTree = "<group>"; };
+		FA678C8D1E0E6BC900EFD8BB /* OISKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OISKeyboard.h; sourceTree = "<group>"; };
+		FA678C8E1E0E6BC900EFD8BB /* OISMouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OISMouse.h; sourceTree = "<group>"; };
+		FA678C8F1E0E6BC900EFD8BB /* OISMultiTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OISMultiTouch.h; sourceTree = "<group>"; };
+		FA678C901E0E6BC900EFD8BB /* OISObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OISObject.h; sourceTree = "<group>"; };
+		FA678C911E0E6BC900EFD8BB /* OISPrereqs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OISPrereqs.h; sourceTree = "<group>"; };
+		FA678CA81E0E6BC900EFD8BB /* iPhoneAccelerometer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iPhoneAccelerometer.mm; sourceTree = "<group>"; };
+		FA678CA91E0E6BC900EFD8BB /* iPhoneInputManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iPhoneInputManager.mm; sourceTree = "<group>"; };
+		FA678CAA1E0E6BC900EFD8BB /* iPhoneMultiTouch.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iPhoneMultiTouch.mm; sourceTree = "<group>"; };
+		FA678CB91E0E6BC900EFD8BB /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		FA678CBA1E0E6BC900EFD8BB /* OISEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OISEffect.cpp; sourceTree = "<group>"; };
+		FA678CBB1E0E6BC900EFD8BB /* OISException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OISException.cpp; sourceTree = "<group>"; };
+		FA678CBC1E0E6BC900EFD8BB /* OISForceFeedback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OISForceFeedback.cpp; sourceTree = "<group>"; };
+		FA678CBD1E0E6BC900EFD8BB /* OISInputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OISInputManager.cpp; sourceTree = "<group>"; };
+		FA678CBE1E0E6BCA00EFD8BB /* OISJoyStick.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OISJoyStick.cpp; sourceTree = "<group>"; };
+		FA678CBF1E0E6BCA00EFD8BB /* OISKeyboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OISKeyboard.cpp; sourceTree = "<group>"; };
+		FA678CC01E0E6BCA00EFD8BB /* OISObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OISObject.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,27 +96,72 @@
 		FA1EA9B91E0B853600A20EDB /* ois */ = {
 			isa = PBXGroup;
 			children = (
-				FA1EA9DC1E0B863700A20EDB /* iphone */,
-				FA1EA9CA1E0B858100A20EDB /* OISEffect.cpp */,
-				FA1EA9CB1E0B858100A20EDB /* OISException.cpp */,
-				FA1EA9CC1E0B858100A20EDB /* OISForceFeedback.cpp */,
-				FA1EA9CD1E0B858100A20EDB /* OISInputManager.cpp */,
-				FA1EA9CE1E0B858100A20EDB /* OISJoyStick.cpp */,
-				FA1EA9CF1E0B858100A20EDB /* OISKeyboard.cpp */,
-				FA1EA9D01E0B858100A20EDB /* OISObject.cpp */,
+				FA678C6B1E0E6BC900EFD8BB /* includes */,
+				FA678C9F1E0E6BC900EFD8BB /* src */,
 			);
-			path = ois;
+			name = ois;
+			path = ../../../../../../Source/ois;
 			sourceTree = "<group>";
 		};
-		FA1EA9DC1E0B863700A20EDB /* iphone */ = {
+		FA678C6B1E0E6BC900EFD8BB /* includes */ = {
 			isa = PBXGroup;
 			children = (
-				FA1EA9DD1E0B863700A20EDB /* iPhoneAccelerometer.mm */,
-				FA1EA9DE1E0B863700A20EDB /* iPhoneInputManager.mm */,
-				FA1EA9DF1E0B863700A20EDB /* iPhoneMultiTouch.mm */,
+				FA678C6C1E0E6BC900EFD8BB /* iphone */,
+				FA678C831E0E6BC900EFD8BB /* OIS.h */,
+				FA678C841E0E6BC900EFD8BB /* OISConfig.h */,
+				FA678C851E0E6BC900EFD8BB /* OISEffect.h */,
+				FA678C861E0E6BC900EFD8BB /* OISEvents.h */,
+				FA678C871E0E6BC900EFD8BB /* OISException.h */,
+				FA678C881E0E6BC900EFD8BB /* OISFactoryCreator.h */,
+				FA678C891E0E6BC900EFD8BB /* OISForceFeedback.h */,
+				FA678C8A1E0E6BC900EFD8BB /* OISInputManager.h */,
+				FA678C8B1E0E6BC900EFD8BB /* OISInterface.h */,
+				FA678C8C1E0E6BC900EFD8BB /* OISJoyStick.h */,
+				FA678C8D1E0E6BC900EFD8BB /* OISKeyboard.h */,
+				FA678C8E1E0E6BC900EFD8BB /* OISMouse.h */,
+				FA678C8F1E0E6BC900EFD8BB /* OISMultiTouch.h */,
+				FA678C901E0E6BC900EFD8BB /* OISObject.h */,
+				FA678C911E0E6BC900EFD8BB /* OISPrereqs.h */,
 			);
-			name = iphone;
-			path = ../../../../../../../Source/ois/src/iphone;
+			path = includes;
+			sourceTree = "<group>";
+		};
+		FA678C6C1E0E6BC900EFD8BB /* iphone */ = {
+			isa = PBXGroup;
+			children = (
+				FA678C6D1E0E6BC900EFD8BB /* iPhoneAccelerometer.h */,
+				FA678C6E1E0E6BC900EFD8BB /* iPhoneHelpers.h */,
+				FA678C6F1E0E6BC900EFD8BB /* iPhoneInputManager.h */,
+				FA678C701E0E6BC900EFD8BB /* iPhoneMultiTouch.h */,
+				FA678C711E0E6BC900EFD8BB /* iPhonePrereqs.h */,
+			);
+			path = iphone;
+			sourceTree = "<group>";
+		};
+		FA678C9F1E0E6BC900EFD8BB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FA678CA71E0E6BC900EFD8BB /* iphone */,
+				FA678CB91E0E6BC900EFD8BB /* Makefile.am */,
+				FA678CBA1E0E6BC900EFD8BB /* OISEffect.cpp */,
+				FA678CBB1E0E6BC900EFD8BB /* OISException.cpp */,
+				FA678CBC1E0E6BC900EFD8BB /* OISForceFeedback.cpp */,
+				FA678CBD1E0E6BC900EFD8BB /* OISInputManager.cpp */,
+				FA678CBE1E0E6BCA00EFD8BB /* OISJoyStick.cpp */,
+				FA678CBF1E0E6BCA00EFD8BB /* OISKeyboard.cpp */,
+				FA678CC01E0E6BCA00EFD8BB /* OISObject.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		FA678CA71E0E6BC900EFD8BB /* iphone */ = {
+			isa = PBXGroup;
+			children = (
+				FA678CA81E0E6BC900EFD8BB /* iPhoneAccelerometer.mm */,
+				FA678CA91E0E6BC900EFD8BB /* iPhoneInputManager.mm */,
+				FA678CAA1E0E6BC900EFD8BB /* iPhoneMultiTouch.mm */,
+			);
+			path = iphone;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,16 +221,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA1EA9D11E0B858100A20EDB /* OISEffect.cpp in Sources */,
-				FA1EA9D71E0B858100A20EDB /* OISObject.cpp in Sources */,
-				FA1EA9D21E0B858100A20EDB /* OISException.cpp in Sources */,
-				FA1EA9E11E0B863700A20EDB /* iPhoneInputManager.mm in Sources */,
-				FA1EA9D61E0B858100A20EDB /* OISKeyboard.cpp in Sources */,
-				FA1EA9E01E0B863700A20EDB /* iPhoneAccelerometer.mm in Sources */,
-				FA1EA9D51E0B858100A20EDB /* OISJoyStick.cpp in Sources */,
-				FA1EA9D41E0B858100A20EDB /* OISInputManager.cpp in Sources */,
-				FA1EA9E21E0B863700A20EDB /* iPhoneMultiTouch.mm in Sources */,
-				FA1EA9D31E0B858100A20EDB /* OISForceFeedback.cpp in Sources */,
+				FA678CF01E0E6BCA00EFD8BB /* OISJoyStick.cpp in Sources */,
+				FA678CEF1E0E6BCA00EFD8BB /* OISInputManager.cpp in Sources */,
+				FA678CF21E0E6BCA00EFD8BB /* OISObject.cpp in Sources */,
+				FA678CDD1E0E6BCA00EFD8BB /* iPhoneAccelerometer.mm in Sources */,
+				FA678CEE1E0E6BCA00EFD8BB /* OISForceFeedback.cpp in Sources */,
+				FA678CEC1E0E6BCA00EFD8BB /* OISEffect.cpp in Sources */,
+				FA678CED1E0E6BCA00EFD8BB /* OISException.cpp in Sources */,
+				FA678CDF1E0E6BCA00EFD8BB /* iPhoneMultiTouch.mm in Sources */,
+				FA678CDE1E0E6BCA00EFD8BB /* iPhoneInputManager.mm in Sources */,
+				FA678CF11E0E6BCA00EFD8BB /* OISKeyboard.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

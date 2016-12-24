@@ -108,7 +108,8 @@
 				FA1EB12C1E0BA47600A20EDB /* OctreeSceneManager */,
 				FA1EB1061E0BA44800A20EDB /* ParticleFX */,
 			);
-			path = ogreplugins;
+			name = ogreplugins;
+			path = ../../../../../../../Source/Ogre/PlugIns;
 			sourceTree = "<group>";
 		};
 		FA1EB1061E0BA44800A20EDB /* ParticleFX */ = {
@@ -116,7 +117,7 @@
 			children = (
 				FA1EB1071E0BA46900A20EDB /* src */,
 			);
-			name = ParticleFX;
+			path = ParticleFX;
 			sourceTree = "<group>";
 		};
 		FA1EB1071E0BA46900A20EDB /* src */ = {
@@ -141,8 +142,7 @@
 				FA1EB1181E0BA46900A20EDB /* OgreRotationAffector.cpp */,
 				FA1EB1191E0BA46900A20EDB /* OgreScaleAffector.cpp */,
 			);
-			name = src;
-			path = ../../../../../../../../Source/Ogre/PlugIns/ParticleFX/src;
+			path = src;
 			sourceTree = "<group>";
 		};
 		FA1EB12C1E0BA47600A20EDB /* OctreeSceneManager */ = {
@@ -150,7 +150,7 @@
 			children = (
 				FA1EB12D1E0BA49000A20EDB /* src */,
 			);
-			name = OctreeSceneManager;
+			path = OctreeSceneManager;
 			sourceTree = "<group>";
 		};
 		FA1EB12D1E0BA49000A20EDB /* src */ = {
@@ -164,8 +164,7 @@
 				FA1EB1331E0BA49000A20EDB /* OgreOctreeSceneManagerDll.cpp */,
 				FA1EB1341E0BA49000A20EDB /* OgreOctreeSceneQuery.cpp */,
 			);
-			name = src;
-			path = ../../../../../../../../Source/Ogre/PlugIns/OctreeSceneManager/src;
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
