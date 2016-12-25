@@ -8,6 +8,7 @@
 
 #import "OgrePlayerViewController.h"
 #import "OgrePlayer.h"
+#include "Logger.h"
 
 @interface OgrePlayerViewController ()
 
@@ -15,11 +16,33 @@
 
 @implementation OgrePlayerViewController
 
+- (instancetype)init {
+    if (self = [super init]) {
+         [self globalInit];
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        [self globalInit];
+    }
+    return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        [self globalInit];
+    }
+    return self;
+}
+
+- (void)globalInit {
+//    LOGGER_GLOBAL_INIT();
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSLog(@"the view frame is : %@", NSStringFromCGRect(self.view.frame));
-    
     mOgrePlayer = [[OgrePlayer alloc] initWithFrame:self.view.bounds resourceRoot:mResourcesRoot];
     [self.view addSubview:mOgrePlayer];
     [mOgrePlayer ogreViewDidLoad];

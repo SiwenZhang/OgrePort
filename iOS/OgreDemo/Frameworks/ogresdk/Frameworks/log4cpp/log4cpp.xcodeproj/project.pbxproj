@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA0240A51E0FFD2200BC2B35 /* AbortAppender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02406C1E0FFD2200BC2B35 /* AbortAppender.cpp */; };
+		FA0240A61E0FFD2200BC2B35 /* Appender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02406D1E0FFD2200BC2B35 /* Appender.cpp */; };
+		FA0240A71E0FFD2200BC2B35 /* AppendersFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02406E1E0FFD2200BC2B35 /* AppendersFactory.cpp */; };
+		FA0240A81E0FFD2200BC2B35 /* AppenderSkeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02406F1E0FFD2200BC2B35 /* AppenderSkeleton.cpp */; };
+		FA0240A91E0FFD2200BC2B35 /* BasicConfigurator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240701E0FFD2200BC2B35 /* BasicConfigurator.cpp */; };
+		FA0240AA1E0FFD2200BC2B35 /* BasicLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240711E0FFD2200BC2B35 /* BasicLayout.cpp */; };
+		FA0240AB1E0FFD2200BC2B35 /* BufferingAppender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240721E0FFD2200BC2B35 /* BufferingAppender.cpp */; };
+		FA0240AC1E0FFD2200BC2B35 /* Category.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240731E0FFD2200BC2B35 /* Category.cpp */; };
+		FA0240AD1E0FFD2200BC2B35 /* CategoryStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240741E0FFD2200BC2B35 /* CategoryStream.cpp */; };
+		FA0240AE1E0FFD2200BC2B35 /* Configurator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240751E0FFD2200BC2B35 /* Configurator.cpp */; };
+		FA0240AF1E0FFD2200BC2B35 /* DailyRollingFileAppender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240761E0FFD2200BC2B35 /* DailyRollingFileAppender.cpp */; };
+		FA0240B01E0FFD2200BC2B35 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240771E0FFD2200BC2B35 /* DllMain.cpp */; };
+		FA0240B11E0FFD2200BC2B35 /* DummyThreads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240781E0FFD2200BC2B35 /* DummyThreads.cpp */; };
+		FA0240B21E0FFD2200BC2B35 /* FactoryParams.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240791E0FFD2200BC2B35 /* FactoryParams.cpp */; };
+		FA0240B31E0FFD2200BC2B35 /* FileAppender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02407A1E0FFD2200BC2B35 /* FileAppender.cpp */; };
+		FA0240B41E0FFD2200BC2B35 /* Filter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02407B1E0FFD2200BC2B35 /* Filter.cpp */; };
+		FA0240B51E0FFD2200BC2B35 /* FixedContextCategory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02407C1E0FFD2200BC2B35 /* FixedContextCategory.cpp */; };
+		FA0240B61E0FFD2200BC2B35 /* HierarchyMaintainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02407D1E0FFD2200BC2B35 /* HierarchyMaintainer.cpp */; };
+		FA0240B71E0FFD2200BC2B35 /* IdsaAppender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02407E1E0FFD2200BC2B35 /* IdsaAppender.cpp */; };
+		FA0240B81E0FFD2200BC2B35 /* LayoutAppender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02407F1E0FFD2200BC2B35 /* LayoutAppender.cpp */; };
+		FA0240B91E0FFD2200BC2B35 /* LayoutsFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240801E0FFD2200BC2B35 /* LayoutsFactory.cpp */; };
+		FA0240BA1E0FFD2200BC2B35 /* LevelEvaluator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240811E0FFD2200BC2B35 /* LevelEvaluator.cpp */; };
+		FA0240BB1E0FFD2200BC2B35 /* Localtime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240821E0FFD2200BC2B35 /* Localtime.cpp */; };
+		FA0240BC1E0FFD2200BC2B35 /* LoggingEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240841E0FFD2200BC2B35 /* LoggingEvent.cpp */; };
+		FA0240BD1E0FFD2200BC2B35 /* Manipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240871E0FFD2200BC2B35 /* Manipulator.cpp */; };
+		FA0240BE1E0FFD2200BC2B35 /* MSThreads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240881E0FFD2200BC2B35 /* MSThreads.cpp */; };
+		FA0240BF1E0FFD2200BC2B35 /* NDC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240891E0FFD2200BC2B35 /* NDC.cpp */; };
+		FA0240C01E0FFD2200BC2B35 /* NTEventLogAppender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02408A1E0FFD2200BC2B35 /* NTEventLogAppender.cpp */; };
+		FA0240C11E0FFD2200BC2B35 /* OmniThreads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02408B1E0FFD2200BC2B35 /* OmniThreads.cpp */; };
+		FA0240C21E0FFD2200BC2B35 /* OstreamAppender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02408C1E0FFD2200BC2B35 /* OstreamAppender.cpp */; };
+		FA0240C31E0FFD2200BC2B35 /* PassThroughLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02408D1E0FFD2200BC2B35 /* PassThroughLayout.cpp */; };
+		FA0240C41E0FFD2200BC2B35 /* PatternLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02408E1E0FFD2200BC2B35 /* PatternLayout.cpp */; };
+		FA0240C51E0FFD2200BC2B35 /* PortabilityImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02408F1E0FFD2200BC2B35 /* PortabilityImpl.cpp */; };
+		FA0240C61E0FFD2200BC2B35 /* Priority.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240911E0FFD2200BC2B35 /* Priority.cpp */; };
+		FA0240C71E0FFD2200BC2B35 /* Properties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240921E0FFD2200BC2B35 /* Properties.cpp */; };
+		FA0240C81E0FFD2200BC2B35 /* PropertyConfigurator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240941E0FFD2200BC2B35 /* PropertyConfigurator.cpp */; };
+		FA0240C91E0FFD2200BC2B35 /* PropertyConfiguratorImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240951E0FFD2200BC2B35 /* PropertyConfiguratorImpl.cpp */; };
+		FA0240CA1E0FFD2200BC2B35 /* PThreads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240971E0FFD2200BC2B35 /* PThreads.cpp */; };
+		FA0240CB1E0FFD2200BC2B35 /* RemoteSyslogAppender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240981E0FFD2200BC2B35 /* RemoteSyslogAppender.cpp */; };
+		FA0240CC1E0FFD2200BC2B35 /* RollingFileAppender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240991E0FFD2200BC2B35 /* RollingFileAppender.cpp */; };
+		FA0240CD1E0FFD2200BC2B35 /* SimpleConfigurator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02409A1E0FFD2200BC2B35 /* SimpleConfigurator.cpp */; };
+		FA0240CE1E0FFD2200BC2B35 /* SimpleLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02409B1E0FFD2200BC2B35 /* SimpleLayout.cpp */; };
+		FA0240CF1E0FFD2200BC2B35 /* SmtpAppender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02409C1E0FFD2200BC2B35 /* SmtpAppender.cpp */; };
+		FA0240D01E0FFD2200BC2B35 /* snprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = FA02409D1E0FFD2200BC2B35 /* snprintf.c */; };
+		FA0240D11E0FFD2200BC2B35 /* StringQueueAppender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02409E1E0FFD2200BC2B35 /* StringQueueAppender.cpp */; };
+		FA0240D21E0FFD2200BC2B35 /* StringUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA02409F1E0FFD2200BC2B35 /* StringUtil.cpp */; };
+		FA0240D31E0FFD2200BC2B35 /* SyslogAppender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240A11E0FFD2200BC2B35 /* SyslogAppender.cpp */; };
+		FA0240D41E0FFD2200BC2B35 /* TimeStamp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240A21E0FFD2200BC2B35 /* TimeStamp.cpp */; };
+		FA0240D51E0FFD2200BC2B35 /* TriggeringEventEvaluatorFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240A31E0FFD2200BC2B35 /* TriggeringEventEvaluatorFactory.cpp */; };
+		FA0240D61E0FFD2200BC2B35 /* Win32DebugAppender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0240A41E0FFD2200BC2B35 /* Win32DebugAppender.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA0240051E0FFCBA00BC2B35 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FA0240071E0FFCBA00BC2B35 /* liblog4cpp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblog4cpp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0240281E0FFD2200BC2B35 /* .cvsignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .cvsignore; sourceTree = "<group>"; };
+		FA02402A1E0FFD2200BC2B35 /* config.h.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.h.in; sourceTree = "<group>"; };
+		FA02402C1E0FFD2200BC2B35 /* .cvsignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .cvsignore; sourceTree = "<group>"; };
+		FA02402D1E0FFD2200BC2B35 /* AbortAppender.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AbortAppender.hh; sourceTree = "<group>"; };
+		FA02402E1E0FFD2200BC2B35 /* Appender.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Appender.hh; sourceTree = "<group>"; };
+		FA02402F1E0FFD2200BC2B35 /* AppendersFactory.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AppendersFactory.hh; sourceTree = "<group>"; };
+		FA0240301E0FFD2200BC2B35 /* AppenderSkeleton.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AppenderSkeleton.hh; sourceTree = "<group>"; };
+		FA0240311E0FFD2200BC2B35 /* BasicConfigurator.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BasicConfigurator.hh; sourceTree = "<group>"; };
+		FA0240321E0FFD2200BC2B35 /* BasicLayout.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BasicLayout.hh; sourceTree = "<group>"; };
+		FA0240331E0FFD2200BC2B35 /* BufferingAppender.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BufferingAppender.hh; sourceTree = "<group>"; };
+		FA0240341E0FFD2200BC2B35 /* Category.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Category.hh; sourceTree = "<group>"; };
+		FA0240351E0FFD2200BC2B35 /* CategoryStream.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CategoryStream.hh; sourceTree = "<group>"; };
+		FA0240361E0FFD2200BC2B35 /* config-MinGW32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "config-MinGW32.h"; sourceTree = "<group>"; };
+		FA0240371E0FFD2200BC2B35 /* config-openvms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "config-openvms.h"; sourceTree = "<group>"; };
+		FA0240381E0FFD2200BC2B35 /* config-win32-stlport-boost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "config-win32-stlport-boost.h"; sourceTree = "<group>"; };
+		FA0240391E0FFD2200BC2B35 /* config-win32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "config-win32.h"; sourceTree = "<group>"; };
+		FA02403A1E0FFD2200BC2B35 /* Configurator.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Configurator.hh; sourceTree = "<group>"; };
+		FA02403B1E0FFD2200BC2B35 /* convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convenience.h; sourceTree = "<group>"; };
+		FA02403C1E0FFD2200BC2B35 /* DailyRollingFileAppender.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DailyRollingFileAppender.hh; sourceTree = "<group>"; };
+		FA02403D1E0FFD2200BC2B35 /* Export.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Export.hh; sourceTree = "<group>"; };
+		FA02403E1E0FFD2200BC2B35 /* FactoryParams.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FactoryParams.hh; sourceTree = "<group>"; };
+		FA02403F1E0FFD2200BC2B35 /* FileAppender.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileAppender.hh; sourceTree = "<group>"; };
+		FA0240401E0FFD2200BC2B35 /* Filter.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Filter.hh; sourceTree = "<group>"; };
+		FA0240411E0FFD2200BC2B35 /* FixedContextCategory.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FixedContextCategory.hh; sourceTree = "<group>"; };
+		FA0240421E0FFD2200BC2B35 /* HierarchyMaintainer.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HierarchyMaintainer.hh; sourceTree = "<group>"; };
+		FA0240431E0FFD2200BC2B35 /* IdsaAppender.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IdsaAppender.hh; sourceTree = "<group>"; };
+		FA0240441E0FFD2200BC2B35 /* Layout.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Layout.hh; sourceTree = "<group>"; };
+		FA0240451E0FFD2200BC2B35 /* LayoutAppender.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LayoutAppender.hh; sourceTree = "<group>"; };
+		FA0240461E0FFD2200BC2B35 /* LayoutsFactory.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LayoutsFactory.hh; sourceTree = "<group>"; };
+		FA0240471E0FFD2200BC2B35 /* LevelEvaluator.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LevelEvaluator.hh; sourceTree = "<group>"; };
+		FA0240481E0FFD2200BC2B35 /* LoggingEvent.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LoggingEvent.hh; sourceTree = "<group>"; };
+		FA0240491E0FFD2200BC2B35 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		FA02404A1E0FFD2200BC2B35 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		FA02404B1E0FFD2200BC2B35 /* Manipulator.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Manipulator.hh; sourceTree = "<group>"; };
+		FA02404C1E0FFD2200BC2B35 /* NDC.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NDC.hh; sourceTree = "<group>"; };
+		FA02404D1E0FFD2200BC2B35 /* NTEventLogAppender.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NTEventLogAppender.hh; sourceTree = "<group>"; };
+		FA02404E1E0FFD2200BC2B35 /* OstreamAppender.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OstreamAppender.hh; sourceTree = "<group>"; };
+		FA02404F1E0FFD2200BC2B35 /* PassThroughLayout.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PassThroughLayout.hh; sourceTree = "<group>"; };
+		FA0240501E0FFD2200BC2B35 /* PatternLayout.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PatternLayout.hh; sourceTree = "<group>"; };
+		FA0240511E0FFD2200BC2B35 /* Portability.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Portability.hh; sourceTree = "<group>"; };
+		FA0240521E0FFD2200BC2B35 /* Priority.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Priority.hh; sourceTree = "<group>"; };
+		FA0240531E0FFD2200BC2B35 /* PropertyConfigurator.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PropertyConfigurator.hh; sourceTree = "<group>"; };
+		FA0240541E0FFD2200BC2B35 /* RemoteSyslogAppender.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RemoteSyslogAppender.hh; sourceTree = "<group>"; };
+		FA0240551E0FFD2200BC2B35 /* RollingFileAppender.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RollingFileAppender.hh; sourceTree = "<group>"; };
+		FA0240561E0FFD2200BC2B35 /* SimpleConfigurator.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SimpleConfigurator.hh; sourceTree = "<group>"; };
+		FA0240571E0FFD2200BC2B35 /* SimpleLayout.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SimpleLayout.hh; sourceTree = "<group>"; };
+		FA0240581E0FFD2200BC2B35 /* SmtpAppender.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SmtpAppender.hh; sourceTree = "<group>"; };
+		FA0240591E0FFD2200BC2B35 /* StringQueueAppender.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StringQueueAppender.hh; sourceTree = "<group>"; };
+		FA02405A1E0FFD2200BC2B35 /* SyslogAppender.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SyslogAppender.hh; sourceTree = "<group>"; };
+		FA02405C1E0FFD2200BC2B35 /* BoostThreads.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BoostThreads.hh; sourceTree = "<group>"; };
+		FA02405D1E0FFD2200BC2B35 /* DummyThreads.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DummyThreads.hh; sourceTree = "<group>"; };
+		FA02405E1E0FFD2200BC2B35 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		FA02405F1E0FFD2200BC2B35 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		FA0240601E0FFD2200BC2B35 /* MSThreads.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MSThreads.hh; sourceTree = "<group>"; };
+		FA0240611E0FFD2200BC2B35 /* OmniThreads.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OmniThreads.hh; sourceTree = "<group>"; };
+		FA0240621E0FFD2200BC2B35 /* PThreads.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PThreads.hh; sourceTree = "<group>"; };
+		FA0240631E0FFD2200BC2B35 /* Threading.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Threading.hh; sourceTree = "<group>"; };
+		FA0240641E0FFD2200BC2B35 /* TimeStamp.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TimeStamp.hh; sourceTree = "<group>"; };
+		FA0240651E0FFD2200BC2B35 /* TriggeringEventEvaluator.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TriggeringEventEvaluator.hh; sourceTree = "<group>"; };
+		FA0240661E0FFD2200BC2B35 /* TriggeringEventEvaluatorFactory.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TriggeringEventEvaluatorFactory.hh; sourceTree = "<group>"; };
+		FA0240671E0FFD2200BC2B35 /* Win32DebugAppender.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Win32DebugAppender.hh; sourceTree = "<group>"; };
+		FA0240681E0FFD2200BC2B35 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		FA0240691E0FFD2200BC2B35 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		FA02406C1E0FFD2200BC2B35 /* AbortAppender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AbortAppender.cpp; sourceTree = "<group>"; };
+		FA02406D1E0FFD2200BC2B35 /* Appender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Appender.cpp; sourceTree = "<group>"; };
+		FA02406E1E0FFD2200BC2B35 /* AppendersFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppendersFactory.cpp; sourceTree = "<group>"; };
+		FA02406F1E0FFD2200BC2B35 /* AppenderSkeleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppenderSkeleton.cpp; sourceTree = "<group>"; };
+		FA0240701E0FFD2200BC2B35 /* BasicConfigurator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BasicConfigurator.cpp; sourceTree = "<group>"; };
+		FA0240711E0FFD2200BC2B35 /* BasicLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BasicLayout.cpp; sourceTree = "<group>"; };
+		FA0240721E0FFD2200BC2B35 /* BufferingAppender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BufferingAppender.cpp; sourceTree = "<group>"; };
+		FA0240731E0FFD2200BC2B35 /* Category.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Category.cpp; sourceTree = "<group>"; };
+		FA0240741E0FFD2200BC2B35 /* CategoryStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CategoryStream.cpp; sourceTree = "<group>"; };
+		FA0240751E0FFD2200BC2B35 /* Configurator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Configurator.cpp; sourceTree = "<group>"; };
+		FA0240761E0FFD2200BC2B35 /* DailyRollingFileAppender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DailyRollingFileAppender.cpp; sourceTree = "<group>"; };
+		FA0240771E0FFD2200BC2B35 /* DllMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DllMain.cpp; sourceTree = "<group>"; };
+		FA0240781E0FFD2200BC2B35 /* DummyThreads.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DummyThreads.cpp; sourceTree = "<group>"; };
+		FA0240791E0FFD2200BC2B35 /* FactoryParams.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FactoryParams.cpp; sourceTree = "<group>"; };
+		FA02407A1E0FFD2200BC2B35 /* FileAppender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileAppender.cpp; sourceTree = "<group>"; };
+		FA02407B1E0FFD2200BC2B35 /* Filter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Filter.cpp; sourceTree = "<group>"; };
+		FA02407C1E0FFD2200BC2B35 /* FixedContextCategory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FixedContextCategory.cpp; sourceTree = "<group>"; };
+		FA02407D1E0FFD2200BC2B35 /* HierarchyMaintainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HierarchyMaintainer.cpp; sourceTree = "<group>"; };
+		FA02407E1E0FFD2200BC2B35 /* IdsaAppender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IdsaAppender.cpp; sourceTree = "<group>"; };
+		FA02407F1E0FFD2200BC2B35 /* LayoutAppender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LayoutAppender.cpp; sourceTree = "<group>"; };
+		FA0240801E0FFD2200BC2B35 /* LayoutsFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LayoutsFactory.cpp; sourceTree = "<group>"; };
+		FA0240811E0FFD2200BC2B35 /* LevelEvaluator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LevelEvaluator.cpp; sourceTree = "<group>"; };
+		FA0240821E0FFD2200BC2B35 /* Localtime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Localtime.cpp; sourceTree = "<group>"; };
+		FA0240831E0FFD2200BC2B35 /* Localtime.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Localtime.hh; sourceTree = "<group>"; };
+		FA0240841E0FFD2200BC2B35 /* LoggingEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoggingEvent.cpp; sourceTree = "<group>"; };
+		FA0240851E0FFD2200BC2B35 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		FA0240861E0FFD2200BC2B35 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		FA0240871E0FFD2200BC2B35 /* Manipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Manipulator.cpp; sourceTree = "<group>"; };
+		FA0240881E0FFD2200BC2B35 /* MSThreads.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSThreads.cpp; sourceTree = "<group>"; };
+		FA0240891E0FFD2200BC2B35 /* NDC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NDC.cpp; sourceTree = "<group>"; };
+		FA02408A1E0FFD2200BC2B35 /* NTEventLogAppender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NTEventLogAppender.cpp; sourceTree = "<group>"; };
+		FA02408B1E0FFD2200BC2B35 /* OmniThreads.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OmniThreads.cpp; sourceTree = "<group>"; };
+		FA02408C1E0FFD2200BC2B35 /* OstreamAppender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OstreamAppender.cpp; sourceTree = "<group>"; };
+		FA02408D1E0FFD2200BC2B35 /* PassThroughLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PassThroughLayout.cpp; sourceTree = "<group>"; };
+		FA02408E1E0FFD2200BC2B35 /* PatternLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PatternLayout.cpp; sourceTree = "<group>"; };
+		FA02408F1E0FFD2200BC2B35 /* PortabilityImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PortabilityImpl.cpp; sourceTree = "<group>"; };
+		FA0240901E0FFD2200BC2B35 /* PortabilityImpl.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PortabilityImpl.hh; sourceTree = "<group>"; };
+		FA0240911E0FFD2200BC2B35 /* Priority.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Priority.cpp; sourceTree = "<group>"; };
+		FA0240921E0FFD2200BC2B35 /* Properties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Properties.cpp; sourceTree = "<group>"; };
+		FA0240931E0FFD2200BC2B35 /* Properties.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Properties.hh; sourceTree = "<group>"; };
+		FA0240941E0FFD2200BC2B35 /* PropertyConfigurator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PropertyConfigurator.cpp; sourceTree = "<group>"; };
+		FA0240951E0FFD2200BC2B35 /* PropertyConfiguratorImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PropertyConfiguratorImpl.cpp; sourceTree = "<group>"; };
+		FA0240961E0FFD2200BC2B35 /* PropertyConfiguratorImpl.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PropertyConfiguratorImpl.hh; sourceTree = "<group>"; };
+		FA0240971E0FFD2200BC2B35 /* PThreads.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PThreads.cpp; sourceTree = "<group>"; };
+		FA0240981E0FFD2200BC2B35 /* RemoteSyslogAppender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RemoteSyslogAppender.cpp; sourceTree = "<group>"; };
+		FA0240991E0FFD2200BC2B35 /* RollingFileAppender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RollingFileAppender.cpp; sourceTree = "<group>"; };
+		FA02409A1E0FFD2200BC2B35 /* SimpleConfigurator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleConfigurator.cpp; sourceTree = "<group>"; };
+		FA02409B1E0FFD2200BC2B35 /* SimpleLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleLayout.cpp; sourceTree = "<group>"; };
+		FA02409C1E0FFD2200BC2B35 /* SmtpAppender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SmtpAppender.cpp; sourceTree = "<group>"; };
+		FA02409D1E0FFD2200BC2B35 /* snprintf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = snprintf.c; sourceTree = "<group>"; };
+		FA02409E1E0FFD2200BC2B35 /* StringQueueAppender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringQueueAppender.cpp; sourceTree = "<group>"; };
+		FA02409F1E0FFD2200BC2B35 /* StringUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringUtil.cpp; sourceTree = "<group>"; };
+		FA0240A01E0FFD2200BC2B35 /* StringUtil.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StringUtil.hh; sourceTree = "<group>"; };
+		FA0240A11E0FFD2200BC2B35 /* SyslogAppender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SyslogAppender.cpp; sourceTree = "<group>"; };
+		FA0240A21E0FFD2200BC2B35 /* TimeStamp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeStamp.cpp; sourceTree = "<group>"; };
+		FA0240A31E0FFD2200BC2B35 /* TriggeringEventEvaluatorFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TriggeringEventEvaluatorFactory.cpp; sourceTree = "<group>"; };
+		FA0240A41E0FFD2200BC2B35 /* Win32DebugAppender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Win32DebugAppender.cpp; sourceTree = "<group>"; };
+		FA0240E21E10003B00BC2B35 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA0240041E0FFCBA00BC2B35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA023FFE1E0FFCBA00BC2B35 = {
+			isa = PBXGroup;
+			children = (
+				FA0240091E0FFCBA00BC2B35 /* log4cpp */,
+				FA0240081E0FFCBA00BC2B35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA0240081E0FFCBA00BC2B35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA0240071E0FFCBA00BC2B35 /* liblog4cpp.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA0240091E0FFCBA00BC2B35 /* log4cpp */ = {
+			isa = PBXGroup;
+			children = (
+				FA0240271E0FFD2200BC2B35 /* include */,
+				FA02406A1E0FFD2200BC2B35 /* src */,
+			);
+			name = log4cpp;
+			path = ../../../../../../Source/thirdparty/log4cpp;
+			sourceTree = "<group>";
+		};
+		FA0240271E0FFD2200BC2B35 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				FA0240281E0FFD2200BC2B35 /* .cvsignore */,
+				FA02402A1E0FFD2200BC2B35 /* config.h.in */,
+				FA02402B1E0FFD2200BC2B35 /* log4cpp */,
+				FA0240681E0FFD2200BC2B35 /* Makefile.am */,
+				FA0240691E0FFD2200BC2B35 /* Makefile.in */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		FA02402B1E0FFD2200BC2B35 /* log4cpp */ = {
+			isa = PBXGroup;
+			children = (
+				FA0240E21E10003B00BC2B35 /* config.h */,
+				FA02402C1E0FFD2200BC2B35 /* .cvsignore */,
+				FA02402D1E0FFD2200BC2B35 /* AbortAppender.hh */,
+				FA02402E1E0FFD2200BC2B35 /* Appender.hh */,
+				FA02402F1E0FFD2200BC2B35 /* AppendersFactory.hh */,
+				FA0240301E0FFD2200BC2B35 /* AppenderSkeleton.hh */,
+				FA0240311E0FFD2200BC2B35 /* BasicConfigurator.hh */,
+				FA0240321E0FFD2200BC2B35 /* BasicLayout.hh */,
+				FA0240331E0FFD2200BC2B35 /* BufferingAppender.hh */,
+				FA0240341E0FFD2200BC2B35 /* Category.hh */,
+				FA0240351E0FFD2200BC2B35 /* CategoryStream.hh */,
+				FA0240361E0FFD2200BC2B35 /* config-MinGW32.h */,
+				FA0240371E0FFD2200BC2B35 /* config-openvms.h */,
+				FA0240381E0FFD2200BC2B35 /* config-win32-stlport-boost.h */,
+				FA0240391E0FFD2200BC2B35 /* config-win32.h */,
+				FA02403A1E0FFD2200BC2B35 /* Configurator.hh */,
+				FA02403B1E0FFD2200BC2B35 /* convenience.h */,
+				FA02403C1E0FFD2200BC2B35 /* DailyRollingFileAppender.hh */,
+				FA02403D1E0FFD2200BC2B35 /* Export.hh */,
+				FA02403E1E0FFD2200BC2B35 /* FactoryParams.hh */,
+				FA02403F1E0FFD2200BC2B35 /* FileAppender.hh */,
+				FA0240401E0FFD2200BC2B35 /* Filter.hh */,
+				FA0240411E0FFD2200BC2B35 /* FixedContextCategory.hh */,
+				FA0240421E0FFD2200BC2B35 /* HierarchyMaintainer.hh */,
+				FA0240431E0FFD2200BC2B35 /* IdsaAppender.hh */,
+				FA0240441E0FFD2200BC2B35 /* Layout.hh */,
+				FA0240451E0FFD2200BC2B35 /* LayoutAppender.hh */,
+				FA0240461E0FFD2200BC2B35 /* LayoutsFactory.hh */,
+				FA0240471E0FFD2200BC2B35 /* LevelEvaluator.hh */,
+				FA0240481E0FFD2200BC2B35 /* LoggingEvent.hh */,
+				FA0240491E0FFD2200BC2B35 /* Makefile.am */,
+				FA02404A1E0FFD2200BC2B35 /* Makefile.in */,
+				FA02404B1E0FFD2200BC2B35 /* Manipulator.hh */,
+				FA02404C1E0FFD2200BC2B35 /* NDC.hh */,
+				FA02404D1E0FFD2200BC2B35 /* NTEventLogAppender.hh */,
+				FA02404E1E0FFD2200BC2B35 /* OstreamAppender.hh */,
+				FA02404F1E0FFD2200BC2B35 /* PassThroughLayout.hh */,
+				FA0240501E0FFD2200BC2B35 /* PatternLayout.hh */,
+				FA0240511E0FFD2200BC2B35 /* Portability.hh */,
+				FA0240521E0FFD2200BC2B35 /* Priority.hh */,
+				FA0240531E0FFD2200BC2B35 /* PropertyConfigurator.hh */,
+				FA0240541E0FFD2200BC2B35 /* RemoteSyslogAppender.hh */,
+				FA0240551E0FFD2200BC2B35 /* RollingFileAppender.hh */,
+				FA0240561E0FFD2200BC2B35 /* SimpleConfigurator.hh */,
+				FA0240571E0FFD2200BC2B35 /* SimpleLayout.hh */,
+				FA0240581E0FFD2200BC2B35 /* SmtpAppender.hh */,
+				FA0240591E0FFD2200BC2B35 /* StringQueueAppender.hh */,
+				FA02405A1E0FFD2200BC2B35 /* SyslogAppender.hh */,
+				FA02405B1E0FFD2200BC2B35 /* threading */,
+				FA0240641E0FFD2200BC2B35 /* TimeStamp.hh */,
+				FA0240651E0FFD2200BC2B35 /* TriggeringEventEvaluator.hh */,
+				FA0240661E0FFD2200BC2B35 /* TriggeringEventEvaluatorFactory.hh */,
+				FA0240671E0FFD2200BC2B35 /* Win32DebugAppender.hh */,
+			);
+			path = log4cpp;
+			sourceTree = "<group>";
+		};
+		FA02405B1E0FFD2200BC2B35 /* threading */ = {
+			isa = PBXGroup;
+			children = (
+				FA02405C1E0FFD2200BC2B35 /* BoostThreads.hh */,
+				FA02405D1E0FFD2200BC2B35 /* DummyThreads.hh */,
+				FA02405E1E0FFD2200BC2B35 /* Makefile.am */,
+				FA02405F1E0FFD2200BC2B35 /* Makefile.in */,
+				FA0240601E0FFD2200BC2B35 /* MSThreads.hh */,
+				FA0240611E0FFD2200BC2B35 /* OmniThreads.hh */,
+				FA0240621E0FFD2200BC2B35 /* PThreads.hh */,
+				FA0240631E0FFD2200BC2B35 /* Threading.hh */,
+			);
+			path = threading;
+			sourceTree = "<group>";
+		};
+		FA02406A1E0FFD2200BC2B35 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FA02406C1E0FFD2200BC2B35 /* AbortAppender.cpp */,
+				FA02406D1E0FFD2200BC2B35 /* Appender.cpp */,
+				FA02406E1E0FFD2200BC2B35 /* AppendersFactory.cpp */,
+				FA02406F1E0FFD2200BC2B35 /* AppenderSkeleton.cpp */,
+				FA0240701E0FFD2200BC2B35 /* BasicConfigurator.cpp */,
+				FA0240711E0FFD2200BC2B35 /* BasicLayout.cpp */,
+				FA0240721E0FFD2200BC2B35 /* BufferingAppender.cpp */,
+				FA0240731E0FFD2200BC2B35 /* Category.cpp */,
+				FA0240741E0FFD2200BC2B35 /* CategoryStream.cpp */,
+				FA0240751E0FFD2200BC2B35 /* Configurator.cpp */,
+				FA0240761E0FFD2200BC2B35 /* DailyRollingFileAppender.cpp */,
+				FA0240771E0FFD2200BC2B35 /* DllMain.cpp */,
+				FA0240781E0FFD2200BC2B35 /* DummyThreads.cpp */,
+				FA0240791E0FFD2200BC2B35 /* FactoryParams.cpp */,
+				FA02407A1E0FFD2200BC2B35 /* FileAppender.cpp */,
+				FA02407B1E0FFD2200BC2B35 /* Filter.cpp */,
+				FA02407C1E0FFD2200BC2B35 /* FixedContextCategory.cpp */,
+				FA02407D1E0FFD2200BC2B35 /* HierarchyMaintainer.cpp */,
+				FA02407E1E0FFD2200BC2B35 /* IdsaAppender.cpp */,
+				FA02407F1E0FFD2200BC2B35 /* LayoutAppender.cpp */,
+				FA0240801E0FFD2200BC2B35 /* LayoutsFactory.cpp */,
+				FA0240811E0FFD2200BC2B35 /* LevelEvaluator.cpp */,
+				FA0240821E0FFD2200BC2B35 /* Localtime.cpp */,
+				FA0240831E0FFD2200BC2B35 /* Localtime.hh */,
+				FA0240841E0FFD2200BC2B35 /* LoggingEvent.cpp */,
+				FA0240851E0FFD2200BC2B35 /* Makefile.am */,
+				FA0240861E0FFD2200BC2B35 /* Makefile.in */,
+				FA0240871E0FFD2200BC2B35 /* Manipulator.cpp */,
+				FA0240881E0FFD2200BC2B35 /* MSThreads.cpp */,
+				FA0240891E0FFD2200BC2B35 /* NDC.cpp */,
+				FA02408A1E0FFD2200BC2B35 /* NTEventLogAppender.cpp */,
+				FA02408B1E0FFD2200BC2B35 /* OmniThreads.cpp */,
+				FA02408C1E0FFD2200BC2B35 /* OstreamAppender.cpp */,
+				FA02408D1E0FFD2200BC2B35 /* PassThroughLayout.cpp */,
+				FA02408E1E0FFD2200BC2B35 /* PatternLayout.cpp */,
+				FA02408F1E0FFD2200BC2B35 /* PortabilityImpl.cpp */,
+				FA0240901E0FFD2200BC2B35 /* PortabilityImpl.hh */,
+				FA0240911E0FFD2200BC2B35 /* Priority.cpp */,
+				FA0240921E0FFD2200BC2B35 /* Properties.cpp */,
+				FA0240931E0FFD2200BC2B35 /* Properties.hh */,
+				FA0240941E0FFD2200BC2B35 /* PropertyConfigurator.cpp */,
+				FA0240951E0FFD2200BC2B35 /* PropertyConfiguratorImpl.cpp */,
+				FA0240961E0FFD2200BC2B35 /* PropertyConfiguratorImpl.hh */,
+				FA0240971E0FFD2200BC2B35 /* PThreads.cpp */,
+				FA0240981E0FFD2200BC2B35 /* RemoteSyslogAppender.cpp */,
+				FA0240991E0FFD2200BC2B35 /* RollingFileAppender.cpp */,
+				FA02409A1E0FFD2200BC2B35 /* SimpleConfigurator.cpp */,
+				FA02409B1E0FFD2200BC2B35 /* SimpleLayout.cpp */,
+				FA02409C1E0FFD2200BC2B35 /* SmtpAppender.cpp */,
+				FA02409D1E0FFD2200BC2B35 /* snprintf.c */,
+				FA02409E1E0FFD2200BC2B35 /* StringQueueAppender.cpp */,
+				FA02409F1E0FFD2200BC2B35 /* StringUtil.cpp */,
+				FA0240A01E0FFD2200BC2B35 /* StringUtil.hh */,
+				FA0240A11E0FFD2200BC2B35 /* SyslogAppender.cpp */,
+				FA0240A21E0FFD2200BC2B35 /* TimeStamp.cpp */,
+				FA0240A31E0FFD2200BC2B35 /* TriggeringEventEvaluatorFactory.cpp */,
+				FA0240A41E0FFD2200BC2B35 /* Win32DebugAppender.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA0240061E0FFCBA00BC2B35 /* log4cpp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA0240101E0FFCBA00BC2B35 /* Build configuration list for PBXNativeTarget "log4cpp" */;
+			buildPhases = (
+				FA0240031E0FFCBA00BC2B35 /* Sources */,
+				FA0240041E0FFCBA00BC2B35 /* Frameworks */,
+				FA0240051E0FFCBA00BC2B35 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = log4cpp;
+			productName = log4cpp;
+			productReference = FA0240071E0FFCBA00BC2B35 /* liblog4cpp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA023FFF1E0FFCBA00BC2B35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "liu enbao";
+				TargetAttributes = {
+					FA0240061E0FFCBA00BC2B35 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FA0240021E0FFCBA00BC2B35 /* Build configuration list for PBXProject "log4cpp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FA023FFE1E0FFCBA00BC2B35;
+			productRefGroup = FA0240081E0FFCBA00BC2B35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA0240061E0FFCBA00BC2B35 /* log4cpp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA0240031E0FFCBA00BC2B35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA0240C01E0FFD2200BC2B35 /* NTEventLogAppender.cpp in Sources */,
+				FA0240A71E0FFD2200BC2B35 /* AppendersFactory.cpp in Sources */,
+				FA0240D41E0FFD2200BC2B35 /* TimeStamp.cpp in Sources */,
+				FA0240CA1E0FFD2200BC2B35 /* PThreads.cpp in Sources */,
+				FA0240B61E0FFD2200BC2B35 /* HierarchyMaintainer.cpp in Sources */,
+				FA0240B41E0FFD2200BC2B35 /* Filter.cpp in Sources */,
+				FA0240CF1E0FFD2200BC2B35 /* SmtpAppender.cpp in Sources */,
+				FA0240D11E0FFD2200BC2B35 /* StringQueueAppender.cpp in Sources */,
+				FA0240B31E0FFD2200BC2B35 /* FileAppender.cpp in Sources */,
+				FA0240CC1E0FFD2200BC2B35 /* RollingFileAppender.cpp in Sources */,
+				FA0240C81E0FFD2200BC2B35 /* PropertyConfigurator.cpp in Sources */,
+				FA0240A81E0FFD2200BC2B35 /* AppenderSkeleton.cpp in Sources */,
+				FA0240B21E0FFD2200BC2B35 /* FactoryParams.cpp in Sources */,
+				FA0240D01E0FFD2200BC2B35 /* snprintf.c in Sources */,
+				FA0240D31E0FFD2200BC2B35 /* SyslogAppender.cpp in Sources */,
+				FA0240CD1E0FFD2200BC2B35 /* SimpleConfigurator.cpp in Sources */,
+				FA0240A61E0FFD2200BC2B35 /* Appender.cpp in Sources */,
+				FA0240BE1E0FFD2200BC2B35 /* MSThreads.cpp in Sources */,
+				FA0240AC1E0FFD2200BC2B35 /* Category.cpp in Sources */,
+				FA0240AD1E0FFD2200BC2B35 /* CategoryStream.cpp in Sources */,
+				FA0240B11E0FFD2200BC2B35 /* DummyThreads.cpp in Sources */,
+				FA0240C31E0FFD2200BC2B35 /* PassThroughLayout.cpp in Sources */,
+				FA0240D21E0FFD2200BC2B35 /* StringUtil.cpp in Sources */,
+				FA0240BA1E0FFD2200BC2B35 /* LevelEvaluator.cpp in Sources */,
+				FA0240C51E0FFD2200BC2B35 /* PortabilityImpl.cpp in Sources */,
+				FA0240CE1E0FFD2200BC2B35 /* SimpleLayout.cpp in Sources */,
+				FA0240C71E0FFD2200BC2B35 /* Properties.cpp in Sources */,
+				FA0240AB1E0FFD2200BC2B35 /* BufferingAppender.cpp in Sources */,
+				FA0240AE1E0FFD2200BC2B35 /* Configurator.cpp in Sources */,
+				FA0240C91E0FFD2200BC2B35 /* PropertyConfiguratorImpl.cpp in Sources */,
+				FA0240C61E0FFD2200BC2B35 /* Priority.cpp in Sources */,
+				FA0240B91E0FFD2200BC2B35 /* LayoutsFactory.cpp in Sources */,
+				FA0240D61E0FFD2200BC2B35 /* Win32DebugAppender.cpp in Sources */,
+				FA0240C11E0FFD2200BC2B35 /* OmniThreads.cpp in Sources */,
+				FA0240AF1E0FFD2200BC2B35 /* DailyRollingFileAppender.cpp in Sources */,
+				FA0240B51E0FFD2200BC2B35 /* FixedContextCategory.cpp in Sources */,
+				FA0240BD1E0FFD2200BC2B35 /* Manipulator.cpp in Sources */,
+				FA0240C21E0FFD2200BC2B35 /* OstreamAppender.cpp in Sources */,
+				FA0240D51E0FFD2200BC2B35 /* TriggeringEventEvaluatorFactory.cpp in Sources */,
+				FA0240A91E0FFD2200BC2B35 /* BasicConfigurator.cpp in Sources */,
+				FA0240BB1E0FFD2200BC2B35 /* Localtime.cpp in Sources */,
+				FA0240BC1E0FFD2200BC2B35 /* LoggingEvent.cpp in Sources */,
+				FA0240BF1E0FFD2200BC2B35 /* NDC.cpp in Sources */,
+				FA0240B01E0FFD2200BC2B35 /* DllMain.cpp in Sources */,
+				FA0240B81E0FFD2200BC2B35 /* LayoutAppender.cpp in Sources */,
+				FA0240AA1E0FFD2200BC2B35 /* BasicLayout.cpp in Sources */,
+				FA0240CB1E0FFD2200BC2B35 /* RemoteSyslogAppender.cpp in Sources */,
+				FA0240A51E0FFD2200BC2B35 /* AbortAppender.cpp in Sources */,
+				FA0240C41E0FFD2200BC2B35 /* PatternLayout.cpp in Sources */,
+				FA0240B71E0FFD2200BC2B35 /* IdsaAppender.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FA02400E1E0FFCBA00BC2B35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FA02400F1E0FFCBA00BC2B35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA0240111E0FFCBA00BC2B35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/../../../../../../Source/thirdparty/log4cpp/include";
+				OTHER_CFLAGS = (
+					"-DLOG4CPP_FIX_ERROR_COLLISION",
+					"-DLOG4CPP_HAVE_UNISTD_H",
+					"-DLOG4CPP_HAVE_SSTREAM",
+					"-DHAVE_SNPRINTF",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FA0240121E0FFCBA00BC2B35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/../../../../../../Source/thirdparty/log4cpp/include";
+				OTHER_CFLAGS = (
+					"-DLOG4CPP_FIX_ERROR_COLLISION",
+					"-DLOG4CPP_HAVE_UNISTD_H",
+					"-DLOG4CPP_HAVE_SSTREAM",
+					"-DHAVE_SNPRINTF",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA0240021E0FFCBA00BC2B35 /* Build configuration list for PBXProject "log4cpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA02400E1E0FFCBA00BC2B35 /* Debug */,
+				FA02400F1E0FFCBA00BC2B35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA0240101E0FFCBA00BC2B35 /* Build configuration list for PBXNativeTarget "log4cpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA0240111E0FFCBA00BC2B35 /* Debug */,
+				FA0240121E0FFCBA00BC2B35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA023FFF1E0FFCBA00BC2B35 /* Project object */;
+}

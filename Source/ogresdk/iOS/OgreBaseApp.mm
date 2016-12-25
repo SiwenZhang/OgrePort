@@ -12,6 +12,8 @@
 
 #import <UIKit/UIApplication.h>
 
+LOGGER_IMPLEMENT(OgreBaseApp);
+
 void OgreBaseApp::loadResources(const char *name)
 {
     cf.load(mResourcesRoot + "/" + name);
@@ -52,6 +54,8 @@ void OgreBaseApp::InitGameWindow() {
     gRenderWnd = gRoot->createRenderWindow("OgreWindow", 0, 0, true, &opt);
     
     InitStartScene();
+    
+    LDEBUG(OgreBaseApp, "InitGameWindow");
     
     //        AConfiguration* config = AConfiguration_new();
     //        // AConfiguration_fromAssetManager(config, gAssetMgr);

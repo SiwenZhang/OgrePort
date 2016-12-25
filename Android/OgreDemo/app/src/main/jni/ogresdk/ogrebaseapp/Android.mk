@@ -21,7 +21,8 @@ LOCAL_C_INCLUDES    := \
                $(OIS_ROOT)/includes \
                $(MYGUI_ROOT)/MyGUIEngine/include \
                $(MYGUI_ROOT)/Platforms/Ogre/OgrePlatform/include \
-               $(OGRESDK_ROOT)/
+               $(OGRESDK_ROOT)/ \
+               $(LOG4CPP_ROOT)/include \
 
 # LOCAL_LDLIBS        := -ldl -llog -lz -landroid -lEGL -lGLESv2
 
@@ -32,6 +33,7 @@ LOCAL_C_INCLUDES    := \
 LOCAL_SRC_FILES        := \
                  $(OGREBASEAPP_ROOT)/OgreBaseApp.cpp \
                  $(OGRESDK_ROOT)/utils/ReflexCpp.cpp \
+                 $(OGRESDK_ROOT)/utils/Logger.cpp \
                  $(OGRESDK_ROOT)/common/OgreMultiTouch.cpp \
 
 LOCAL_STATIC_LIBRARIES := \
@@ -44,8 +46,10 @@ LOCAL_STATIC_LIBRARIES := \
                 cpufeatures \
                 libois \
                 libmygui \
+                liblog4cpp \
 
 LOCAL_CFLAGS += -DBUILD_TARGET_ANDROID
+LOCAL_CFLAGS += -DLOG4CPP_HAVE_SSTREAM
 
 LOCAL_SHARED_LIBRARIES := \
                 ogrenative

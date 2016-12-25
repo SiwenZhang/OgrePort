@@ -40,6 +40,8 @@
 
 #include "OgreMultiTouch.h"
 
+#include "utils/Logger.h"
+
 class OgreMultiTouch;
 
 class OgreBaseApp
@@ -445,6 +447,8 @@ private:
             usleep(10 * 1000);
         }
     }
+            
+    LOGGER_DECLARE(OgreBaseApp);
 };
 
 #endif /* OgreBaseApp_hpp */

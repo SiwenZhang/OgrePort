@@ -6,6 +6,8 @@
 #include "OgreAPKFileSystemArchive.h"
 #include "OgreAPKZipArchive.h"
 
+LOGGER_IMPLEMENT(OgreBaseApp);
+
 #include <android/log.h>
 
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "OgreSample", __VA_ARGS__))
