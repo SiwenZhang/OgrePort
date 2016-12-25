@@ -44,10 +44,6 @@ THE SOFTWARE.
 #include <algorithm>
 #include <climits>
 
-#ifdef DEBUG
-#include "logger.h"
-#endif
-
 namespace Ogre {
 	AndroidEGLWindow::AndroidEGLWindow(AndroidEGLSupport *glsupport)
 		: EGLWindow(glsupport),
@@ -58,16 +54,12 @@ namespace Ogre {
 		  mMSAA(0),
 		  mCSAA(0)
 	{
-#ifdef DEBUG
-        LOGD("AndroidEGLWindow::AndroidEGLWindow gles2 constructor");
-#endif
+
 	}
 
 	AndroidEGLWindow::~AndroidEGLWindow()
 	{
-#ifdef DEBUG
-        LOGD("AndroidEGLWindow::AndroidEGLWindow gles2 destructor");
-#endif
+
 	}
 
 	EGLContext* AndroidEGLWindow::createEGLContext() const
@@ -109,10 +101,6 @@ namespace Ogre {
 	        mContext->setCurrent(); 
             eglQuerySurface(mEglDisplay, mEglSurface, EGL_WIDTH, (EGLint*)&mWidth);
             eglQuerySurface(mEglDisplay, mEglSurface, EGL_HEIGHT, (EGLint*)&mHeight);
-
-#ifdef DEBUG
-            LOGD("AndroidEGLWindow::windowMovedOrResized mWidth : %d mHeight : %d", mWidth, mHeight);
-#endif
             
             // Notify viewports of resize
             ViewportList::iterator it = mViewportList.begin();
@@ -361,9 +349,6 @@ namespace Ogre {
         {
             bool isLandscape = (int)AConfiguration_getOrientation(config) == 2;
             mGLSupport->setConfigOption("Orientation", isLandscape ? "Landscape" : "Portrait");
-#ifdef DEBUG
-            LOGD("The Orientation is : %s", isLandscape ? "Landscape" : "Portrait");
-#endif
         }
         
         if(mContext)

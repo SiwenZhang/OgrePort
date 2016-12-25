@@ -30,7 +30,7 @@ LOCAL_C_INCLUDES    := \
 #                 AndroidLogListener.cpp \
 
 LOCAL_SRC_FILES        := \
-                 OgreBaseApp.cpp \
+                 $(OGREBASEAPP_ROOT)/OgreBaseApp.cpp \
                  $(OGRESDK_ROOT)/utils/ReflexCpp.cpp \
                  $(OGRESDK_ROOT)/common/OgreMultiTouch.cpp \
 
