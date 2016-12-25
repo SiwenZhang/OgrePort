@@ -100,7 +100,7 @@
 				FA678C9F1E0E6BC900EFD8BB /* src */,
 			);
 			name = ois;
-			path = ../../../../../../Source/ois;
+			path = ../../../../../../Source/thirdparty/ois;
 			sourceTree = "<group>";
 		};
 		FA678C6B1E0E6BC900EFD8BB /* includes */ = {
@@ -328,7 +328,7 @@
 		FA1EA9C11E0B853600A20EDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/../../../../../../Source/ois/includes";
+				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/../../../../../../Source/thirdparty/ois/includes";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -338,7 +338,7 @@
 		FA1EA9C21E0B853600A20EDB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/../../../../../../Source/ois/includes";
+				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/../../../../../../Source/thirdparty/ois/includes";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

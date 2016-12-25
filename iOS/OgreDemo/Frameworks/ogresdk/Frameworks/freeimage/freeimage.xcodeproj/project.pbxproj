@@ -1101,7 +1101,7 @@
 				FA6790D71E0E74C900EFD8BB /* Source */,
 			);
 			name = freeimage;
-			path = ../../../../../../Source/FreeImage;
+			path = ../../../../../../Source/thirdparty/FreeImage;
 			sourceTree = "<group>";
 		};
 		FA6790D71E0E74C900EFD8BB /* Source */ = {
@@ -2485,25 +2485,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/Metadata",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/FreeImageToolkit",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibJPEG",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibPNG",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibTIFF4",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/ZLib",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibOpenJPEG",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/OpenEXR",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/OpenEXR/Half",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/OpenEXR/Iex",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/OpenEXR/IlmImf",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/OpenEXR/IlmThread",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/OpenEXR/Imath",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibRawLite",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibRawLite/dcraw",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibRawLite/internal",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibRawLite/libraw",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibRawLite/src",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/Metadata",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/FreeImageToolkit",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibJPEG",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibPNG",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibTIFF4",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/ZLib",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibOpenJPEG",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/OpenEXR",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/OpenEXR/Half",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/OpenEXR/Iex",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/OpenEXR/IlmImf",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/OpenEXR/IlmThread",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/OpenEXR/Imath",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibRawLite",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibRawLite/dcraw",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibRawLite/internal",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibRawLite/libraw",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibRawLite/src",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2515,25 +2515,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/Metadata",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/FreeImageToolkit",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibJPEG",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibPNG",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibTIFF4",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/ZLib",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibOpenJPEG",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/OpenEXR",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/OpenEXR/Half",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/OpenEXR/Iex",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/OpenEXR/IlmImf",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/OpenEXR/IlmThread",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/OpenEXR/Imath",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibRawLite",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibRawLite/dcraw",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibRawLite/internal",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibRawLite/libraw",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeImage/Source/LibRawLite/src",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/Metadata",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/FreeImageToolkit",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibJPEG",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibPNG",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibTIFF4",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/ZLib",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibOpenJPEG",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/OpenEXR",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/OpenEXR/Half",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/OpenEXR/Iex",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/OpenEXR/IlmImf",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/OpenEXR/IlmThread",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/OpenEXR/Imath",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibRawLite",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibRawLite/dcraw",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibRawLite/internal",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibRawLite/libraw",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeImage/Source/LibRawLite/src",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

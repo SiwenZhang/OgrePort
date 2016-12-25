@@ -109,7 +109,7 @@
 				FA1EB1061E0BA44800A20EDB /* ParticleFX */,
 			);
 			name = ogreplugins;
-			path = ../../../../../../../Source/Ogre/PlugIns;
+			path = ../../../../../../../Source/thirdparty/Ogre/PlugIns;
 			sourceTree = "<group>";
 		};
 		FA1EB1061E0BA44800A20EDB /* ParticleFX */ = {
@@ -348,9 +348,9 @@
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(SOURCE_ROOT)/..",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/Plugins/ParticleFX/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/Plugins/OctreeSceneManager/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/Plugins/ParticleFX/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/Plugins/OctreeSceneManager/include",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,9 +363,9 @@
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(SOURCE_ROOT)/..",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/Plugins/ParticleFX/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/Plugins/OctreeSceneManager/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/Plugins/ParticleFX/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/Plugins/OctreeSceneManager/include",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

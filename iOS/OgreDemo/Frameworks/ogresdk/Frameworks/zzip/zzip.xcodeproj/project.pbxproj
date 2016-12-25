@@ -93,7 +93,7 @@
 				FA678C5E1E0E6B9000EFD8BB /* zip.c */,
 			);
 			name = zzip;
-			path = ../../../../../../Source/Zzip/zzip;
+			path = ../../../../../../Source/thirdparty/Zzip/zzip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +262,7 @@
 		FA1EA9511E0B825F00A20EDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/../../../../../../Source/Zzip";
+				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/../../../../../../Source/thirdparty/Zzip";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -272,7 +272,7 @@
 		FA1EA9521E0B825F00A20EDB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/../../../../../../Source/Zzip";
+				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/../../../../../../Source/thirdparty/Zzip";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

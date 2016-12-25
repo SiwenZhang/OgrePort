@@ -388,7 +388,7 @@
 				FA1012B21E0C063200D8715B /* GLES2 */,
 			);
 			name = ogrerendersystems;
-			path = ../../../../../../../Source/Ogre/RenderSystems;
+			path = ../../../../../../../Source/thirdparty/Ogre/RenderSystems;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -594,11 +594,11 @@
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(SOURCE_ROOT)/..",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include/iOS",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/RenderSystems/EGL",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/RenderSystems/GLES2/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/RenderSystems/GLES2/include/EAGL",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/OgreMain/include/iOS",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/RenderSystems/EGL",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/RenderSystems/GLES2/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/RenderSystems/GLES2/include/EAGL",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -611,11 +611,11 @@
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(SOURCE_ROOT)/..",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include/iOS",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/RenderSystems/EGL",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/RenderSystems/GLES2/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/RenderSystems/GLES2/include/EAGL",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/OgreMain/include/iOS",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/RenderSystems/EGL",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/RenderSystems/GLES2/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/RenderSystems/GLES2/include/EAGL",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -593,7 +593,7 @@
 				FA678E8B1E0E6DEA00EFD8BB /* src */,
 			);
 			name = freetype;
-			path = ../../../../../../Source/FreeType;
+			path = ../../../../../../Source/thirdparty/FreeType;
 			sourceTree = "<group>";
 		};
 		FA678E321E0E6DEA00EFD8BB /* include */ = {
@@ -1515,8 +1515,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeType/include",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeType/builds/unix",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeType/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeType/builds/unix",
 				);
 				OTHER_CFLAGS = "-DFT2_BUILD_LIBRARY";
 				OTHER_LDFLAGS = "-ObjC";
@@ -1529,8 +1529,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeType/include",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeType/builds/unix",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeType/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeType/builds/unix",
 				);
 				OTHER_CFLAGS = "-DFT2_BUILD_LIBRARY";
 				OTHER_LDFLAGS = "-ObjC";

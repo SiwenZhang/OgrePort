@@ -421,7 +421,6 @@
 		FA1011861E0BAEB300D8715B /* OgreZip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreZip.cpp; sourceTree = "<group>"; };
 		FA10118E1E0BAEB300D8715B /* OgreDefaultWorkQueueStandard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreDefaultWorkQueueStandard.cpp; sourceTree = "<group>"; };
 		FA1EAEA11E0B9FE200A20EDB /* libogremain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libogremain.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA678D0B1E0E6D3100EFD8BB /* asm_math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asm_math.h; sourceTree = "<group>"; };
 		FA678D171E0E6D3100EFD8BB /* macUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macUtils.h; sourceTree = "<group>"; };
 		FA678D181E0E6D3100EFD8BB /* OgreConfigDialogImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreConfigDialogImp.h; sourceTree = "<group>"; };
 		FA678D191E0E6D3100EFD8BB /* OgreErrorDialogImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreErrorDialogImp.h; sourceTree = "<group>"; };
@@ -701,7 +700,7 @@
 				FA1010981E0BAEB200D8715B /* src */,
 			);
 			name = ogremain;
-			path = ../../../../../../../Source/Ogre/OgreMain;
+			path = ../../../../../../../Source/thirdparty/Ogre/OgreMain;
 			sourceTree = "<group>";
 		};
 		FA1010981E0BAEB200D8715B /* src */ = {
@@ -947,7 +946,6 @@
 		FA678D031E0E6D3100EFD8BB /* include */ = {
 			isa = PBXGroup;
 			children = (
-				FA678D0B1E0E6D3100EFD8BB /* asm_math.h */,
 				FA678D161E0E6D3100EFD8BB /* iOS */,
 				FA678D201E0E6D3100EFD8BB /* Ogre.h */,
 				FA678D211E0E6D3100EFD8BB /* OgreAlignedAllocator.h */,
@@ -1580,10 +1578,10 @@
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(SOURCE_ROOT)/..",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include/iOS",
-					"$(SOURCE_ROOT)/../../../../../../../Source/FreeImage/Source",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Zzip",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/OgreMain/include/iOS",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/FreeImage/Source",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Zzip",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1596,10 +1594,10 @@
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(SOURCE_ROOT)/..",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include/iOS",
-					"$(SOURCE_ROOT)/../../../../../../../Source/FreeImage/Source",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Zzip",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/OgreMain/include/iOS",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/FreeImage/Source",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Zzip",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

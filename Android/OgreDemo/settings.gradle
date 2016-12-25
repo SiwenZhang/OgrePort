@@ -1,1 +1,1 @@
-include ':app', ':ogresdk'
+include ':app'

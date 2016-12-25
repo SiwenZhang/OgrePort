@@ -286,7 +286,7 @@
 				FA1EB2DE1E0BAAEA00A20EDB /* MyGUIEngine */,
 			);
 			name = mygui;
-			path = ../../../../../../Source/MyGUI;
+			path = ../../../../../../Source/thirdparty/MyGUI;
 			sourceTree = "<group>";
 		};
 		FA1EB2DE1E0BAAEA00A20EDB /* MyGUIEngine */ = {
@@ -715,10 +715,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-					"$(SOURCE_ROOT)/../../../../../../Source/Ogre/OgreMain/include",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeType/include",
-					"$(SOURCE_ROOT)/../../../../../../Source/MyGUI/MyGUIEngine/include",
-					"$(SOURCE_ROOT)/../../../../../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeType/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/MyGUI/MyGUIEngine/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/MyGUI/Platforms/Ogre/OgrePlatform/include",
 					"$(SOURCE_ROOT)/../ogre",
 				);
 				OTHER_CFLAGS = "-DMYGUI_USE_FREETYPE";
@@ -732,10 +732,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-					"$(SOURCE_ROOT)/../../../../../../Source/Ogre/OgreMain/include",
-					"$(SOURCE_ROOT)/../../../../../../Source/FreeType/include",
-					"$(SOURCE_ROOT)/../../../../../../Source/MyGUI/MyGUIEngine/include",
-					"$(SOURCE_ROOT)/../../../../../../Source/MyGUI/Platforms/Ogre/OgrePlatform/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/FreeType/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/MyGUI/MyGUIEngine/include",
+					"$(SOURCE_ROOT)/../../../../../../Source/thirdparty/MyGUI/Platforms/Ogre/OgrePlatform/include",
 					"$(SOURCE_ROOT)/../ogre",
 				);
 				OTHER_CFLAGS = "-DMYGUI_USE_FREETYPE";

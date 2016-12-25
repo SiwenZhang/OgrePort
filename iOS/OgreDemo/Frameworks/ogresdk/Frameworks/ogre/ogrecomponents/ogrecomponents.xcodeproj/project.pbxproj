@@ -161,7 +161,7 @@
 				FA1EB13C1E0BA4BD00A20EDB /* RTShaderSystem */,
 			);
 			name = ogrecomponents;
-			path = ../../../../../../../Source/Ogre/Components;
+			path = ../../../../../../../Source/thirdparty/Ogre/Components;
 			sourceTree = "<group>";
 		};
 		FA1EB13C1E0BA4BD00A20EDB /* RTShaderSystem */ = {
@@ -452,10 +452,10 @@
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(SOURCE_ROOT)/..",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/Components/RTShaderSystem/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/Components/Overlay/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/FreeType/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/Components/RTShaderSystem/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/Components/Overlay/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/FreeType/include",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -468,10 +468,10 @@
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(SOURCE_ROOT)/..",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/OgreMain/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/Components/RTShaderSystem/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/Ogre/Components/Overlay/include",
-					"$(SOURCE_ROOT)/../../../../../../../Source/FreeType/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/OgreMain/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/Components/RTShaderSystem/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/Ogre/Components/Overlay/include",
+					"$(SOURCE_ROOT)/../../../../../../../Source/thirdparty/FreeType/include",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
