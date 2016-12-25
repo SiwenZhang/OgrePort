@@ -19,10 +19,6 @@ class IAppLifeCycle;
 #include <android/native_window_jni.h> // requires ndk r5 or newer
 #include <android/asset_manager_jni.h>
 
-// typedef void (*MessageCallbackFunction)( const AndroidMessage& );
-
-class ClassLoader;
-class NotificationManager;
 #endif
 
 class IAppInterface {
@@ -44,9 +40,7 @@ public:
     
     virtual JNIEnv* GetJNIEnv() = 0;
     virtual jobject GetJNIActivity() = 0;
-    
-    virtual ClassLoader* GetClassLoader() = 0;
-    virtual NotificationManager* GetNotificationManager() = 0;
+
 #else
     virtual void* getOgrePlayer() = 0;
     virtual std::string getResourcesPath() = 0;

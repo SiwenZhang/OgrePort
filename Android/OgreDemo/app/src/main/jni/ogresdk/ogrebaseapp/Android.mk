@@ -23,7 +23,7 @@ LOCAL_C_INCLUDES    := \
                $(MYGUI_ROOT)/Platforms/Ogre/OgrePlatform/include \
                $(OGRESDK_ROOT)/
 
-LOCAL_LDLIBS        := -ldl -llog -lz -landroid -lEGL -lGLESv2
+# LOCAL_LDLIBS        := -ldl -llog -lz -landroid -lEGL -lGLESv2
 
 # LOCAL_SRC_FILES        := \
 #                 OgreApp.cpp \

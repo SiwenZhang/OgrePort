@@ -10,9 +10,6 @@ LOCAL_C_INCLUDES    := \
 
 LOCAL_SRC_FILES := $(OGRENATIVE_ROOT)/NativeActivity.cpp \
                    $(OGRENATIVE_ROOT)/Android.cpp \
-                   $(OGRENATIVE_ROOT)/Notification.cpp \
-                   $(OGRENATIVE_ROOT)/ClassLoader.cpp \
-                   $(OGRENATIVE_ROOT)/NotificationManager.cpp \
                    $(OGRENATIVE_ROOT)/AndroidMain.cpp \
 
 LOCAL_STATIC_LIBRARIES := \
