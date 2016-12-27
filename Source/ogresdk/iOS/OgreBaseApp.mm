@@ -67,6 +67,8 @@ void OgreBaseApp::createGameWindow() {
     chooseSceneManager();
     createCamera();
     
+    createViewports();
+    
     createResourceListener();
     
     loadResources();

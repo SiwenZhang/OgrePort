@@ -45,9 +45,8 @@ class OgreMultiTouch;
 
 class OgreBaseApp
         :public IAppLifeCycle,
-        public Ogre::WindowEventListener,
         public Ogre::FrameListener,
-        public Ogre::RenderTargetListener,
+        public Ogre::WindowEventListener,
         public OIS::MultiTouchListener {
 public:
     OgreBaseApp()
@@ -65,6 +64,7 @@ protected:
     Ogre::Camera*               mCamera;
     Ogre::SceneManager*         mSceneMgr;
     Ogre::RenderWindow*         mWindow;
+    Ogre::Viewport*             mViewport;
 //    Ogre::OverlaySystem*        mOverlaySystem;
     
     Ogre::ShaderGeneratorTechniqueResolverListener* mMatListener;
@@ -194,11 +194,11 @@ protected:
     
     virtual void createViewports(void) {
         // Create one viewport, entire window
-        Ogre::Viewport* vp = mWindow->addViewport(mCamera);
-        vp->setBackgroundColour(Ogre::ColourValue(0,0,0));
+        mViewport = mWindow->addViewport(mCamera);
+        mViewport->setBackgroundColour(Ogre::ColourValue(0.3, 0.3, 0.3));
         
-        // Alter the camera aspect ratio to match the viewport
-        mCamera->setAspectRatio(Ogre::Real(vp->getActualWidth()) / Ogre::Real(vp->getActualHeight()));
+//        // Alter the camera aspect ratio to match the viewport
+//        mCamera->setAspectRatio(Ogre::Real(mViewport->getActualWidth()) / Ogre::Real(mViewport->getActualHeight()));
     }
     
     virtual void createResourceListener(void) {

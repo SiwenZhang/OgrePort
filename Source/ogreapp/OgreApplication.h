@@ -12,7 +12,9 @@
 #include "common/OgreBaseApp.h"
 #include "utils/ReflexCpp.h"
 
-class OgreApplication: public OgreBaseApp {
+class OgreApplication:
+                public OgreBaseApp,
+                public Ogre::RenderTargetListener {
     DECLARE_CLASS(OgreApplication)
 
 public:
@@ -24,11 +26,7 @@ protected:
     virtual void destroyScene(void); // Override me!
     
 protected:
-    virtual bool touchMoved( const OIS::MultiTouchEvent &arg ) {
-//        pNode->yaw(Ogre::Radian(Ogre::Degree(arg.state.X.rel)));
-//        mRTTRightCamera->yaw(Ogre::Radian(Ogre::Degree(-arg.state.X.rel)));
-        return true;
-    }
+    virtual bool touchMoved( const OIS::MultiTouchEvent &arg );
     
     virtual bool touchPressed( const OIS::MultiTouchEvent &arg ) {
         return true;
@@ -41,6 +39,26 @@ protected:
     virtual bool touchCancelled( const OIS::MultiTouchEvent &arg ) {
         return true;
     }
+                    
+    virtual void preRenderTargetUpdate(const Ogre::RenderTargetEvent& rte);
+    virtual void postRenderTargetUpdate(const Ogre::RenderTargetEvent& rte);
+    
+private:
+    Ogre::Entity* mSinbadEntity;
+    Ogre::SceneNode* mSinbadNode;
+
+private:
+    Ogre::Viewport* mRTTLeftViewport;
+    Ogre::Viewport* mRTTRightViewport;
+    Ogre::Camera* mRTTLeftCamera;
+    Ogre::Camera* mRTTRightCamera;
+    
+    Ogre::Rectangle2D* mMiniscreen;
+    Ogre::SceneNode* mMiniscreenNode;
+
+    Ogre::RenderTexture* mRenderTexture;
+    Ogre::TexturePtr mRTTTexture;
+    Ogre::MaterialPtr mRTTMaterial;
 };
 
 #endif /* OGRE_APPLICATION_H */
