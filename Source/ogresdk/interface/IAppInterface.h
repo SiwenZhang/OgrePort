@@ -14,7 +14,6 @@ class IAppLifeCycle;
 #include <string>
 
 #ifdef BUILD_TARGET_ANDROID
-// #include "AndroidMessage.h"
 
 #include <android/native_window_jni.h> // requires ndk r5 or newer
 #include <android/asset_manager_jni.h>
@@ -27,7 +26,6 @@ public:
     virtual void SetEventHandler( IAppLifeCycle* pHandler ) = 0;
     
 #ifdef BUILD_TARGET_ANDROID
-    // virtual void SetEventCallback( MessageCallbackFunction pCallback ) = 0;
     
     virtual ANativeWindow* GetWindow() = 0;
     virtual AAssetManager* GetAssetManager() = 0;

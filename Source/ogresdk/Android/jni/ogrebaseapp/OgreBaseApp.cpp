@@ -8,58 +8,33 @@
 
 LOGGER_IMPLEMENT(OgreBaseApp);
 
-#include <android/log.h>
-
-#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "OgreSample", __VA_ARGS__))
-#define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, "OgreSample", __VA_ARGS__))
-#define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "OgreSample", __VA_ARGS__))
-#define LOGE(...) ((void)__android_log_print(ANDROID_LOG_ERROR, "OgreSample", __VA_ARGS__))
-
-static Ogre::DataStreamPtr openAPKFile(AAssetManager* gAssetMgr, const Ogre::String& fileName)
-{
-     if(gAssetMgr == NULL)
-     {
-         LOGE("openAPKFile error gAssetMgr == NULL [%s]", fileName.c_str());
-     }
-
-     LOGD("get asset start");
+static Ogre::DataStreamPtr openAPKFile(AAssetManager* assetManager, const Ogre::String& fileName) {
      Ogre::DataStreamPtr stream;
-     LOGD("get asset start 2 : %s", fileName.c_str());
-     AAsset* asset = AAssetManager_open(gAssetMgr, fileName.c_str(), AASSET_MODE_BUFFER);
-     if(asset)
-     {
-         LOGD("asset ok");
+     
+     AAsset* asset = AAssetManager_open(assetManager, fileName.c_str(), AASSET_MODE_BUFFER);
+     if(asset) {
          off_t length = AAsset_getLength(asset);
          void* membuf = OGRE_MALLOC(length, Ogre::MEMCATEGORY_GENERAL);
          memcpy(membuf, AAsset_getBuffer(asset), length);
          AAsset_close(asset);
 
          stream = Ogre::DataStreamPtr(new Ogre::MemoryDataStream(membuf, length, true, true));
-         LOGI("openAPKFile ok %s", fileName.c_str());
-     }
-     else
-     {
-         LOGE("openAPKFile error %s", fileName.c_str());
      }
      return stream;
 }
 
-void OgreBaseApp::loadResources(const char *name)
-{
-    LOGD("The loadResources gAssetMgr is : %p", gAssetMgr);
+void OgreBaseApp::loadResources(const char *name) {
 
-    cf.load(openAPKFile(gAssetMgr, name));
+    cf.load(openAPKFile(mAppInterface->GetAssetManager(), name));
 
     Ogre::ConfigFile::SectionIterator seci = cf.getSectionIterator();
-     while (seci.hasMoreElements())
-     {
+     while (seci.hasMoreElements()) {
          Ogre::String sec, type, arch;
          sec = seci.peekNextKey();
          Ogre::ConfigFile::SettingsMultiMap* settings = seci.getNext();
          Ogre::ConfigFile::SettingsMultiMap::iterator i;
 
-         for (i = settings->begin(); i != settings->end(); i++)
-         {
+         for (i = settings->begin(); i != settings->end(); i++) {
              type = i->first;
              arch = i->second;
              Ogre::ResourceGroupManager::getSingleton().addResourceLocation(arch, type, sec);
@@ -67,39 +42,43 @@ void OgreBaseApp::loadResources(const char *name)
      }
 }
 
+// Surface
+void OgreBaseApp::OnSurfaceCreated() {
+    InitGameWindow();
+}
+
+void OgreBaseApp::OnSurfaceChanged(int iPixelFormat, int iWidth, int iHeight) {
+    InitGameScene();
+}
+
+void OgreBaseApp::OnSurfaceDestroyed() {
+   if(mRoot && mRenderWindow)
+       static_cast<Ogre::AndroidEGLWindow*>(mRenderWindow)->_destroyInternalResources();
+}
+
 void OgreBaseApp::InitGameWindow() {
     AConfiguration* config = AConfiguration_new();
-    // AConfiguration_fromAssetManager(config, gAssetMgr);
-//        AConfiguration_setOrientation(config, 2);
+//    AConfiguration_fromAssetManager(config, mAppInterface->GetAssetManager());
+//    AConfiguration_setOrientation(config, 2);
 
-    LOGD("The gAssetMgr is : %p", gAssetMgr);
-
-    if(!gRenderWnd)
-    {
-        Ogre::APKFileSystemArchiveFactory* apkFileSystem = new Ogre::APKFileSystemArchiveFactory(gAssetMgr);
-        Ogre::APKZipArchiveFactory* apkZip = new Ogre::APKZipArchiveFactory(gAssetMgr);
-
-        LOGD("apkFileSystem is : %p factory->getType() : %s", apkFileSystem, apkFileSystem->getType().c_str());
-        LOGD("apkZip is : %p", apkZip);
+    if(!mRenderWindow) {
+        Ogre::APKFileSystemArchiveFactory* apkFileSystem = new Ogre::APKFileSystemArchiveFactory(mAppInterface->GetAssetManager());
+        Ogre::APKZipArchiveFactory* apkZip = new Ogre::APKZipArchiveFactory(mAppInterface->GetAssetManager());
 
         Ogre::ArchiveManager::getSingleton().addArchiveFactory( apkFileSystem );
         Ogre::ArchiveManager::getSingleton().addArchiveFactory( apkZip );
-
-        LOGD("mWindow is : %p", mWindow);
 
         Ogre::NameValuePairList opt;
         opt["externalWindowHandle"] = Ogre::StringConverter::toString((int)mAppInterface->GetWindow());
         // opt["androidConfig"] = Ogre::StringConverter::toString((int)config);
 
-        gRenderWnd = gRoot->createRenderWindow("OgreWindow", 1920, 1080, true, &opt);
+        mRenderWindow = mRoot->createRenderWindow("OgreWindow", 1920, 1080, true, &opt);
 
-        Ogre::WindowEventUtilities::addWindowEventListener(gRenderWnd, this);
+        Ogre::WindowEventUtilities::addWindowEventListener(mRenderWindow, this);
 
         InitStartScene();
-    }
-    else
-    {
-        static_cast<Ogre::AndroidEGLWindow*>(gRenderWnd)->_createInternalResources(mAppInterface->GetWindow(), NULL);
+    } else {
+        static_cast<Ogre::AndroidEGLWindow*>(mRenderWindow)->_createInternalResources(mAppInterface->GetWindow(), NULL);
     }
     AConfiguration_delete(config);
 }

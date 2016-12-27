@@ -9,25 +9,23 @@
 #include "OgreBaseApp.h"
 #include "ReflexCpp.h"
 #include "Any.h"
+#include "IAppInterface.h"
 
 #import <UIKit/UIApplication.h>
 
 LOGGER_IMPLEMENT(OgreBaseApp);
 
-void OgreBaseApp::loadResources(const char *name)
-{
-    cf.load(mResourcesRoot + "/" + name);
+void OgreBaseApp::loadResources(const char *name) {
+    cf.load(mAppInterface->getResourcesPath() + "/" + name);
     
     Ogre::ConfigFile::SectionIterator seci = cf.getSectionIterator();
-    while (seci.hasMoreElements())
-    {
+    while (seci.hasMoreElements()) {
         Ogre::String sec, type, arch;
         sec = seci.peekNextKey();
         Ogre::ConfigFile::SettingsMultiMap* settings = seci.getNext();
         Ogre::ConfigFile::SettingsMultiMap::iterator i;
         
-        for (i = settings->begin(); i != settings->end(); i++)
-        {
+        for (i = settings->begin(); i != settings->end(); i++) {
             type = i->first;
             arch = i->second;
             
@@ -35,11 +33,24 @@ void OgreBaseApp::loadResources(const char *name)
             // In order to make things portable on OS X we need to provide
             // the loading with it's own bundle path location
             if (!Ogre::StringUtil::startsWith(arch, "/", false)) // only adjust relative dirs
-                arch = Ogre::String(mResourcesRoot + arch);
+                arch = Ogre::String(mAppInterface->getResourcesPath() + arch);
             
             Ogre::ResourceGroupManager::getSingleton().addResourceLocation(arch, type, sec);
         }
     }
+}
+
+// Surface
+void OgreBaseApp::OnSurfaceCreated() {
+    InitGameWindow();
+}
+
+void OgreBaseApp::OnSurfaceChanged(int iPixelFormat, int iWidth, int iHeight) {
+    InitGameScene();
+}
+
+void OgreBaseApp::OnSurfaceDestroyed() {
+    
 }
 
 void OgreBaseApp::InitGameWindow() {
@@ -48,39 +59,14 @@ void OgreBaseApp::InitGameWindow() {
     opt["contentScalingFactor"] = "2.0";
     opt["FSAA"] = "16";
     opt["externalWindowHandle"] = Ogre::StringConverter::toString((unsigned long)[UIApplication sharedApplication].keyWindow);
-    opt["externalViewHandle"] = Ogre::StringConverter::toString((unsigned long)mOgrePlayer);
+    opt["externalViewHandle"] = Ogre::StringConverter::toString((unsigned long)mAppInterface->getOgrePlayer());
     opt["contentScalingFactor"] = Ogre::StringConverter::toString(1);
     
-    gRenderWnd = gRoot->createRenderWindow("OgreWindow", 0, 0, true, &opt);
+    mRenderWindow = mRoot->createRenderWindow("OgreWindow", 0, 0, true, &opt);
     
     InitStartScene();
     
     LDEBUG(OgreBaseApp, "InitGameWindow");
-    
-    //        AConfiguration* config = AConfiguration_new();
-    //        // AConfiguration_fromAssetManager(config, gAssetMgr);
-    //        //        AConfiguration_setOrientation(config, 2);
-    //
-    //        if(!gRenderWnd)
-    //        {
-    //            Ogre::ArchiveManager::getSingleton().addArchiveFactory( new Ogre::APKFileSystemArchiveFactory(gAssetMgr) );
-    //            Ogre::ArchiveManager::getSingleton().addArchiveFactory( new Ogre::APKZipArchiveFactory(gAssetMgr) );
-    //
-    //            Ogre::NameValuePairList opt;
-    //            opt["externalWindowHandle"] = Ogre::StringConverter::toString((int)mAppInterface->GetWindow());
-    //            // opt["androidConfig"] = Ogre::StringConverter::toString((int)config);
-    //
-    //            gRenderWnd = gRoot->createRenderWindow("OgreWindow", 1920, 1080, true, &opt);
-    //
-    //            Ogre::WindowEventUtilities::addWindowEventListener(gRenderWnd, this);
-    //
-    //            InitStartScene();
-    //        }
-    //        else
-    //        {
-    //            static_cast<Ogre::AndroidEGLWindow*>(gRenderWnd)->_createInternalResources(mAppInterface->GetWindow(), NULL);
-    //        }
-    //        AConfiguration_delete(config);
 }
 
 void OgreApplicationMain(const char* appName, IAppInterface* appInterface) {
