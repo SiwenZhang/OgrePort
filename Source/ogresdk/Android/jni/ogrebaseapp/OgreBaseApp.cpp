@@ -23,7 +23,7 @@ static Ogre::DataStreamPtr openAPKFile(AAssetManager* assetManager, const Ogre::
      return stream;
 }
 
-void OgreBaseApp::loadResources(const char *name) {
+void OgreBaseApp::setupResources(const char *name) {
 
     cf.load(openAPKFile(mAppInterface->GetAssetManager(), name));
 
@@ -44,24 +44,23 @@ void OgreBaseApp::loadResources(const char *name) {
 
 // Surface
 void OgreBaseApp::OnSurfaceCreated() {
-    InitGameWindow();
+    createGameWindow();
 }
 
 void OgreBaseApp::OnSurfaceChanged(int iPixelFormat, int iWidth, int iHeight) {
-    InitGameScene();
+
 }
 
 void OgreBaseApp::OnSurfaceDestroyed() {
-   if(mRoot && mRenderWindow)
-       static_cast<Ogre::AndroidEGLWindow*>(mRenderWindow)->_destroyInternalResources();
+    destroyGameWindow();
 }
 
-void OgreBaseApp::InitGameWindow() {
+void OgreBaseApp::createGameWindow() {
     AConfiguration* config = AConfiguration_new();
 //    AConfiguration_fromAssetManager(config, mAppInterface->GetAssetManager());
 //    AConfiguration_setOrientation(config, 2);
 
-    if(!mRenderWindow) {
+    if(!mWindow) {
         Ogre::APKFileSystemArchiveFactory* apkFileSystem = new Ogre::APKFileSystemArchiveFactory(mAppInterface->GetAssetManager());
         Ogre::APKZipArchiveFactory* apkZip = new Ogre::APKZipArchiveFactory(mAppInterface->GetAssetManager());
 
@@ -72,15 +71,29 @@ void OgreBaseApp::InitGameWindow() {
         opt["externalWindowHandle"] = Ogre::StringConverter::toString((int)mAppInterface->GetWindow());
         // opt["androidConfig"] = Ogre::StringConverter::toString((int)config);
 
-        mRenderWindow = mRoot->createRenderWindow("OgreWindow", 1920, 1080, true, &opt);
+        mWindow = mRoot->createRenderWindow("OgreWindow", 1920, 1080, true, &opt);
 
-        Ogre::WindowEventUtilities::addWindowEventListener(mRenderWindow, this);
+        Ogre::WindowEventUtilities::addWindowEventListener(mWindow, this);
 
-        InitStartScene();
+        chooseSceneManager();
+        createCamera();
+        
+        createResourceListener();
+        
+        loadResources();
+        
+        createScene();
+        
+        createFrameListener();
     } else {
-        static_cast<Ogre::AndroidEGLWindow*>(mRenderWindow)->_createInternalResources(mAppInterface->GetWindow(), NULL);
+        static_cast<Ogre::AndroidEGLWindow*>(mWindow)->_createInternalResources(mAppInterface->GetWindow(), NULL);
     }
     AConfiguration_delete(config);
+}
+
+void OgreBaseApp::destroyGameWindow() {
+    if(mRoot && mWindow)
+       static_cast<Ogre::AndroidEGLWindow*>(mWindow)->_destroyInternalResources();
 }
 
 void OgreApplicationMain(const char* appName, IAppInterface* appInterface) {

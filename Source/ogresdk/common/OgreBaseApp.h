@@ -49,166 +49,78 @@ class OgreBaseApp
         public Ogre::FrameListener,
         public Ogre::RenderTargetListener,
         public OIS::MultiTouchListener {
-
 public:
+    OgreBaseApp()
+        :mRoot(NULL),
+        mCamera(NULL),
+        mSceneMgr(NULL),
+        mWindow(NULL)
+//        mOverlaySystem(NULL),
+            {
+        
+    }
+            
+protected:
+    Ogre::Root*                 mRoot;
+    Ogre::Camera*               mCamera;
+    Ogre::SceneManager*         mSceneMgr;
+    Ogre::RenderWindow*         mWindow;
+//    Ogre::OverlaySystem*        mOverlaySystem;
+    
+    Ogre::ShaderGeneratorTechniqueResolverListener* mMatListener;
+    Ogre::StaticPluginLoader* mStaticPluginLoader;
+    
+    OgreMultiTouch* mOgreMultiTouch;
+    
+    Ogre::ConfigFile cf;
+
+protected:
+    IAppInterface* mAppInterface;
+
     // Application
     virtual void OnShutdown() {
-        
+       
     }
-    
+
     // Surface
     virtual void OnSurfaceCreated();
-    
+
     virtual void OnSurfaceChanged(int iPixelFormat, int iWidth, int iHeight);
-    
+
     virtual void OnSurfaceDestroyed();
-    
+
     // States
     virtual void OnPause() {
-        
+
     }
-    
+
     virtual void OnResume() {
-        
+
     }
-    
+
     virtual void OnVisible() {
-        
+
     }
-    
+
     virtual void OnHidden() {
-        
+
     }
-    
+
     virtual void OnLowMemory() {
-        
+       
     }
-    
+
     // Input
     virtual void OnKey( int iKeyCode, wchar_t iUnicodeChar ) {
-        
+       
     }
-    
+
     virtual void OnTouch(int iPointerID, float fPosX, float fPosY, int iAction) {
-        mOgreMultiTouch->injectTouchEvent(iPointerID, iAction, fPosX, fPosY, mRenderWindow->getWidth(), mRenderWindow->getHeight());
-    }
-    
-private:
-    void InitGameWindow();
-    
-    void InitStartScene() {
-        mSceneManager = mRoot->createSceneManager(Ogre::ST_GENERIC);
-        
-        Ogre::RTShader::ShaderGenerator::initialize();
-        Ogre::RTShader::ShaderGenerator::getSingletonPtr()->setTargetLanguage("glsles");
-        mMatListener = new Ogre::ShaderGeneratorTechniqueResolverListener(Ogre::RTShader::ShaderGenerator::getSingletonPtr());
-        Ogre::MaterialManager::getSingleton().addListener(mMatListener);
-        
-        Ogre::RTShader::ShaderGenerator::getSingletonPtr()->addSceneManager(mSceneManager);
-        
-        camera = mSceneManager->createCamera("MyCam");
-        camera->setNearClipDistance(0.1f);
-        camera->setFarClipDistance(1000.0f);
-        camera->setPosition(0,0,50.0f);
-        camera->lookAt(0,0,0);
-        camera->setAutoAspectRatio(true);
-        
-        vp = mRenderWindow->addViewport(camera);
-        
-        mOgreMultiTouch = new OgreMultiTouch();
-        mOgreMultiTouch->setEventCallback(this);
-        
-        loadResources("resources.cfg");
-    }
-    
-    void InitGameScene() {
-        if (mSceneInited == true) {
-            return ;
-        }
-        
-        Ogre::RTShader::ShaderGenerator::getSingletonPtr()->invalidateScheme(Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME);
-        Ogre::ResourceGroupManager::getSingletonPtr()->initialiseAllResourceGroups();
-        
-        mSceneManager->setAmbientLight(Ogre::ColourValue(1.0f, 1.0f, 1.0f));
-        
-        Ogre::Entity* pEntity = mSceneManager->createEntity("Sinbad", "Sinbad.mesh");
-        pNode = mSceneManager->getRootSceneNode()->createChildSceneNode("Sinbad");
-        pNode->attachObject(pEntity);
-
-        Ogre::TexturePtr rttTexture =
-        Ogre::TextureManager::getSingleton().createManual(
-                                                          "RttTex",
-                                                          Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
-                                                          Ogre::TEX_TYPE_2D,
-                                                          mRenderWindow->getWidth(),
-                                                          mRenderWindow->getHeight(),
-                                                          0,
-                                                          Ogre::PF_R8G8B8,
-                                                          Ogre::TU_RENDERTARGET);
-        
-        mRenderTexture = rttTexture->getBuffer()->getRenderTarget();
-        
-        mRTTLeftCamera = mSceneManager->createCamera("RTTLeftCamera");
-        mRTTLeftCamera->setNearClipDistance(0.1f);
-        mRTTLeftCamera->setFarClipDistance(1000.0f);
-        mRTTLeftCamera->setPosition(0, 0, 50);
-        mRTTLeftCamera->lookAt(0,0,0);
-        mRTTLeftCamera->setAutoAspectRatio(true);
-        
-        mRTTLeftViewport = mRenderTexture->addViewport(mRTTLeftCamera, 0, 0.0f, 0.0f, 0.5f, 1.0f);
-        mRenderTexture->setAutoUpdated(true);
-        mRTTLeftViewport->setClearEveryFrame(true);
-        mRTTLeftViewport->setBackgroundColour(Ogre::ColourValue::Green);
-        mRTTLeftViewport->setOverlaysEnabled(true);
-        
-        mRTTRightCamera = mSceneManager->createCamera("RTTRightCamera");
-        mRTTRightCamera->setNearClipDistance(0.1f);
-        mRTTRightCamera->setFarClipDistance(1000.0f);
-        mRTTRightCamera->setPosition(0, 0, 50);
-        mRTTRightCamera->lookAt(0,0,0);
-        mRTTRightCamera->setAutoAspectRatio(true);
-        
-        mRTTRightViewport = mRenderTexture->addViewport(mRTTRightCamera, 1, 0.5f, 0.0f, 0.5f, 1.0f);
-        mRenderTexture->setAutoUpdated(true);
-        mRTTRightViewport->setClearEveryFrame(true);
-        mRTTRightViewport->setBackgroundColour(Ogre::ColourValue::Blue);
-        mRTTRightViewport->setOverlaysEnabled(true);
-        
-        mMiniscreen = new Ogre::Rectangle2D(true);
-        mMiniscreen->setCorners(-1.0, 1.0, 1.0, -1.0);
-        mMiniscreen->setBoundingBox(Ogre::AxisAlignedBox::BOX_INFINITE);
-        
-        Ogre::SceneNode* miniscreenNode =
-        mSceneManager->getRootSceneNode()->createChildSceneNode();
-        miniscreenNode->attachObject(mMiniscreen);
-        
-        Ogre::MaterialPtr renderMat =
-        Ogre::MaterialManager::getSingleton().create(
-                                                     "RttMat",
-                                                     Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
-        renderMat->getTechnique(0)->getPass(0)->setLightingEnabled(false);
-        renderMat->getTechnique(0)->getPass(0)->createTextureUnitState("RttTex");
-        
-        mMiniscreen->setMaterial("RttMat");
-        
-        mRenderTexture->addListener(this);
-        
-        mPlatform = new MyGUI::OgrePlatform();
-        mPlatform->initialise(mRenderTexture, mSceneManager);
-        mGUI = new MyGUI::Gui();
-        
-        mGUI->initialise();
-        mButton = mGUI->createWidget<MyGUI::Button>("Button",10,10,200,100,MyGUI::Align::Stretch,"Main");
-        mButton->setCaption("中文");
-        mButton->setFontHeight(40);
-        
-        mSceneInited = true;
+        mOgreMultiTouch->injectTouchEvent(iPointerID, iAction, fPosX, fPosY, mWindow->getWidth(), mWindow->getHeight());
     }
 
-    void loadResources(const char *name);
-    
-public:
-    OgreBaseApp() {
+protected:
+    virtual bool setup() {
         mRoot = new Ogre::Root();
         
 #ifdef OGRE_STATIC_LIB
@@ -218,99 +130,96 @@ public:
         mRoot->setRenderSystem(mRoot->getAvailableRenderers().at(0));
         mRoot->initialise(false, "");
         
-        mRenderWindow = NULL;
+        setupResources("resources.cfg");
         
-        mSceneInited = false;
-    }
-    
-    virtual ~OgreBaseApp() {
-        Ogre::WindowEventUtilities::removeWindowEventListener(mRenderWindow, this);
-    }
-            
-    virtual bool touchMoved( const OIS::MultiTouchEvent &arg ) {
-        return true;
-    }
-    
-    virtual bool touchPressed( const OIS::MultiTouchEvent &arg ) {
+//        setupRTShader();
+        
+//        if (!configure()) {
+//            return false;
+//        }
+//        
+//        chooseSceneManager();
+        
         return true;
     }
             
-    virtual bool touchReleased( const OIS::MultiTouchEvent &arg ) {
-        return true;
+    virtual void unsetup() {
+        
     }
-    
-    virtual bool touchCancelled( const OIS::MultiTouchEvent &arg ) {
-        return true;
-    }
-            
-protected:
-    Ogre::RenderWindow* mRenderWindow;
-    Ogre::Root* mRoot;
-    Ogre::SceneManager* mSceneManager;
-    Ogre::ShaderGeneratorTechniqueResolverListener* mMatListener;
-    Ogre::StaticPluginLoader* mStaticPluginLoader;
 
-    Ogre::Camera* camera;
-    Ogre::SceneNode* pNode;
-    Ogre::RaySceneQuery* mRayScnQuery;
-    Ogre::TextAreaOverlayElement* textArea;
-    Ogre::Viewport* vp;
+    virtual void createGameWindow();
     
-    Ogre::Viewport* mRTTLeftViewport;
-    Ogre::Viewport* mRTTRightViewport;
-    Ogre::RenderTexture* mRenderTexture;
-    Ogre::Camera* mRTTLeftCamera;
-    Ogre::Camera* mRTTRightCamera;
-    
-    Ogre::Viewport* mSaveViewport;
-    
-    Ogre::ConfigFile cf;
-    
-    MyGUI::Gui* mGUI;
-    MyGUI::OgrePlatform* mPlatform;
-    MyGUI::ButtonPtr mButton;
-    
-    bool mSceneInited;
+    virtual void destroyGameWindow();
             
-    OgreMultiTouch* mOgreMultiTouch;
-    
-private:
-    virtual bool frameRenderingQueued(const Ogre::FrameEvent& fe) {
-        return true;
-    }
-    
-    virtual void preRenderTargetUpdate(const Ogre::RenderTargetEvent& rte) {
-        mMiniscreen->setVisible(false);
-    }
-    
-    virtual void postRenderTargetUpdate(const Ogre::RenderTargetEvent& rte) {
-        mMiniscreen->setVisible(true);
-    }
-    
-    virtual void preViewportUpdate(const Ogre::RenderTargetViewportEvent& evt) {
-        if (evt.source == mRTTLeftViewport) {
-            mPlatform->getRenderManagerPtr()->setActiveViewport(0);
-        } else if (evt.source == mRTTRightViewport) {
-            mPlatform->getRenderManagerPtr()->setActiveViewport(1);
-        } else {
+//    virtual bool configure(void) {
+//        
+//        return true;
+//    }
             
-        }
-    }
-    
-    virtual void postViewportUpdate(const Ogre::RenderTargetViewportEvent& evt) {
+    virtual void chooseSceneManager(void) {
+        // Get the SceneManager, in this case a generic one
+        mSceneMgr = mRoot->createSceneManager(Ogre::ST_GENERIC);
         
+//        // Initialize the OverlaySystem (changed for Ogre 1.9)
+//        mOverlaySystem = new Ogre::OverlaySystem();
+//        mSceneMgr->addRenderQueueListener(mOverlaySystem);
     }
     
-private:
-    Ogre::Rectangle2D* mMiniscreen;
+    virtual void createCamera(void) {
+        mCamera = mSceneMgr->createCamera("MyCam");
+        mCamera->setNearClipDistance(0.1f);
+        mCamera->setFarClipDistance(1000.0f);
+        mCamera->setPosition(0,0,50.0f);
+        mCamera->lookAt(0,0,0);
+        mCamera->setAutoAspectRatio(true);
+    }
+
+    virtual void setupResources(const char* resoureCfg);
+
+    virtual void loadResources() {
+        Ogre::RTShader::ShaderGenerator::initialize();
+        Ogre::RTShader::ShaderGenerator::getSingletonPtr()->setTargetLanguage("glsles");
+        mMatListener = new Ogre::ShaderGeneratorTechniqueResolverListener(Ogre::RTShader::ShaderGenerator::getSingletonPtr());
+        Ogre::MaterialManager::getSingleton().addListener(mMatListener);
+        
+        Ogre::RTShader::ShaderGenerator::getSingletonPtr()->addSceneManager(mSceneMgr);
+        
+        Ogre::RTShader::ShaderGenerator::getSingletonPtr()->invalidateScheme(Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME);
+        
+        Ogre::ResourceGroupManager::getSingleton().initialiseAllResourceGroups();
+    }
+            
+    virtual void createScene(void) = 0; // Override me!
+    virtual void destroyScene(void) = 0; // Override me!
     
-protected:
-    IAppInterface* mAppInterface;
+    virtual void createViewports(void) {
+        // Create one viewport, entire window
+        Ogre::Viewport* vp = mWindow->addViewport(mCamera);
+        vp->setBackgroundColour(Ogre::ColourValue(0,0,0));
+        
+        // Alter the camera aspect ratio to match the viewport
+        mCamera->setAspectRatio(Ogre::Real(vp->getActualWidth()) / Ogre::Real(vp->getActualHeight()));
+    }
+    
+    virtual void createResourceListener(void) {
+    
+    }
+            
+    virtual void createFrameListener(void) {
+        
+        mOgreMultiTouch = new OgreMultiTouch();
+        mOgreMultiTouch->setEventCallback(this);
+
+        //Add some event looper
+        mRoot->addFrameListener(this);
+    }
 
     virtual void go(IAppInterface* appInterface) {
         appInterface->SetEventHandler(this);
 
         mAppInterface = appInterface;
+        
+        setup();
         
         while (true) {
             appInterface->PollEvents();
@@ -319,10 +228,12 @@ protected:
             
             usleep(10 * 1000);
         }
+        
+        unsetup();
     }
-            
+
     virtual void renderOneFrame() {
-        if(mRenderWindow != NULL && mRenderWindow->isActive()) {
+        if(mWindow != NULL && mWindow->isActive()) {
             mRoot->renderOneFrame();
         }
     }

@@ -18,14 +18,16 @@ OgreApplication::~OgreApplication() {
     
 }
 
+void OgreApplication::createScene(void) {
+    
+}
+
+void OgreApplication::destroyScene(void) {
+    
+}
+
 IMPLEMENT_CLASS(OgreApplication)
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 void OgreMain(IAppInterface* appInterface) {
     OgreApplicationMain("OgreApplication", appInterface);
 }
-#ifdef __cplusplus
-}
-#endif

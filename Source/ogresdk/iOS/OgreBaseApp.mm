@@ -15,7 +15,7 @@
 
 LOGGER_IMPLEMENT(OgreBaseApp);
 
-void OgreBaseApp::loadResources(const char *name) {
+void OgreBaseApp::setupResources(const char *name) {
     cf.load(mAppInterface->getResourcesPath() + "/" + name);
     
     Ogre::ConfigFile::SectionIterator seci = cf.getSectionIterator();
@@ -42,18 +42,18 @@ void OgreBaseApp::loadResources(const char *name) {
 
 // Surface
 void OgreBaseApp::OnSurfaceCreated() {
-    InitGameWindow();
+    createGameWindow();
 }
 
 void OgreBaseApp::OnSurfaceChanged(int iPixelFormat, int iWidth, int iHeight) {
-    InitGameScene();
-}
-
-void OgreBaseApp::OnSurfaceDestroyed() {
     
 }
 
-void OgreBaseApp::InitGameWindow() {
+void OgreBaseApp::OnSurfaceDestroyed() {
+    destroyGameWindow();
+}
+
+void OgreBaseApp::createGameWindow() {
     Ogre::NameValuePairList opt;
     opt["colourDepth"] = "32";
     opt["contentScalingFactor"] = "2.0";
@@ -62,11 +62,22 @@ void OgreBaseApp::InitGameWindow() {
     opt["externalViewHandle"] = Ogre::StringConverter::toString((unsigned long)mAppInterface->getOgrePlayer());
     opt["contentScalingFactor"] = Ogre::StringConverter::toString(1);
     
-    mRenderWindow = mRoot->createRenderWindow("OgreWindow", 0, 0, true, &opt);
+    mWindow = mRoot->createRenderWindow("OgreWindow", 0, 0, true, &opt);
     
-    InitStartScene();
+    chooseSceneManager();
+    createCamera();
     
-    LDEBUG(OgreBaseApp, "InitGameWindow");
+    createResourceListener();
+    
+    loadResources();
+    
+    createScene();
+    
+    createFrameListener();
+}
+
+void OgreBaseApp::destroyGameWindow() {
+    
 }
 
 void OgreApplicationMain(const char* appName, IAppInterface* appInterface) {

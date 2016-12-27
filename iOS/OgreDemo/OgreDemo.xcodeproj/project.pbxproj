@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27832CEF1E123DCC00738880 /* OgreApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27832CED1E123DCC00738880 /* OgreApplication.cpp */; };
 		FA1012A31E0C002800D8715B /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1012A21E0C002800D8715B /* libstdc++.6.0.9.tbd */; };
 		FA1013AB1E0C081D00D8715B /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1013AA1E0C081D00D8715B /* libc++.1.tbd */; };
 		FA1013AE1E0C1B5B00D8715B /* assets in Resources */ = {isa = PBXBuildFile; fileRef = FA1013AD1E0C1B5B00D8715B /* assets */; };
-		FA1D7CC91E0F07DD00BA73B7 /* OgreApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1D7CC71E0F07DD00BA73B7 /* OgreApplication.cpp */; };
 		FA1EA9281E0B812300A20EDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA9271E0B812300A20EDB /* main.m */; };
 		FA1EA92B1E0B812300A20EDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA92A1E0B812300A20EDB /* AppDelegate.m */; };
 		FA1EA92E1E0B812300A20EDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA92D1E0B812300A20EDB /* ViewController.m */; };
@@ -29,11 +29,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27832CED1E123DCC00738880 /* OgreApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreApplication.cpp; sourceTree = "<group>"; };
+		27832CEE1E123DCC00738880 /* OgreApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreApplication.h; sourceTree = "<group>"; };
 		FA1012A21E0C002800D8715B /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		FA1013AA1E0C081D00D8715B /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 		FA1013AD1E0C1B5B00D8715B /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
-		FA1D7CC71E0F07DD00BA73B7 /* OgreApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OgreApplication.cpp; sourceTree = "<group>"; };
-		FA1D7CC81E0F07DD00BA73B7 /* OgreApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreApplication.h; sourceTree = "<group>"; };
 		FA1EA9231E0B812300A20EDB /* OgreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OgreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1EA9271E0B812300A20EDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA1EA9291E0B812300A20EDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -59,13 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FA1D7CC61E0F07DD00BA73B7 /* ogreapp */ = {
+		27832CEC1E123DCC00738880 /* ogreapp */ = {
 			isa = PBXGroup;
 			children = (
-				FA1D7CC71E0F07DD00BA73B7 /* OgreApplication.cpp */,
-				FA1D7CC81E0F07DD00BA73B7 /* OgreApplication.h */,
+				27832CED1E123DCC00738880 /* OgreApplication.cpp */,
+				27832CEE1E123DCC00738880 /* OgreApplication.h */,
 			);
-			path = ogreapp;
+			name = ogreapp;
+			path = ../../../Source/ogreapp;
 			sourceTree = "<group>";
 		};
 		FA1EA91A1E0B812300A20EDB = {
@@ -88,7 +89,7 @@
 		FA1EA9251E0B812300A20EDB /* OgreDemo */ = {
 			isa = PBXGroup;
 			children = (
-				FA1D7CC61E0F07DD00BA73B7 /* ogreapp */,
+				27832CEC1E123DCC00738880 /* ogreapp */,
 				FA1013AD1E0C1B5B00D8715B /* assets */,
 				FA1EA9291E0B812300A20EDB /* AppDelegate.h */,
 				FA1EA92A1E0B812300A20EDB /* AppDelegate.m */,
@@ -214,7 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1EA92E1E0B812300A20EDB /* ViewController.m in Sources */,
-				FA1D7CC91E0F07DD00BA73B7 /* OgreApplication.cpp in Sources */,
+				27832CEF1E123DCC00738880 /* OgreApplication.cpp in Sources */,
 				FA1EA92B1E0B812300A20EDB /* AppDelegate.m in Sources */,
 				FA1EA9281E0B812300A20EDB /* main.m in Sources */,
 			);

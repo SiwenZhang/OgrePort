@@ -20,8 +20,12 @@ public:
     virtual ~OgreApplication();
     
 protected:
+    virtual void createScene(void); // Override me!
+    virtual void destroyScene(void); // Override me!
+    
+protected:
     virtual bool touchMoved( const OIS::MultiTouchEvent &arg ) {
-        pNode->yaw(Ogre::Radian(Ogre::Degree(arg.state.X.rel)));
+//        pNode->yaw(Ogre::Radian(Ogre::Degree(arg.state.X.rel)));
 //        mRTTRightCamera->yaw(Ogre::Radian(Ogre::Degree(-arg.state.X.rel)));
         return true;
     }
